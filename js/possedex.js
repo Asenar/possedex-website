@@ -90,7 +90,7 @@ let decodex_descs = [
     "inclassable", "parodique", "pas fiable du tout", "peu fiable", "fiable"
 ];
 
-var base_url = "http://decodex.insoumis.online/database.json";
+var base_url = "http://possedex.info/database.json";
 var _debug = 5;
 
 console && console.log("POUET");
