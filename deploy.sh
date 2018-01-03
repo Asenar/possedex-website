@@ -48,5 +48,7 @@ if [[ -n $changes ]]; then
     else
         echo "Push cancelled (test mode)"
     fi
+else
+    echo "Aucun changement détecté"
 fi
 
