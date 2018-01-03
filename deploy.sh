@@ -44,7 +44,7 @@ if [[ -n $changes ]]; then
     git add docs/database.json
     git commit -m"Update with $rev ($date)"
     if [[ false == $test_mode ]]; then
-        git push
+        git push origin master:master
     else
         echo "Push cancelled (test mode)"
     fi
