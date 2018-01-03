@@ -25,7 +25,9 @@ def slugify(value):
     value = unicode(re.sub('[-\s]+', '-', value))
     return str(value)
 
-response = requests.get('https://docs.google.com/spreadsheets/export?id=1WJ1c9y8hHECdkVbBYULGR8XWrCv9YRtw2LoCM6LCAew&exportFormat=csv&gid=90145853')
+# @TODO: use original decodex to consolidate datas
+# decodex = requests.get('http://www.lemonde.fr/webservice/decodex/updates');
+response = requests.get('https://docs.google.com/spreadsheets/export?id=1po3WjKX15T766GYOYV8fHtve4RdlyLF6XEXBlUICib0&exportFormat=csv&gid=0')
 response.encoding = 'UTF-8'
 
 assert response.status_code == 200, 'failed to download csv file'
@@ -40,8 +42,9 @@ id = 0
 
 col_nom           = 0
 col_desc          = 1
-col_decodex       = 2
-col_soumission    = 3
+col_possedex      = 2
+
+col_updated       = 3
 
 col_proprietaire1 = 4
 col_fortune1      = 5
@@ -68,6 +71,7 @@ col_urls         = 19 # colonne de la 1ere url
 
 
 with open('tmp.csv', 'rb') as csvfile:
+    url_count = 0;
     reader = csv.reader(csvfile, delimiter=',', quotechar='"')
     for row in reader:
         if len(row) < 4:
@@ -79,45 +83,42 @@ with open('tmp.csv', 'rb') as csvfile:
             continue
 
         entry = []
-        note_soumission = -1
-        node_decodex = -1
+        classement_possedex = 'zzz'
 
         try:
 
-            if row[col_soumission] == '0-inconnu':
-                note_soumission = 0
+            if row[col_possedex] == 'inconnu':
+                classement_possedex = ''
                 print bcolors.OKBLUE+"[  inconnu   ] "+bcolors.ENDC+" "+row[col_nom]
-            elif row[col_soumission] == '1-soumis-capital':
-                note_soumission = 1
-                print "soumis au capital pour "+row[col_nom]
+            elif row[col_possedex] == 'capital':
+                classement_possedex = 'capital'
                 print bcolors.OKGREEN+"[  capital  ] "+bcolors.ENDC+" "+row[col_nom]
-            elif row[col_soumission] == '2-soumis-etat':
-                note_soumission = 2
+            elif row[col_possedex] == 'etat':
+                classement_possedex = 'etat'
                 print bcolors.OKBLUE +"[    etat   ] "+bcolors.ENDC+" "+row[col_nom]
-            elif row[col_soumission] == '4-insoumis-independant':
-                note_soumission = 4
+            elif row[col_possedex] == 'independant':
+                classement_possedex = 'independant'
                 print bcolors.OKGREEN+"[   indep   ] "+bcolors.ENDC+" "+row[col_nom]
-            elif row[col_soumission] == '5-site-partisan-insoumis':
-                note_soumission = 5
-                print bcolors.OKGREEN+"[  site fi  ] "+bcolors.ENDC+" "+row[col_nom]
+                # TODO: ajouter reseaux sociaux ?
             else:
-                print bcolors.FAIL+"[note fi manquante] "+bcolors.ENDC+" "+row[col_nom]+" (on met 0)"
+                print bcolors.FAIL+"[classement possedex manquant] "+bcolors.ENDC+" "+row[col_nom]+" (on met 0)"
                 continue
         except:
             pass
 
-        try:
-            note_decodex = int(row[col_decodex])
-        except:
-            print "               "+bcolors.WARNING+" [note decodex manquante] "+bcolors.ENDC+" "+row[col_nom]+" (on met 0)"
-            note_decodex = 0
-            pass
+        #try:
+        #    note_decodex = int(row[col_decodex])
+        #except:
+        #    #print "               "+bcolors.WARNING+" [note decodex manquante] "+bcolors.ENDC+" "+row[col_nom]+" (on met 0)"
+        #    note_decodex = 0
+        #    pass
+        #entry.append(note_decodex)                   #   - note originale decodex
 
-        entry.append(note_decodex)                    # 0  - note originale decodex
-        entry.append(row[col_desc])                   # 1  - Description originale
-        entry.append(row[col_nom])                    # 2  - Nom
-        entry.append(slugify(row[col_nom]))           # 3  - Nom normalise
-        entry.append(note_soumission)                 # 4  - Notre note
+        entry.append(row[col_nom])                    # 0  - Nom
+        entry.append(row[col_desc])                   # 1  - Description
+        entry.append(slugify(row[col_nom]))           # 2  - Nom normalise
+        entry.append(classement_possedex)             # 3  - Notre note
+        entry.append(row[col_updated])                # 4  - updated
 
         entry.append(row[col_pub])                    # 5  - Pub ?
         entry.append(row[col_subventions])            # 6  - subventions
@@ -134,15 +135,16 @@ with open('tmp.csv', 'rb') as csvfile:
         entry.append(row[col_marque2])                # 14
         entry.append(row[col_influence2])             # 15
 
-        entry.append(row[col_proprietaire3])          # 16
-        entry.append(row[col_fortune3])               # 17
-        entry.append(row[col_marque3])                # 18
-        entry.append(row[col_influence3])             # 19
+        entry.append(row[col_proprietaire3])          # 17
+        entry.append(row[col_fortune3])               # 18
+        entry.append(row[col_marque3])                # 19
+        entry.append(row[col_influence3])             # 20
 
 
         database['sites'][id] = entry
 
         for i in range(col_urls, len(row)-1):
+            url_count = url_count+1;
             url = row[i]
             url = url.rstrip('/')
             url = url.rstrip('\n')
@@ -151,6 +153,7 @@ with open('tmp.csv', 'rb') as csvfile:
             if url:
                 database['urls'][url] = id
 
+print bcolors.OKGREEN+"Nombre d'url trouvees : "+bcolors.ENDC+" ", url_count
 with open('database.json', 'wb') as outfile:
     json.dump(database, outfile, indent=4)
 
