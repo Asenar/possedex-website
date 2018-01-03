@@ -23,29 +23,25 @@ if [[ false == $test_mode ]]; then
     echo $GH_TOKEN | cut -c1-5
 
     git init
-    git config user.name "Lucas Gautheron"
-    git config user.email "lucas.gautheron@gmail.com"
+    git config user.name "Travis"
+    git config user.email "github@marinetti.fr"
 
-    git remote add origin "https://$GH_TOKEN@github.com/Insoumis/decodex-database.git"
+    git remote add origin "https://$GH_TOKEN@github.com/Asenar/possedex-website"
 else
     echo "Push cancelled (test mode)"
 fi
+
 git fetch origin
-git fetch origin master
-git fetch origin gh-pages
 
-git checkout master
-git checkout gh-pages
-git merge -m"merge" master
+git reset --hard origin/master
 
-python fetch.py
 python fetch-v2.py
 
 changes=$(git status -uno -s)
 
 if [[ -n $changes ]]; then
     date=$(date)
-    git add decodex_data.json database.json
+    git add docs/database.json
     git commit -m"Update with $rev ($date)"
     if [[ false == $test_mode ]]; then
         git push
