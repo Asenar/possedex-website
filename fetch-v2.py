@@ -154,6 +154,6 @@ with open('tmp.csv', 'rb') as csvfile:
                 database['urls'][url] = id
 
 print bcolors.OKGREEN+"Nombre d'url trouvees : "+bcolors.ENDC+" ", url_count
-with open('public/database.json', 'wb') as outfile:
+with open('docs/database.json', 'wb') as outfile:
     json.dump(database, outfile, indent=4)
 
