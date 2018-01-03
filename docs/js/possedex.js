@@ -1,4 +1,7 @@
 /***** constants and variables *****/
+
+var _debug = 0;
+
 let col_nom                 = 0;
 let col_desc          = 1;
 let col_slug                = 2;
