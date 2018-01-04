@@ -1,18 +1,19 @@
-# Décodex Insoumis
+# Possedex
 
-[Télécharger la version firefox](https://addons.mozilla.org/fr/firefox/addon/decodex-insoumis/)
+[Télécharger la version firefox](https://addons.mozilla.org/fr/firefox/addon/possedex/)
 
-[Télécharger la version chrome](https://chrome.google.com/webstore/detail/decodex-insoumis/nhoafopabcknfapognndbcnjddcdoadl?hl=fr)
+[Télécharger la version chrome](https://chrome.google.com/webstore/detail/gemmpegibhkgoccbgcjalhagnikphman/publish-accepted?hl=fr)
 
-[Voir le code source de l'extension (github)](https://github.com/Insoumis/decodex-insoumis-firefox/)
+[Voir le code source de l'extension (github)](https://github.com/Asenar/possedex/)
 
 
-# decodex-database
-Base de données du decodex insoumis (attention, il peut y avoir quelques changements)
+# possedex-website
+Site internet et base de données du Possedex (attention, il peut y avoir quelques changements)
 
 ## Contribuer
-Pour contribuer, demander les droits d'accès à [la base de données (google sheets)](https://docs.google.com/spreadsheets/d/1WJ1c9y8hHECdkVbBYULGR8XWrCv9YRtw2LoCM6LCAew/edit#gid=90145853) sur le discord des insoumis.
+Pour contribuer, demander les droits d'accès à [la base de données (google sheets)](https://docs.google.com/spreadsheets/d/1po3WjKX15T766GYOYV8fHtve4RdlyLF6XEXBlUICib0/edit#gid=0).
 
+[Attention, les instructions ci dessous datent de mars 2017 et doivent être mises à jour]
  * Remplir en priorité les sites mieux notés par décodex (colonne note originelle, mieux = 4 puis 3 etc.)
  * Propriétaires : [Organigramme du Monde Diplomatique http://www.monde-diplomatique.fr/cartes/ppa](http://www.monde-diplomatique.fr/cartes/ppa)
  * **Aides à la presse** :
@@ -25,18 +26,6 @@ Pour contribuer, demander les droits d'accès à [la base de données (google sh
 [Le titre de l'article](http://lien-vers-l-article)
 ```
 
-
- * Notation 
-   
-
-Code | Couleur | Description | Critères
------------- | ------------- | ------------- | -------------
-0 | `gris  #A2A9AE`  | NSPP                 | Aucune information connue ou suffisamment fiable pour se prononcer / impossible de statuer;
-1 | `rouge #D50303`  | soumis-capital       | Possédé par un ou des grands groupes industriels/financiers ou de grande fortunes.
-2 | `jaune #F5A725`  | soumis-etat          | Média possédés par un état (France Télévision, RT France, …)
-3 | `bleu #129AF0`   | ?                    |
-4 | `vert #468847`   | insoumis-independant | Appartient à ses rédacteurs, pas ou très peu de publicité, indépendants, …
-5 | `vert #468847`   | partisan-Fi          | Site partisan pro France Insoumise :)
 
  Exemples :
  
@@ -56,7 +45,7 @@ passé ou le présent) indiqué de fausses informations, plus celui ci aura une
 mauvaise note invitant le visiteur à vérifier les informations sur d'autres
 source.
 
-Nous fournissons son complément essentiel : le décodex insoumis, afin de
+Nous fournissons son complément essentiel : le possedex, afin de
 mettre en avant les puissances financières ou politique derrière un site que
 vous visitez. Cela ne veut pas dire que les informations que vous y lirez sont
 fausses ou incorrecte, mais peuvent influencer la ligne éditoriale générale du

@@ -189,7 +189,7 @@ function debunkSite(url, data){
         try {
             site_actif     = sites[site_id][col_nom];                    // nom du site
             updated        = new Date(sites[site_id][col_updated]);      // note possedex
-            classement     = sites[site_id][col_classement_possedex];   // note insoumis
+            classement     = sites[site_id][col_classement_possedex];   // clssement possedex
             notule         = sites[site_id][col_desc];                   // description originale
             slug           = sites[site_id][col_slug];                   // nom normalisé
 
