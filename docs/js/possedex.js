@@ -15,17 +15,17 @@ let col_sources       = 7;
 let col_proprietaire1 =  8;
 let col_fortune1      =  9;
 let col_marque1       = 10;
-let col_influence1    = 11;
+let col_interet1    = 11;
 
 let col_proprietaire2 = 12;
 let col_fortune2      = 13;
 let col_marque2       = 14;
-let col_influence2    = 15;
+let col_interet2    = 15;
 
 let col_proprietaire3 = 16;
 let col_fortune3      = 17;
 let col_marque3       = 18;
-let col_influence3    = 19;
+let col_interet3    = 19;
 
 var messages = {
  inconnu     : "non classé",
@@ -149,9 +149,11 @@ function debunkSite(url, data){
     var proprietaires = '';
     var fortunes      = '';
     var marques       = '';
-    var influences    = '';
-    var proprietaires = '';
     var interets      = '';
+    var proprietaires = '';
+
+    var interets      = '';
+
     var conflits      = '';
     var subventions   = '';
     var publicite     = '';
@@ -198,23 +200,50 @@ function debunkSite(url, data){
             var proprietaire1  = sites[site_id][col_proprietaire1];      // propriétaires
             var fortunes1      = sites[site_id][col_fortune1     ];      // propriétaires
             var marque1        = sites[site_id][col_marque1      ];      // propriétaires
-            var influence1     = sites[site_id][col_influence1   ];      // propriétaires
+            var interet1     = sites[site_id][col_interet1   ];      // propriétaires
 
             var proprietaire2 = sites[site_id][col_proprietaire2];      // propriétaires
             var fortunes2      = sites[site_id][col_fortune2     ];      // propriétaires
             var marque2        = sites[site_id][col_marque2      ];      // propriétaires
-            var influence2     = sites[site_id][col_influence2   ];      // propriétaires
+            var interet2     = sites[site_id][col_interet2   ];      // propriétaires
 
             var proprietaire3 = sites[site_id][col_proprietaire3];      // propriétaires
             var fortunes3      = sites[site_id][col_fortune3     ];      // propriétaires
             var marque3        = sites[site_id][col_marque3      ];      // propriétaires
-            var influence3     = sites[site_id][col_influence3   ];      // propriétaires
+            var interet3     = sites[site_id][col_interet3   ];      // propriétaires
 
-            proprietaires = [proprietaire1, proprietaire2, proprietaire3];
+            proprietaires = []
+            proprietaires.push(proprietaire1 + " (" + fortunes1 + ")");
+            if (proprietaire2) {
+                proprietaires.push(proprietaire2 + " (" + fortunes2 + ")");
+            }
+            if (proprietaire3) {
+                proprietaires.push(proprietaire3 + " (" + fortunes3 + ")");
+            };
             // TODO: if (!empty(proprietaire2), etc…)
-            fortunes      = [fortunes1    , fortunes2    , fortunes3    ];
-            marques       = [marque1     , marque2       , marque3      ];
-            influences    = [influence1  , influence2    , influence3   ];
+            //fortunes      = [fortunes1    , fortunes2    , fortunes3    ];
+
+            marques       = [];
+            if (marque1) {
+                marques.push(marque1);
+            }
+            if (marque2) {
+                marques.push(marque2);
+            }
+            if (marque3) {
+                marques.push(marque3);
+            }
+
+            interets       = [];
+            if (interet1) {
+                interets.push(interet1);
+            }
+            if (interet2) {
+                interets.push(interet2);
+            }
+            if (interet3) {
+                interets.push(interet3);
+            }
 
             subventions    = sites[site_id][col_subventions];            // Montant des subventions d'état
             publicite      = sites[site_id][col_pub];                    // Pub ?
@@ -286,8 +315,12 @@ function debunkSite(url, data){
                     $("#result").append("<label>Description</label><p>"+notule+"</p>");
                     //$("#result").append("<label>identifiant(à masquer plus tard)</label><p>"+slug+"</p>");
                     $("#result").append("<label>Propriétaires</label><p>"+proprietaires+"</p>");
-                    $("#result").append("<label>Intérêts</label><p>"+interets+"</p>");
-                    $("#result").append("<label>Conflits</label><p>"+conflits+"</p>");
+                    if (interets.length) {
+                        $("#result").append("<label>Intérêts</label><p>"+interets+"</p>");
+                    }
+                    if (marques.length) {
+                        $("#result").append("<label>Marques</label><p>"+marques+"</p>");
+                    }
                     $("#result").append("<label>Subventions</label><p>"+subventions+"</p>");
                     $("#result").append(sources);
                     $("#result").append("<label>Dernière mise à jour</label><p>"+updated_human+"</p>");
