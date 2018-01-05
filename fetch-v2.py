@@ -2,6 +2,8 @@ import requests
 import csv
 import json
 
+base_file  = 'https://docs.google.com/spreadsheets/export?id=1po3WjKX15T766GYOYV8fHtve4RdlyLF6XEXBlUICib0&exportFormat=csv&gid=0'
+
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -27,12 +29,13 @@ def slugify(value):
 
 # @TODO: use original decodex to consolidate datas
 # decodex = requests.get('http://www.lemonde.fr/webservice/decodex/updates');
-response = requests.get('https://docs.google.com/spreadsheets/export?id=1po3WjKX15T766GYOYV8fHtve4RdlyLF6XEXBlUICib0&exportFormat=csv&gid=0')
+tmp_base_output = 'base.csv'
+response = requests.get(base_file)
 response.encoding = 'UTF-8'
 
-assert response.status_code == 200, 'failed to download csv file'
+assert response.status_code == 200, 'failed to download base csv file'
 
-text_file = open('tmp.csv', 'w')
+text_file = open(tmp_base_output, 'w')
 text_file.write(response.content)
 text_file.close()
 
@@ -70,7 +73,7 @@ col_urls         = 19 # colonne de la 1ere url
 
 
 
-with open('tmp.csv', 'rb') as csvfile:
+with open(tmp_base_output, 'rb') as csvfile:
     url_count = 0;
     reader = csv.reader(csvfile, delimiter=',', quotechar='"')
     for row in reader:
