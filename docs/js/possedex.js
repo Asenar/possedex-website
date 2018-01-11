@@ -1,7 +1,68 @@
+/*          POSSEDEX
+            VERSION 1 / MARS 2017
+            VERSION 2 / JANVIER 2018
+            REMERCIEMENT A L'EQUIPE LES DECODEURS DU MONDE
+            REMERCIEMENT AUX INSOUMIS QUI SE RECONNAITRONT
+                             .y.
+                            -dMm.
+                           .mMMMd.
+                          .dMMMMMd.     .:+oyyso-
+                         `hMMMMMMMd` -odNMMMMMMMNy`             `..
+                         sMMMm:dMMMddNMMMMmyoomMMMh    `.-/+oydmmN:
+                        :NMMN/ .mMMMMMNd+-`   -NMMMyydmNNNMMMMMMMd.
+                        hMMMy   -mMMMN:        sMMMMMMMMNNmhhNMMMo
+                       -mMMM-    -mMMMy`       -NMMMy+/-.`` /NMMN.
+                       /NMMM`     -mMMMy`      `hMMM+       sMMMh
+                       -mMMMo`     :mMMMs`      sMMMd      .NMMN/
+                        +NMMNy`     :NMMNs      /MMMm`     +MMMd.
+                         :dMMMd:     :NMMMo`    `NMMN-    `dMMMo
+                          .yMMMN+     :NMMNo     NMMN/    /NMMM.
+                           `oNMMNy.    /NMMN+    dMMMo    yMMMh
+                             :mMMMd-    /NMMN+   yMMMs   `NMMN/
+                         `-://ohhhhy+////ymNMN/.-shhds:--+mmmd.
+                       `/osoo+++++++++++oosshdsssoooooooooosss+/-`
+                      `+so/:::::::::::::::/osss+:::::::::::://+os+-`
+                      -ss/:----------------/ss+:--------------::+ss+-.```
+                      .ss+:::::::--::::::::+sso::---------------::+osoooo-
+                      `+sso+++///::::///+++oosso+//:::::::--------:::/+ss-
+                     `/ss+/::::::::::::::::::+ssssoooooo+:------------/ss-
+                     .os+:-------------------:oso-....os+-------------/ss-
+                     `+so::----------:::::://+ss+`    +so:------------/ss-
+                      .+so+////////:::::////+++os+.   -ss/------------/ss-
+                       `-oso//:::::------------:os+   `/so/:----------/ss-
+                        `oso:-----------------::oso    `+so/:---------/ss-
+                         :ss+:::::::::::::::://+oss/.  ``/so+:--------/ss-
+                          -+osoooooo++///::::::::/+so- -.`:oso/::-----/ss-
+                            .-:::oso:-------------:os+` o+ `:oso+/::::/ss-
+                                 /so/:------------:os+` /Ms. `-+ysssoooss-
+                                 `+so+/:::::::::/+oso.  +MMd-  .hNmmh----`
+                                  `:+oooossssooooo+:`   yMMMy`  -MMMN/
+                                     `..:dmmm/...`      :NMMM:   sMMMm`
+                                        :MMMm.           yMMMh   .dMMMs
+                                        yMMMy       ``.:+yMMMN:   :NMMN:
+                                       `mMMM/  ``-+shmMMMMMMNNy    sMMMm`
+                                       /NMMN-:ohmMMMMNNmdyo+/--    .mMMMo
+                                       sMMMMmMMMMNmyo/.`   `.:/+ossodMMMN:
+                                      .mMMMMMNmy+.`    `-+ymNMMMMMMMMMMMMd`
+                                      :MMMMNs:`  ``./oymNMMMMNdhyssyhmMMMMo
+                                      yMMMNyoooyhdNNMMMMNMMMMo`      `dMMMd`
+                                      -dNMMMMMMMMMNNNdy+:oMMMN:    `:hMMMN:
+                                       `:+syyyyso/:.`     yMMMm` `/dMMMMd:
+                                                          .dMMMhomMMMNh/
+                                                           -NMMMMMMNy-
+                                                            +NMMMms.
+                                                             sMmo`
+                                                             `/`
+
+*/
+
+
+var _debug = 0; // 0=quiet, 1=verbose, 2=more verbose, 3= very very verbose, 4=even more. 5 very very verbose
+if (_debug) {
+    console && console.info("DEBUG LEVEL", _debug);
+}
+
 /***** constants and variables *****/
-
-var _debug = 0;
-
 let col_nom                 = 0;
 let col_desc          = 1;
 let col_slug                = 2;
@@ -190,7 +251,7 @@ function debunkSite(url, data){
         }
         try {
             site_actif     = sites[site_id][col_nom];                    // nom du site
-            updated        = new Date(sites[site_id][col_updated]);      // note possedex
+            updated        = new Date(sites[site_id][col_updated]);      // last maj
             classement     = sites[site_id][col_classement_possedex];   // clssement possedex
             notule         = sites[site_id][col_desc];                   // description originale
             slug           = sites[site_id][col_slug];                   // nom normalisé
