@@ -352,7 +352,7 @@ function debunkSite(url, data){
         $("#result").html('Nous n\'avons actuellement aucune information sur ce site.');
         if (2 <= _debug) {
             console && console.info("site non trouvé", url);
-            console && console.log(url);
+            console && console.log(urls);
         }
         // Optional : add a badge text and badge bg with the icon
         //browser.browserAction.setBadgeText({"text" : "Soumis :p"});
