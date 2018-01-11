@@ -1,6 +1,7 @@
 import requests
 import csv
 import json
+import re
 
 base_file  = 'https://docs.google.com/spreadsheets/export?id=1po3WjKX15T766GYOYV8fHtve4RdlyLF6XEXBlUICib0&exportFormat=csv&gid=0'
 
@@ -152,6 +153,8 @@ with open(tmp_base_output, 'rb') as csvfile:
             url = url.rstrip('/')
             url = url.rstrip('\n')
             url = url.rstrip(' ')
+
+            url = re.sub(r'^https?:\/\/(www)?', '', url)
 
             if url:
                 database['urls'][url] = id
