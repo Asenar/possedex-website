@@ -2,7 +2,7 @@
 
 [Télécharger la version firefox](https://addons.mozilla.org/fr/firefox/addon/possedex/)
 
-[Télécharger la version chrome](https://chrome.google.com/webstore/detail/gemmpegibhkgoccbgcjalhagnikphman/publish-accepted?hl=fr)
+[Télécharger la version chrome](https://chrome.google.com/webstore/detail/possedex/gemmpegibhkgoccbgcjalhagnikphman?hl=fr)
 
 [Voir le code source de l'extension (github)](https://github.com/Asenar/possedex/)
 
