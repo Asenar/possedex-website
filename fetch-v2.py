@@ -3,7 +3,8 @@ import csv
 import json
 import re
 
-base_file  = 'https://docs.google.com/spreadsheets/export?id=1po3WjKX15T766GYOYV8fHtve4RdlyLF6XEXBlUICib0&exportFormat=csv&gid=0'
+base_file   = 'https://docs.google.com/spreadsheets/export?id=1po3WjKX15T766GYOYV8fHtve4RdlyLF6XEXBlUICib0&exportFormat=csv&gid=0'
+owner_file  = 'https://docs.google.com/spreadsheets/export?id=1po3WjKX15T766GYOYV8fHtve4RdlyLF6XEXBlUICib0&exportFormat=csv&gid=1970270275'
 
 class bcolors:
     HEADER = '\033[95m'
@@ -30,62 +31,99 @@ def slugify(value):
 
 # @TODO: use original decodex to consolidate datas
 # decodex = requests.get('http://www.lemonde.fr/webservice/decodex/updates');
-tmp_base_output = 'base.csv'
+
+base_output = 'base.csv'
 response = requests.get(base_file)
 response.encoding = 'UTF-8'
 
 assert response.status_code == 200, 'failed to download base csv file'
 
-text_file = open(tmp_base_output, 'w')
+text_file = open(base_output, 'w')
 text_file.write(response.content)
 text_file.close()
 
-database = {'sites': {}, 'urls': {}}
+owner_output = 'owner.csv'
+response = requests.get(owner_file)
+response.encoding = 'UTF-8'
+assert response.status_code == 200, 'failed to download owner csv file'
+text2_file = open(owner_output, 'w')
+text2_file.write(response.content)
+text2_file.close()
 
-id = 0
-
-col_nom           = 0
-col_desc          = 1
-col_possedex      = 2
-
-col_updated       = 3
-
-col_proprietaire1 = 4
-col_fortune1      = 5
-col_marque1       = 6
-col_influence1    = 7
-
-col_proprietaire2 = 8
-col_fortune2      = 9
-col_marque2       =10
-col_influence2    =11
-
-col_proprietaire3 =12
-col_fortune3      =13
-col_marque3       =14
-col_influence3    =15
-
-col_subventions  = 16
-col_pub          = 17
-col_sources      = 18
-
-col_urls         = 19 # colonne de la 1ere url
+database = {'sites': {}, 'urls': {}, 'proprietaires' : {}}
 
 
+with open(owner_output, 'rb') as csvfile:
+    reader = csv.reader(csvfile, delimiter=',', quotechar='"')
+
+    col_updated       = 0
+    col_nom           = 1
+    col_fortune       = 2
+    col_marque        = 3
+    col_secteur       = 4
+    col_description   = 5
+
+    owner_count = 0
+    for row in reader:
+        if len(row) < 4:
+            continue
+        owner_count = owner_count + 1
+
+        if row[col_nom] == '':
+            continue
+
+        entry = {
+            'nom'         : row[col_nom],
+            'description' : row[col_description],
+            'fortune'     : row[col_fortune],
+            'marque'      : row[col_marque],
+            'secteur'     : row[col_secteur],
+            'updated'     : row[col_updated],
+            'possession'  : []
+        }
+        database['proprietaires'][row[col_nom]] = entry
+
+print bcolors.OKGREEN+"Nombre de proprietaires trouves : "+bcolors.ENDC+" ", owner_count
 
 
-with open(tmp_base_output, 'rb') as csvfile:
+with open(base_output, 'rb') as csvfile:
+    id = 0
+
+    col_nom           = 0
+    col_desc          = 1
+    col_possedex      = 2
+
+    col_updated       = 3
+
+    col_proprietaire1 = 4
+    col_fortune1      = 5
+    col_marque1       = 6
+    col_influence1    = 7
+
+    col_proprietaire2 = 8
+    col_fortune2      = 9
+    col_marque2       =10
+    col_influence2    =11
+
+    col_proprietaire3 =12
+    col_fortune3      =13
+    col_marque3       =14
+    col_influence3    =15
+
+    col_subventions  = 16
+    col_pub          = 17
+    col_sources      = 18
+
+    col_urls         = 19 # colonne de la 1ere url
+
     url_count = 0;
     reader = csv.reader(csvfile, delimiter=',', quotechar='"')
     for row in reader:
         if len(row) < 4:
             continue
-
         id = id + 1
-
         if id == 1:
             continue
-
         entry = []
         classement_possedex = 'zzz'
 
@@ -153,6 +191,22 @@ with open(tmp_base_output, 'rb') as csvfile:
             url = url.rstrip('/')
             url = url.rstrip('\n')
             url = url.rstrip(' ')
+
+            if url:
+                if (i == col_urls):
+                    media = {'url' : url, 'nom' : row[col_nom]}
+                    if (row[col_proprietaire1]
+                        and database['proprietaires'][row[col_proprietaire1]]
+                        and media not in database['proprietaires'][row[col_proprietaire1]]['possession']):
+                        database['proprietaires'][row[col_proprietaire1]]['possession'].append(media)
+                    if (row[col_proprietaire2]
+                        and database['proprietaires'][row[col_proprietaire2]]
+                        and media not in database['proprietaires'][row[col_proprietaire2]]['possession']):
+                        database['proprietaires'][row[col_proprietaire2]]['possession'].append(media)
+                    if (row[col_proprietaire3]
+                        and database['proprietaires'][row[col_proprietaire3]]
+                        and media not in database['proprietaires'][row[col_proprietaire3]]['possession']):
+                        database['proprietaires'][row[col_proprietaire3]]['possession'].append(media)
 
             url = re.sub(r'^https?:\/\/(www)?', '', url)
 
