@@ -58,6 +58,9 @@
 
 
 var _debug = 0; // 0=quiet, 1=verbose, 2=more verbose, 3= very very verbose, 4=even more. 5 very very verbose
+
+var DOMAIN     = 'possedex.info';
+var maj        = '201801212317';
 if (_debug) {
     console && console.info("DEBUG LEVEL", _debug);
 }
@@ -136,16 +139,21 @@ var colors = {
 // let possedex_colors = [ "#A2A9AE", "#129AF0", "#D50303", "#F5A725", "#468847" ];
 // let possedex_descs = [ "inclassable", "parodique", "pas fiable du tout", "peu fiable", "fiable" ];
 
-var base_url = "http://possedex.info/database.json?maj=20180116191300";
+var base_url = "http://"+DOMAIN+"/database.json?maj="+maj;
 
 $(document).ready(function(){
     $("#form-possedex").on("submit", function(e){
         e.preventDefault();
         var url = $("#url").val();
         if (url.length > 0) {
-            document.location.hash = url;
             $.getJSON(base_url, function(data){
-                debunkSite(url, data);
+                if ($("#domain-or-owner").val() == "owner") {
+                    document.location.hash = 'p/'+url;
+                    debunkProprietaire(url, data);
+                } else {
+                    document.location.hash = url;
+                    debunkSite(url, data);
+                }
             });
         } else {
             alert("Saisissez d'abord une url :) ");
@@ -157,10 +165,31 @@ $(document).ready(function(){
         $("#form-possedex").submit();
     });
 
+    $(document).on("click", ".detail-owner,.detail-media", function(e){
+        e.preventDefault();
+        var nom = this.href.replace('http://'+DOMAIN+"/#", '');
+        if ('p/' == nom.substr(0, 2)) {
+            $("#domain-or-owner").val("owner");
+            $("#url").val(decodeURIComponent(nom.substr(2)));
+        } else {
+            $("#domain-or-owner").val("domain");
+            $("#url").val(decodeURIComponent(nom));
+        }
+        $("#form-possedex").submit();
+    });
+
+    // check if this is a direct request
     var current_location = document.location.href; // full url;
     if ((pos = current_location.indexOf('#')) > -1) {
         url = current_location.substring(pos+1);
-        $("#url").val(url);
+        if ('p/' == url.substr(0, 2)) {
+            $("#domain-or-owner").val("owner");
+            url = url.substr(2);
+            $("#url").val(decodeURIComponent(url));
+        } else {
+            $("#domain-or-owner").val("domain");
+            $("#url").val(decodeURIComponent(url));
+        }
         $("#submit-possedex").click();
     }
 
@@ -250,7 +279,7 @@ function debunkSite(url, data){
             console && console.log('site FOUND ! ', site_id);
         }
         try {
-            site_actif     = sites[site_id][col_nom];                    // nom du site
+            nom            = sites[site_id][col_nom];                    // nom du site
             updated        = new Date(sites[site_id][col_updated]);      // last maj
             classement     = sites[site_id][col_classement_possedex];   // clssement possedex
             notule         = sites[site_id][col_desc];                   // description originale
@@ -274,15 +303,25 @@ function debunkSite(url, data){
             var interet3     = sites[site_id][col_interet3   ];      // propriétaires
 
             proprietaires = []
-            proprietaires.push(proprietaire1 + " (" + fortunes1 + ")");
+            proprietaires.push(' <a class="detail-owner" href="http://'+DOMAIN+'#p/'+proprietaire1+'">'
+                +proprietaire1
+                + '</a>'
+                //+ " (" + fortunes1 + ")"
+            );
             if (proprietaire2) {
-                proprietaires.push(proprietaire2 + " (" + fortunes2 + ")");
+                proprietaires.push(' <a class="detail-owner" href="http://'+DOMAIN+'#p/'+proprietaire2+'">'
+                    +proprietaire2
+                    + '</a>'
+                    //+ " (" + fortunes2 + ")"
+                );
             }
             if (proprietaire3) {
-                proprietaires.push(proprietaire3 + " (" + fortunes3 + ")");
+                proprietaires.push(' <a class="detail-owner" href="http://'+DOMAIN+'#p/'+proprietaire3+'">'
+                    +proprietaire3
+                    + '</a>'
+                    //+ " (" + fortunes3 + ")"
+                );
             };
-            // TODO: if (!empty(proprietaire2), etc…)
-            //fortunes      = [fortunes1    , fortunes2    , fortunes3    ];
 
             marques       = [];
             if (marque1) {
@@ -319,9 +358,7 @@ function debunkSite(url, data){
             match = regex.exec(raw_sources);
             sources = [];
             while (match != null) {
-                title = match[1];
-                url   = match[2];
-                sources.push({"url":url, "title":title});
+                sources.push({"url":match[2], "title":match[1]});
                 match = regex.exec(raw_sources);
             }
 
@@ -331,60 +368,61 @@ function debunkSite(url, data){
 
             // URL toute seule
             var regex = new RegExp(/^(http[s]?:\/\/([^/]+)\/[^" ,]+)[^"]{1,2}$/g);
-                    match = regex.exec(raw_sources);
-                    while (match != null) {
-                    url   = match[1];
-                    title = match[2];
-                    sources.push({"url":url, "title":title});
-                    match = regex.exec(raw_sources);
-                    }
+            match = regex.exec(raw_sources);
+            while (match != null) {
+                sources.push({"url":match[1], "title":match[2]});
+                match = regex.exec(raw_sources);
+            }
 
-                    if (3 <= _debug) {
-                    console && console.log("sources apres urls simples", sources);
-                    }
+            if (3 <= _debug) {
+                console && console.log("sources apres urls simples", sources);
+            }
 
-                    note          = classement;
-                    color         = colors[classement];
-                    message       = messages[classement];
-                    //decodex_color = decodex_colors[decodex_note];
-                    //decodex_desc  = decodex_descs[decodex_note];
-                    updated_human  = updated.toLocaleString('fr');
-                    bandeau_msg   = bandeau_msgs[classement];
-                    icone         = icones[classement];
+            note          = classement;
+            color         = colors[classement];
+            message       = messages[classement];
+            //decodex_color = decodex_colors[decodex_note];
+            //decodex_desc  = decodex_descs[decodex_note];
+            updated_human  = updated.toLocaleString('fr');
+            bandeau_msg   = bandeau_msgs[classement];
+            icone         = icones[classement];
 
-                    if (2 <= _debug) {
-                        console && console.group("tout s'est bien passé");
-                        console && console.log('site_actif     =',site_actif     );
-                        console && console.log('updated        =',updated_human  );
-                        console && console.log('classement     =',classement     );
-                        console && console.log('notule         =',notule         );
-                        console && console.log('slug           =',slug           );
-                        console && console.log('proprietaires  =',proprietaires  );
-                        console && console.log('interets       =',interets       );
-                        console && console.log('conflits       =',conflits       );
-                        console && console.log('subventions    =',subventions    );
-                        console && console.log('sources        =',sources        );
-                        console && console.groupEnd();
+            if (2 <= _debug) {
+                console && console.group("tout s'est bien passé");
+                console && console.log('nom            =',nom            );
+                console && console.log('updated        =',updated_human  );
+                console && console.log('classement     =',classement     );
+                console && console.log('notule         =',notule         );
+                console && console.log('slug           =',slug           );
+                console && console.log('proprietaires  =',proprietaires  );
+                console && console.log('interets       =',interets       );
+                console && console.log('conflits       =',conflits       );
+                console && console.log('subventions    =',subventions    );
+                console && console.log('sources        =',sources        );
+                console && console.groupEnd();
+            }
 
-                    }
-                    // display results
-                    $("#result").html('<dl id="infos">');
-                    $("#infos").append("<label>Nom</label>");
-                    $("#infos").append("<p>"+site_actif+"</p>");
-                    //$("#result").append("<label>Note LeMonde (outdated)</label><p>"+decodex_note+"</p>");
-                    $("#result").append("<label>Classement Possedex</label><p>"+messages[classement]+"</p>");
-                    $("#result").append("<label>Description</label><p>"+notule+"</p>");
-                    //$("#result").append("<label>identifiant(à masquer plus tard)</label><p>"+slug+"</p>");
-                    $("#result").append("<label>Propriétaires</label><p>"+proprietaires+"</p>");
-                    if (interets.length) {
-                        $("#result").append("<label>Intérêts</label><p>"+interets+"</p>");
-                    }
-                    if (marques.length) {
-                        $("#result").append("<label>Marques</label><p>"+marques+"</p>");
-                    }
-                    $("#result").append("<label>Subventions</label><p>"+subventions+"</p>");
-                    $("#result").append(sources);
-                    $("#result").append("<label>Dernière mise à jour</label><p>"+updated_human+"</p>");
+            // display results
+            $("#result").html('<dl id="infos">');
+            $("#infos").append("<label>Nom</label>");
+            $("#infos").append("<p>"+nom
+                +' <a target="from_possedex" href="http://'+url+'">'+url+'</a>'
+                +"</p>");
+            //$("#result").append("<label>Note LeMonde (outdated)</label><p>"+decodex_note+"</p>");
+            $("#result").append("<label>Classement Possedex</label><p>"+messages[classement]+"</p>");
+            $("#result").append("<label>Description</label><p>"+notule+"</p>");
+            //$("#result").append("<label>identifiant(à masquer plus tard)</label><p>"+slug+"</p>");
+            $("#result").append("<label>Propriétaires</label><p>"+proprietaires+"</p>");
+            if (interets.length) {
+                $("#result").append("<label>Intérêts</label><p>"+interets+"</p>");
+            }
+            if (marques.length) {
+                $("#result").append("<label>Marques</label><p>"+marques+"</p>");
+            }
+            $("#result").append("<label>Subventions</label><p>"+subventions+"</p>");
+            $("#result").append(sources);
+            $("#result").append("<label>Dernière mise à jour</label><p>"+updated_human+"</p>");
+
         } catch(e) {
             if (1 <= _debug) {
                 console && console.error("ERREUR has_info");
@@ -438,20 +476,36 @@ function debunkSite(url, data){
             sources        = "";             // Nos sources (urls séparés par virgule et/ou espace)
     }
 
-    //var today = new Date();
-    //if(always_refresh || (today.getTime() - results.last_update)/1000/60/60 >= 24) {
-
-    //    if (1 <= _debug) {
-    //        console && console.log("refresh every hour or refresh forced");
-    //    }
-    //    loadData();
-    //} else {
-    //    if (2 <= _debug) {
-    //        console && console.log("(not refresh) use data found in cache");
-    //    }
-    //}
     if (3 <= _debug) {
         console && console.groupEnd();
     }
+}
+
+function debunkProprietaire(nom, data){
+
+    nom = decodeURIComponent(nom);
+    // display results
+    $("#result").html('<dl id="infos">');
+    $("#infos").append("<label>Nom</label>");
+    $("#infos").append("<p>"+nom+"</p>");
+    //$("#result").append("<label>Note LeMonde (outdated)</label><p>"+decodex_note+"</p>");
+    $("#result").append("<label>Classement Fortune</label><p>"+data.proprietaires[nom].fortune+"</p>");
+    $("#result").append("<label>Description</label><p>"+data.proprietaires[nom].description+"</p>");
+    //$("#result").append("<label>identifiant(à masquer plus tard)</label><p>"+slug+"</p>");
+    //$("#result").append("<label>Description</label><p>"+data.proprietaires[nom].description+"</p>");
+    $("#result").append("<label>Secteur(s)</label><p>"+data.proprietaires[nom].secteur+"</p>");
+    $("#result").append("<label>Marques</label><p>"+data.proprietaires[nom].marque+"</p>");
+    var medias = $("<ul>");
+    data.proprietaires[nom].possession.forEach(function(media) {
+        medias.append('<li>'
+            +'<a class="detail-media" href="http://'+DOMAIN+'/#'+media.url+'">'+media.nom+'</a>'
+            +' <small><a class="goto-media" target="from_possedex" href="http://'+media.url+'">(acceder)</a></small>'
+            +'</li>');
+
+    })
+    medias = $("<p>").append(medias);
+    $("#result").append("<label>Médias contrôlés</label>").append(medias);
+    $("#result").append("<label>Dernière mise à jour</label><p>"+"TODO"+"</p>");
+
 }
 

@@ -54,11 +54,17 @@
                         <p class="lead">Découvrez qui possède quoi</p>
                         <form id="form-possedex" method="GET" class="form-horizontal" >
                                 <span class="input-group">
+                                    <span class="input-group-addon">
+                                        <select id="domain-or-owner" class="form-control" >
+                                            <option id="option-domain" value="domain">Média (url)</option>
+                                            <option id="option-owner"  value="owner">Propriétaire</option>
+                                        </select>
+                                    </span>
                                     <input type="text" name="url" id="url"
                                     class="form-control" placeholder="Exemple : lemonde.fr, humanite.fr" />
                                     <span class="input-group-addon">
                                         <button id="submit-possedex" class="btn btn-default"
-                                            type="button" >Envoyer</button>
+                                            type="button" >Chercher</button>
                                     </span>
                                 </span>
                         </form>

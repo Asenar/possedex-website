@@ -126,3 +126,11 @@ color:#555;
 font-weight:normal;
 text-decoration : none;
 }
+
+#result a, .possedex a.detail-owner, .possedex a.detail-media {
+    color : white;
+    text-decoration : underline;
+}
+.goto-media {
+    font-weight: normal;
+}
