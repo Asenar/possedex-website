@@ -129,7 +129,13 @@ text-decoration : none;
 
 #result a, .possedex a.detail-owner, .possedex a.detail-media {
     color : white;
-    text-decoration : underline;
+}
+.possedex #result .list-group-item a.goto-media,
+.possedex #result .list-group-item a.detail-media,
+.possedex #result .list-group-item a.goto-acrimed
+{
+    color : #222;
+    font-weight : normal;
 }
 .goto-media {
     font-weight: normal;

@@ -421,7 +421,9 @@ function debunkSite(url, data){
             }
             $("#result").append("<label>Subventions</label><p>"+subventions+"</p>");
             $("#result").append(sources);
-            $("#result").append("<label>Dernière mise à jour</label><p>"+updated_human+"</p>");
+            $("#result").append("<label>Dernière mise à jour</label><p>"
+                + new Date(data.proprietaires[nom].updated).toLocaleString()
+                +"</p>");
 
         } catch(e) {
             if (1 <= _debug) {
@@ -495,17 +497,26 @@ function debunkProprietaire(nom, data){
     //$("#result").append("<label>Description</label><p>"+data.proprietaires[nom].description+"</p>");
     $("#result").append("<label>Secteur(s)</label><p>"+data.proprietaires[nom].secteur+"</p>");
     $("#result").append("<label>Marques</label><p>"+data.proprietaires[nom].marque+"</p>");
-    var medias = $("<ul>");
+    var medias = $('<ul class="list-group">');
     data.proprietaires[nom].possession.forEach(function(media) {
-        medias.append('<li>'
+        medias.append('<li class="list-group-item">'
             +'<a class="detail-media" href="http://'+DOMAIN+'/#'+media.url+'">'+media.nom+'</a>'
-            +' <small><a class="goto-media" target="from_possedex" href="http://'+media.url+'">(acceder)</a></small>'
+            +' -  '
+            //+'<small>'
+            +'<a class="goto-acrimed" title="Cliquer pour chercher des articles d\'ACRIMED concernant ce média" target="to_acrimed" href="http://www.acrimed.org/+-'+media.nom.replace(/ /,'-')+'-+">'
+            +'<img src="/img/acrimed.png" alt="ACRIMED"/>'
+            +' ACRIMED'
+            +'</a>'
+            //+'</small>'
+            //+' <br><small><a class="goto-media" target="from_possedex" href="http://'+media.url+'">accéder à ce média (dans un nouvel onglet)</a></small>'
             +'</li>');
 
     })
     medias = $("<p>").append(medias);
     $("#result").append("<label>Médias contrôlés</label>").append(medias);
-    $("#result").append("<label>Dernière mise à jour</label><p>"+"TODO"+"</p>");
+    $("#result").append("<label>Dernière mise à jour</label><p>"
+        + new Date(data.proprietaires[nom].updated).toLocaleString()
+        +"</p>");
 
 }
 
