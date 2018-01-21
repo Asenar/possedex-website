@@ -1,4 +1,1334 @@
 {
+    "proprietaires": {
+        "Arnaud Lagard\u00e8re": {
+            "possession": [
+                {
+                    "url": "europe1.fr", 
+                    "nom": "Europe 1"
+                }, 
+                {
+                    "url": "gulli.fr", 
+                    "nom": "Gulli"
+                }, 
+                {
+                    "url": "lejdd.fr", 
+                    "nom": "Le JDD"
+                }, 
+                {
+                    "url": "parismatch.com", 
+                    "nom": "Paris Match"
+                }, 
+                {
+                    "url": "rfm.fr", 
+                    "nom": "RFM"
+                }, 
+                {
+                    "url": "virginradio.fr", 
+                    "nom": "Virgin Radio"
+                }
+            ], 
+            "nom": "Arnaud Lagard\u00e8re", 
+            "updated": "", 
+            "fortune": "305\u00e8me fortune de France", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "proprio1": {
+            "possession": [
+                {
+                    "url": "possedex.info/capital", 
+                    "nom": "exemple lien capital"
+                }
+            ], 
+            "nom": "proprio1", 
+            "updated": "2018-01-21 22:00", 
+            "fortune": "xxxeme fortune de france", 
+            "description": "", 
+            "secteur": "le batiment, le luxe", 
+            "marque": "une marque, une autre"
+        }, 
+        "R\u00e9publique Fran\u00e7aise": {
+            "possession": [
+                {
+                    "url": "arte.tv", 
+                    "nom": "Arte"
+                }, 
+                {
+                    "url": "fipradio.fr", 
+                    "nom": "FIP"
+                }, 
+                {
+                    "url": "france2.fr", 
+                    "nom": "France 2"
+                }, 
+                {
+                    "url": "france3.fr", 
+                    "nom": "France 3"
+                }, 
+                {
+                    "url": "france4.fr", 
+                    "nom": "France 4"
+                }, 
+                {
+                    "url": "france5.fr", 
+                    "nom": "France 5"
+                }, 
+                {
+                    "url": "francebleu.fr", 
+                    "nom": "France Bleu"
+                }, 
+                {
+                    "url": "franceculture.fr", 
+                    "nom": "France Culture"
+                }, 
+                {
+                    "url": "franceinter.fr", 
+                    "nom": "France Inter"
+                }, 
+                {
+                    "url": "francemusique.fr", 
+                    "nom": "France Musique"
+                }, 
+                {
+                    "url": "franceo.fr", 
+                    "nom": "France \u00d4"
+                }, 
+                {
+                    "url": "france24.com/\u200e", 
+                    "nom": "France24"
+                }, 
+                {
+                    "url": "francetvinfo.fr", 
+                    "nom": "franceinfo"
+                }, 
+                {
+                    "url": "lcp.fr", 
+                    "nom": "LCP"
+                }, 
+                {
+                    "url": "mouv.fr", 
+                    "nom": "Mouv"
+                }, 
+                {
+                    "url": "publicsenat.fr", 
+                    "nom": "Public S\u00e9nat"
+                }, 
+                {
+                    "url": "radiofrance.fr", 
+                    "nom": "Radio France"
+                }, 
+                {
+                    "url": "rfi.fr/\u200e", 
+                    "nom": "rfi"
+                }, 
+                {
+                    "url": "tv5monde.com/\u200e", 
+                    "nom": "TV5MONDE"
+                }
+            ], 
+            "nom": "R\u00e9publique Fran\u00e7aise", 
+            "updated": "", 
+            "fortune": "PIB par habitant :  40 049\u20ac", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "Fran\u00e7ois Pinault": {
+            "possession": [
+                {
+                    "url": "agefi.fr", 
+                    "nom": "L'AGEFI Hebdo"
+                }, 
+                {
+                    "url": "lepoint.fr", 
+                    "nom": "Le Point"
+                }
+            ], 
+            "nom": "Fran\u00e7ois Pinault", 
+            "updated": "", 
+            "fortune": "7\u00e8me fortune de France", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "Pascal Houzelot": {
+            "possession": [
+                {
+                    "url": "bfmbusiness.bfmtv.com", 
+                    "nom": "Numero 23"
+                }
+            ], 
+            "nom": "Pascal Houzelot", 
+            "updated": "", 
+            "fortune": "Hors classement", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "Dark Vador": {
+            "possession": [
+                {
+                    "url": "possedex.info/capital", 
+                    "nom": "exemple lien capital"
+                }, 
+                {
+                    "url": "possedex.info/etat", 
+                    "nom": "exemple lien etat"
+                }, 
+                {
+                    "url": "possedex.info/independant", 
+                    "nom": "exemple ind\u00e9pendant"
+                }
+            ], 
+            "nom": "Dark Vador", 
+            "updated": "2018-01-21 22:03", 
+            "fortune": "Fortune de l'Empire", 
+            "description": "", 
+            "secteur": "Les Sith", 
+            "marque": "\u00c9toile Noire"
+        }, 
+        "Famille Hurbain": {
+            "possession": [
+                {
+                    "url": "20minutes.fr", 
+                    "nom": "20 minutes"
+                }, 
+                {
+                    "url": "aisnenouvelle.fr", 
+                    "nom": "Aisne Nouvelle"
+                }, 
+                {
+                    "url": "courrier-picard.fr", 
+                    "nom": "Courrier Picard"
+                }, 
+                {
+                    "url": "lardennais.fr", 
+                    "nom": "L'Ardennais"
+                }, 
+                {
+                    "url": "lest-eclair.fr", 
+                    "nom": "L'Est Eclair"
+                }, 
+                {
+                    "url": "lunion.fr", 
+                    "nom": "L'Union"
+                }, 
+                {
+                    "url": "lavoixdunord.fr", 
+                    "nom": "La Voix du Nord"
+                }, 
+                {
+                    "url": "nordeclair.fr", 
+                    "nom": "Nord Eclair"
+                }, 
+                {
+                    "url": "nordlittoral.fr", 
+                    "nom": "Nord Littoral"
+                }
+            ], 
+            "nom": "Famille Hurbain", 
+            "updated": "", 
+            "fortune": "Hors classement", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "Marianne Finances (Maurice Szafran)": {
+            "possession": [
+                {
+                    "url": "marianne.net", 
+                    "nom": "Marianne"
+                }
+            ], 
+            "nom": "Marianne Finances (Maurice Szafran)", 
+            "updated": "", 
+            "fortune": "31 %", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "Financi\u00e8re Viveris": {
+            "possession": [
+                {
+                    "url": "slate.fr", 
+                    "nom": "Slate"
+                }
+            ], 
+            "nom": "Financi\u00e8re Viveris", 
+            "updated": "", 
+            "fortune": "Hors classement", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "Ariane et Benjamin de Rothschild": {
+            "possession": [
+                {
+                    "url": "slate.fr", 
+                    "nom": "Slate"
+                }
+            ], 
+            "nom": "Ariane et Benjamin de Rothschild", 
+            "updated": "2018-01-17 10:57", 
+            "fortune": "20\u00e8me fortune de France", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "Qatar Investment Authority": {
+            "possession": [
+                {
+                    "url": "europe1.fr", 
+                    "nom": "Europe 1"
+                }, 
+                {
+                    "url": "gulli.fr", 
+                    "nom": "Gulli"
+                }, 
+                {
+                    "url": "lejdd.fr", 
+                    "nom": "Le JDD"
+                }, 
+                {
+                    "url": "parismatch.com", 
+                    "nom": "Paris Match"
+                }, 
+                {
+                    "url": "rfm.fr", 
+                    "nom": "RFM"
+                }, 
+                {
+                    "url": "virginradio.fr", 
+                    "nom": "Virgin Radio"
+                }
+            ], 
+            "nom": "Qatar Investment Authority", 
+            "updated": "", 
+            "fortune": "PIB par habitant :  88 313\u20ac", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "Nom": {
+            "possession": [], 
+            "nom": "Nom", 
+            "updated": "", 
+            "fortune": "Fortune", 
+            "description": "Description", 
+            "secteur": "Secteur d'activit\u00e9", 
+            "marque": "Marque"
+        }, 
+        "Iskandar Safa": {
+            "possession": [
+                {
+                    "url": "valeursactuelles.com", 
+                    "nom": "Valeurs Actuelles"
+                }
+            ], 
+            "nom": "Iskandar Safa", 
+            "updated": "", 
+            "fortune": "71\u00e8me fortune de France", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "Xavier Ellie": {
+            "possession": [
+                {
+                    "url": "paris-normandie.fr/le-havre", 
+                    "nom": "Havre Libre"
+                }, 
+                {
+                    "url": "paris-normandie.fr/fecamp", 
+                    "nom": "Le Progr\u00e8s de F\u00e9camp"
+                }, 
+                {
+                    "url": "paris-normandie.fr", 
+                    "nom": "Paris Normandie"
+                }
+            ], 
+            "nom": "Xavier Ellie", 
+            "updated": "", 
+            "fortune": "Hors classement", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "Pierre Berg\u00e9": {
+            "possession": [], 
+            "nom": "Pierre Berg\u00e9", 
+            "updated": "", 
+            "fortune": "363\u00e8me fortune de France", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "Bernard Tapie": {
+            "possession": [
+                {
+                    "url": "corsematin.com", 
+                    "nom": "Corse Matin"
+                }, 
+                {
+                    "url": "laprovence.com", 
+                    "nom": "La Provence"
+                }
+            ], 
+            "nom": "Bernard Tapie", 
+            "updated": "", 
+            "fortune": "400\u00e8me fortune de France", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "Ind\u00e9pendant": {
+            "possession": [
+                {
+                    "url": "arretsurimages.net", 
+                    "nom": "Arr\u00eat sur images"
+                }, 
+                {
+                    "url": "lesjours.fr", 
+                    "nom": "Les Jours"
+                }
+            ], 
+            "nom": "Ind\u00e9pendant", 
+            "updated": "", 
+            "fortune": "", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "-": {
+            "possession": [], 
+            "nom": "-", 
+            "updated": "", 
+            "fortune": "", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "Russie": {
+            "possession": [
+                {
+                    "url": "francais.rt.com", 
+                    "nom": "Russia Today"
+                }, 
+                {
+                    "url": "https://fr.sputniknews.com", 
+                    "nom": "sputnik"
+                }
+            ], 
+            "nom": "Russie", 
+            "updated": "", 
+            "fortune": "PIB par habitant : 13 767\u20ac", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "Cr\u00e9dit Agricole": {
+            "possession": [
+                {
+                    "url": "20minutes.fr", 
+                    "nom": "20 minutes"
+                }, 
+                {
+                    "url": "aisnenouvelle.fr", 
+                    "nom": "Aisne Nouvelle"
+                }, 
+                {
+                    "url": "courrier-picard.fr", 
+                    "nom": "Courrier Picard"
+                }, 
+                {
+                    "url": "lardennais.fr", 
+                    "nom": "L'Ardennais"
+                }, 
+                {
+                    "url": "lest-eclair.fr", 
+                    "nom": "L'Est Eclair"
+                }, 
+                {
+                    "url": "lunion.fr", 
+                    "nom": "L'Union"
+                }, 
+                {
+                    "url": "lavoixdunord.fr", 
+                    "nom": "La Voix du Nord"
+                }, 
+                {
+                    "url": "nordeclair.fr", 
+                    "nom": "Nord Eclair"
+                }, 
+                {
+                    "url": "nordlittoral.fr", 
+                    "nom": "Nord Littoral"
+                }
+            ], 
+            "nom": "Cr\u00e9dit Agricole", 
+            "updated": "2018-01-18 00:21", 
+            "fortune": "Produit Net Bancaire : 31.3 milliard \u20ac", 
+            "description": "", 
+            "secteur": "Banque", 
+            "marque": ""
+        }, 
+        "Pierre Berg\u00e9 (mise \u00e0 jour requise \u2026)": {
+            "possession": [], 
+            "nom": "Pierre Berg\u00e9 (mise \u00e0 jour requise \u2026)", 
+            "updated": "", 
+            "fortune": "363\u00e8me fortune de France", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "Famille Baudecroux": {
+            "possession": [
+                {
+                    "url": "nrj-play.fr/cherie25", 
+                    "nom": "Ch\u00e9rie 25"
+                }, 
+                {
+                    "url": "cheriefm.fr", 
+                    "nom": "Ch\u00e9rie FM"
+                }, 
+                {
+                    "url": "nostalgie.fr", 
+                    "nom": "Nolstalgie"
+                }, 
+                {
+                    "url": "nrj.fr", 
+                    "nom": "NRJ"
+                }, 
+                {
+                    "url": "nrj-play.fr/nrj12", 
+                    "nom": "NRJ12"
+                }, 
+                {
+                    "url": "rireetchansons.fr", 
+                    "nom": "Rire et Chansons"
+                }
+            ], 
+            "nom": "Famille Baudecroux", 
+            "updated": "2018-01-04 23:47", 
+            "fortune": "Hors classement", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "Fondation Varenne": {
+            "possession": [
+                {
+                    "url": "centre-presse.fr", 
+                    "nom": "Centre Presse"
+                }, 
+                {
+                    "url": "lechorepublicain.fr", 
+                    "nom": "L'Echos R\u00e9publicain"
+                }, 
+                {
+                    "url": "lyonne.fr", 
+                    "nom": "L'Yonne R\u00e9publicaine"
+                }, 
+                {
+                    "url": "lamontagne.fr", 
+                    "nom": "La Montagne"
+                }, 
+                {
+                    "url": "lanouvellerepublique.fr", 
+                    "nom": "La Nouvelle R\u00e9publique"
+                }, 
+                {
+                    "url": "larep.fr", 
+                    "nom": "La R\u00e9publique du Centre"
+                }, 
+                {
+                    "url": "leberry.fr", 
+                    "nom": "Le Berry R\u00e9publicain"
+                }, 
+                {
+                    "url": "lejdc.fr", 
+                    "nom": "Le Journal du Centre"
+                }, 
+                {
+                    "url": "lepopulaire.fr", 
+                    "nom": "Le populaire du Centre"
+                }, 
+                {
+                    "url": "tvtours.fr", 
+                    "nom": "TV Tours"
+                }
+            ], 
+            "nom": "Fondation Varenne", 
+            "updated": "", 
+            "fortune": "Sans information", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "Alain Weill": {
+            "possession": [
+                {
+                    "url": "bfmtv.com", 
+                    "nom": "BFM TV"
+                }, 
+                {
+                    "url": "bfmbusiness.bfmtv.com", 
+                    "nom": "Numero 23"
+                }
+            ], 
+            "nom": "Alain Weill", 
+            "updated": "", 
+            "fortune": "230\u00e8me fortune de France", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "Soci\u00e9t\u00e9 nouvelle du journal L'Humanit\u00e9": {
+            "possession": [
+                {
+                    "url": "humanite.fr", 
+                    "nom": "L'Humanit\u00e9"
+                }
+            ], 
+            "nom": "Soci\u00e9t\u00e9 nouvelle du journal L'Humanit\u00e9", 
+            "updated": "2018-01-21 22:33", 
+            "fortune": "zzz", 
+            "description": "", 
+            "secteur": "...", 
+            "marque": "L'Humanit\u00e9"
+        }, 
+        "Famille Amaury": {
+            "possession": [
+                {
+                    "url": "lequipe.fr", 
+                    "nom": "L'\u00e9quipe"
+                }
+            ], 
+            "nom": "Famille Amaury", 
+            "updated": "", 
+            "fortune": "230\u00e8me fortune de France", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "Nethys": {
+            "possession": [
+                {
+                    "url": "corsematin.com", 
+                    "nom": "Corse Matin"
+                }, 
+                {
+                    "url": "laprovence.com", 
+                    "nom": "La Provence"
+                }, 
+                {
+                    "url": "nicematin.com", 
+                    "nom": "Nice matin"
+                }
+            ], 
+            "nom": "Nethys", 
+            "updated": "", 
+            "fortune": "Sans information", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "Patrick Drahi": {
+            "possession": [
+                {
+                    "url": "bfmtv.com", 
+                    "nom": "BFM TV"
+                }, 
+                {
+                    "url": "lexpress.fr", 
+                    "nom": "L'Express"
+                }, 
+                {
+                    "url": "lexpansion.lexpress.fr", 
+                    "nom": "L'Express l'Expansion"
+                }, 
+                {
+                    "url": "votreargent.lexpress.fr", 
+                    "nom": "L'Express Votre Argent"
+                }, 
+                {
+                    "url": "liberation.fr", 
+                    "nom": "Lib\u00e9ration"
+                }, 
+                {
+                    "url": "bfmbusiness.bfmtv.com", 
+                    "nom": "Numero 23"
+                }, 
+                {
+                    "url": "strategies.fr", 
+                    "nom": "Strat\u00e9gie"
+                }
+            ], 
+            "nom": "Patrick Drahi", 
+            "updated": "2018-01-17 10:53", 
+            "fortune": "8\u00e8me fortune de France", 
+            "description": "son nom est apparu dans les Panama Papers par l'interm\u00e9diaire de la soci\u00e9t\u00e9 panam\u00e9enne Jenville SA qui a \u00e9t\u00e9 actionnaire \u00ab de passage \u00bb au capital d\u2019Altice IV en d\u00e9cembre 2008", 
+            "secteur": "t\u00e9l\u00e9communications, publicit\u00e9 (teads), m\u00e9dias, divertissements", 
+            "marque": "Num\u00e9ricable, SFR, Altice"
+        }, 
+        "Famille Hutin": {
+            "possession": [
+                {
+                    "url": "20minutes.fr", 
+                    "nom": "20 minutes"
+                }, 
+                {
+                    "url": "lapressedelamanche.fr", 
+                    "nom": "La Presse de la Manche"
+                }, 
+                {
+                    "url": "courrierdelouest.fr", 
+                    "nom": "Le Courrier de l'Ouest"
+                }, 
+                {
+                    "url": "lemainelibre.fr", 
+                    "nom": "Le Maine Libre"
+                }, 
+                {
+                    "url": "ouest-france.fr", 
+                    "nom": "Ouest France"
+                }, 
+                {
+                    "url": "presseocean.fr", 
+                    "nom": "Presse Oc\u00e9an"
+                }, 
+                {
+                    "url": "publihebdos.com", 
+                    "nom": "Publi Hebdos"
+                }
+            ], 
+            "nom": "Famille Hutin", 
+            "updated": "", 
+            "fortune": "Hors classement", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "Edouard Coudurier": {
+            "possession": [
+                {
+                    "url": "poher.bzh", 
+                    "nom": "Le Poher"
+                }, 
+                {
+                    "url": "letelegramme.fr", 
+                    "nom": "Le T\u00e9l\u00e9gramme"
+                }, 
+                {
+                    "url": "tebeo.bzh", 
+                    "nom": "T\u00e9b\u00e9o"
+                }, 
+                {
+                    "url": "tebesud.fr", 
+                    "nom": "T\u00e9b\u00e9sud"
+                }
+            ], 
+            "nom": "Edouard Coudurier", 
+            "updated": "", 
+            "fortune": "Hors classement", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "Xavier Niel": {
+            "possession": [
+                {
+                    "url": "courrierinternational.com", 
+                    "nom": "Courrier international"
+                }, 
+                {
+                    "url": "tempsreel.nouvelobs.com", 
+                    "nom": "L'OBS"
+                }, 
+                {
+                    "url": "lavie.fr", 
+                    "nom": "La vie"
+                }, 
+                {
+                    "url": "huffingtonpost.fr", 
+                    "nom": "Le Huffington Post"
+                }, 
+                {
+                    "url": "lemonde.fr", 
+                    "nom": "Le Monde"
+                }, 
+                {
+                    "url": "lemondedesreligions.fr", 
+                    "nom": "Le Monde des Religions"
+                }, 
+                {
+                    "url": "monde-diplomatique.fr", 
+                    "nom": "Le Monde diplomatique"
+                }, 
+                {
+                    "url": "monde-diplomatique.fr/mav", 
+                    "nom": "Mani\u00e8re de voir"
+                }, 
+                {
+                    "url": "magazine-prier.fr", 
+                    "nom": "Prier"
+                }, 
+                {
+                    "url": "telerama.fr", 
+                    "nom": "T\u00e9l\u00e9rama"
+                }
+            ], 
+            "nom": "Xavier Niel", 
+            "updated": "2018-01-17 10:55", 
+            "fortune": "10\u00e8me fortune de France (Challenges, 2017), 129\u00e8me fortune mondiale (Forbes, 2016)", 
+            "description": "Son nom est apparu dans les Panama Papers. Il a d\u00e9clar\u00e9 \u00ab Quand les journalistes m\u2019emmerdent je prends une participation dans leur canard et apr\u00e8s ils me foutent la paix. \u00bb. C'est le beau-fils de Bernard Arnault.", 
+            "secteur": "T\u00e9l\u00e9communications", 
+            "marque": "Free"
+        }, 
+        "Famille Mohn": {
+            "possession": [
+                {
+                    "url": "6play.fr/6ter", 
+                    "nom": "6ter"
+                }, 
+                {
+                    "url": "capital.fr", 
+                    "nom": "Capital"
+                }, 
+                {
+                    "url": "funradio.fr", 
+                    "nom": "Fun radio"
+                }, 
+                {
+                    "url": "hbrfrance.fr", 
+                    "nom": "Harvard Business Review"
+                }, 
+                {
+                    "url": "m6.fr", 
+                    "nom": "M6"
+                }, 
+                {
+                    "url": "rtl.fr", 
+                    "nom": "RTL"
+                }, 
+                {
+                    "url": "rtl2.fr", 
+                    "nom": "RTL2"
+                }, 
+                {
+                    "url": "vsd.fr", 
+                    "nom": "VSD"
+                }, 
+                {
+                    "url": "6play.fr/w9", 
+                    "nom": "W9"
+                }
+            ], 
+            "nom": "Famille Mohn", 
+            "updated": "2018-01-04 23:47", 
+            "fortune": "Hors classement", 
+            "description": "Les membres de la famille Mohn poss\u00e8dent 23\u00a0% et contr\u00f4lent un des plus \ngrands groupes mondiaux d'\u00e9dition et de m\u00e9dias, la soci\u00e9t\u00e9 allemande Bertelsmann, fond\u00e9e en 1835 par Carl Bertelsmann .", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "Vincent Bollor\u00e9": {
+            "possession": [
+                {
+                    "url": "cstar.fr", 
+                    "nom": "C Star"
+                }, 
+                {
+                    "url": "c8.fr", 
+                    "nom": "C8"
+                }, 
+                {
+                    "url": "canalplus.fr", 
+                    "nom": "Canal+"
+                }, 
+                {
+                    "url": "cnewsmatin.fr", 
+                    "nom": "Direct Matin"
+                }, 
+                {
+                    "url": "itele.fr", 
+                    "nom": "iT\u00e9l\u00e9"
+                }
+            ], 
+            "nom": "Vincent Bollor\u00e9", 
+            "updated": "2018-01-04 23:53", 
+            "fortune": "10\u00e8me fortune de France", 
+            "description": "", 
+            "secteur": "Transport, Logistique, Communication", 
+            "marque": ""
+        }, 
+        "Famille Lemoine": {
+            "possession": [
+                {
+                    "url": "charentelibre.fr", 
+                    "nom": "Charrente Libre"
+                }, 
+                {
+                    "url": "dordognelibre.fr", 
+                    "nom": "Dordogne Libre"
+                }, 
+                {
+                    "url": "larepubliquedespyrenees.fr", 
+                    "nom": "La R\u00e9publique Des Pyr\u00e9n\u00e9es"
+                }, 
+                {
+                    "url": "sudouest.fr", 
+                    "nom": "Sud Ouest"
+                }
+            ], 
+            "nom": "Famille Lemoine", 
+            "updated": "", 
+            "fortune": "Sans information", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "Matthieu Pigasse": {
+            "possession": [
+                {
+                    "url": "courrierinternational.com", 
+                    "nom": "Courrier international"
+                }, 
+                {
+                    "url": "tempsreel.nouvelobs.com", 
+                    "nom": "L'OBS"
+                }, 
+                {
+                    "url": "lavie.fr", 
+                    "nom": "La vie"
+                }, 
+                {
+                    "url": "huffingtonpost.fr", 
+                    "nom": "Le Huffington Post"
+                }, 
+                {
+                    "url": "lemonde.fr", 
+                    "nom": "Le Monde"
+                }, 
+                {
+                    "url": "lemondedesreligions.fr", 
+                    "nom": "Le Monde des Religions"
+                }, 
+                {
+                    "url": "monde-diplomatique.fr", 
+                    "nom": "Le Monde diplomatique"
+                }, 
+                {
+                    "url": "lesinrocks.com", 
+                    "nom": "Les inrockuptibles"
+                }, 
+                {
+                    "url": "monde-diplomatique.fr/mav", 
+                    "nom": "Mani\u00e8re de voir"
+                }, 
+                {
+                    "url": "novaplanet.com", 
+                    "nom": "nova le grand mix"
+                }, 
+                {
+                    "url": "magazine-prier.fr", 
+                    "nom": "Prier"
+                }, 
+                {
+                    "url": "telerama.fr", 
+                    "nom": "T\u00e9l\u00e9rama"
+                }, 
+                {
+                    "url": "vice.com", 
+                    "nom": "Vice"
+                }
+            ], 
+            "nom": "Matthieu Pigasse", 
+            "updated": "", 
+            "fortune": "Hors classement", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "Yves de Chaisemartin": {
+            "possession": [
+                {
+                    "url": "marianne.net", 
+                    "nom": "Marianne"
+                }
+            ], 
+            "nom": "Yves de Chaisemartin", 
+            "updated": "", 
+            "fortune": "57 %", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "Famille Saint-Cricq": {
+            "possession": [
+                {
+                    "url": "centre-presse.fr", 
+                    "nom": "Centre Presse"
+                }, 
+                {
+                    "url": "lechorepublicain.fr", 
+                    "nom": "L'Echos R\u00e9publicain"
+                }, 
+                {
+                    "url": "lyonne.fr", 
+                    "nom": "L'Yonne R\u00e9publicaine"
+                }, 
+                {
+                    "url": "lamontagne.fr", 
+                    "nom": "La Montagne"
+                }, 
+                {
+                    "url": "lanouvellerepublique.fr", 
+                    "nom": "La Nouvelle R\u00e9publique"
+                }, 
+                {
+                    "url": "larep.fr", 
+                    "nom": "La R\u00e9publique du Centre"
+                }, 
+                {
+                    "url": "leberry.fr", 
+                    "nom": "Le Berry R\u00e9publicain"
+                }, 
+                {
+                    "url": "lejdc.fr", 
+                    "nom": "Le Journal du Centre"
+                }, 
+                {
+                    "url": "lepopulaire.fr", 
+                    "nom": "Le populaire du Centre"
+                }, 
+                {
+                    "url": "tvtours.fr", 
+                    "nom": "TV Tours"
+                }
+            ], 
+            "nom": "Famille Saint-Cricq", 
+            "updated": "", 
+            "fortune": "Sans information", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "Association Modeste et G\u00e9niale": {
+            "possession": [
+                {
+                    "url": "la-bas.org", 
+                    "nom": "L\u00e0-bas si j'y suis"
+                }
+            ], 
+            "nom": "Association Modeste et G\u00e9niale", 
+            "updated": "", 
+            "fortune": "association \u00e0 but non lucratif", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "Famille Baylet": {
+            "possession": [
+                {
+                    "url": "centrepresseaveyron.fr", 
+                    "nom": "Centre Presse Aveyron"
+                }, 
+                {
+                    "url": "lindependant.fr", 
+                    "nom": "L'Ind\u00e9pendant"
+                }, 
+                {
+                    "url": "ladepeche.fr", 
+                    "nom": "La D\u00e9p\u00eache"
+                }, 
+                {
+                    "url": "nrpyrenees.fr", 
+                    "nom": "La Nouvelle R\u00e9publique des Pyr\u00e9n\u00e9es"
+                }, 
+                {
+                    "url": "petitbleu.fr", 
+                    "nom": "Le Petit Bleu"
+                }, 
+                {
+                    "url": "midilibre.fr", 
+                    "nom": "Midi Libre"
+                }
+            ], 
+            "nom": "Famille Baylet", 
+            "updated": "", 
+            "fortune": "Hors classement", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "Philippe Hersant": {
+            "possession": [
+                {
+                    "url": "franceantilles.fr", 
+                    "nom": "France Antilles"
+                }, 
+                {
+                    "url": "franceguyane.fr", 
+                    "nom": "France Guyanne"
+                }
+            ], 
+            "nom": "Philippe Hersant", 
+            "updated": "", 
+            "fortune": "Hors classement", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "Attention, la feuille \u00abbase\u00bb ne prend en compte que les 100 premi\u00e8res lignes : si besoin d'un tableau plus grand, clic droit sur la ligne 100 + \u00abins\u00e9rer au dessus\u00bb)": {
+            "possession": [], 
+            "nom": "Attention, la feuille \u00abbase\u00bb ne prend en compte que les 100 premi\u00e8res lignes : si besoin d'un tableau plus grand, clic droit sur la ligne 100 + \u00abins\u00e9rer au dessus\u00bb)", 
+            "updated": "", 
+            "fortune": "", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "Cr\u00e9dit Mutuel": {
+            "possession": [
+                {
+                    "url": "dna.fr", 
+                    "nom": "DNA"
+                }, 
+                {
+                    "url": "lalsace.fr", 
+                    "nom": "L'Alsace"
+                }, 
+                {
+                    "url": "estrepublicain.fr", 
+                    "nom": "L'Est R\u00e9publicain"
+                }, 
+                {
+                    "url": "bienpublic.com", 
+                    "nom": "Le Bien Public"
+                }, 
+                {
+                    "url": "ledauphine.com", 
+                    "nom": "Le Dauphin\u00e9 Liber\u00e9"
+                }, 
+                {
+                    "url": "jhm.fr", 
+                    "nom": "Le journal de la Haute Marne"
+                }, 
+                {
+                    "url": "leprogres.fr", 
+                    "nom": "Le Progr\u00e8s"
+                }, 
+                {
+                    "url": "republicain-lorrain.fr", 
+                    "nom": "Le R\u00e9publicain Lorrain"
+                }, 
+                {
+                    "url": "vosgesmatin.fr", 
+                    "nom": "Vosges Matin"
+                }
+            ], 
+            "nom": "Cr\u00e9dit Mutuel", 
+            "updated": "2018-01-18 00:21", 
+            "fortune": "Produit Net Bancaire : 16.8 milliard \u20ac", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "R\u00e9publique F\u00e9d\u00e9rale d'Allemagne": {
+            "possession": [
+                {
+                    "url": "arte.tv", 
+                    "nom": "Arte"
+                }
+            ], 
+            "nom": "R\u00e9publique F\u00e9d\u00e9rale d'Allemagne", 
+            "updated": "", 
+            "fortune": "PIB par habitant :  43 597\u20ac", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "Les Augustins de l'Assomption": {
+            "possession": [
+                {
+                    "url": "la-croix.com", 
+                    "nom": "La Croix"
+                }, 
+                {
+                    "url": "notretemps.com", 
+                    "nom": "Notre Temps"
+                }, 
+                {
+                    "url": "pelerin.com", 
+                    "nom": "P\u00e9lerin"
+                }
+            ], 
+            "nom": "Les Augustins de l'Assomption", 
+            "updated": "", 
+            "fortune": "Sans information", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "Famille Bettencourt": {
+            "possession": [
+                {
+                    "url": "lopinion.fr", 
+                    "nom": "L'Opinion"
+                }
+            ], 
+            "nom": "Famille Bettencourt", 
+            "updated": "2018-01-04 23:48", 
+            "fortune": "1\u00e8re fortune de France", 
+            "description": "Andr\u00e9 Bettencourt par son mariage en 1950 avec Liliane Schueller, h\u00e9riti\u00e8re du groupe industriel fran\u00e7ais de produits cosm\u00e9tiques L'Or\u00e9al, permet \u00e0 cette famille de devenir l'une des premi\u00e8res fortunes fran\u00e7aises.", 
+            "secteur": "Produits cosm\u00e9tiques", 
+            "marque": ""
+        }, 
+        "Franck Julien": {
+            "possession": [
+                {
+                    "url": "latribune.fr", 
+                    "nom": "La Tribune"
+                }
+            ], 
+            "nom": "Franck Julien", 
+            "updated": "", 
+            "fortune": "166\u00e8me fortune de France", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "Bernard Arnault": {
+            "possession": [
+                {
+                    "url": "investir.lesechos.fr", 
+                    "nom": "Investir"
+                }, 
+                {
+                    "url": "lopinion.fr", 
+                    "nom": "L'Opinion"
+                }, 
+                {
+                    "url": "leparisien.fr", 
+                    "nom": "Le Parisien"
+                }, 
+                {
+                    "url": "leparisien.fr/economie", 
+                    "nom": "Le Parisien Economie"
+                }, 
+                {
+                    "url": "leparisien.fr/magazine", 
+                    "nom": "Le Parisien Magazine"
+                }, 
+                {
+                    "url": "lesechos.fr", 
+                    "nom": "Les Echos"
+                }, 
+                {
+                    "url": "www.lesechos.fr/week-end", 
+                    "nom": "Les Echos Weekend"
+                }, 
+                {
+                    "url": "radioclassique.fr", 
+                    "nom": "Radio Classique"
+                }
+            ], 
+            "nom": "Bernard Arnault", 
+            "updated": "", 
+            "fortune": "1\u00e8re fortune de France", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }, 
+        "Famille Bouygues": {
+            "possession": [
+                {
+                    "url": "tf1.fr/tmc", 
+                    "nom": "HD1"
+                }, 
+                {
+                    "url": "lci.fr", 
+                    "nom": "LCI"
+                }, 
+                {
+                    "url": "tf1.fr/nt1", 
+                    "nom": "NT1"
+                }, 
+                {
+                    "url": "tf1.fr", 
+                    "nom": "TF1"
+                }, 
+                {
+                    "url": "tf1.fr/tmc", 
+                    "nom": "TMC"
+                }
+            ], 
+            "nom": "Famille Bouygues", 
+            "updated": "2018-01-04 23:55", 
+            "fortune": "30\u00e8me fortune de France", 
+            "description": "", 
+            "secteur": "Construction, t\u00e9l\u00e9communications", 
+            "marque": ""
+        }, 
+        "Non trouv\u00e9": {
+            "possession": [], 
+            "nom": "Non trouv\u00e9", 
+            "updated": "2018-01-21 22:21", 
+            "fortune": "erreur bdd (proprietaires!C53)", 
+            "description": "erreur bdd (proprietaires!F53)", 
+            "secteur": "erreur bdd (proprietaires!E53)", 
+            "marque": "erreur bdd (proprietaires!D53)"
+        }, 
+        "Famille Dassault": {
+            "possession": [
+                {
+                    "url": "lefigaro.fr", 
+                    "nom": "Le Figaro"
+                }, 
+                {
+                    "url": "lefigaro.fr/magazine", 
+                    "nom": "Le Figaro magazine"
+                }, 
+                {
+                    "url": "leparticulier.fr", 
+                    "nom": "Le Particulier"
+                }
+            ], 
+            "nom": "Famille Dassault", 
+            "updated": "2018-01-04 23:52", 
+            "fortune": "5\u00e8me fortune de France", 
+            "description": "", 
+            "secteur": "A\u00e9ronautique, Armement, D\u00e9fense", 
+            "marque": "Veolia, Dassault"
+        }, 
+        "Claude Perdriel": {
+            "possession": [
+                {
+                    "url": "challenges.fr", 
+                    "nom": "Challenges"
+                }, 
+                {
+                    "url": "historia.fr", 
+                    "nom": "Historia"
+                }, 
+                {
+                    "url": "lhistoire.fr", 
+                    "nom": "L'Histoire"
+                }, 
+                {
+                    "url": "lopinion.fr", 
+                    "nom": "L'Opinion"
+                }
+            ], 
+            "nom": "Claude Perdriel", 
+            "updated": "", 
+            "fortune": "365\u00e8me fortune de France", 
+            "description": "", 
+            "secteur": "", 
+            "marque": ""
+        }
+    }, 
     "sites": {
         "2": [
             "exemple lien capital", 
@@ -13,10 +1343,10 @@
             "xxxeme fortune de france", 
             "une marque, une autre", 
             "le batiment, le luxe", 
-            "proprio2", 
-            "xxxeme fortune du monde", 
-            "", 
-            "", 
+            "Dark Vador", 
+            "Fortune de l'Empire", 
+            "\u00c9toile Noire", 
+            "Les Sith", 
             "", 
             "", 
             "", 
@@ -31,10 +1361,10 @@
             "", 
             "question b\u00eate", 
             "", 
-            "Russie (par exemple)", 
-            "1ere puissance \u00e9conoique mondiale", 
-            "", 
-            "Climatosceptique, etc ? :p", 
+            "Dark Vador", 
+            "Fortune de l'Empire", 
+            "\u00c9toile Noire", 
+            "Les Sith", 
             "", 
             "", 
             "", 
@@ -53,12 +1383,12 @@
             "Non", 
             "non :)", 
             "", 
-            "proprio ind\u00e9pendant", 
-            "xxxeme fortune de france", 
+            "Dark Vador", 
+            "Fortune de l'Empire", 
+            "\u00c9toile Noire", 
+            "Les Sith", 
             "", 
-            "une influence ?", 
-            "proprio2 ind\u00e9pendant", 
-            "xxxeme fortune du monde", 
+            "", 
             "", 
             "", 
             "", 
@@ -71,7 +1401,7 @@
             "", 
             "20-minutes", 
             "capital", 
-            "2018-01-04 23:13", 
+            "2017-03-31 00:00", 
             "", 
             "", 
             "[La carte des m\u00e9dias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)", 
@@ -93,7 +1423,7 @@
             "", 
             "6ter", 
             "capital", 
-            "2018-01-04 23:13", 
+            "2017-03-31 00:00", 
             "", 
             "", 
             "[La carte des m\u00e9dias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)", 
@@ -115,7 +1445,7 @@
             "Acrimed (Action CRItique MEDias) est une association qui, comme son nom l'indique, se veut \u00eatre un observatoire critique des m\u00e9dias. Acrimed se donne pour objectif d'informer sur l'information et d'analyser les liens entre le journalisme et les pouvoirs \u00e9conomiques et politiques.", 
             "acrimed", 
             "independant", 
-            "2018-01-16 15:18", 
+            "2017-03-31 00:00", 
             "", 
             "", 
             "", 
@@ -137,7 +1467,7 @@
             "", 
             "aisne-nouvelle", 
             "capital", 
-            "2018-01-18 00:25", 
+            "2017-03-31 00:00", 
             "", 
             "42 k\u20ac", 
             "[La carte des m\u00e9dias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)", 
@@ -159,7 +1489,7 @@
             "", 
             "", 
             "capital", 
-            "2018-01-18 00:49", 
+            "2017-03-31 00:00", 
             "", 
             "", 
             "[La carte des m\u00e9dias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)", 
@@ -181,7 +1511,7 @@
             "Un site et un magazine consacr\u00e9s \u00e0 l'\u00e9conomie et au \nsocial, qui se place dans une tradition \u00e9conomique h\u00e9rit\u00e9e de Keynes et \ndu r\u00e9gulationnisme. Le site, fond\u00e9 par l'\u00e9conomiste Denis Clerc, est \nd\u00e9tenu par ses salari\u00e9s.", 
             "alternatives-economiques", 
             "independant", 
-            "2018-01-11 16:10", 
+            "2017-03-31 00:00", 
             "", 
             "", 
             "", 
@@ -203,7 +1533,7 @@
             "Site de d\u00e9construction des r\u00e9cits m\u00e9diatiques. Emissions, enqu\u00eates par une \u00e9quipe de journalistes. Financ\u00e9 exclusivement par ses abonn\u00e9s (4\u20ac/mois)", 
             "arret-sur-images", 
             "independant", 
-            "2018-01-16 15:50", 
+            "2017-03-31 00:00", 
             "Non", 
             "0", 
             "[A propos](http://www.arretsurimages.net/a-propos.php)", 
@@ -225,7 +1555,7 @@
             "", 
             "arte", 
             "etat", 
-            "2018-01-04 23:46", 
+            "2017-03-31 00:00", 
             "", 
             "", 
             "[La carte des m\u00e9dias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)", 
@@ -247,7 +1577,7 @@
             "", 
             "bfm-business", 
             "capital", 
-            "2018-01-04 23:06", 
+            "2017-03-31 00:00", 
             "", 
             "", 
             "[La carte des m\u00e9dias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)", 
@@ -269,7 +1599,7 @@
             "", 
             "bfm-tv", 
             "capital", 
-            "2018-01-04 23:06", 
+            "2017-03-31 00:00", 
             "Oui", 
             "", 
             "[La carte des m\u00e9dias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)", 
@@ -291,7 +1621,7 @@
             "", 
             "c-star", 
             "capital", 
-            "2018-01-04 23:06", 
+            "2017-03-31 00:00", 
             "Oui", 
             "", 
             "[La carte des m\u00e9dias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)", 
@@ -450,7 +1780,7 @@
             "", 
             "[La carte des m\u00e9dias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)", 
             "Famille Lemoine", 
-            "Hors classement", 
+            "Sans information", 
             "", 
             "", 
             "", 
@@ -533,7 +1863,7 @@
             "", 
             "courrier-international", 
             "capital", 
-            "2018-01-16 18:51", 
+            "2017-03-31 00:00", 
             "", 
             "261 k\u20ac", 
             "[La carte des m\u00e9dias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)", 
@@ -626,7 +1956,7 @@
             "93.6 k\u20ac", 
             "[La carte des m\u00e9dias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)", 
             "Famille Lemoine", 
-            "Hors classement", 
+            "Sans information", 
             "", 
             "", 
             "", 
@@ -1264,7 +2594,7 @@
             "", 
             "[La carte des m\u00e9dias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)", 
             "Famille Lemoine", 
-            "Hors classement", 
+            "Sans information", 
             "", 
             "", 
             "", 
@@ -1439,10 +2769,10 @@
             "", 
             "", 
             "", 
-            "", 
-            "", 
-            "", 
-            "", 
+            "Soci\u00e9t\u00e9 nouvelle du journal L'Humanit\u00e9", 
+            "zzz", 
+            "L'Humanit\u00e9", 
+            "...", 
             "", 
             "", 
             "", 
@@ -1479,7 +2809,7 @@
             "", 
             "lobs", 
             "capital", 
-            "2018-01-16 18:51", 
+            "2017-03-31 00:00", 
             "", 
             "390 k\u20ac", 
             "[La carte des m\u00e9dias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)", 
@@ -1726,7 +3056,7 @@
             "1 M\u20ac", 
             "[La carte des m\u00e9dias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)", 
             "Famille Lemoine", 
-            "Hors classement", 
+            "Sans information", 
             "", 
             "", 
             "", 
@@ -1787,7 +3117,7 @@
             "", 
             "la-vie", 
             "capital", 
-            "2018-01-16 18:50", 
+            "2017-03-31 00:00", 
             "", 
             "251 k\u20ac", 
             "[La carte des m\u00e9dias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)", 
@@ -1836,7 +3166,7 @@
             "0", 
             "[Mentions L\u00e9gales](https://la-bas.org/credits-mentions-legales), [Qui sommes nous](https://la-bas.org/qui-sommes-nous)", 
             "Association Modeste et G\u00e9niale", 
-            "20\u00e8me fortune de France", 
+            "association \u00e0 but non lucratif", 
             "", 
             "", 
             "", 
@@ -1985,7 +3315,7 @@
             "", 
             "le-figaro", 
             "capital", 
-            "2018-01-05 02:23", 
+            "2017-03-31 00:00", 
             "", 
             "6 456 112 \u20ac en 2015", 
             "[La carte des m\u00e9dias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)", 
@@ -2029,7 +3359,7 @@
             "", 
             "le-huffington-post", 
             "capital", 
-            "2018-01-16 18:50", 
+            "2017-03-31 00:00", 
             "", 
             "", 
             "[La carte des m\u00e9dias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)", 
@@ -2183,7 +3513,7 @@
             "", 
             "le-monde", 
             "capital", 
-            "2018-01-16 18:50", 
+            "2017-03-31 00:00", 
             "", 
             "5.4 M\u20ac", 
             "[La carte des m\u00e9dias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)", 
@@ -2205,7 +3535,7 @@
             "", 
             "le-monde-des-religions", 
             "capital", 
-            "2018-01-16 18:50", 
+            "2017-03-31 00:00", 
             "", 
             "", 
             "[La carte des m\u00e9dias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)", 
@@ -2227,7 +3557,7 @@
             "L'ind\u00e9pendance du Monde diplomatique est garantie par ses statuts qui stipulent que son directeur ne peut \u00eatre d\u00e9sign\u00e9 que sur proposition de l\u2019association Gunter Holzmann. Ce sont donc les personnels du journal qui \u00e9lisent leur directeur, actuellement Serge Halimi depuis mars 2008. Ainsi associ\u00e9s, lecteurs et salari\u00e9s font la singularit\u00e9 du Monde diplomatique et prot\u00e8gent sa libert\u00e9 d\u2019informer.", 
             "le-monde-diplomatique", 
             "independant", 
-            "2018-01-17 13:50", 
+            "2017-03-31 00:00", 
             "", 
             "235 k\u20ac", 
             "[L\u2019ind\u00e9pendance du \u00ab Monde diplomatique \u00bb](https://www.monde-diplomatique.fr/2011/01/HALIMI/20027)", 
@@ -2601,7 +3931,7 @@
             "Site d\u00e9fendant \u00ab un journalisme singulier, curieux, tenace, emmen\u00e9 par des t\u00eates de pioche \u00bb", 
             "les-jours", 
             "independant", 
-            "2018-01-16 15:57", 
+            "2017-03-31 00:00", 
             "", 
             "", 
             "[Qui sommes nous](https://lesjours.fr/obsessions/les-jours-c-quoi/les-jours-l-equipe/)", 
@@ -2711,7 +4041,7 @@
             "", 
             "maniere-de-voir", 
             "independant", 
-            "2018-01-17 13:22", 
+            "2017-03-31 00:00", 
             "", 
             "26 k\u20ac", 
             "[La carte des m\u00e9dias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)", 
@@ -2738,7 +4068,7 @@
             "251 k\u20ac", 
             "[La carte des m\u00e9dias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)", 
             "Yves de Chaisemartin", 
-            "", 
+            "57 %", 
             "", 
             "", 
             "Marianne Finances (Maurice Szafran)", 
@@ -3173,7 +4503,7 @@
             "", 
             "prier", 
             "capital", 
-            "2018-01-16 18:52", 
+            "2017-03-31 00:00", 
             "", 
             "", 
             "[La carte des m\u00e9dias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)", 
@@ -3442,7 +4772,7 @@
             "", 
             "", 
             "Russie", 
-            "", 
+            "PIB par habitant : 13 767\u20ac", 
             "", 
             "", 
             "", 
@@ -3459,7 +4789,7 @@
             "", 
             "slate", 
             "capital", 
-            "2018-01-17 10:58", 
+            "2017-03-31 00:00", 
             "", 
             "", 
             "[La carte des m\u00e9dias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)", 
@@ -3468,7 +4798,7 @@
             "", 
             "", 
             "Ariane et Benjamin de Rothschild", 
-            "230\u00e8me fortune de France", 
+            "20\u00e8me fortune de France", 
             "", 
             "", 
             "", 
@@ -3508,7 +4838,7 @@
             "1.1 M\u20ac", 
             "[La carte des m\u00e9dias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)", 
             "Famille Lemoine", 
-            "Hors classement", 
+            "Sans information", 
             "", 
             "", 
             "", 
@@ -3569,7 +4899,7 @@
             "", 
             "telerama", 
             "capital", 
-            "2018-01-16 18:52", 
+            "2017-03-31 00:00", 
             "", 
             "101 k\u20ac", 
             "[La carte des m\u00e9dias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)", 
@@ -3838,29 +5168,7 @@
             "", 
             "http://www.liberation.fr/ecrans/2014/11/12/sputnik-poutine-en-orbite_1141744", 
             "Russie", 
-            "", 
-            "", 
-            "", 
-            "", 
-            "", 
-            "", 
-            "", 
-            "", 
-            "", 
-            "", 
-            ""
-        ], 
-        "179": [
-            "Taranis News", 
-            "", 
-            "taranis-news", 
-            "independant", 
-            "2018-01-16 16:05", 
-            "Non", 
-            "", 
-            "", 
-            "", 
-            "", 
+            "PIB par habitant : 13 767\u20ac", 
             "", 
             "", 
             "", 
@@ -3884,7 +5192,6 @@
         "fipradio.fr": 35, 
         "lejdc.fr": 101, 
         "leparisien.fr": 106, 
-        "taranis.news": 179, 
         "investir.lesechos.fr": 55, 
         "midilibre.fr": 131, 
         "leparisien.fr/magazine": 109, 
@@ -4009,6 +5316,7 @@
         "liberation.fr": 123, 
         "paris-normandie.fr": 145, 
         "lemondedesreligions.fr": 104, 
+        "magazine-prier.fr": 148, 
         "radiofrance.fr": 152, 
         "nrj-play.fr/cherie25": 25, 
         "arte.tv": 14, 
