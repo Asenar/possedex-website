@@ -149,8 +149,10 @@ $(document).ready(function(){
             $.getJSON(base_url, function(data){
                 if ($("#domain-or-owner").val() == "owner") {
                     document.location.hash = 'p/'+url;
+                    document.title = 'Que possède "'+url+'" ? - Possedex';
                     debunkProprietaire(url, data);
                 } else {
+                    document.title = 'Qui possède "'+url+'" ? - Possedex';
                     document.location.hash = url;
                     debunkSite(url, data);
                 }
