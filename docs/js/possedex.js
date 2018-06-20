@@ -413,7 +413,9 @@ if (entity.hasOwnProperty('est_possede')) {
             ' <a class="detail-owner" href="http://'+DOMAIN+'#'+el.nom+'">'
             +el.nom
             +'</a>'
-            + ' ('+el.valeur+'%)'
+            + ' ('+el.valeur
+                +(parseInt(el.valeur)?'%':'')
+            +')'
             //+ " (" + fortunes1 + ")"
         );
     })
