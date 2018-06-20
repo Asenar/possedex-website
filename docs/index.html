@@ -74,56 +74,145 @@
                 </a></h3>
                     </div>
 
-                    <div class="jumbotron">
-                        <h1 class="display-3">Dix milliardaires détiennent la plupart des
-                            médias</h1>
-                        <p class="lead">Découvrez qui possède quoi</p>
-                        <form id="form-possedex" method="GET" class="form-horizontal" >
+        <div class="container-fluid">
+            <div class="row justify-content-md-center">
+                <div class="col-lg-10">
+                    <div id="section1">
+                        <div class="align-middle">
+                            <h1 class="display-4">
+                                <span class="titre">Possédex</span>
+                                <p>Cherchez un média pour trouver son propriétaire, ou un milliardaire pour trouver ses médias.</p></h1>
+
+
+                            <form id="form-possedex" method="GET" class="form-horizontal" >
                                 <span class="input-group">
-                                    <span class="input-group-addon">
-                                        <select id="domain-or-owner" class="form-control" >
-                                            <option id="option-domain" value="domain">Média (url)</option>
-                                            <option id="option-owner"  value="owner">Propriétaire</option>
-                                        </select>
-                                    </span>
                                     <input type="text" name="url" id="url"
-                                    class="form-control" placeholder="Exemple : lemonde.fr, humanite.fr" />
+                                        class="form-control" placeholder="Exemples : Le Monde, humanite.fr, Bolloré" />
                                     <span class="input-group-addon">
-                                        <button id="submit-possedex" class="btn btn-default"
+                                        <button id="submit-possedex" class="btn "
                                             type="button" >Chercher</button>
                                     </span>
                                 </span>
-                        </form>
-                        <hr class="hr">
-                        <div id="result"></div>
+                            </form>
+
+                        </div>
+                        <div id="result" style="clear: both;"></div>
+
                     </div>
 
+                    <div id="section2">
+                        <h2>Medias & milliardaires</h2>
+                        <div class="row">
+                            <div class="text col-1"></div>
 
-                    <footer class="footer">
-                        <p>&copy; Possédex - création 2017 - inspiré de la
-                            carte «Qui Possède Quoi ?» par <a target="_blank" title="ACRIMED - Action - Critique - Médias" href="http://www.acrimed.org">
-                                <!--<img alt="ACRIMED" title="ACRIMED" src="" />-->
-                                ACRIMED
-                                </a> et <a target="_blank" title="Le Monde Diplomatique" href="http://www.monde-diplomatique.fr/">
-                                <!--<img alt="Le Monde Diplomatique" title="Le Monde Diplomatique" />-->
-                                Le Monde Diplomatique
-                        </a></p>
-                    </footer>
+                            <div class="text col-6">
+                                <p><b>Les médias français sont concentrés dans la main d’une dizaine de milliardaires. </b> Le Possedex permet de découvrir les puissances financières ou politique derrière un site que vous visitez. En recherchant un site d’un d’information sur le Possedex, vous découvrirez qui est son propriétaire et s’il est une grande fortune.
+                                </p>
+                                <p>Cela ne signifie pas que les informations que vous y lirez sont fausses ou incorrecte, mais leur main-mise peut influencer la ligne éditoriale générale du site ou la présentation des informations. Le Possedex a un but pédagogique et n’a pas la prétention d'être exhaustif.</p>
+                            </div>
+                            <div class="text col-1"></div>
+                            <div class="col-4">
+                                <div class="graphique">
+                                    <h4>L'emprise des milliardaires dans les médias</h4>
+                                    <img class="visuel"src="img/visuel.png">
+                                </div>
+                                <br>
+                                <p class="legende"><a href="https://www.bastamag.net/Le-pouvoir-d-influence-delirant-des-dix-milliardaires-qui-possedent-la-presse">Source: Bastamag</a></p>
 
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div id="section3">
+                        <h2>L'extension : dénichez les milliardaires</h2>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="cadre2" style="padding-left: 4.1rem;padding-right: 4.1rem;border-bottom:  1px solid;">
+                                    <img class="visuel2"src="img/popup.png">
+                                </div>
+                            </div>
+                            <div class="text col-6">
+                                <p> L’extension Possedex vous permet d’afficher le propriétaire du média lorsque vous naviguez sur son site. Cette extension a un but pédagogique et informe l'internaute, sur un ton parfois humoristique, certaines informations nécessaires au traitement des médias. Nous n'avons pas ici la prétention d'être exhaustif.</p>
+                                <p><b>Telécharger sur Chrome</b></p>
+                                <p><b>Télécharger sur Firefox</b></p>
+                                <p>Autre navigateur ?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="section3">
+                        <h2>Contribuer au Possedex</h2>
+                        <div class="row">
+                            <div class="text col-1"></div>
+                            <div class="text col-5">
+                                <p>Il manque un site ? Une information ne vous semble pas exacte ?
+                                    Pour nous aider à compléter nos données, aucune compétence particulière en programmation n'est nécessaire. Nous utilisons  une feuille de calcul Google pour générer la base de données. Pour évitez des manipulations mal attentionnées, les contributions sont ajoutées à la base de donnée après modération.
+                                    <p><b>Contribuer à la base de donnée</b></p>
+                                    <p><b>Rejoindre le discord Possédex</b></p>
+
+
+                                </div>
+                                <div class="col-6">
+                                    <div class="cadre2" style="padding-left: 4.1rem;padding-right: 4.1rem;border-bottom:  1px solid;">
+                                        <img class="visuel2"src="img/bdd.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <footer class="footer">
+                            <p>&copy; Possédex - création 2017 - inspiré de la
+                                carte «Qui Possède Quoi ?» par <a target="_blank" title="ACRIMED - Action - Critique - Médias" href="http://www.acrimed.org">
+                                    <!--<img alt="ACRIMED" title="ACRIMED" src="" />-->
+                                    ACRIMED
+                                    </a> et <a target="_blank" title="Le Monde Diplomatique" href="http://www.monde-diplomatique.fr/">
+                                    <!--<img alt="Le Monde Diplomatique" title="Le Monde Diplomatique" />-->
+                                    Le Monde Diplomatique
+                            </a></p>
+                        </footer>
+
+                    </div>
                 </div>
-            </div>
-        </div> <!-- /container -->
+            </div> <!-- /container -->
 
-        <!-- Bootstrap core JavaScript
-        ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
-        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-        <script src="/js/ie10-viewport-bug-workaround.js"></script>
+            <!-- Bootstrap core JavaScript
+            ================================================== -->
+            <!-- Placed at the end of the document so the pages load faster -->
+            <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+            <script src="/js/ie10-viewport-bug-workaround.js"></script>
 
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-        <script src="/js/possedex.js?update=201801111810"></script>
+            <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+            <script src="/js/possedex.js?update=201801111810"></script>
 
-    </body>
-</html>
+        </body>
+        <script>
+            $(document).ready(function(){
+                // Add smooth scrolling to all links
+                $("a").on('click', function(event) {
+
+                    // Make sure this.hash has a value before overriding default behavior
+                    if (this.hash !== "") {
+                        // Prevent default anchor click behavior
+                        event.preventDefault();
+
+                        // Store hash
+                        var hash = this.hash;
+
+                        // Using jQuery's animate() method to add smooth page scroll
+                        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 400, function(){
+
+                            // Add hash (#) to URL when done scrolling (default click behavior)
+                            window.location.hash = hash;
+                        });
+                    } // End if
+                });
+            });
+        </script>
+    </html>
