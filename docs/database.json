@@ -59,7 +59,7 @@
                     "nom": "FIP"
                 }, 
                 {
-                    "url": "france2.fr", 
+                    "url": "france.tv/france-2", 
                     "nom": "France 2"
                 }, 
                 {
@@ -2039,7 +2039,7 @@
             "", 
             "france-2", 
             "etat", 
-            "2017-03-31 00:00", 
+            "2018-06-20 10:55", 
             "Oui", 
             "", 
             "[La carte des m\u00e9dias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)", 
@@ -5217,14 +5217,14 @@
         "publicsenat.fr": 150, 
         "c8.fr": 18, 
         "rfi.fr/\u200e": 153, 
-        "larep.fr": 83, 
+        "capital.fr": 20, 
         "tvtours.fr": 169, 
         "humanite.fr": 69, 
         "facebook.com/gulli": 50, 
         "bfmtv.com": 16, 
         "vsd.fr": 176, 
         "lardennais.fr": 59, 
-        "capital.fr": 20, 
+        "larep.fr": 83, 
         "centrepresseaveyron.fr": 22, 
         "lapressedelamanche.fr": 80, 
         "lechorepublicain.fr": 60, 
@@ -5255,6 +5255,7 @@
         "marianne.net": 128, 
         "twitter.com/gulli": 50, 
         "petitbleu.fr": 111, 
+        "france.tv/france-2": 36, 
         "tf1.fr/tmc": 168, 
         "jhm.fr": 100, 
         "acrimed.org": 9, 
