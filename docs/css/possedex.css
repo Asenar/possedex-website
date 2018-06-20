@@ -1,16 +1,19 @@
 @font-face {
     font-family: "Brown";
-    src: local ('/fonts/lineto-brown-bold.ttf');
-    src: local ('fonts/lineto-brown-bold.ttf');
-    src: url ('/fonts/lineto-brown-bold.ttf');
-
+    src: url('/fonts/lineto-brown-bold.eot');
+    src: url('/fonts/lineto-brown-bold.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/lineto-brown-bold.woff') format('woff'),
+       url('/fonts/lineto-brown-bold.ttf')  format('truetype'),
+       url('/fonts/lineto-brown-bold.svg#svgFontName') format('svg');
       font-weight: bold;
 }
 @font-face {
-    font-family: Brown;
-    src: local ('/fonts/lineto-brown-bold.ttf');
-    src: local ('fonts/lineto-brown-bold.ttf');
-    src: url ('/fonts/lineto-brown-bold.ttf');
+    font-family: 'Brown';
+    src: url('/fonts/lineto-brown-regular.eot');
+    src: url('/fonts/lineto-brown-regular.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/lineto-brown-regular.woff') format('woff'),
+       url('/fonts/lineto-brown-regular.ttf')  format('truetype'),
+       url('/fonts/lineto-brown-regular.svg#svgFontName') format('svg');
 }
 
 
@@ -26,7 +29,7 @@
 /* Space out content a bit */
 body {
   padding-top: 0rem;
-    font-family: Brown;
+    font-family: 'Brown';
     font-size: 0.85em;
     color: var(--dark-color);
 }
@@ -256,7 +259,7 @@ h1{
 
 
 h1, h2, h3, h4, h5, h6, #result label{
-    font-family : Brown;
+    font-family : 'Brown';
 }
 
 .titre{
