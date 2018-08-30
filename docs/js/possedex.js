@@ -1,8 +1,10 @@
 /*          POSSEDEX
             VERSION 1 / MARS 2017
             VERSION 2 / JANVIER 2018
+            VERSION 3 / AOUT 2018
             REMERCIEMENT A L'EQUIPE LES DECODEURS DU MONDE
             REMERCIEMENT AUX INSOUMIS QUI SE RECONNAITRONT
+            INFINIMENT MERCI AU MONDE DIPLOMATIQUE QUI A PUBLIÉ SA BASE
                              .y.
                             -dMm.
                            .mMMMd.
@@ -57,39 +59,40 @@
 */
 
 
-var _debug = 0; // 0=quiet, 1=verbose, 2=more verbose, 3= very very verbose, 4=even more. 5 very very verbose
+var _debug = 3; // 0=quiet, 1=verbose, 2=more verbose, 3= very very verbose, 4=even more. 5 very very verbose
 
-var DOMAIN     = 'possedex.info';
+var DOMAIN     = 'loc.possedex.info';
 var maj        = '201801212317';
 if (_debug) {
     console && console.info("DEBUG LEVEL", _debug);
+    console && console.info("DOMAIN", DOMAIN);
 }
 
 /***** constants and variables *****/
-let col_nom                 = 0;
-let col_desc          = 1;
-let col_slug                = 2;
-let col_classement_possedex = 3;
-let col_updated             = 4;
+let col_nom                 = 'nom';
+let col_desc                = 1;
+let col_slug                = 1;
+let col_classement_possedex = 2;
+let col_updated             = 3;
 
-let col_pub           = 5;
-let col_subventions   = 6;
-let col_sources       = 7;
+let col_pub                 = 5;
+let col_subventions         = 6;
+let col_sources             = 7;
 
-let col_proprietaire1 =  8;
-let col_fortune1      =  9;
-let col_marque1       = 10;
-let col_interet1    = 11;
+let col_proprietaire1       =  8;
+let col_fortune1            =  9;
+let col_marque1             = 10;
+let col_interet1            = 11;
 
-let col_proprietaire2 = 12;
-let col_fortune2      = 13;
-let col_marque2       = 14;
-let col_interet2    = 15;
+let col_proprietaire2       = 12;
+let col_fortune2            = 13;
+let col_marque2             = 14;
+let col_interet2            = 15;
 
-let col_proprietaire3 = 16;
-let col_fortune3      = 17;
-let col_marque3       = 18;
-let col_interet3    = 19;
+let col_proprietaire3       = 16;
+let col_fortune3            = 17;
+let col_marque3             = 18;
+let col_interet3            = 19;
 
 var messages = {
  inconnu     : "non classé",
@@ -139,7 +142,7 @@ var colors = {
 // let possedex_colors = [ "#A2A9AE", "#129AF0", "#D50303", "#F5A725", "#468847" ];
 // let possedex_descs = [ "inclassable", "parodique", "pas fiable du tout", "peu fiable", "fiable" ];
 
-var base_url = "http://"+DOMAIN+"/database.json?maj="+maj;
+var base_url = "http://"+DOMAIN+"/mdiplo.json?maj="+maj;
 
 $(document).ready(function(){
     $("#form-possedex").on("submit", function(e){
@@ -261,7 +264,7 @@ function debunkSite(url, data){
     var icone         = '';
     // end INIT vars
     if (3 <= _debug) {
-        console && console.group('STARRT debunk site '+url);
+        console && console.group('START debunk site '+url);
     }
 
     if (3 <= _debug) {
@@ -270,7 +273,7 @@ function debunkSite(url, data){
     }
 
     urls = data.urls;
-    sites = data.sites;
+    sites = data.objets;
     url = lastSlash(url);
     url = url_cleaner(url);
     has_info = urls.hasOwnProperty(url);
@@ -278,12 +281,19 @@ function debunkSite(url, data){
     if (has_info == true) {
         site_id = urls[url];
         if (2 <= _debug) {
+            console && console.info("Site id pour "+url+", site_id = "+site_id);
+        }
+
+        lesite = sites[site_id];
+        if (2 <= _debug) {
             console && console.log('site FOUND ! ', site_id);
+            console && console.log('contenu', sites[site_id]);
         }
         try {
-            nom            = sites[site_id][col_nom];                    // nom du site
+            nom            = lesite.nom;                    // nom du site
+            // nom            = site_id;                                    // nom du site
             updated        = new Date(sites[site_id][col_updated]);      // last maj
-            classement     = sites[site_id][col_classement_possedex];   // clssement possedex
+            classement     = sites[site_id][col_classement_possedex];    // clssement possedex
             notule         = sites[site_id][col_desc];                   // description originale
             slug           = sites[site_id][col_slug];                   // nom normalisé
 
@@ -305,25 +315,15 @@ function debunkSite(url, data){
             var interet3     = sites[site_id][col_interet3   ];      // propriétaires
 
             proprietaires = []
-            proprietaires.push(' <a class="detail-owner" href="http://'+DOMAIN+'#p/'+proprietaire1+'">'
-                +proprietaire1
-                + '</a>'
-                //+ " (" + fortunes1 + ")"
-            );
-            if (proprietaire2) {
-                proprietaires.push(' <a class="detail-owner" href="http://'+DOMAIN+'#p/'+proprietaire2+'">'
-                    +proprietaire2
-                    + '</a>'
-                    //+ " (" + fortunes2 + ")"
+            lesite.est_possede.forEach(function(el, i) {
+                console && console.log(el);
+                proprietaires.push(
+                    ' <a class="detail-owner" href="http://'+DOMAIN+'#p/'+el.nom+'">'
+                    +el.nom
+                    + '(possède à '+el.valeur+'%)'+'</a>'
+                    //+ " (" + fortunes1 + ")"
                 );
-            }
-            if (proprietaire3) {
-                proprietaires.push(' <a class="detail-owner" href="http://'+DOMAIN+'#p/'+proprietaire3+'">'
-                    +proprietaire3
-                    + '</a>'
-                    //+ " (" + fortunes3 + ")"
-                );
-            };
+            })
 
             marques       = [];
             if (marque1) {
@@ -411,8 +411,8 @@ function debunkSite(url, data){
                 +' <a target="from_possedex" href="http://'+url+'">'+url+'</a>'
                 +"</p>");
             //$("#result").append("<label>Note LeMonde (outdated)</label><p>"+decodex_note+"</p>");
-            $("#result").append("<label>Classement Possedex</label><p>"+messages[classement]+"</p>");
-            $("#result").append("<label>Description</label><p>"+notule+"</p>");
+            // $("#result").append("<label>Classement Possedex</label><p>"+messages[classement]+"</p>");
+            // $("#result").append("<label>Description</label><p>"+notule+"</p>");
             //$("#result").append("<label>identifiant(à masquer plus tard)</label><p>"+slug+"</p>");
             $("#result").append("<label>Propriétaires</label><p>"+proprietaires+"</p>");
             if (interets.length) {
@@ -429,9 +429,12 @@ function debunkSite(url, data){
 
         } catch(e) {
             if (1 <= _debug) {
+                console && console.group("site_id = "+site_id);
                 console && console.error("ERREUR has_info");
                 console && console.error(e);
                 console && console.log(sites[site_id]);
+                console && console.log(sites[site_id]);
+                console && console.groupEnd();
             }
         }
 

@@ -3,11 +3,12 @@ import csv
 import json
 import re
 
-#base_file   = 'https://docs.google.com/spreadsheets/export?id=1po3WjKX15T766GYOYV8fHtve4RdlyLF6XEXBlUICib0&exportFormat=csv&gid=0'
-#owner_file  = 'https://docs.google.com/spreadsheets/export?id=1po3WjKX15T766GYOYV8fHtve4RdlyLF6XEXBlUICib0&exportFormat=csv&gid=1970270275'
-base_file  = 'https://raw.githubusercontent.com/mdiplo/Medias_francais/master/relations_medias_francais.tsv'
-owner_file = 'https://raw.githubusercontent.com/mdiplo/Medias_francais/master/medias_francais.tsv'
+url_base = 'https://docs.google.com/spreadsheets/export?id=1po3WjKX15T766GYOYV8fHtve4RdlyLF6XEXBlUICib0&exportFormat=tsv&gid=0'
 
+url_relations_medias = 'https://raw.githubusercontent.com/mdiplo/Medias_francais/master/relations_medias_francais.tsv'
+url_liste_medias     = 'https://raw.githubusercontent.com/mdiplo/Medias_francais/master/medias_francais.tsv'
+
+# {{{ quelques definitions
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -31,71 +32,156 @@ def slugify(value):
     value = unicode(re.sub('[-\s]+', '-', value))
     return str(value)
 
-# @TODO: use original decodex to consolidate datas
-# decodex = requests.get('http://www.lemonde.fr/webservice/decodex/updates');
+def idFromNom(db, nom):
+    id = 0
+    #print db[45]
+    for i in db:
+        row = db[i]
+        if row['nom'] == nom:
+            return id
 
-base_output = 'base.tsv'
-response = requests.get(base_file)
+        if re.search(nom, row['nom'], flags=re.IGNORECASE|re.UNICODE):
+            return id
+        id = id + 1
+
+
+    print "RIEN TROUVE pour ", nom
+
+    return -2
+    raise nom, "NOT FOUND IN DB"
+
+# }}}
+
+# {{{ recuperations des donnees
+
+#### base des relations medias / proprietaires ####
+# {{{
+file_relations = 'relations.tsv'
+# ce fichier contient les relations entre les entites :
+#  0 - origine
+#  1 - valeur ([origine] possede [cible] a [valeur] %)
+#  2 - cible
+#  3 - source
+#  4 - datePublication
+#  5 - dateConsultation
+
+response = requests.get(url_relations_medias)
 response.encoding = 'UTF-8'
-
 assert response.status_code == 200, 'failed to download base tsv file'
-
-text_file = open(base_output, 'w')
+text_file = open(file_relations, 'w')
 text_file.write(response.content)
 text_file.close()
+# }}}
 
-owner_output = 'owner.tsv'
-response = requests.get(owner_file)
+#### base des medias / proprietaires ####
+# {{{
+file_liste_medias = 'liste_medias.tsv'
+# ce fichier contient les informations sur les proprietaires
+# 0 - nom
+# 1 - typeLibelle
+# 2 - typeCode
+# 3 - rangChallenges
+# 4 - mediaType
+# 5 - mediaPeriodicite
+# 6 - mediaEchelle
+# 7 - commentaire
+
+response = requests.get(url_liste_medias)
 response.encoding = 'UTF-8'
 assert response.status_code == 200, 'failed to download owner tsv file'
-text2_file = open(owner_output, 'w')
-text2_file.write(response.content)
-text2_file.close()
+text_file = open(file_liste_medias, 'w')
+text_file.write(response.content)
+text_file.close()
+# }}}
 
-database = {'sites': {}, 'urls': {}, 'proprietaires' : {}}
+#### base des urls des medias ####
+# {{{
+file_urls = 'urls.tsv'
+# ce fichier contient les informations sur les proprietaires
+# 0 - nom
+# 1 - typeLibelle
+# 2 - typeCode
+# 3 - rangChallenges
+# 4 - mediaType
+# 5 - mediaPeriodicite
+# 6 - mediaEchelle
+# 7 - commentaire
+
+response = requests.get(url_base)
+response.encoding = 'UTF-8'
+assert response.status_code == 200, 'failed to download owner tsv file'
+text_file = open(file_urls, 'w')
+text_file.write(response.content)
+text_file.close()
+# }}}
+
+# }}} recuperations des donnees
+
+database = {'sites': {}, 'urls': {}, 'objets' : {}}
 
 
-with open(owner_output, 'rb') as tsvfile:
+# {{{ objets
+with open(file_liste_medias, 'rb') as tsvfile:
     reader = csv.reader(tsvfile, delimiter="\t")
 
-    col_updated       = 0
-    col_nom           = 1
-    col_fortune       = 2
-    col_marque        = 3
-    col_secteur       = 4
-    col_description   = 5
+    col_updated       = 99  # info manquante
+    col_nom           = 0
+    col_fortune       = 3  # rang Challenge
+    col_marque        = 99 # info manquante
+    col_secteur       = 99 # info manquante
+    col_description   = 1  # indication basique (personne morale/media/personne physique)
+    col_type          = 2  # typeCode, 1/2/3 ?
 
-    owner_count = 0
+    # nouvelle colonnes
+    col_type_media    = 4  # GPE, Television, Regional, Radio, ...
+    col_periodicite   = 5  # Hebdomadaire, Bimestriel, Mensuel, ...
+    col_echelle       = 6  # International, National
+    col_commentaire   = 7  # Gratuit, Pure player, ...
+
+    id = 0
     for row in reader:
         if len(row) < 4:
             continue
-        owner_count = owner_count + 1
+        id = id + 1
 
         if row[col_nom] == '':
             continue
+
+        #id = row[col_nom]
 
         entry = {
             'nom'         : row[col_nom],
             'description' : row[col_description],
             'fortune'     : row[col_fortune],
-            'marque'      : row[col_marque],
-            'secteur'     : row[col_secteur],
-            'updated'     : row[col_updated],
-            'possession'  : []
+            # a remplir dans google sheet ?
+            'marque'      : '',
+            'secteur'     : '',
+            'updated'     : '',
+
+            # nouvelle colonnes
+            'type_media'  : row[col_type_media],
+            'periodicite' : row[col_periodicite],
+            'echelle'     : row[col_echelle],
+            'commentaire' : row[col_commentaire],
+            'possession'  : [],
+            'est_possede' : [],
+            'ajouts_possedex' : {}
         }
-        database['proprietaires'][row[col_nom]] = entry
 
-print bcolors.OKGREEN+"Nombre de proprietaires trouves : "+bcolors.ENDC+" ", owner_count
+        database['objets'][id] = entry
+# }}} objets
+print bcolors.OKGREEN+"Nombre d'objets trouves : "+bcolors.ENDC+" ", id
 
-
-with open(base_output, 'rb') as tsvfile:
-    id = 0
-
+# {{{ ancienne base
+# 1) Reconstruire le tableau indexe sur le nom
+# 2) en deduire l'id
+with open(file_urls, 'rb') as csvfile:
+    # {{{ colonnes
     col_nom           = 0
     col_desc          = 1
-    #col_possedex      = 2
+    col_possedex      = 2
 
-    #col_updated       = 3
+    col_updated       = 3
 
     col_proprietaire1 = 4
     col_fortune1      = 5
@@ -117,77 +203,71 @@ with open(base_output, 'rb') as tsvfile:
     col_sources      = 18
 
     col_urls         = 19 # colonne de la 1ere url
-
+    # }}} colonnes
     url_count = 0;
-    reader = csv.reader(tsvfile, delimiter="\t")
+    reader = csv.reader(csvfile, delimiter="\t")
+    #reader = csv.reader(csvfile, delimiter="\t", quotechar='"')
+    num_row = 0
     for row in reader:
-        if len(row) < 4:
+        try:
+            id = -1
+            if len(row) < 4:
+                continue
+            num_row = num_row + 1
+            if num_row == 1:
+                continue
+            if re.search('^exemple ', row[col_nom]) or re.search('^0$', row[col_nom]):
+                print bcolors.OKBLUE+"On ignore le nom <"+row[col_nom]+">"+bcolors.ENDC
+                continue
+            if re.search('^$', row[col_nom]):
+                print bcolors.OKBLUE+"On ignore le nom vide"+bcolors.ENDC
+                continue
+            # {{{ anciennes donnees
+            entry = {}
+            classement = 'zzz'
+            entry['nom'] = row[col_nom]                     # 0  - Nom
+            entry['desc'] = row[col_desc]                   # 1  - Description
+            entry['slug'] = slugify(row[col_nom])           # 2  - Nom normalise
+            entry['classement'] = classement                # 3  - Notre note
+            entry['udpated'] = row[col_updated]             # 4  - updated
+
+            entry['pub'] = row[col_pub]                    # 5  - Pub ?
+            entry['subventions'] = (row[col_subventions])            # 6  - subventions
+
+            entry['sources'] = (row[col_sources])                # 7 - Sources
+
+            entry['proprietaire1'] = row[col_proprietaire1];          # 8
+            entry['fortune1']      = row[col_fortune1];               # 9
+            entry['marque1']       = row[col_marque1];                # 10
+            entry['influence1']    = row[col_influence1];             # 11
+
+            entry['proprietaire2'] = row[col_proprietaire2];          # 12
+            entry['fortune2']      = row[col_fortune2];               # 13
+            entry['marque2']       = row[col_marque2];                # 14
+            entry['influence2']    = row[col_influence2];             # 15
+
+            entry['proprietaire3'] = row[col_proprietaire3];          # 17
+            entry['fortune3']      = row[col_fortune3];               # 18
+            entry['marque3']       = row[col_marque3];                # 19
+            entry['influence3']    = row[col_influence3];             # 20
+
+            #print "On commence a chercher "+row[col_nom]
+            id = idFromNom(database['objets'], row[col_nom])
+            #print "On a fini la recherche"
+
+            database['objets'][id]['ajouts_possedex'] = entry
+            #print bcolors.OKGREEN +"le nom <"+row[col_nom]+"> de googlesheet est bien dans la db[objets]" +bcolors.ENDC, id
+
+            # }}} anciennes donnees
+        except:
+            #print bcolors.WARNING +"le nom <"+row[col_nom]+"> est introuvable dans la db[objets]" +bcolors.ENDC, id
+            #    raise row[col_nom], "STOOOP"
+
             continue
-        id = id + 1
-        if id == 1:
-            continue
-        entry = []
-        classement_possedex = 'zzz'
+            #continue
 
-        # {{{
-        # try:
-        #
-        #     if row[col_possedex] == 'inconnu':
-        #         classement_possedex = ''
-        #         print bcolors.OKBLUE+"[  inconnu   ] "+bcolors.ENDC+" "+row[col_nom]
-        #     elif row[col_possedex] == 'capital':
-        #         classement_possedex = 'capital'
-        #         print bcolors.OKGREEN+"[  capital  ] "+bcolors.ENDC+" "+row[col_nom]
-        #     elif row[col_possedex] == 'etat':
-        #         classement_possedex = 'etat'
-        #         print bcolors.OKBLUE +"[    etat   ] "+bcolors.ENDC+" "+row[col_nom]
-        #     elif row[col_possedex] == 'independant':
-        #         classement_possedex = 'independant'
-        #         print bcolors.OKGREEN+"[   indep   ] "+bcolors.ENDC+" "+row[col_nom]
-        #         # TODO: ajouter reseaux sociaux ?
-        #     else:
-        #         print bcolors.FAIL+"[classement possedex manquant] "+bcolors.ENDC+" "+row[col_nom]+" (on met 0)"
-        #         continue
-        # except:
-        #     pass
-
-        #try:
-        #    note_decodex = int(row[col_decodex])
-        #except:
-        #    #print "               "+bcolors.WARNING+" [note decodex manquante] "+bcolors.ENDC+" "+row[col_nom]+" (on met 0)"
-        #    note_decodex = 0
-        #    pass
-        #entry.append(note_decodex)                   #   - note originale decodex
-        # }}}
-
-        entry.append(row[col_nom])                    # 0  - Nom
-        entry.append(row[col_desc])                   # 1  - Description
-        entry.append(slugify(row[col_nom]))           # 2  - Nom normalise
-        entry.append(classement_possedex)             # 3  - Notre note
-        entry.append(row[col_updated])                # 4  - updated
-
-        entry.append(row[col_pub])                    # 5  - Pub ?
-        entry.append(row[col_subventions])            # 6  - subventions
-
-        entry.append(row[col_sources])                # 7 - Sources
-
-        entry.append(row[col_proprietaire1])          # 8
-        entry.append(row[col_fortune1])               # 9
-        entry.append(row[col_marque1])                # 10
-        entry.append(row[col_influence1])             # 11
-
-        entry.append(row[col_proprietaire2])          # 12
-        entry.append(row[col_fortune2])               # 13
-        entry.append(row[col_marque2])                # 14
-        entry.append(row[col_influence2])             # 15
-
-        entry.append(row[col_proprietaire3])          # 17
-        entry.append(row[col_fortune3])               # 18
-        entry.append(row[col_marque3])                # 19
-        entry.append(row[col_influence3])             # 20
-
-
-        database['sites'][id] = entry
+        # {{{ on recupere les urls
+        # medias_urls[row[col_nom]] = []
 
         for i in range(col_urls, len(row)-1):
             url_count = url_count+1;
@@ -196,28 +276,114 @@ with open(base_output, 'rb') as tsvfile:
             url = url.rstrip('\n')
             url = url.rstrip(' ')
 
-            if url:
-                if (i == col_urls):
-                    media = {'url' : url, 'nom' : row[col_nom]}
-                    if (row[col_proprietaire1]
-                        and database['proprietaires'][row[col_proprietaire1]]
-                        and media not in database['proprietaires'][row[col_proprietaire1]]['possession']):
-                        database['proprietaires'][row[col_proprietaire1]]['possession'].append(media)
-                    if (row[col_proprietaire2]
-                        and database['proprietaires'][row[col_proprietaire2]]
-                        and media not in database['proprietaires'][row[col_proprietaire2]]['possession']):
-                        database['proprietaires'][row[col_proprietaire2]]['possession'].append(media)
-                    if (row[col_proprietaire3]
-                        and database['proprietaires'][row[col_proprietaire3]]
-                        and media not in database['proprietaires'][row[col_proprietaire3]]['possession']):
-                        database['proprietaires'][row[col_proprietaire3]]['possession'].append(media)
+            #if url:
+            #    if (i == col_urls):
+            #        media = {'url' : url, 'nom' : row[col_nom]}
+            #        if (row[col_proprietaire1]
+            #            and database['proprietaires'][row[col_proprietaire1]]
+            #            and media not in database['proprietaires'][row[col_proprietaire1]]['possession']):
+            #            database['proprietaires'][row[col_proprietaire1]]['possession'].append(media)
+            #        if (row[col_proprietaire2]
+            #            and database['proprietaires'][row[col_proprietaire2]]
+            #            and media not in database['proprietaires'][row[col_proprietaire2]]['possession']):
+            #            database['proprietaires'][row[col_proprietaire2]]['possession'].append(media)
+            #        if (row[col_proprietaire3]
+            #            and database['proprietaires'][row[col_proprietaire3]]
+            #            and media not in database['proprietaires'][row[col_proprietaire3]]['possession']):
+            #            database['proprietaires'][row[col_proprietaire3]]['possession'].append(media)
 
             url = re.sub(r'^https?:\/\/(www)?', '', url)
 
             if url:
+                # medias_urls[url] = row[col_nom]
+                #database['urls'][url] = idFromNom(database['objets'], row[col_nom])
                 database['urls'][url] = id
-
+        # }}} on recupere les urls
+# }}} ancienne base
 print bcolors.OKGREEN+"Nombre d'url trouvees : "+bcolors.ENDC+" ", url_count
-with open('docs/database-mdiplo.json', 'wb') as outfile:
+
+# {{{ relations
+with open(file_relations, 'rb') as tsvfile:
+    id = 0
+
+    col_origine           = 0
+    col_valeur            = 1
+    col_cible             = 2
+    col_source            = 3 # source de l'information
+    col_date_publication  = 4
+    col_date_consultation = 5
+
+    relations_count = 0;
+    reader = csv.reader(tsvfile, delimiter="\t")
+    for row in reader:
+        if len(row) < 4:
+            continue
+        id = id + 1
+        if id == 1:
+            continue
+        entry = []
+        classement = 'zzz'
+
+        entry.append(row[col_origine])                # 0  - Nom
+        #entry.append(row[col_desc])                  # 1  - Description
+        entry.append(slugify(row[col_origine]))       # 2  - Nom normalise
+        entry.append(classement)                      # 3  - Notre note
+        entry.append(row[col_date_consultation])      # 4  - updated
+
+        # database['sites'][id] = entry
+        database['sites'][row[col_nom]] = entry
+
+        sources = row[col_source]
+        if sources:
+            #if re.search(' et ', sources):
+            result = re.split(' et |,', sources)
+            #print "length result = ", len(result)
+
+            for source in result:
+                #print "Pour <"+urls+">, traitement de ", source
+                relations_count = relations_count+1;
+                #source = result[i]
+                #source = source.rstrip('/')
+                #source = source.rstrip('\n')
+                source = source.strip(' ')
+                #print bcolors.OKBLUE+ " - Ajoutons une entree "+bcolors.ENDC+" "
+                #print "origine:"+row[col_origine]
+                #print "cible  :"+row[col_cible]
+                #print "source:"+source
+                relation = {
+                        'nom'    : row[col_origine],
+                        'valeur' : row[col_valeur],
+                        'source' : source
+                        }
+                try:
+                    # OUPS ici
+                    idOrig = idFromNom(database['objets'], row[col_origine])
+                    if row[col_cible] and database['objets'][idOrig]:
+                        if relation not in database['objets'][idOrig]['possession']:
+                            database['objets'][idOrig]['possession'].append(relation)
+
+                    idCible = idFromNom(database['objets'], row[col_cible])
+                    #print "PROBLEME?"
+                    #print "row[col_origine]=", row[col_origine]
+
+                    #print "idCible=", idCible
+                    #print "database[objets][idCible]=", database['objets'][idCible]
+                    #print "-----"
+                    if row[col_origine] and database['objets'][idCible]:
+                        if relation not in database['objets'][idCible]['est_possede']:
+                            database['objets'][idCible]['est_possede'].append(relation)
+                except:
+                    print "[[[[EXCEPTION]]]]"
+                    print "row col_cible = "+row[col_cible]
+                    print "row col_origine = "+row[col_origine]
+                    print row
+                    raise
+
+# }}} relations
+print bcolors.OKGREEN+"Nombre de relations : "+bcolors.ENDC+" ", relations_count
+
+
+
+with open('docs/mdiplo.json', 'wb') as outfile:
     json.dump(database, outfile, indent=4)
 
