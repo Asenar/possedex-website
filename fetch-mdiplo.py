@@ -6,9 +6,16 @@ import re
 import requests
 
 url_base = 'https://docs.google.com/spreadsheets/export?id=1po3WjKX15T766GYOYV8fHtve4RdlyLF6XEXBlUICib0&exportFormat=tsv&gid=0'
+file_urls = 'urls.tsv'
+
+url_owners = 'https://docs.google.com/spreadsheets/export?id=1po3WjKX15T766GYOYV8fHtve4RdlyLF6XEXBlUICib0&exportFormat=tsv&gid=1970270275'
+file_owners = 'owners.tsv'
 
 url_relations_medias = 'https://raw.githubusercontent.com/mdiplo/Medias_francais/master/relations_medias_francais.tsv'
+file_relations = 'relations.tsv'
+
 url_liste_medias     = 'https://raw.githubusercontent.com/mdiplo/Medias_francais/master/medias_francais.tsv'
+file_liste_medias = 'liste_medias.tsv'
 
 # {{{ quelques definitions
 class bcolors:
@@ -81,7 +88,6 @@ def idFromNom(db, nom):
 
 #### base des relations medias / proprietaires ####
 # {{{
-file_relations = 'relations.tsv'
 # ce fichier contient les relations entre les entites :
 #  0 - origine
 #  1 - valeur ([origine] possede [cible] a [valeur] %)
@@ -95,7 +101,6 @@ getData(url_relations_medias, file_relations)
 
 #### base des medias / proprietaires ####
 # {{{
-file_liste_medias = 'liste_medias.tsv'
 # ce fichier contient les informations sur les proprietaires
 # 0 - nom
 # 1 - typeLibelle
@@ -112,15 +117,42 @@ getData(url_liste_medias, file_liste_medias)
 # {{{
 file_urls = 'urls.tsv'
 # ce fichier contient les informations sur les proprietaires
-# 0 - nom
-# 1 - typeLibelle
-# 2 - typeCode
-# 3 - rangChallenges
-# 4 - mediaType
-# 5 - mediaPeriodicite
-# 6 - mediaEchelle
-# 7 - commentaire
+#  1 - Média
+#  2 - description
+#  3 - Possedex
+#  4 - dernière modif (automatique)
+#  5 - Propriétaire 1
+#  6 - Fortune 1
+#  7 - Marque 1
+#  8 - secteur1
+#  9 - Propriétaire 2
+# 10 - Fortune 2
+# 11 - Marque 2
+# 12 - secteur 2
+# 13 - Propriétaire 3
+# 14 - Fortune 3
+# 15 - Marque 3
+# 16 - secteur 3
+# 17 - Subventions
+# 18 - Pub
+# 19 - Sources
+# 20 - Adresse 1
+# 21 - Adresse 2
+# 22 - Adresse 3
+# 23 - Adresse 4
+# 24 - Adresse 5
 getData(url_base, file_urls)
+# }}}
+
+#### base des infos proprietaires ####
+# {{{
+# ce fichier contient les informations sur les proprietaires
+#  1 - Nom
+#  2 - Fortune
+#  3 - Marque
+#  4 - Secteur d'activite
+#  5 - Description
+getData(url_owners, file_owners)
 # }}}
 
 # }}} recuperations des donnees
@@ -162,28 +194,35 @@ with open(file_liste_medias, 'r') as tsvfile:
             continue
 
         #id = row[col_nom]
+        entry = collections.OrderedDict()
 
-        entry = {
-                "abc" : "test",
-                "zyx" : "test",
-                "ghi" : "test",
-            'nom'         : row[col_nom],
-            'description' : row[col_description],
-            'fortune'     : row[col_fortune],
-            # a remplir dans google sheet ?
-            'marque'      : '',
-            'secteur'     : '',
-            'updated'     : '',
+        entry['nom'        ] = row[col_nom]
+        if row[col_type] == '1':
+            entry['type' ] = "personne"
+        elif row[col_type] == '2':
+            entry['type' ] = "Type 2 (groupe)"
+        elif row[col_type] == '3':
+            entry['type' ] = "Type 3 (media)"
+        elif row[col_type] == '4':
+            entry['type' ] = "Type 4 (état)"
+        else:
+            entry['type' ] = "Autre type: "+row[col_type]
 
-            # nouvelle colonnes
-            'type_media'  : row[col_type_media],
-            'periodicite' : row[col_periodicite],
-            'echelle'     : row[col_echelle],
-            'commentaire' : row[col_commentaire],
-            'est_possede' : [],
-            'possession'  : [],
-            'possedex'    : {}
-        }
+        entry['description'] = row[col_description]
+        entry['fortune'    ] = row[col_fortune]
+        # a remplir dans google sheet ?
+        entry['marque'     ] =  ''
+        entry['secteur'    ] =  ''
+        entry['updated'    ] =  ''
+
+        # nouvelle colonnes
+        entry['type_media' ] = row[col_type_media]
+        entry['periodicite'] = row[col_periodicite]
+        entry['echelle'    ] = row[col_echelle]
+        entry['commentaire'] = row[col_commentaire]
+        entry['est_possede'] = []
+        entry['possession' ] = []
+        entry['possedex'   ] = {}
 
         database['objets'][id] = entry
 # }}} objets
@@ -234,21 +273,22 @@ with open(file_urls, 'r') as csvfile:
             if num_row == 1:
                 continue
             if re.search('^exemple ', row[col_nom]) or re.search('^0$', row[col_nom]):
-                print(bcolors.OKBLUE+"On ignore le nom <"+row[col_nom]+">"+bcolors.ENDC)
+                #print(bcolors.OKBLUE+"On ignore le nom <"+row[col_nom]+">, row="+bcolors.ENDC)
+                #print(row)
                 continue
             if re.search('^$', row[col_nom]):
-                print( bcolors.OKBLUE+"On ignore le nom vide"+bcolors.ENDC)
+                #print( bcolors.OKBLUE+"On ignore le nom vide, row="+bcolors.ENDC)
+                #print(row)
                 continue
             # {{{ anciennes donnees
-            entry = {}
-            classement = 'zzz'
+            entry = collections.OrderedDict()
             entry['nom'] = row[col_nom]                     # 0  - Nom
             entry['desc'] = row[col_desc]                   # 1  - Description
             entry['slug'] = slugify(row[col_nom])           # 2  - Nom normalise
-            entry['classement'] = classement                # 3  - Notre note
+            entry['classement'] = 'zzz'                     # 3  - Notre note
             entry['udpated'] = row[col_updated]             # 4  - updated
 
-            entry['pub'] = row[col_pub]                    # 5  - Pub ?
+            entry['pub'] = row[col_pub]                     # 5  - Pub ?
             entry['subventions'] = (row[col_subventions])            # 6  - subventions
 
             entry['sources'] = (row[col_sources])                # 7 - Sources
@@ -398,5 +438,6 @@ print(bcolors.OKGREEN+"Nombre de relations : "+bcolors.ENDC+" ", relations_count
 
 
 with open('docs/mdiplo.json', 'w') as outfile:
-    json.dump(database, outfile, indent=4)
+    json.dump(database, outfile, indent=4, ensure_ascii=False)
 
+print(bcolors.OKGREEN+"Data written to docs/mdiplo.json"+bcolors.ENDC+" ")
