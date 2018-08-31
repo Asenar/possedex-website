@@ -66,18 +66,17 @@ def slugify(value):
 
 def idFromNom(db, nom):
     id = 0
-    #print db[45]
-    for i in db:
-        row = db[i]
+
+    for id in db:
+        row = db[id]
+        print ("id=", id)
         if row['nom'] == nom:
             return id
 
         if re.search('^'+row['nom']+'$', nom, flags=re.IGNORECASE|re.UNICODE):
             return id
-        id = id + 1
 
-
-    #print("RIEN TROUVE pour ", nom)
+    print("RIEN TROUVE pour ", nom)
 
     return -2
     #raise nom, "NOT FOUND IN DB"
@@ -221,7 +220,7 @@ with open(file_liste_medias, 'r') as tsvfile:
         entry['echelle'    ] = row[col_echelle]
         entry['commentaire'] = row[col_commentaire]
         entry['est_possede'] = []
-        entry['possession' ] = []
+        entry['possessions' ] = []
         entry['possedex'   ] = {}
 
         database['objets'][id] = entry
@@ -338,16 +337,16 @@ with open(file_urls, 'r') as csvfile:
             #        media = {'url' : url, 'nom' : row[col_nom]}
             #        if (row[col_proprietaire1]
             #            and database['proprietaires'][row[col_proprietaire1]]
-            #            and media not in database['proprietaires'][row[col_proprietaire1]]['possession']):
-            #            database['proprietaires'][row[col_proprietaire1]]['possession'].append(media)
+            #            and media not in database['proprietaires'][row[col_proprietaire1]]['possessions']):
+            #            database['proprietaires'][row[col_proprietaire1]]['possessions'].append(media)
             #        if (row[col_proprietaire2]
             #            and database['proprietaires'][row[col_proprietaire2]]
-            #            and media not in database['proprietaires'][row[col_proprietaire2]]['possession']):
-            #            database['proprietaires'][row[col_proprietaire2]]['possession'].append(media)
+            #            and media not in database['proprietaires'][row[col_proprietaire2]]['possessions']):
+            #            database['proprietaires'][row[col_proprietaire2]]['possessions'].append(media)
             #        if (row[col_proprietaire3]
             #            and database['proprietaires'][row[col_proprietaire3]]
-            #            and media not in database['proprietaires'][row[col_proprietaire3]]['possession']):
-            #            database['proprietaires'][row[col_proprietaire3]]['possession'].append(media)
+            #            and media not in database['proprietaires'][row[col_proprietaire3]]['possessions']):
+            #            database['proprietaires'][row[col_proprietaire3]]['possessions'].append(media)
 
             url = re.sub(r'^https?:\/\/(www)?', '', url)
 
@@ -393,11 +392,16 @@ with open(file_relations, 'r') as tsvfile:
         sources = row[col_source]
         if sources:
             #if re.search(' et ', sources):
-            result = re.split(' et |,', sources)
+            result = re.split(',', sources)
             #print "length result = ", len(result)
 
-            relation = {
+            est_possede_par = {
                     'nom'    : row[col_origine],
+                    'valeur' : row[col_valeur],
+                    'source' : []
+                    }
+            possession = {
+                    'nom'    : row[col_cible],
                     'valeur' : row[col_valeur],
                     'source' : []
                     }
@@ -412,19 +416,22 @@ with open(file_relations, 'r') as tsvfile:
                 #print "origine:"+row[col_origine]
                 #print "cible  :"+row[col_cible]
                 #print "source:"+source
-                relation['source'].append(source)
+                est_possede_par['source'].append(source)
+                possession['source'].append(source)
             try:
                 # OUPS ici
+                print ("recherche <"+row[col_origine]+">")
                 idOrig = idFromNom(database['objets'], row[col_origine])
+                print ("idOrig=", idOrig)
                 if row[col_cible] and database['objets'][idOrig]:
-                    if relation not in database['objets'][idOrig]['possession']:
-                        database['objets'][idOrig]['possession'].append(relation)
+                    if possession not in database['objets'][idOrig]['possessions']:
+                        database['objets'][idOrig]['possessions'].append(possession)
 
                 idCible = idFromNom(database['objets'], row[col_cible])
 
                 if row[col_origine] and database['objets'][idCible]:
-                    if relation not in database['objets'][idCible]['est_possede']:
-                        database['objets'][idCible]['est_possede'].append(relation)
+                    if est_possede_par not in database['objets'][idCible]['est_possede']:
+                        database['objets'][idCible]['est_possede'].append(est_possede_par)
             except:
                 print ("[[[[EXCEPTION]]]]"                  )
                 print ("row col_cible = "+row[col_cible]    )
