@@ -67,13 +67,18 @@ def slugify(value):
 def idFromNom(db, nom):
     id = 0
 
+
     for id in db:
         row = db[id]
         #print("check id \r", id, end='')
         if row['nom'] == nom:
+            #print (" match direct ", nom)
+            #print("de la db = ", row['nom'])
+            #print ("et l'id=", id)
             return id
 
         if re.search('^'+row['nom']+'$', nom, flags=re.IGNORECASE|re.UNICODE):
+            print ("match regex", id)
             return id
 
     print("RIEN TROUVE pour ", nom)
@@ -223,6 +228,10 @@ with open(file_liste_medias, 'r') as tsvfile:
         entry['echelle'    ] = row[col_echelle]
         entry['commentaire'] = row[col_commentaire]
         entry['possedex'   ] = {}
+
+        entry['possessions'] = []
+        entry['urls']        = []
+        entry['est_possede'] = []
         print(bcolors.OKBLUE+"GRRR POSSEDEX"+bcolors.ENDC+" ", id)
         print(entry)
 
@@ -352,9 +361,8 @@ with open(file_urls, 'r') as csvfile:
             # }}} anciennes donnees
         except:
             print(bcolors.FAIL
-                    +"Fail pour idFromNom<"+row[col_nom]+">, on saute"
-                    +bcolors.ENDC, id)
-
+                +"Fail pour idFromNom<"+row[col_nom]+">, on saute"
+                +bcolors.ENDC, id)
             continue
             #continue
 
@@ -389,8 +397,12 @@ with open(file_urls, 'r') as csvfile:
             if url:
                 # medias_urls[url] = row[col_nom]
                 #database['urls'][url] = idFromNom(database['objets'], row[col_nom])
-                database['urls'][url] = id
+                if id != -1 and id != -2:
+                    database['urls'][url] = id
+                    if url not in database['objets'][id]['urls']:
+                        database['objets'][id]['urls'].append(url)
         # }}} on recupere les urls
+
 # }}} ancienne base
 print(bcolors.OKGREEN+"Nombre d'url trouvees : "+bcolors.ENDC+" ", url_count)
 
@@ -453,16 +465,16 @@ with open(file_relations, 'r') as tsvfile:
                 #print ("idOrig=", idOrig)
                 if row[col_cible] and database['objets'][idOrig]:
 
-                    if not hasattr(database['objets'][idOrig], 'possessions'):
-                        database['objets'][idOrig]['possessions'] = []
+                    #if not hasattr(database['objets'][idOrig], 'possessions'):
+                    #    database['objets'][idOrig]['possessions'] = []
                     if possession not in database['objets'][idOrig]['possessions']:
                         database['objets'][idOrig]['possessions'].append(possession)
 
                 idCible = idFromNom(database['objets'], row[col_cible])
 
                 if row[col_origine] and database['objets'][idCible]:
-                    if not hasattr(database['objets'][idCible], 'est_possede'):
-                        database['objets'][idCible]['est_possede'] = []
+                    #if not hasattr(database['objets'][idCible], 'est_possede'):
+                    #    database['objets'][idCible]['est_possede'] = []
                     if est_possede_par not in database['objets'][idCible]['est_possede']:
                         database['objets'][idCible]['est_possede'].append(est_possede_par)
             except:
