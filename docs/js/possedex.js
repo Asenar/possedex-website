@@ -61,8 +61,8 @@
 
 var _debug = 0; // 0=quiet, 1=verbose, 2=more verbose, 3= very very verbose, 4=even more. 5 very very verbose
 
-var DOMAIN     = 'loc.possedex.info';
-var maj        = '201801212317';
+var DOMAIN     = 'possedex.info';
+var maj        = '201808311846';
 if (_debug) {
     console && console.info("DEBUG LEVEL", _debug);
     console && console.info("DOMAIN", DOMAIN);
