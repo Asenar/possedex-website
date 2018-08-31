@@ -1,7 +1,9 @@
-import requests
+#!/usr/bin/python3
+import collections
 import csv
 import json
 import re
+import requests
 
 url_base = 'https://docs.google.com/spreadsheets/export?id=1po3WjKX15T766GYOYV8fHtve4RdlyLF6XEXBlUICib0&exportFormat=tsv&gid=0'
 
@@ -19,18 +21,41 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
+def getData(url, filename):
+    response = requests.get(url)
+    response.encoding = 'UTF-8'
+    assert response.status_code == 200, 'failed to download '+url
+    text_file = open(filename, 'w')
+    text_file.write(response.text)
+    text_file.close()
+
+def strip_accents(s):
+    import unicodedata
+    return ''.join(c for c in unicodedata.normalize('NFD', s)
+            if unicodedata.category(c) != 'Mn')
+
 def slugify(value):
     """
     Normalizes string, converts to lowercase, removes non-alpha characters,
     and converts spaces to hyphens.
     """
-    import unicodedata
-    import re
-    value = unicode(value.decode("utf-8"))
-    value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore')
-    value = unicode(re.sub('[^\w\s-]', '', value).strip().lower())
-    value = unicode(re.sub('[-\s]+', '-', value))
-    return str(value)
+    return strip_accents(value)
+    ### import re
+    ### #value = unicode(value.decode("utf-8"))
+    ### #value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore')
+    ### #value = unicode(re.sub('[^\w\s-]', '', value).strip().lower())
+    ### #value = unicode(re.sub('[-\s]+', '-', value))
+    ### #return str(value)
+
+    ### import unidecode
+    ### #value = unicode(value.decode("utf-8"))
+    ### return unidecode.unidecode(value)
+    ### value = str(value)
+    ### value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore')
+    ### value = (re.sub('[^\w\s-]', '', value).strip().lower())
+    ### value = (re.sub('[-\s]+', '-', value))
+    ### return (value)
+
 
 def idFromNom(db, nom):
     id = 0
@@ -40,15 +65,15 @@ def idFromNom(db, nom):
         if row['nom'] == nom:
             return id
 
-        if re.search(nom, row['nom'], flags=re.IGNORECASE|re.UNICODE):
+        if re.search('^'+row['nom']+'$', nom, flags=re.IGNORECASE|re.UNICODE):
             return id
         id = id + 1
 
 
-    print "RIEN TROUVE pour ", nom
+    #print("RIEN TROUVE pour ", nom)
 
     return -2
-    raise nom, "NOT FOUND IN DB"
+    #raise nom, "NOT FOUND IN DB"
 
 # }}}
 
@@ -64,13 +89,8 @@ file_relations = 'relations.tsv'
 #  3 - source
 #  4 - datePublication
 #  5 - dateConsultation
+getData(url_relations_medias, file_relations)
 
-response = requests.get(url_relations_medias)
-response.encoding = 'UTF-8'
-assert response.status_code == 200, 'failed to download base tsv file'
-text_file = open(file_relations, 'w')
-text_file.write(response.content)
-text_file.close()
 # }}}
 
 #### base des medias / proprietaires ####
@@ -85,13 +105,7 @@ file_liste_medias = 'liste_medias.tsv'
 # 5 - mediaPeriodicite
 # 6 - mediaEchelle
 # 7 - commentaire
-
-response = requests.get(url_liste_medias)
-response.encoding = 'UTF-8'
-assert response.status_code == 200, 'failed to download owner tsv file'
-text_file = open(file_liste_medias, 'w')
-text_file.write(response.content)
-text_file.close()
+getData(url_liste_medias, file_liste_medias)
 # }}}
 
 #### base des urls des medias ####
@@ -106,22 +120,22 @@ file_urls = 'urls.tsv'
 # 5 - mediaPeriodicite
 # 6 - mediaEchelle
 # 7 - commentaire
-
-response = requests.get(url_base)
-response.encoding = 'UTF-8'
-assert response.status_code == 200, 'failed to download owner tsv file'
-text_file = open(file_urls, 'w')
-text_file.write(response.content)
-text_file.close()
+getData(url_base, file_urls)
 # }}}
 
 # }}} recuperations des donnees
 
-database = {'sites': {}, 'urls': {}, 'objets' : {}}
+database = collections.OrderedDict()
+
+database['objets'] = collections.OrderedDict()
+database['sites']  = collections.OrderedDict()
+database['urls']   = collections.OrderedDict()
+
+#database = {'sites': {}, 'urls': {}, 'objets' : {}}
 
 
 # {{{ objets
-with open(file_liste_medias, 'rb') as tsvfile:
+with open(file_liste_medias, 'r') as tsvfile:
     reader = csv.reader(tsvfile, delimiter="\t")
 
     col_updated       = 99  # info manquante
@@ -150,6 +164,9 @@ with open(file_liste_medias, 'rb') as tsvfile:
         #id = row[col_nom]
 
         entry = {
+                "abc" : "test",
+                "zyx" : "test",
+                "ghi" : "test",
             'nom'         : row[col_nom],
             'description' : row[col_description],
             'fortune'     : row[col_fortune],
@@ -163,19 +180,19 @@ with open(file_liste_medias, 'rb') as tsvfile:
             'periodicite' : row[col_periodicite],
             'echelle'     : row[col_echelle],
             'commentaire' : row[col_commentaire],
-            'possession'  : [],
             'est_possede' : [],
-            'ajouts_possedex' : {}
+            'possession'  : [],
+            'possedex'    : {}
         }
 
         database['objets'][id] = entry
 # }}} objets
-print bcolors.OKGREEN+"Nombre d'objets trouves : "+bcolors.ENDC+" ", id
+print(bcolors.OKGREEN+"Nombre d'objets trouves : "+bcolors.ENDC+" ", id)
 
 # {{{ ancienne base
 # 1) Reconstruire le tableau indexe sur le nom
 # 2) en deduire l'id
-with open(file_urls, 'rb') as csvfile:
+with open(file_urls, 'r') as csvfile:
     # {{{ colonnes
     col_nom           = 0
     col_desc          = 1
@@ -217,10 +234,10 @@ with open(file_urls, 'rb') as csvfile:
             if num_row == 1:
                 continue
             if re.search('^exemple ', row[col_nom]) or re.search('^0$', row[col_nom]):
-                print bcolors.OKBLUE+"On ignore le nom <"+row[col_nom]+">"+bcolors.ENDC
+                print(bcolors.OKBLUE+"On ignore le nom <"+row[col_nom]+">"+bcolors.ENDC)
                 continue
             if re.search('^$', row[col_nom]):
-                print bcolors.OKBLUE+"On ignore le nom vide"+bcolors.ENDC
+                print( bcolors.OKBLUE+"On ignore le nom vide"+bcolors.ENDC)
                 continue
             # {{{ anciennes donnees
             entry = {}
@@ -255,7 +272,7 @@ with open(file_urls, 'rb') as csvfile:
             id = idFromNom(database['objets'], row[col_nom])
             #print "On a fini la recherche"
 
-            database['objets'][id]['ajouts_possedex'] = entry
+            database['objets'][id]['possedex'] = entry
             #print bcolors.OKGREEN +"le nom <"+row[col_nom]+"> de googlesheet est bien dans la db[objets]" +bcolors.ENDC, id
 
             # }}} anciennes donnees
@@ -300,10 +317,10 @@ with open(file_urls, 'rb') as csvfile:
                 database['urls'][url] = id
         # }}} on recupere les urls
 # }}} ancienne base
-print bcolors.OKGREEN+"Nombre d'url trouvees : "+bcolors.ENDC+" ", url_count
+print(bcolors.OKGREEN+"Nombre d'url trouvees : "+bcolors.ENDC+" ", url_count)
 
 # {{{ relations
-with open(file_relations, 'rb') as tsvfile:
+with open(file_relations, 'r') as tsvfile:
     id = 0
 
     col_origine           = 0
@@ -339,6 +356,11 @@ with open(file_relations, 'rb') as tsvfile:
             result = re.split(' et |,', sources)
             #print "length result = ", len(result)
 
+            relation = {
+                    'nom'    : row[col_origine],
+                    'valeur' : row[col_valeur],
+                    'source' : []
+                    }
             for source in result:
                 #print "Pour <"+urls+">, traitement de ", source
                 relations_count = relations_count+1;
@@ -350,40 +372,31 @@ with open(file_relations, 'rb') as tsvfile:
                 #print "origine:"+row[col_origine]
                 #print "cible  :"+row[col_cible]
                 #print "source:"+source
-                relation = {
-                        'nom'    : row[col_origine],
-                        'valeur' : row[col_valeur],
-                        'source' : source
-                        }
-                try:
-                    # OUPS ici
-                    idOrig = idFromNom(database['objets'], row[col_origine])
-                    if row[col_cible] and database['objets'][idOrig]:
-                        if relation not in database['objets'][idOrig]['possession']:
-                            database['objets'][idOrig]['possession'].append(relation)
+                relation['source'].append(source)
+            try:
+                # OUPS ici
+                idOrig = idFromNom(database['objets'], row[col_origine])
+                if row[col_cible] and database['objets'][idOrig]:
+                    if relation not in database['objets'][idOrig]['possession']:
+                        database['objets'][idOrig]['possession'].append(relation)
 
-                    idCible = idFromNom(database['objets'], row[col_cible])
-                    #print "PROBLEME?"
-                    #print "row[col_origine]=", row[col_origine]
+                idCible = idFromNom(database['objets'], row[col_cible])
 
-                    #print "idCible=", idCible
-                    #print "database[objets][idCible]=", database['objets'][idCible]
-                    #print "-----"
-                    if row[col_origine] and database['objets'][idCible]:
-                        if relation not in database['objets'][idCible]['est_possede']:
-                            database['objets'][idCible]['est_possede'].append(relation)
-                except:
-                    print "[[[[EXCEPTION]]]]"
-                    print "row col_cible = "+row[col_cible]
-                    print "row col_origine = "+row[col_origine]
-                    print row
-                    raise
+                if row[col_origine] and database['objets'][idCible]:
+                    if relation not in database['objets'][idCible]['est_possede']:
+                        database['objets'][idCible]['est_possede'].append(relation)
+            except:
+                print ("[[[[EXCEPTION]]]]"                  )
+                print ("row col_cible = "+row[col_cible]    )
+                print ("row col_origine = "+row[col_origine])
+                print (row                                  )
+                raise
 
 # }}} relations
-print bcolors.OKGREEN+"Nombre de relations : "+bcolors.ENDC+" ", relations_count
+print(bcolors.OKGREEN+"Nombre de relations : "+bcolors.ENDC+" ", relations_count)
 
 
 
-with open('docs/mdiplo.json', 'wb') as outfile:
+with open('docs/mdiplo.json', 'w') as outfile:
     json.dump(database, outfile, indent=4)
 
