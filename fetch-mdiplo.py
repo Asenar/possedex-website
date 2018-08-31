@@ -69,7 +69,7 @@ def idFromNom(db, nom):
 
     for id in db:
         row = db[id]
-        print ("id=", id)
+        #print("check id \r", id, end='')
         if row['nom'] == nom:
             return id
 
@@ -174,7 +174,7 @@ with open(file_liste_medias, 'r') as tsvfile:
     col_fortune       = 3  # rang Challenge
     col_marque        = 99 # info manquante
     col_secteur       = 99 # info manquante
-    col_description   = 1  # indication basique (personne morale/media/personne physique)
+    col_typeLibelle   = 1  # indication basique (personne morale/media/personne physique)
     col_type          = 2  # typeCode, 1/2/3 ?
 
     # nouvelle colonnes
@@ -196,18 +196,21 @@ with open(file_liste_medias, 'r') as tsvfile:
         entry = collections.OrderedDict()
 
         entry['nom'        ] = row[col_nom]
-        if row[col_type] == '1':
-            entry['type' ] = "personne"
-        elif row[col_type] == '2':
-            entry['type' ] = "Type 2 (groupe)"
-        elif row[col_type] == '3':
-            entry['type' ] = "Type 3 (media)"
-        elif row[col_type] == '4':
-            entry['type' ] = "Type 4 (état)"
-        else:
-            entry['type' ] = "Autre type: "+row[col_type]
+        #if row[col_type] == '1':
+        #    entry['type' ] = "Personne physique"
+        #elif row[col_type] == '2':
+        #    entry['type' ] = "Groupe (personne morale)"
+        #elif row[col_type] == '3':
+        #    entry['type' ] = "Média"
+        #elif row[col_type] == '4':
+        #    entry['type' ] = "État"
+        #else:
+        #    entry['type' ] = "Autre type: "+row[col_type]
 
-        entry['description'] = row[col_description]
+        entry['type'] = row[col_type]
+        entry['typeLibelle'] = row[col_typeLibelle]
+
+        #entry['description'] = row[col_description]
         entry['fortune'    ] = row[col_fortune]
         # a remplir dans google sheet ?
         entry['marque'     ] =  ''
@@ -219,9 +222,9 @@ with open(file_liste_medias, 'r') as tsvfile:
         entry['periodicite'] = row[col_periodicite]
         entry['echelle'    ] = row[col_echelle]
         entry['commentaire'] = row[col_commentaire]
-        entry['est_possede'] = []
-        entry['possessions' ] = []
         entry['possedex'   ] = {}
+        print(bcolors.OKBLUE+"GRRR POSSEDEX"+bcolors.ENDC+" ", id)
+        print(entry)
 
         database['objets'][id] = entry
 # }}} objets
@@ -272,52 +275,85 @@ with open(file_urls, 'r') as csvfile:
             if num_row == 1:
                 continue
             if re.search('^exemple ', row[col_nom]) or re.search('^0$', row[col_nom]):
-                #print(bcolors.OKBLUE+"On ignore le nom <"+row[col_nom]+">, row="+bcolors.ENDC)
-                #print(row)
                 continue
             if re.search('^$', row[col_nom]):
-                #print( bcolors.OKBLUE+"On ignore le nom vide, row="+bcolors.ENDC)
-                #print(row)
                 continue
+
+            try:
+                id = idFromNom(database['objets'], row[col_nom])
+            except:
+                print("ERREUR FATALE idFromNom")
+
             # {{{ anciennes donnees
-            entry = collections.OrderedDict()
-            entry['nom'] = row[col_nom]                     # 0  - Nom
-            entry['desc'] = row[col_desc]                   # 1  - Description
-            entry['slug'] = slugify(row[col_nom])           # 2  - Nom normalise
-            entry['classement'] = 'zzz'                     # 3  - Notre note
-            entry['udpated'] = row[col_updated]             # 4  - updated
+            try:
+                entry = collections.OrderedDict()
+                entry['nom'] = row[col_nom]                     # 0  - Nom
+                entry['desc'] = row[col_desc]                   # 1  - Description
+                entry['slug'] = slugify(row[col_nom])           # 2  - Nom normalise
+                entry['classement'] = 'zzz'                     # 3  - Notre note
+                entry['udpated'] = row[col_updated]             # 4  - updated
 
-            entry['pub'] = row[col_pub]                     # 5  - Pub ?
-            entry['subventions'] = (row[col_subventions])            # 6  - subventions
+                entry['pub'] = row[col_pub]                     # 5  - Pub ?
+                entry['subventions'] = row[col_subventions]     # 6  - subventions
 
-            entry['sources'] = (row[col_sources])                # 7 - Sources
+                entry['sources'] = row[col_sources]             # 7 - Sources
 
-            entry['proprietaire1'] = row[col_proprietaire1];          # 8
-            entry['fortune1']      = row[col_fortune1];               # 9
-            entry['marque1']       = row[col_marque1];                # 10
-            entry['influence1']    = row[col_influence1];             # 11
+                # données pas à jour pour les entités de type média (type = 3),
+                # + les types 1 et 2 sont les clefs
+                #entry['proprietaires'] = [
+                #        row[col_proprietaire1],
+                #        row[col_proprietaire2],
+                #        row[col_proprietaire3]
+                #        ]
 
-            entry['proprietaire2'] = row[col_proprietaire2];          # 12
-            entry['fortune2']      = row[col_fortune2];               # 13
-            entry['marque2']       = row[col_marque2];                # 14
-            entry['influence2']    = row[col_influence2];             # 15
+                if database['objets'][id]['type'] == '1' or database['objets'][id]['type'] == '2':
+                    print("traitement fortune pour id ", id)
+                    entry['fortunes'] = [
+                            row[col_fortune1],
+                            row[col_fortune2],
+                            row[col_fortune3]
+                            ]
 
-            entry['proprietaire3'] = row[col_proprietaire3];          # 17
-            entry['fortune3']      = row[col_fortune3];               # 18
-            entry['marque3']       = row[col_marque3];                # 19
-            entry['influence3']    = row[col_influence3];             # 20
+                if database['objets'][id]['type'] == '1' or database['objets'][id]['type'] == '2':
+                    entry['marques'] = [
+                            row[col_marque1],
+                            row[col_marque2],
+                            row[col_marque3]
+                            ]
 
-            #print "On commence a chercher "+row[col_nom]
-            id = idFromNom(database['objets'], row[col_nom])
-            #print "On a fini la recherche"
+                if database['objets'][id]['type'] == '1' or database['objets'][id]['type'] == '2':
+                    entry['influences'] = [
+                        row[col_influence1],
+                        row[col_influence2],
+                        row[col_influence3]
+                        ]
 
-            database['objets'][id]['possedex'] = entry
-            #print bcolors.OKGREEN +"le nom <"+row[col_nom]+"> de googlesheet est bien dans la db[objets]" +bcolors.ENDC, id
+                #print("On commence a chercher ", row[col_nom])
+
+                if id == -1:
+                    print(bcolors.WARNING
+                        +"(-1) <"+row[col_nom]+"> est introuvable dans la db[objets] sans exception"
+                        +bcolors.ENDC, id)
+                elif id == -2:
+                    print(bcolors.WARNING
+                        +"(-2) <"+row[col_nom]+"> est introuvable dans la db[objets] sans exception"
+                        +bcolors.ENDC, id)
+                else:
+                    print(bcolors.OKBLUE+"ADDING ANCIENNE DONNEES"+bcolors.ENDC+" ", id)
+                    database['objets'][id]['possedex'] = entry
+                    #database['objets'][id]['possedex']['zzz'] = "GRRR"
+                    #print bcolors.OKGREEN +"le nom <"+row[col_nom]+"> de googlesheet est bien dans la db[objets]" +bcolors.ENDC, id
+            except:
+                print(bcolors.FAIL
+                    +"ERRREUR fatale dans le traitement des anciennes donnees"
+                    +bcolors.ENDC, id)
+
 
             # }}} anciennes donnees
         except:
-            #print bcolors.WARNING +"le nom <"+row[col_nom]+"> est introuvable dans la db[objets]" +bcolors.ENDC, id
-            #    raise row[col_nom], "STOOOP"
+            print(bcolors.FAIL
+                    +"Fail pour idFromNom<"+row[col_nom]+">, on saute"
+                    +bcolors.ENDC, id)
 
             continue
             #continue
@@ -391,9 +427,7 @@ with open(file_relations, 'r') as tsvfile:
 
         sources = row[col_source]
         if sources:
-            #if re.search(' et ', sources):
             result = re.split(',', sources)
-            #print "length result = ", len(result)
 
             est_possede_par = {
                     'nom'    : row[col_origine],
@@ -408,28 +442,27 @@ with open(file_relations, 'r') as tsvfile:
             for source in result:
                 #print "Pour <"+urls+">, traitement de ", source
                 relations_count = relations_count+1;
-                #source = result[i]
-                #source = source.rstrip('/')
-                #source = source.rstrip('\n')
                 source = source.strip(' ')
-                #print bcolors.OKBLUE+ " - Ajoutons une entree "+bcolors.ENDC+" "
-                #print "origine:"+row[col_origine]
-                #print "cible  :"+row[col_cible]
-                #print "source:"+source
                 est_possede_par['source'].append(source)
                 possession['source'].append(source)
+
             try:
                 # OUPS ici
-                print ("recherche <"+row[col_origine]+">")
+                #print ("recherche <"+row[col_origine]+">")
                 idOrig = idFromNom(database['objets'], row[col_origine])
-                print ("idOrig=", idOrig)
+                #print ("idOrig=", idOrig)
                 if row[col_cible] and database['objets'][idOrig]:
+
+                    if not hasattr(database['objets'][idOrig], 'possessions'):
+                        database['objets'][idOrig]['possessions'] = []
                     if possession not in database['objets'][idOrig]['possessions']:
                         database['objets'][idOrig]['possessions'].append(possession)
 
                 idCible = idFromNom(database['objets'], row[col_cible])
 
                 if row[col_origine] and database['objets'][idCible]:
+                    if not hasattr(database['objets'][idCible], 'est_possede'):
+                        database['objets'][idCible]['est_possede'] = []
                     if est_possede_par not in database['objets'][idCible]['est_possede']:
                         database['objets'][idCible]['est_possede'].append(est_possede_par)
             except:
@@ -443,6 +476,7 @@ with open(file_relations, 'r') as tsvfile:
 print(bcolors.OKGREEN+"Nombre de relations : "+bcolors.ENDC+" ", relations_count)
 
 
+print(bcolors.OKBLUE+"Going to write into mdiplo.json"+bcolors.ENDC+" ")
 
 with open('docs/mdiplo.json', 'w') as outfile:
     json.dump(database, outfile, indent=4, ensure_ascii=False)
