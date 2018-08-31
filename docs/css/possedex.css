@@ -101,7 +101,11 @@ body {
     color : #555
 }
 
-.possedex a { color : #111;font-weight:bold; }
+.possedex a { color : #111;font-weight:normal; }
+
+.possedex a.detail-media,
+.possedex a.detail-owner
+{ color : #111;font-weight:bold; }
 
 
 h1, h2, h3, h4, h5, h6, #result label{
