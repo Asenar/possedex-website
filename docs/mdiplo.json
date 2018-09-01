@@ -26,22 +26,22 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "50",
                     "nom": "Sophia Publications",
+                    "valeur": "50",
                     "source": [
                         "source"
                     ]
                 },
                 {
-                    "valeur": "53",
                     "nom": "Groupe Perdriel",
+                    "valeur": "53",
                     "source": [
                         "source"
                     ]
                 },
                 {
-                    "valeur": "participe",
                     "nom": "L'Opinion",
+                    "valeur": "participe",
                     "source": [
                         "challenges.fr"
                     ]
@@ -62,15 +62,15 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "L'histoire",
+                    "valeur": "100",
                     "source": [
                         "lemonde.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Historia",
+                    "valeur": "100",
                     "source": [
                         "strategies.fr"
                     ]
@@ -79,8 +79,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "50",
                     "nom": "Claude Perdriel",
+                    "valeur": "50",
                     "source": [
                         "source"
                     ]
@@ -99,15 +99,15 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "Challenges",
+                    "valeur": "100",
                     "source": [
                         "strategies.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Sciences & Avenir",
+                    "valeur": "100",
                     "source": [
                         "strategies.fr"
                     ]
@@ -116,22 +116,22 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "53",
                     "nom": "Claude Perdriel",
+                    "valeur": "53",
                     "source": [
                         "source"
                     ]
                 },
                 {
-                    "valeur": "40",
                     "nom": "Renault",
+                    "valeur": "40",
                     "source": [
                         "lemonde.fr"
                     ]
                 },
                 {
-                    "valeur": "40",
                     "nom": "Renault",
+                    "valeur": "40",
                     "source": [
                         "bouygues.com"
                     ]
@@ -162,8 +162,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Sophia Publications",
+                    "valeur": "100",
                     "source": [
                         "lemonde.fr"
                     ]
@@ -194,8 +194,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Sophia Publications",
+                    "valeur": "100",
                     "source": [
                         "strategies.fr"
                     ]
@@ -226,8 +226,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Perdriel",
+                    "valeur": "100",
                     "source": [
                         "strategies.fr"
                     ]
@@ -248,8 +248,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Perdriel",
+                    "valeur": "100",
                     "source": [
                         "strategies.fr"
                     ]
@@ -280,29 +280,29 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "participe",
                     "nom": "LVMH",
+                    "valeur": "participe",
                     "source": [
                         "challenges.fr"
                     ]
                 },
                 {
-                    "valeur": "participe",
                     "nom": "Famille Bettencourt",
+                    "valeur": "participe",
                     "source": [
                         "challenges.fr"
                     ]
                 },
                 {
-                    "valeur": "participe",
                     "nom": "Nicolas Beytout",
+                    "valeur": "participe",
                     "source": [
                         "challenges.fr"
                     ]
                 },
                 {
-                    "valeur": "participe",
                     "nom": "Claude Perdriel",
+                    "valeur": "participe",
                     "source": [
                         "challenges.fr"
                     ]
@@ -321,8 +321,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "20",
                     "nom": "Le Monde libre",
+                    "valeur": "20",
                     "source": [
                         "strategies.fr"
                     ]
@@ -343,8 +343,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "40",
                     "nom": "Le Monde libre",
+                    "valeur": "40",
                     "source": [
                         "https://fr.reuters.com/article/topNews/idFRKCN1BJ24Z-OFRTP"
                     ]
@@ -365,15 +365,15 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "40",
                     "nom": "Le Monde libre",
+                    "valeur": "40",
                     "source": [
                         "https://fr.reuters.com/article/topNews/idFRKCN1BJ24Z-OFRTP"
                     ]
                 },
                 {
-                    "valeur": "78",
                     "nom": "Les Nouvelles Éditions",
+                    "valeur": "78",
                     "source": [
                         "lexpress.fr"
                     ]
@@ -394,15 +394,15 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "73",
                     "nom": "Le Monde SA",
+                    "valeur": "73",
                     "source": [
                         "https://fr.reuters.com/article/topNews/idFRKCN1BJ24Z-OFRTP"
                     ]
                 },
                 {
-                    "valeur": "99",
                     "nom": "L'Obs",
+                    "valeur": "99",
                     "source": [
                         "lefigaro.fr"
                     ]
@@ -411,22 +411,22 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "20",
                     "nom": "Prisa",
+                    "valeur": "20",
                     "source": [
                         "strategies.fr"
                     ]
                 },
                 {
-                    "valeur": "40",
                     "nom": "Xavier Niel",
+                    "valeur": "40",
                     "source": [
                         "https://fr.reuters.com/article/topNews/idFRKCN1BJ24Z-OFRTP"
                     ]
                 },
                 {
-                    "valeur": "40",
                     "nom": "Matthieu Pigasse",
+                    "valeur": "40",
                     "source": [
                         "https://fr.reuters.com/article/topNews/idFRKCN1BJ24Z-OFRTP"
                     ]
@@ -445,80 +445,80 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "Prier",
+                    "valeur": "100",
                     "source": [
                         "sdllemonde.fr",
                         "lemonde.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "M, le magazine du Monde",
+                    "valeur": "100",
                     "source": [
                         "sdllemonde.fr",
                         "lemonde.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Le Monde",
+                    "valeur": "100",
                     "source": [
                         "sdllemonde.fr",
                         "lemonde.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Télérama",
+                    "valeur": "100",
                     "source": [
                         "sdllemonde.fr",
                         "lemonde.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Courrier international",
+                    "valeur": "100",
                     "source": [
                         "sdllemonde.fr",
                         "lemonde.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Le Monde des religions",
-                    "source": [
-                        "sdllemonde.fr",
-                        "lemonde.fr"
-                    ]
-                },
-                {
                     "valeur": "100",
+                    "source": [
+                        "sdllemonde.fr",
+                        "lemonde.fr"
+                    ]
+                },
+                {
                     "nom": "La Vie",
+                    "valeur": "100",
                     "source": [
                         "sdllemonde.fr",
                         "lemonde.fr"
                     ]
                 },
                 {
-                    "valeur": "51",
                     "nom": "Le Monde diplomatique",
-                    "source": [
-                        "sdllemonde.fr",
-                        "lemonde.fr"
-                    ]
-                },
-                {
                     "valeur": "51",
-                    "nom": "Manière de voir",
                     "source": [
                         "sdllemonde.fr",
                         "lemonde.fr"
                     ]
                 },
                 {
-                    "valeur": "34",
+                    "nom": "Manière de voir",
+                    "valeur": "51",
+                    "source": [
+                        "sdllemonde.fr",
+                        "lemonde.fr"
+                    ]
+                },
+                {
                     "nom": "Huffingtonpost.fr",
+                    "valeur": "34",
                     "source": [
                         "lexpress.fr"
                     ]
@@ -527,8 +527,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "73",
                     "nom": "Le Monde libre",
+                    "valeur": "73",
                     "source": [
                         "https://fr.reuters.com/article/topNews/idFRKCN1BJ24Z-OFRTP"
                     ]
@@ -561,8 +561,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "99",
                     "nom": "Le Monde libre",
+                    "valeur": "99",
                     "source": [
                         "lefigaro.fr"
                     ]
@@ -594,8 +594,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Le Monde SA",
+                    "valeur": "100",
                     "source": [
                         "sdllemonde.fr",
                         "lemonde.fr"
@@ -617,8 +617,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Le Monde SA",
+                    "valeur": "100",
                     "source": [
                         "sdllemonde.fr",
                         "lemonde.fr"
@@ -650,8 +650,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Le Monde SA",
+                    "valeur": "100",
                     "source": [
                         "sdllemonde.fr",
                         "lemonde.fr"
@@ -683,8 +683,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Le Monde SA",
+                    "valeur": "100",
                     "source": [
                         "sdllemonde.fr",
                         "lemonde.fr"
@@ -716,8 +716,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Le Monde SA",
+                    "valeur": "100",
                     "source": [
                         "sdllemonde.fr",
                         "lemonde.fr"
@@ -749,8 +749,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Le Monde SA",
+                    "valeur": "100",
                     "source": [
                         "sdllemonde.fr",
                         "lemonde.fr"
@@ -782,8 +782,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Le Monde SA",
+                    "valeur": "100",
                     "source": [
                         "sdllemonde.fr",
                         "lemonde.fr"
@@ -815,23 +815,23 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "51",
                     "nom": "Le Monde SA",
+                    "valeur": "51",
                     "source": [
                         "sdllemonde.fr",
                         "lemonde.fr"
                     ]
                 },
                 {
-                    "valeur": "24,5",
                     "nom": "Les Amis du Monde diplomatique",
+                    "valeur": "24,5",
                     "source": [
                         "lexpress.fr"
                     ]
                 },
                 {
-                    "valeur": "24,5",
                     "nom": "Association Günter-Holzmann",
+                    "valeur": "24,5",
                     "source": [
                         "lexpress.fr"
                     ]
@@ -862,23 +862,23 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "51",
                     "nom": "Le Monde SA",
+                    "valeur": "51",
                     "source": [
                         "sdllemonde.fr",
                         "lemonde.fr"
                     ]
                 },
                 {
-                    "valeur": "24,5",
                     "nom": "Les Amis du Monde diplomatique",
+                    "valeur": "24,5",
                     "source": [
                         "lexpress.fr"
                     ]
                 },
                 {
-                    "valeur": "24,5",
                     "nom": "Association Günter-Holzmann",
+                    "valeur": "24,5",
                     "source": [
                         "lexpress.fr"
                     ]
@@ -899,22 +899,22 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "34",
                     "nom": "Le Monde SA",
+                    "valeur": "34",
                     "source": [
                         "lexpress.fr"
                     ]
                 },
                 {
-                    "valeur": "51",
                     "nom": "Huffington Post",
+                    "valeur": "51",
                     "source": [
                         "lexpress.fr"
                     ]
                 },
                 {
-                    "valeur": "11",
                     "nom": "Les Nouvelles Éditions",
+                    "valeur": "11",
                     "source": [
                         "lexpress.fr"
                     ]
@@ -933,8 +933,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "Huffington Post",
+                    "valeur": "100",
                     "source": [
                         "lexpress.fr"
                     ]
@@ -955,8 +955,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "51",
                     "nom": "Huffingtonpost.fr",
+                    "valeur": "51",
                     "source": [
                         "lexpress.fr"
                     ]
@@ -965,8 +965,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "AOL",
+                    "valeur": "100",
                     "source": [
                         "lexpress.fr"
                     ]
@@ -985,29 +985,29 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "11",
                     "nom": "Huffingtonpost.fr",
+                    "valeur": "11",
                     "source": [
                         "lexpress.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Radio Nova",
-                    "source": [
-                        "lesechos.fr"
-                    ]
-                },
-                {
                     "valeur": "100",
-                    "nom": "Les Inrockuptibles",
                     "source": [
                         "lesechos.fr"
                     ]
                 },
                 {
-                    "valeur": "<50",
+                    "nom": "Les Inrockuptibles",
+                    "valeur": "100",
+                    "source": [
+                        "lesechos.fr"
+                    ]
+                },
+                {
                     "nom": "Vice.com",
+                    "valeur": "<50",
                     "source": [
                         "lemonde.fr"
                     ]
@@ -1016,8 +1016,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "78",
                     "nom": "Matthieu Pigasse",
+                    "valeur": "78",
                     "source": [
                         "lexpress.fr"
                     ]
@@ -1038,8 +1038,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Les Nouvelles Éditions",
+                    "valeur": "100",
                     "source": [
                         "lesechos.fr"
                     ]
@@ -1070,8 +1070,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Les Nouvelles Éditions",
+                    "valeur": "100",
                     "source": [
                         "lesechos.fr"
                     ]
@@ -1092,8 +1092,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "<50",
                     "nom": "Les Nouvelles Éditions",
+                    "valeur": "<50",
                     "source": [
                         "lemonde.fr"
                     ]
@@ -1112,15 +1112,15 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "24,5",
                     "nom": "Le Monde diplomatique",
+                    "valeur": "24,5",
                     "source": [
                         "lexpress.fr"
                     ]
                 },
                 {
-                    "valeur": "24,5",
                     "nom": "Manière de voir",
+                    "valeur": "24,5",
                     "source": [
                         "lexpress.fr"
                     ]
@@ -1141,15 +1141,15 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "24,5",
                     "nom": "Le Monde diplomatique",
+                    "valeur": "24,5",
                     "source": [
                         "lexpress.fr"
                     ]
                 },
                 {
-                    "valeur": "24,5",
                     "nom": "Manière de voir",
+                    "valeur": "24,5",
                     "source": [
                         "lexpress.fr"
                     ]
@@ -1170,8 +1170,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Dassault",
+                    "valeur": "100",
                     "source": [
                         "lemonde.fr"
                     ]
@@ -1192,8 +1192,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Figaro",
+                    "valeur": "100",
                     "source": [
                         "lemonde.fr"
                     ]
@@ -1202,8 +1202,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Famille Dassault",
+                    "valeur": "100",
                     "source": [
                         "lemonde.fr"
                     ]
@@ -1222,32 +1222,32 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "Le Figaro",
+                    "valeur": "100",
                     "source": [
                         "dassault.fr",
                         "offremedia.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Figaro Magazine",
+                    "valeur": "100",
                     "source": [
                         "dassault.fr",
                         "offremedia.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Le Particulier",
+                    "valeur": "100",
                     "source": [
                         "dassault.fr",
                         "offremedia.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "La Lettre de l'Expansion",
+                    "valeur": "100",
                     "source": [
                         "dassault.fr",
                         "offremedia.com"
@@ -1257,8 +1257,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Dassault",
+                    "valeur": "100",
                     "source": [
                         "lemonde.fr"
                     ]
@@ -1290,8 +1290,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Figaro",
+                    "valeur": "100",
                     "source": [
                         "dassault.fr",
                         "offremedia.com"
@@ -1313,8 +1313,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Figaro",
+                    "valeur": "100",
                     "source": [
                         "dassault.fr",
                         "offremedia.com"
@@ -1346,8 +1346,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Figaro",
+                    "valeur": "100",
                     "source": [
                         "dassault.fr",
                         "offremedia.com"
@@ -1369,8 +1369,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Figaro",
+                    "valeur": "100",
                     "source": [
                         "dassault.fr",
                         "offremedia.com"
@@ -1390,8 +1390,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "46,6",
                     "nom": "LVMH",
+                    "valeur": "46,6",
                     "source": [
                         "dassault.fr",
                         "offremedia.com"
@@ -1413,43 +1413,43 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "Le Parisien",
+                    "valeur": "100",
                     "source": [
                         "lvmh.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Le Parisien Week-End",
+                    "valeur": "100",
                     "source": [
                         "lvmh.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Le Parisien économie",
+                    "valeur": "100",
                     "source": [
                         "lvmh.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Aujourd'hui en France",
-                    "source": [
-                        "lvmh.fr"
-                    ]
-                },
-                {
                     "valeur": "100",
-                    "nom": "Groupe Les Échos",
                     "source": [
                         "lvmh.fr"
                     ]
                 },
                 {
-                    "valeur": "participe",
+                    "nom": "Groupe Les Échos",
+                    "valeur": "100",
+                    "source": [
+                        "lvmh.fr"
+                    ]
+                },
+                {
                     "nom": "L'Opinion",
+                    "valeur": "participe",
                     "source": [
                         "challenges.fr"
                     ]
@@ -1458,8 +1458,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "46,6",
                     "nom": "Bernard Arnault",
+                    "valeur": "46,6",
                     "source": [
                         "dassault.fr",
                         "offremedia.com"
@@ -1491,8 +1491,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "LVMH",
+                    "valeur": "100",
                     "source": [
                         "lvmh.fr"
                     ]
@@ -1513,8 +1513,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "LVMH",
+                    "valeur": "100",
                     "source": [
                         "lvmh.fr"
                     ]
@@ -1535,8 +1535,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "LVMH",
+                    "valeur": "100",
                     "source": [
                         "lvmh.fr"
                     ]
@@ -1557,8 +1557,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "LVMH",
+                    "valeur": "100",
                     "source": [
                         "lvmh.fr"
                     ]
@@ -1577,36 +1577,36 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "Les Échos",
+                    "valeur": "100",
                     "source": [
                         "lvmh.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Investir",
+                    "valeur": "100",
                     "source": [
                         "lvmh.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Investir Magazine",
+                    "valeur": "100",
                     "source": [
                         "lvmh.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Les Échos Week-End",
+                    "valeur": "100",
                     "source": [
                         "lvmh.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Radio Classique",
+                    "valeur": "100",
                     "source": [
                         "lvmh.fr"
                     ]
@@ -1615,8 +1615,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "LVMH",
+                    "valeur": "100",
                     "source": [
                         "lvmh.fr"
                     ]
@@ -1637,8 +1637,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Les Échos",
+                    "valeur": "100",
                     "source": [
                         "lvmh.fr"
                     ]
@@ -1669,8 +1669,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Les Échos",
+                    "valeur": "100",
                     "source": [
                         "lvmh.fr"
                     ]
@@ -1691,8 +1691,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Les Échos",
+                    "valeur": "100",
                     "source": [
                         "lvmh.fr"
                     ]
@@ -1713,8 +1713,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Les Échos",
+                    "valeur": "100",
                     "source": [
                         "lvmh.fr"
                     ]
@@ -1745,8 +1745,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Les Échos",
+                    "valeur": "100",
                     "source": [
                         "lvmh.fr"
                     ]
@@ -1765,8 +1765,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "participe",
                     "nom": "L'Opinion",
+                    "valeur": "participe",
                     "source": [
                         "challenges.fr"
                     ]
@@ -1787,8 +1787,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "participe",
                     "nom": "L'Opinion",
+                    "valeur": "participe",
                     "source": [
                         "challenges.fr"
                     ]
@@ -1809,8 +1809,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "61",
                     "nom": "Altice",
+                    "valeur": "61",
                     "source": [
                         "challenges.fr"
                     ]
@@ -1831,8 +1831,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "78",
                     "nom": "Altice France",
+                    "valeur": "78",
                     "source": [
                         "challenges.fr"
                     ]
@@ -1841,8 +1841,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "61",
                     "nom": "Patrick Drahi",
+                    "valeur": "61",
                     "source": [
                         "challenges.fr"
                     ]
@@ -1861,22 +1861,22 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "L'Express",
+                    "valeur": "100",
                     "source": [
                         "linformaticien.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Libération",
+                    "valeur": "100",
                     "source": [
                         "linformaticien.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "NextRadioTV",
+                    "valeur": "100",
                     "source": [
                         "freenews.fr"
                     ]
@@ -1885,8 +1885,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "78",
                     "nom": "Altice",
+                    "valeur": "78",
                     "source": [
                         "challenges.fr"
                     ]
@@ -1917,8 +1917,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Altice France",
+                    "valeur": "100",
                     "source": [
                         "linformaticien.com"
                     ]
@@ -1949,8 +1949,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Altice France",
+                    "valeur": "100",
                     "source": [
                         "linformaticien.com"
                     ]
@@ -1969,36 +1969,36 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "BFM TV",
+                    "valeur": "100",
                     "source": [
                         "investir.lesechos.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "RMC Découverte",
+                    "valeur": "100",
                     "source": [
                         "investir.lesechos.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "RMC",
+                    "valeur": "100",
                     "source": [
                         "investir.lesechos.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "BFM Business",
+                    "valeur": "100",
                     "source": [
                         "investir.lesechos.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Numéro 23",
+                    "valeur": "100",
                     "source": [
                         "lepoint.fr"
                     ]
@@ -2007,8 +2007,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Altice France",
+                    "valeur": "100",
                     "source": [
                         "freenews.fr"
                     ]
@@ -2039,8 +2039,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "NextRadioTV",
+                    "valeur": "100",
                     "source": [
                         "investir.lesechos.fr"
                     ]
@@ -2069,8 +2069,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "NextRadioTV",
+                    "valeur": "100",
                     "source": [
                         "investir.lesechos.fr"
                     ]
@@ -2099,8 +2099,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "NextRadioTV",
+                    "valeur": "100",
                     "source": [
                         "investir.lesechos.fr"
                     ]
@@ -2129,8 +2129,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "NextRadioTV",
+                    "valeur": "100",
                     "source": [
                         "investir.lesechos.fr"
                     ]
@@ -2151,8 +2151,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "NextRadioTV",
+                    "valeur": "100",
                     "source": [
                         "lepoint.fr"
                     ]
@@ -2171,8 +2171,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "7,96",
                     "nom": "Lagardère SCA",
+                    "valeur": "7,96",
                     "source": [
                         "lepoint.fr"
                     ]
@@ -2193,8 +2193,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "12,83",
                     "nom": "Lagardère SCA",
+                    "valeur": "12,83",
                     "source": [
                         "lepoint.fr"
                     ]
@@ -2215,8 +2215,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "Lagardère Active",
+                    "valeur": "100",
                     "source": [
                         "lepoint.fr"
                     ]
@@ -2225,15 +2225,15 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "7,96",
                     "nom": "Arnaud Lagardère",
+                    "valeur": "7,96",
                     "source": [
                         "lepoint.fr"
                     ]
                 },
                 {
-                    "valeur": "12,83",
                     "nom": "Qatar Investment Authority",
+                    "valeur": "12,83",
                     "source": [
                         "lepoint.fr"
                     ]
@@ -2252,43 +2252,43 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "Le Journal du dimanche",
+                    "valeur": "100",
                     "source": [
                         "lagardere.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Paris Match",
+                    "valeur": "100",
                     "source": [
                         "lagardere.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Gulli",
+                    "valeur": "100",
                     "source": [
                         "lagardere.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Europe 1",
+                    "valeur": "100",
                     "source": [
                         "lagardere.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "RFM",
+                    "valeur": "100",
                     "source": [
                         "lagardere.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Virgin Radio",
+                    "valeur": "100",
                     "source": [
                         "lagardere.com"
                     ]
@@ -2297,8 +2297,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Lagardère SCA",
+                    "valeur": "100",
                     "source": [
                         "lepoint.fr"
                     ]
@@ -2319,8 +2319,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Lagardère Active",
+                    "valeur": "100",
                     "source": [
                         "lagardere.com"
                     ]
@@ -2351,8 +2351,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Lagardère Active",
+                    "valeur": "100",
                     "source": [
                         "lagardere.com"
                     ]
@@ -2386,8 +2386,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Lagardère Active",
+                    "valeur": "100",
                     "source": [
                         "lagardere.com"
                     ]
@@ -2418,8 +2418,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Lagardère Active",
+                    "valeur": "100",
                     "source": [
                         "lagardere.com"
                     ]
@@ -2450,8 +2450,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Lagardère Active",
+                    "valeur": "100",
                     "source": [
                         "lagardere.com"
                     ]
@@ -2482,8 +2482,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Lagardère Active",
+                    "valeur": "100",
                     "source": [
                         "lagardere.com"
                     ]
@@ -2502,8 +2502,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "49,77",
                     "nom": "Financière de l'Odet",
+                    "valeur": "49,77",
                     "source": [
                         "lagardere.com"
                     ]
@@ -2524,8 +2524,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "64,4",
                     "nom": "Bolloré",
+                    "valeur": "64,4",
                     "source": [
                         "lagardere.com"
                     ]
@@ -2534,8 +2534,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "49,77",
                     "nom": "Vincent Bolloré",
+                    "valeur": "49,77",
                     "source": [
                         "lagardere.com"
                     ]
@@ -2554,8 +2554,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "CNews matin",
+                    "valeur": "100",
                     "source": [
                         "bollore.com",
                         "vivendi.com",
@@ -2563,8 +2563,8 @@
                     ]
                 },
                 {
-                    "valeur": "20,65",
                     "nom": "Vivendi",
+                    "valeur": "20,65",
                     "source": [
                         "bollore.com",
                         "vivendi.com",
@@ -2575,8 +2575,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "64,4",
                     "nom": "Financière de l'Odet",
+                    "valeur": "64,4",
                     "source": [
                         "lagardere.com"
                     ]
@@ -2597,8 +2597,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Bolloré",
+                    "valeur": "100",
                     "source": [
                         "bollore.com",
                         "vivendi.com",
@@ -2619,8 +2619,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "Canal +",
+                    "valeur": "100",
                     "source": [
                         "bollore.com",
                         "vivendi.com",
@@ -2628,8 +2628,8 @@
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "C8",
+                    "valeur": "100",
                     "source": [
                         "bollore.com",
                         "vivendi.com",
@@ -2637,8 +2637,8 @@
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "CNews",
+                    "valeur": "100",
                     "source": [
                         "bollore.com",
                         "vivendi.com",
@@ -2646,8 +2646,8 @@
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "CStar",
+                    "valeur": "100",
                     "source": [
                         "bollore.com",
                         "vivendi.com",
@@ -2658,8 +2658,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "20,65",
                     "nom": "Bolloré",
+                    "valeur": "20,65",
                     "source": [
                         "bollore.com",
                         "vivendi.com",
@@ -2682,8 +2682,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Vivendi",
+                    "valeur": "100",
                     "source": [
                         "bollore.com",
                         "vivendi.com",
@@ -2716,8 +2716,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Vivendi",
+                    "valeur": "100",
                     "source": [
                         "bollore.com",
                         "vivendi.com",
@@ -2740,8 +2740,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Vivendi",
+                    "valeur": "100",
                     "source": [
                         "bollore.com",
                         "vivendi.com",
@@ -2764,8 +2764,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Vivendi",
+                    "valeur": "100",
                     "source": [
                         "bollore.com",
                         "vivendi.com",
@@ -2786,8 +2786,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "Privinvest",
+                    "valeur": "100",
                     "source": [
                         "bollore.com",
                         "vivendi.com",
@@ -2810,8 +2810,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": ">50",
                     "nom": "Groupe Valmonde",
+                    "valeur": ">50",
                     "source": [
                         "bollore.com",
                         "vivendi.com",
@@ -2822,8 +2822,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Iskandar Safa",
+                    "valeur": "100",
                     "source": [
                         "bollore.com",
                         "vivendi.com",
@@ -2844,15 +2844,15 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "Valeurs actuelles",
+                    "valeur": "100",
                     "source": [
                         "ozap.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Mieux vivre votre argent",
+                    "valeur": "100",
                     "source": [
                         "ozap.com"
                     ]
@@ -2861,8 +2861,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": ">50",
                     "nom": "Privinvest",
+                    "valeur": ">50",
                     "source": [
                         "bollore.com",
                         "vivendi.com",
@@ -2895,8 +2895,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Valmonde",
+                    "valeur": "100",
                     "source": [
                         "ozap.com"
                     ]
@@ -2917,8 +2917,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Valmonde",
+                    "valeur": "100",
                     "source": [
                         "ozap.com"
                     ]
@@ -2937,8 +2937,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "9",
                     "nom": "Marianne",
+                    "valeur": "9",
                     "source": [
                         "Correspondance de la presse"
                     ]
@@ -2959,8 +2959,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "50",
                     "nom": "Czech Media Invest",
+                    "valeur": "50",
                     "source": [
                         "bfmbusiness.bfmtv.com"
                     ]
@@ -2981,8 +2981,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "91",
                     "nom": "Marianne",
+                    "valeur": "91",
                     "source": [
                         "marianne.net"
                     ]
@@ -2991,8 +2991,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "50",
                     "nom": "Daniel Křetínský",
+                    "valeur": "50",
                     "source": [
                         "bfmbusiness.bfmtv.com"
                     ]
@@ -3023,15 +3023,15 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "9",
                     "nom": "Yves de Chaisemartin",
+                    "valeur": "9",
                     "source": [
                         "Correspondance de la presse"
                     ]
                 },
                 {
-                    "valeur": "91",
                     "nom": "Czech Media Invest",
+                    "valeur": "91",
                     "source": [
                         "marianne.net"
                     ]
@@ -3050,8 +3050,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "Artémis",
+                    "valeur": "100",
                     "source": [
                         "marianne.net"
                     ]
@@ -3072,22 +3072,22 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Sebdo-Le Point",
+                    "valeur": "100",
                     "source": [
                         "marianne.net"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Groupe L'Agefi",
+                    "valeur": "100",
                     "source": [
                         "marianne.net"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Point de vue",
+                    "valeur": "100",
                     "source": [
                         "Pressenews.fr"
                     ]
@@ -3096,8 +3096,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "François Pinault",
+                    "valeur": "100",
                     "source": [
                         "marianne.net"
                     ]
@@ -3116,8 +3116,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "Le Point",
+                    "valeur": "100",
                     "source": [
                         "groupeartemis.com",
                         "agefi.fr"
@@ -3127,8 +3127,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Artémis",
+                    "valeur": "100",
                     "source": [
                         "marianne.net"
                     ]
@@ -3147,8 +3147,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "L'Agefi hebdo",
+                    "valeur": "100",
                     "source": [
                         "groupeartemis.com",
                         "agefi.fr"
@@ -3158,8 +3158,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Artémis",
+                    "valeur": "100",
                     "source": [
                         "marianne.net"
                     ]
@@ -3180,8 +3180,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Artémis",
+                    "valeur": "100",
                     "source": [
                         "Pressenews.fr"
                     ]
@@ -3212,8 +3212,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Sebdo-Le Point",
+                    "valeur": "100",
                     "source": [
                         "groupeartemis.com",
                         "agefi.fr"
@@ -3245,8 +3245,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe L'Agefi",
+                    "valeur": "100",
                     "source": [
                         "groupeartemis.com",
                         "agefi.fr"
@@ -3266,8 +3266,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "contrôle",
                     "nom": "Bertelsmann",
+                    "valeur": "contrôle",
                     "source": [
                         "groupeartemis.com",
                         "agefi.fr"
@@ -3289,16 +3289,16 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "Gruner + Jahr",
+                    "valeur": "100",
                     "source": [
                         "groupeartemis.com",
                         "agefi.fr"
                     ]
                 },
                 {
-                    "valeur": "75",
                     "nom": "RTL Group",
+                    "valeur": "75",
                     "source": [
                         "groupeartemis.com",
                         "agefi.fr"
@@ -3308,8 +3308,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "contrôle",
                     "nom": "Famille Mohn",
+                    "valeur": "contrôle",
                     "source": [
                         "groupeartemis.com",
                         "agefi.fr"
@@ -3329,8 +3329,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "Prisma Media",
+                    "valeur": "100",
                     "source": [
                         "groupeartemis.com",
                         "agefi.fr"
@@ -3340,8 +3340,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Bertelsmann",
+                    "valeur": "100",
                     "source": [
                         "groupeartemis.com",
                         "agefi.fr"
@@ -3361,8 +3361,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "48",
                     "nom": "Groupe M6",
+                    "valeur": "48",
                     "source": [
                         "investir.lesechos.fr"
                     ]
@@ -3371,8 +3371,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "75",
                     "nom": "Bertelsmann",
+                    "valeur": "75",
                     "source": [
                         "groupeartemis.com",
                         "agefi.fr"
@@ -3392,22 +3392,22 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "Capital",
+                    "valeur": "100",
                     "source": [
                         "investir.lesechos.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Management",
+                    "valeur": "100",
                     "source": [
                         "investir.lesechos.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Harvard Business Review",
+                    "valeur": "100",
                     "source": [
                         "investir.lesechos.fr"
                     ]
@@ -3416,8 +3416,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Gruner + Jahr",
+                    "valeur": "100",
                     "source": [
                         "groupeartemis.com",
                         "agefi.fr"
@@ -3449,8 +3449,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Prisma Media",
+                    "valeur": "100",
                     "source": [
                         "investir.lesechos.fr"
                     ]
@@ -3479,8 +3479,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Prisma Media",
+                    "valeur": "100",
                     "source": [
                         "investir.lesechos.fr"
                     ]
@@ -3511,8 +3511,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Prisma Media",
+                    "valeur": "100",
                     "source": [
                         "investir.lesechos.fr"
                     ]
@@ -3531,48 +3531,48 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "M6",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com",
                         "AFP"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "W9",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com",
                         "AFP"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "6ter",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com",
                         "AFP"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "RTL",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com",
                         "AFP"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "RTL2",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com",
                         "AFP"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Fun Radio",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com",
                         "AFP"
@@ -3582,8 +3582,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "48",
                     "nom": "RTL Group",
+                    "valeur": "48",
                     "source": [
                         "investir.lesechos.fr"
                     ]
@@ -3614,8 +3614,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe M6",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com",
                         "AFP"
@@ -3647,8 +3647,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe M6",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com",
                         "AFP"
@@ -3680,8 +3680,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe M6",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com",
                         "AFP"
@@ -3713,8 +3713,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe M6",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com",
                         "AFP"
@@ -3746,8 +3746,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe M6",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com",
                         "AFP"
@@ -3779,8 +3779,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe M6",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com",
                         "AFP"
@@ -3800,8 +3800,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "Ghosn Capital",
+                    "valeur": "100",
                     "source": [
                         "strategies.fr",
                         "AFP"
@@ -3823,8 +3823,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "VSD",
+                    "valeur": "100",
                     "source": [
                         "strategies.fr",
                         "AFP"
@@ -3834,8 +3834,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Georges Ghosn",
+                    "valeur": "100",
                     "source": [
                         "strategies.fr",
                         "AFP"
@@ -3867,8 +3867,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Ghosn Capital",
+                    "valeur": "100",
                     "source": [
                         "strategies.fr",
                         "AFP"
@@ -3888,8 +3888,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "20",
                     "nom": "Bouygues",
+                    "valeur": "20",
                     "source": [
                         "zonebourse.com",
                         "AFP"
@@ -3911,8 +3911,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "44",
                     "nom": "Groupe TF1",
+                    "valeur": "44",
                     "source": [
                         "zonebourse.com",
                         "AFP"
@@ -3922,8 +3922,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "20",
                     "nom": "Martin et Olivier Bouygues",
+                    "valeur": "20",
                     "source": [
                         "zonebourse.com",
                         "AFP"
@@ -3943,8 +3943,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "TF1",
+                    "valeur": "100",
                     "source": [
                         "bouygues.com",
                         "groupe-tf1.fr",
@@ -3952,8 +3952,8 @@
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "TFX",
+                    "valeur": "100",
                     "source": [
                         "bouygues.com",
                         "groupe-tf1.fr",
@@ -3961,8 +3961,8 @@
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "LCI",
+                    "valeur": "100",
                     "source": [
                         "bouygues.com",
                         "groupe-tf1.fr",
@@ -3970,8 +3970,8 @@
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "TF1 Séries Films",
+                    "valeur": "100",
                     "source": [
                         "bouygues.com",
                         "groupe-tf1.fr",
@@ -3979,8 +3979,8 @@
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "TMC",
+                    "valeur": "100",
                     "source": [
                         "bouygues.com"
                     ]
@@ -3989,8 +3989,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "44",
                     "nom": "Bouygues",
+                    "valeur": "44",
                     "source": [
                         "zonebourse.com",
                         "AFP"
@@ -4022,8 +4022,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe TF1",
+                    "valeur": "100",
                     "source": [
                         "bouygues.com",
                         "groupe-tf1.fr",
@@ -4046,8 +4046,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe TF1",
+                    "valeur": "100",
                     "source": [
                         "bouygues.com",
                         "groupe-tf1.fr",
@@ -4080,8 +4080,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe TF1",
+                    "valeur": "100",
                     "source": [
                         "bouygues.com",
                         "groupe-tf1.fr",
@@ -4104,8 +4104,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe TF1",
+                    "valeur": "100",
                     "source": [
                         "bouygues.com",
                         "groupe-tf1.fr",
@@ -4138,8 +4138,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe TF1",
+                    "valeur": "100",
                     "source": [
                         "bouygues.com"
                     ]
@@ -4158,57 +4158,57 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "15",
                     "nom": "Renault",
+                    "valeur": "15",
                     "source": [
                         "bouygues.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "La Chaîne parlementaire",
+                    "valeur": "100",
                     "source": [
                         "bouygues.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Public Sénat",
+                    "valeur": "100",
                     "source": [
                         "bouygues.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "France Médias Monde",
+                    "valeur": "100",
                     "source": [
                         "bouygues.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "France Télévision",
+                    "valeur": "100",
                     "source": [
                         "bouygues.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Radio France",
-                    "source": [
-                        "bouygues.com"
-                    ]
-                },
-                {
                     "valeur": "100",
-                    "nom": "Arte France",
                     "source": [
                         "bouygues.com"
                     ]
                 },
                 {
-                    "valeur": "15",
+                    "nom": "Arte France",
+                    "valeur": "100",
+                    "source": [
+                        "bouygues.com"
+                    ]
+                },
+                {
                     "nom": "Renault",
+                    "valeur": "15",
                     "source": [
                         "zonebourse.com"
                     ]
@@ -4229,8 +4229,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "contrôle",
                     "nom": "ARD / ZDF",
+                    "valeur": "contrôle",
                     "source": [
                         "zonebourse.com"
                     ]
@@ -4251,15 +4251,15 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "40",
                     "nom": "Groupe Perdriel",
+                    "valeur": "40",
                     "source": [
                         "lemonde.fr"
                     ]
                 },
                 {
-                    "valeur": "40",
                     "nom": "Groupe Perdriel",
+                    "valeur": "40",
                     "source": [
                         "bouygues.com"
                     ]
@@ -4268,15 +4268,15 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "15",
                     "nom": "République française",
+                    "valeur": "15",
                     "source": [
                         "bouygues.com"
                     ]
                 },
                 {
-                    "valeur": "15",
                     "nom": "République française",
+                    "valeur": "15",
                     "source": [
                         "zonebourse.com"
                     ]
@@ -4292,13 +4292,23 @@
             "periodicite": "",
             "echelle": "",
             "commentaire": "Gratuit",
-            "possedex": {},
+            "possedex": {
+                "nom": "La Chaîne Parlementaire",
+                "desc": "",
+                "slug": "La Chaine Parlementaire",
+                "udpated": "2018-09-01 18:07",
+                "pub": "",
+                "subventions": "",
+                "sources": ""
+            },
             "possessions": [],
-            "urls": [],
+            "urls": [
+                "lcp.fr"
+            ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "République française",
+                    "valeur": "100",
                     "source": [
                         "bouygues.com"
                     ]
@@ -4329,8 +4339,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "République française",
+                    "valeur": "100",
                     "source": [
                         "bouygues.com"
                     ]
@@ -4349,29 +4359,29 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "Monte Carlo Doualiya",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Radio France International",
-                    "source": [
-                        "zonebourse.com"
-                    ]
-                },
-                {
                     "valeur": "100",
-                    "nom": "France 24",
                     "source": [
                         "zonebourse.com"
                     ]
                 },
                 {
-                    "valeur": "13",
+                    "nom": "France 24",
+                    "valeur": "100",
+                    "source": [
+                        "zonebourse.com"
+                    ]
+                },
+                {
                     "nom": "TV5 Monde",
+                    "valeur": "13",
                     "source": [
                         "zonebourse.com"
                     ]
@@ -4380,8 +4390,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "République française",
+                    "valeur": "100",
                     "source": [
                         "bouygues.com"
                     ]
@@ -4400,50 +4410,50 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "49",
                     "nom": "TV5 Monde",
+                    "valeur": "49",
                     "source": [
                         "zonebourse.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "France 2",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "France 3",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "France 5",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "France 4",
-                    "source": [
-                        "zonebourse.com"
-                    ]
-                },
-                {
                     "valeur": "100",
-                    "nom": "France Ô",
                     "source": [
                         "zonebourse.com"
                     ]
                 },
                 {
-                    "valeur": "contrôle",
+                    "nom": "France Ô",
+                    "valeur": "100",
+                    "source": [
+                        "zonebourse.com"
+                    ]
+                },
+                {
                     "nom": "France info",
+                    "valeur": "contrôle",
                     "source": [
                         "zonebourse.com"
                     ]
@@ -4452,8 +4462,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "République française",
+                    "valeur": "100",
                     "source": [
                         "bouygues.com"
                     ]
@@ -4495,57 +4505,57 @@
             },
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "France Inter",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "France Musique",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "France Culture",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "FIP",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "France Bleu",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "France Info",
-                    "source": [
-                        "zonebourse.com"
-                    ]
-                },
-                {
                     "valeur": "100",
-                    "nom": "Mouv'",
                     "source": [
                         "zonebourse.com"
                     ]
                 },
                 {
-                    "valeur": "contrôle",
+                    "nom": "Mouv'",
+                    "valeur": "100",
+                    "source": [
+                        "zonebourse.com"
+                    ]
+                },
+                {
                     "nom": "France info",
+                    "valeur": "contrôle",
                     "source": [
                         "zonebourse.com"
                     ]
@@ -4556,8 +4566,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "République française",
+                    "valeur": "100",
                     "source": [
                         "bouygues.com"
                     ]
@@ -4576,8 +4586,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "50",
                     "nom": "Arte",
+                    "valeur": "50",
                     "source": [
                         "zonebourse.com"
                     ]
@@ -4586,8 +4596,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "République française",
+                    "valeur": "100",
                     "source": [
                         "bouygues.com"
                     ]
@@ -4608,8 +4618,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "France Médias Monde",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com"
                     ]
@@ -4630,8 +4640,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "France Médias Monde",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com"
                     ]
@@ -4652,8 +4662,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "France Médias Monde",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com"
                     ]
@@ -4669,20 +4679,30 @@
             "periodicite": "",
             "echelle": "International",
             "commentaire": "",
-            "possedex": {},
+            "possedex": {
+                "nom": "TV5 Monde",
+                "desc": "",
+                "slug": "TV5 Monde",
+                "udpated": "2018-09-01 18:07",
+                "pub": "",
+                "subventions": "",
+                "sources": ""
+            },
             "possessions": [],
-            "urls": [],
+            "urls": [
+                "tv5monde.com/‎"
+            ],
             "est_possede": [
                 {
-                    "valeur": "13",
                     "nom": "France Médias Monde",
+                    "valeur": "13",
                     "source": [
                         "zonebourse.com"
                     ]
                 },
                 {
-                    "valeur": "49",
                     "nom": "France Télévision",
+                    "valeur": "49",
                     "source": [
                         "zonebourse.com"
                     ]
@@ -4715,8 +4735,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "France Télévision",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com"
                     ]
@@ -4747,8 +4767,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "France Télévision",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com"
                     ]
@@ -4779,8 +4799,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "France Télévision",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com"
                     ]
@@ -4811,8 +4831,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "France Télévision",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com"
                     ]
@@ -4843,8 +4863,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "France Télévision",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com"
                     ]
@@ -4865,22 +4885,22 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "contrôle",
                     "nom": "France Télévision",
-                    "source": [
-                        "zonebourse.com"
-                    ]
-                },
-                {
-                    "valeur": "100",
-                    "nom": "Radio France",
-                    "source": [
-                        "zonebourse.com"
-                    ]
-                },
-                {
                     "valeur": "contrôle",
+                    "source": [
+                        "zonebourse.com"
+                    ]
+                },
+                {
                     "nom": "Radio France",
+                    "valeur": "100",
+                    "source": [
+                        "zonebourse.com"
+                    ]
+                },
+                {
+                    "nom": "Radio France",
+                    "valeur": "contrôle",
                     "source": [
                         "zonebourse.com"
                     ]
@@ -4911,8 +4931,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Radio France",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com"
                     ]
@@ -4943,8 +4963,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Radio France",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com"
                     ]
@@ -4975,8 +4995,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Radio France",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com"
                     ]
@@ -5007,8 +5027,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Radio France",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com"
                     ]
@@ -5039,8 +5059,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Radio France",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com"
                     ]
@@ -5075,8 +5095,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Radio France",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com"
                     ]
@@ -5109,15 +5129,15 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "50",
                     "nom": "Arte France",
+                    "valeur": "50",
                     "source": [
                         "zonebourse.com"
                     ]
                 },
                 {
-                    "valeur": "50",
                     "nom": "Arte Deutschland TV GmbH",
+                    "valeur": "50",
                     "source": [
                         "zonebourse.com"
                     ]
@@ -5136,8 +5156,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "50",
                     "nom": "Arte Deutschland TV GmbH",
+                    "valeur": "50",
                     "source": [
                         "zonebourse.com"
                     ]
@@ -5146,8 +5166,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "contrôle",
                     "nom": "République fédérale d'Allemagne",
+                    "valeur": "contrôle",
                     "source": [
                         "zonebourse.com"
                     ]
@@ -5166,8 +5186,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "50",
                     "nom": "Arte",
+                    "valeur": "50",
                     "source": [
                         "zonebourse.com"
                     ]
@@ -5176,8 +5196,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "50",
                     "nom": "ARD / ZDF",
+                    "valeur": "50",
                     "source": [
                         "zonebourse.com"
                     ]
@@ -5196,8 +5216,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "Bayard",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com"
                     ]
@@ -5218,22 +5238,22 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "La Croix",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Pèlerin",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Notre temps",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com"
                     ]
@@ -5242,8 +5262,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Les Augustins de l'Assomption",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com"
                     ]
@@ -5274,8 +5294,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Bayard",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com"
                     ]
@@ -5296,8 +5316,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Bayard",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com"
                     ]
@@ -5328,8 +5348,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Bayard",
+                    "valeur": "100",
                     "source": [
                         "zonebourse.com"
                     ]
@@ -5348,8 +5368,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "79,1",
                     "nom": "NRJ Group",
+                    "valeur": "79,1",
                     "source": [
                         "zonebourse.com"
                     ]
@@ -5370,43 +5390,43 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "NRJ 12",
+                    "valeur": "100",
                     "source": [
                         "nrjgroup.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Chérie 25",
+                    "valeur": "100",
                     "source": [
                         "nrjgroup.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "NRJ",
+                    "valeur": "100",
                     "source": [
                         "nrjgroup.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Rire et Chansons",
+                    "valeur": "100",
                     "source": [
                         "nrjgroup.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Chérie FM",
+                    "valeur": "100",
                     "source": [
                         "nrjgroup.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Nostalgie",
+                    "valeur": "100",
                     "source": [
                         "nrjgroup.fr"
                     ]
@@ -5415,8 +5435,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "79,1",
                     "nom": "Jean-Paul Baudecroux",
+                    "valeur": "79,1",
                     "source": [
                         "zonebourse.com"
                     ]
@@ -5437,8 +5457,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "NRJ Group",
+                    "valeur": "100",
                     "source": [
                         "nrjgroup.fr"
                     ]
@@ -5469,8 +5489,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "NRJ Group",
+                    "valeur": "100",
                     "source": [
                         "nrjgroup.fr"
                     ]
@@ -5501,8 +5521,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "NRJ Group",
+                    "valeur": "100",
                     "source": [
                         "nrjgroup.fr"
                     ]
@@ -5533,8 +5553,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "NRJ Group",
+                    "valeur": "100",
                     "source": [
                         "nrjgroup.fr"
                     ]
@@ -5565,8 +5585,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "NRJ Group",
+                    "valeur": "100",
                     "source": [
                         "nrjgroup.fr"
                     ]
@@ -5587,8 +5607,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "NRJ Group",
+                    "valeur": "100",
                     "source": [
                         "nrjgroup.fr"
                     ]
@@ -5607,8 +5627,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "contrôle",
                     "nom": "Association pour le soutien des principes de la démocratie humaniste",
+                    "valeur": "contrôle",
                     "source": [
                         "nrjgroup.fr"
                     ]
@@ -5629,8 +5649,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "contrôle",
                     "nom": "Groupe Rossel",
+                    "valeur": "contrôle",
                     "source": [
                         "cbnews.fr",
                         "lavoixdunord.fr"
@@ -5652,8 +5672,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "25",
                     "nom": "Groupe Rossel La Voix",
+                    "valeur": "25",
                     "source": [
                         "cbnews.fr",
                         "lavoixdunord.fr"
@@ -5675,8 +5695,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe SIPA - Ouest",
+                    "valeur": "100",
                     "source": [
                         "nrjgroup.fr"
                     ]
@@ -5685,8 +5705,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "contrôle",
                     "nom": "Famille Hutin",
+                    "valeur": "contrôle",
                     "source": [
                         "nrjgroup.fr"
                     ]
@@ -5705,55 +5725,55 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "Ouest France",
+                    "valeur": "100",
                     "source": [
                         "hebdoscom.com",
                         "precom.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Le Courrier de l'Ouest",
+                    "valeur": "100",
                     "source": [
                         "hebdoscom.com",
                         "precom.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Le Maine libre",
+                    "valeur": "100",
                     "source": [
                         "hebdoscom.com",
                         "precom.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Presse-Océan",
+                    "valeur": "100",
                     "source": [
                         "hebdoscom.com",
                         "precom.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "La Presse de la Manche",
+                    "valeur": "100",
                     "source": [
                         "hebdoscom.com",
                         "precom.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Publi Hebdos",
+                    "valeur": "100",
                     "source": [
                         "publihebdos.com"
                     ]
                 },
                 {
-                    "valeur": "40",
                     "nom": "Sofiouest",
+                    "valeur": "40",
                     "source": [
                         "publihebdos.com"
                     ]
@@ -5762,8 +5782,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Association pour le soutien des principes de la démocratie humaniste",
+                    "valeur": "100",
                     "source": [
                         "nrjgroup.fr"
                     ]
@@ -5794,8 +5814,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe SIPA - Ouest",
+                    "valeur": "100",
                     "source": [
                         "hebdoscom.com",
                         "precom.fr"
@@ -5827,8 +5847,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe SIPA - Ouest",
+                    "valeur": "100",
                     "source": [
                         "hebdoscom.com",
                         "precom.fr"
@@ -5860,8 +5880,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe SIPA - Ouest",
+                    "valeur": "100",
                     "source": [
                         "hebdoscom.com",
                         "precom.fr"
@@ -5883,8 +5903,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe SIPA - Ouest",
+                    "valeur": "100",
                     "source": [
                         "hebdoscom.com",
                         "precom.fr"
@@ -5916,8 +5936,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe SIPA - Ouest",
+                    "valeur": "100",
                     "source": [
                         "hebdoscom.com",
                         "precom.fr"
@@ -5949,8 +5969,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe SIPA - Ouest",
+                    "valeur": "100",
                     "source": [
                         "publihebdos.com"
                     ]
@@ -5969,8 +5989,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "50",
                     "nom": "20 Minutes",
+                    "valeur": "50",
                     "source": [
                         "cbnews.fr",
                         "lavoixdunord.fr"
@@ -5980,8 +6000,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "40",
                     "nom": "Groupe SIPA - Ouest",
+                    "valeur": "40",
                     "source": [
                         "publihebdos.com"
                     ]
@@ -6012,16 +6032,16 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "50",
                     "nom": "Sofiouest",
+                    "valeur": "50",
                     "source": [
                         "cbnews.fr",
                         "lavoixdunord.fr"
                     ]
                 },
                 {
-                    "valeur": "49",
                     "nom": "Groupe Rossel La Voix",
+                    "valeur": "49",
                     "source": [
                         "cbnews.fr",
                         "lavoixdunord.fr"
@@ -6041,8 +6061,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "73",
                     "nom": "Groupe Rossel La Voix",
+                    "valeur": "73",
                     "source": [
                         "cbnews.fr",
                         "lavoixdunord.fr"
@@ -6052,8 +6072,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "contrôle",
                     "nom": "Famille Hurbain",
+                    "valeur": "contrôle",
                     "source": [
                         "cbnews.fr",
                         "lavoixdunord.fr"
@@ -6073,16 +6093,16 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "49",
                     "nom": "20 Minutes",
+                    "valeur": "49",
                     "source": [
                         "cbnews.fr",
                         "lavoixdunord.fr"
                     ]
                 },
                 {
-                    "valeur": "96",
                     "nom": "La Voix du Nord SA",
+                    "valeur": "96",
                     "source": [
                         "cbnews.fr",
                         "lavoixdunord.fr"
@@ -6092,16 +6112,16 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "73",
                     "nom": "Groupe Rossel",
+                    "valeur": "73",
                     "source": [
                         "cbnews.fr",
                         "lavoixdunord.fr"
                     ]
                 },
                 {
-                    "valeur": "25",
                     "nom": "Crédit Agricole Nord de France",
+                    "valeur": "25",
                     "source": [
                         "cbnews.fr",
                         "lavoixdunord.fr"
@@ -6121,168 +6141,168 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "La Voix du Nord",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Nord éclair",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Nord Littoral",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Courrier picard",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "L'aisne Nouvelle",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "L'Union - L'Ardennais",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "L'Est-éclair - Libération Champagne",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "L'Avenir de l'Artois",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Les Echos du Touquet",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Le Journal des Flandres",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Le Messager",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "L'Essor savoyard",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Le Pays gessien",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "La Tribune républicaine",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "La Savoie",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Le Phare Dunkerquois",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "La Semaine dans le Boulonnais",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Le Réveil de Berck",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Le Journal de Montreuil",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "L'indicateur",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "L'Echo de la Lys",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
@@ -6292,8 +6312,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "96",
                     "nom": "Groupe Rossel La Voix",
+                    "valeur": "96",
                     "source": [
                         "cbnews.fr",
                         "lavoixdunord.fr"
@@ -6325,8 +6345,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "La Voix du Nord SA",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
@@ -6348,8 +6368,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "La Voix du Nord SA",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
@@ -6381,8 +6401,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "La Voix du Nord SA",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
@@ -6414,8 +6434,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "La Voix du Nord SA",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
@@ -6437,8 +6457,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "La Voix du Nord SA",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
@@ -6460,8 +6480,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "La Voix du Nord SA",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
@@ -6483,8 +6503,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "La Voix du Nord SA",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
@@ -6506,8 +6526,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "La Voix du Nord SA",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
@@ -6529,8 +6549,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "La Voix du Nord SA",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
@@ -6552,8 +6572,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "La Voix du Nord SA",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
@@ -6575,8 +6595,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "La Voix du Nord SA",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
@@ -6598,8 +6618,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "La Voix du Nord SA",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
@@ -6621,8 +6641,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "La Voix du Nord SA",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
@@ -6644,8 +6664,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "La Voix du Nord SA",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
@@ -6667,8 +6687,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "La Voix du Nord SA",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
@@ -6690,8 +6710,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "La Voix du Nord SA",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
@@ -6713,8 +6733,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "La Voix du Nord SA",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
@@ -6736,8 +6756,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "La Voix du Nord SA",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
@@ -6759,8 +6779,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "La Voix du Nord SA",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
@@ -6782,8 +6802,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "La Voix du Nord SA",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
@@ -6805,8 +6825,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "La Voix du Nord SA",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
@@ -6826,8 +6846,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe EBRA",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
@@ -6849,78 +6869,78 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "L'Est républicain",
+                    "valeur": "100",
                     "source": [
                         "ebra.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Le Républicain lorrain",
+                    "valeur": "100",
                     "source": [
                         "ebra.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "DNA",
+                    "valeur": "100",
                     "source": [
                         "ebra.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Vosges Matin",
+                    "valeur": "100",
                     "source": [
                         "ebra.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "L'Alsace",
+                    "valeur": "100",
                     "source": [
                         "ebra.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Le Bien public",
+                    "valeur": "100",
                     "source": [
                         "ebra.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Le Journal de Saône-et-Loire",
+                    "valeur": "100",
                     "source": [
                         "ebra.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Le Progrès",
+                    "valeur": "100",
                     "source": [
                         "ebra.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Le Dauphiné libéré",
-                    "source": [
-                        "ebra.fr"
-                    ]
-                },
-                {
                     "valeur": "100",
-                    "nom": "Vaucluse Matin",
                     "source": [
                         "ebra.fr"
                     ]
                 },
                 {
-                    "valeur": "50",
+                    "nom": "Vaucluse Matin",
+                    "valeur": "100",
+                    "source": [
+                        "ebra.fr"
+                    ]
+                },
+                {
                     "nom": "Le Journal de la Haute-Marne",
+                    "valeur": "50",
                     "source": [
                         "wikipedia.org"
                     ]
@@ -6929,8 +6949,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Crédit Mutuel",
+                    "valeur": "100",
                     "source": [
                         "latribune.fr",
                         "rossel-lavoix.fr"
@@ -6962,8 +6982,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe EBRA",
+                    "valeur": "100",
                     "source": [
                         "ebra.fr"
                     ]
@@ -6994,8 +7014,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe EBRA",
+                    "valeur": "100",
                     "source": [
                         "ebra.fr"
                     ]
@@ -7026,8 +7046,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe EBRA",
+                    "valeur": "100",
                     "source": [
                         "ebra.fr"
                     ]
@@ -7058,8 +7078,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe EBRA",
+                    "valeur": "100",
                     "source": [
                         "ebra.fr"
                     ]
@@ -7090,8 +7110,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe EBRA",
+                    "valeur": "100",
                     "source": [
                         "ebra.fr"
                     ]
@@ -7122,8 +7142,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe EBRA",
+                    "valeur": "100",
                     "source": [
                         "ebra.fr"
                     ]
@@ -7144,8 +7164,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe EBRA",
+                    "valeur": "100",
                     "source": [
                         "ebra.fr"
                     ]
@@ -7176,8 +7196,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe EBRA",
+                    "valeur": "100",
                     "source": [
                         "ebra.fr"
                     ]
@@ -7198,8 +7218,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe EBRA",
+                    "valeur": "100",
                     "source": [
                         "ebra.fr"
                     ]
@@ -7220,8 +7240,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe EBRA",
+                    "valeur": "100",
                     "source": [
                         "ebra.fr"
                     ]
@@ -7242,8 +7262,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "50",
                     "nom": "Groupe EBRA",
+                    "valeur": "50",
                     "source": [
                         "wikipedia.org"
                     ]
@@ -7262,8 +7282,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": ">50",
                     "nom": "Groupe La Montagne",
+                    "valeur": ">50",
                     "source": [
                         "wikipedia.org"
                     ]
@@ -7284,8 +7304,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "15",
                     "nom": "Groupe NRCO",
+                    "valeur": "15",
                     "source": [
                         "docpresse.esj-lille.fr"
                     ]
@@ -7306,106 +7326,106 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "La Montagne",
+                    "valeur": "100",
                     "source": [
                         "lamontagne.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Le Populaire du centre",
+                    "valeur": "100",
                     "source": [
                         "lamontagne.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Le Journal du centre",
+                    "valeur": "100",
                     "source": [
                         "lamontagne.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Le Berry républicain",
+                    "valeur": "100",
                     "source": [
                         "lamontagne.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "L’Yonne Républicaine",
+                    "valeur": "100",
                     "source": [
                         "lamontagne.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "L’Echo Républicain",
+                    "valeur": "100",
                     "source": [
                         "lamontagne.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Courrier du Loiret",
+                    "valeur": "100",
                     "source": [
                         "lamontagne.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "L’Eclaireur du Gâtinais",
+                    "valeur": "100",
                     "source": [
                         "lamontagne.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Régional de Cosne",
+                    "valeur": "100",
                     "source": [
                         "lamontagne.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "L’Echo Charitois",
+                    "valeur": "100",
                     "source": [
                         "lamontagne.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Pays Roannais",
+                    "valeur": "100",
                     "source": [
                         "lamontagne.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "La Liberté",
-                    "source": [
-                        "lamontagne.fr"
-                    ]
-                },
-                {
                     "valeur": "100",
-                    "nom": "Journal de Gien",
                     "source": [
                         "lamontagne.fr"
                     ]
                 },
                 {
-                    "valeur": "70",
+                    "nom": "Journal de Gien",
+                    "valeur": "100",
+                    "source": [
+                        "lamontagne.fr"
+                    ]
+                },
+                {
                     "nom": "La République du Centre",
+                    "valeur": "70",
                     "source": [
                         "docpresse.esj-lille.fr"
                     ]
                 },
                 {
-                    "valeur": "16",
                     "nom": "Groupe NRCO",
+                    "valeur": "16",
                     "source": [
                         "docpresse.esj-lille.fr"
                     ]
@@ -7414,8 +7434,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": ">50",
                     "nom": "Fondation Varenne",
+                    "valeur": ">50",
                     "source": [
                         "wikipedia.org"
                     ]
@@ -7446,8 +7466,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe La Montagne",
+                    "valeur": "100",
                     "source": [
                         "lamontagne.fr"
                     ]
@@ -7478,8 +7498,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe La Montagne",
+                    "valeur": "100",
                     "source": [
                         "lamontagne.fr"
                     ]
@@ -7510,8 +7530,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe La Montagne",
+                    "valeur": "100",
                     "source": [
                         "lamontagne.fr"
                     ]
@@ -7542,8 +7562,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe La Montagne",
+                    "valeur": "100",
                     "source": [
                         "lamontagne.fr"
                     ]
@@ -7564,8 +7584,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe La Montagne",
+                    "valeur": "100",
                     "source": [
                         "lamontagne.fr"
                     ]
@@ -7586,8 +7606,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe La Montagne",
+                    "valeur": "100",
                     "source": [
                         "lamontagne.fr"
                     ]
@@ -7608,8 +7628,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe La Montagne",
+                    "valeur": "100",
                     "source": [
                         "lamontagne.fr"
                     ]
@@ -7630,8 +7650,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe La Montagne",
+                    "valeur": "100",
                     "source": [
                         "lamontagne.fr"
                     ]
@@ -7652,8 +7672,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe La Montagne",
+                    "valeur": "100",
                     "source": [
                         "lamontagne.fr"
                     ]
@@ -7674,8 +7694,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe La Montagne",
+                    "valeur": "100",
                     "source": [
                         "lamontagne.fr"
                     ]
@@ -7696,8 +7716,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe La Montagne",
+                    "valeur": "100",
                     "source": [
                         "lamontagne.fr"
                     ]
@@ -7718,8 +7738,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe La Montagne",
+                    "valeur": "100",
                     "source": [
                         "lamontagne.fr"
                     ]
@@ -7740,8 +7760,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe La Montagne",
+                    "valeur": "100",
                     "source": [
                         "lamontagne.fr"
                     ]
@@ -7772,15 +7792,15 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "70",
                     "nom": "Groupe La Montagne",
+                    "valeur": "70",
                     "source": [
                         "docpresse.esj-lille.fr"
                     ]
                 },
                 {
-                    "valeur": "30",
                     "nom": "Groupe NRCO",
+                    "valeur": "30",
                     "source": [
                         "docpresse.esj-lille.fr"
                     ]
@@ -7799,29 +7819,29 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "30",
                     "nom": "La République du Centre",
+                    "valeur": "30",
                     "source": [
                         "docpresse.esj-lille.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Nouvelle République du Centre",
+                    "valeur": "100",
                     "source": [
                         "lesechos.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Centre Presse",
+                    "valeur": "100",
                     "source": [
                         "wikipedia.org"
                     ]
                 },
                 {
-                    "valeur": "40",
                     "nom": "TV Tours",
+                    "valeur": "40",
                     "source": [
                         "wikipedia.org"
                     ]
@@ -7830,15 +7850,15 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "16",
                     "nom": "Groupe La Montagne",
+                    "valeur": "16",
                     "source": [
                         "docpresse.esj-lille.fr"
                     ]
                 },
                 {
-                    "valeur": "15",
                     "nom": "Famille Saint-Cricq",
+                    "valeur": "15",
                     "source": [
                         "docpresse.esj-lille.fr"
                     ]
@@ -7859,8 +7879,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe NRCO",
+                    "valeur": "100",
                     "source": [
                         "lesechos.fr"
                     ]
@@ -7891,8 +7911,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe NRCO",
+                    "valeur": "100",
                     "source": [
                         "wikipedia.org"
                     ]
@@ -7923,8 +7943,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "40",
                     "nom": "Groupe NRCO",
+                    "valeur": "40",
                     "source": [
                         "wikipedia.org"
                     ]
@@ -7943,8 +7963,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "82,5",
                     "nom": "Groupe La Dépêche",
+                    "valeur": "82,5",
                     "source": [
                         "wikipedia.org"
                     ]
@@ -7965,48 +7985,48 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "La Dépêche du midi",
+                    "valeur": "100",
                     "source": [
                         "strategies.fr",
                         "ladepeche-diffusion.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Le Petit Bleu",
+                    "valeur": "100",
                     "source": [
                         "strategies.fr",
                         "ladepeche-diffusion.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "La Nouvelle République des Pyrénées",
+                    "valeur": "100",
                     "source": [
                         "strategies.fr",
                         "ladepeche-diffusion.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Le Villefranchois",
+                    "valeur": "100",
                     "source": [
                         "strategies.fr",
                         "ladepeche-diffusion.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "La Gazette du Comminges",
+                    "valeur": "100",
                     "source": [
                         "strategies.fr",
                         "ladepeche-diffusion.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Les Journaux du midi",
+                    "valeur": "100",
                     "source": [
                         "strategies.fr",
                         "ladepeche-diffusion.com"
@@ -8016,8 +8036,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "82,5",
                     "nom": "Famille Baylet",
+                    "valeur": "82,5",
                     "source": [
                         "wikipedia.org"
                     ]
@@ -8038,8 +8058,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe La Dépêche",
+                    "valeur": "100",
                     "source": [
                         "strategies.fr",
                         "ladepeche-diffusion.com"
@@ -8071,8 +8091,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe La Dépêche",
+                    "valeur": "100",
                     "source": [
                         "strategies.fr",
                         "ladepeche-diffusion.com"
@@ -8104,8 +8124,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe La Dépêche",
+                    "valeur": "100",
                     "source": [
                         "strategies.fr",
                         "ladepeche-diffusion.com"
@@ -8127,8 +8147,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe La Dépêche",
+                    "valeur": "100",
                     "source": [
                         "strategies.fr",
                         "ladepeche-diffusion.com"
@@ -8150,8 +8170,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe La Dépêche",
+                    "valeur": "100",
                     "source": [
                         "strategies.fr",
                         "ladepeche-diffusion.com"
@@ -8171,22 +8191,22 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "Midi libre",
+                    "valeur": "100",
                     "source": [
                         "ladepeche.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "L'Indépendant",
+                    "valeur": "100",
                     "source": [
                         "ladepeche.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Centre Presse Aveyron",
+                    "valeur": "100",
                     "source": [
                         "ladepeche.fr"
                     ]
@@ -8195,8 +8215,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe La Dépêche",
+                    "valeur": "100",
                     "source": [
                         "strategies.fr",
                         "ladepeche-diffusion.com"
@@ -8228,8 +8248,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Les Journaux du midi",
+                    "valeur": "100",
                     "source": [
                         "ladepeche.fr"
                     ]
@@ -8260,8 +8280,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Les Journaux du midi",
+                    "valeur": "100",
                     "source": [
                         "ladepeche.fr"
                     ]
@@ -8292,8 +8312,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Les Journaux du midi",
+                    "valeur": "100",
                     "source": [
                         "ladepeche.fr"
                     ]
@@ -8312,8 +8332,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "80",
                     "nom": "Groupe Sud Ouest",
+                    "valeur": "80",
                     "source": [
                         "ladepeche.fr"
                     ]
@@ -8334,80 +8354,80 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "Sud Ouest",
+                    "valeur": "100",
                     "source": [
                         "groupesudouest.com",
                         "lefigaro.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Charente Libre",
+                    "valeur": "100",
                     "source": [
                         "groupesudouest.com",
                         "lefigaro.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Dordogne Libre",
+                    "valeur": "100",
                     "source": [
                         "groupesudouest.com",
                         "lefigaro.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Haute Saintonge",
+                    "valeur": "100",
                     "source": [
                         "groupesudouest.com",
                         "lefigaro.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Haute Gironde",
+                    "valeur": "100",
                     "source": [
                         "groupesudouest.com",
                         "lefigaro.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Le Résistant",
+                    "valeur": "100",
                     "source": [
                         "groupesudouest.com",
                         "lefigaro.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "L'Hebdo de Charente-Maritime",
+                    "valeur": "100",
                     "source": [
                         "groupesudouest.com",
                         "lefigaro.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "La Dépêche du Bassin",
+                    "valeur": "100",
                     "source": [
                         "groupesudouest.com",
                         "lefigaro.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Le Journal du Médoc",
+                    "valeur": "100",
                     "source": [
                         "groupesudouest.com",
                         "lefigaro.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Pyrénées Presse",
+                    "valeur": "100",
                     "source": [
                         "groupesudouest.com",
                         "lefigaro.fr"
@@ -8417,8 +8437,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "80",
                     "nom": "Famille Lemoine",
+                    "valeur": "80",
                     "source": [
                         "ladepeche.fr"
                     ]
@@ -8449,8 +8469,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Sud Ouest",
+                    "valeur": "100",
                     "source": [
                         "groupesudouest.com",
                         "lefigaro.fr"
@@ -8472,8 +8492,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Sud Ouest",
+                    "valeur": "100",
                     "source": [
                         "groupesudouest.com",
                         "lefigaro.fr"
@@ -8505,8 +8525,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Sud Ouest",
+                    "valeur": "100",
                     "source": [
                         "groupesudouest.com",
                         "lefigaro.fr"
@@ -8528,8 +8548,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Sud Ouest",
+                    "valeur": "100",
                     "source": [
                         "groupesudouest.com",
                         "lefigaro.fr"
@@ -8551,8 +8571,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Sud Ouest",
+                    "valeur": "100",
                     "source": [
                         "groupesudouest.com",
                         "lefigaro.fr"
@@ -8574,8 +8594,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Sud Ouest",
+                    "valeur": "100",
                     "source": [
                         "groupesudouest.com",
                         "lefigaro.fr"
@@ -8597,8 +8617,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Sud Ouest",
+                    "valeur": "100",
                     "source": [
                         "groupesudouest.com",
                         "lefigaro.fr"
@@ -8620,8 +8640,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Sud Ouest",
+                    "valeur": "100",
                     "source": [
                         "groupesudouest.com",
                         "lefigaro.fr"
@@ -8643,8 +8663,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Sud Ouest",
+                    "valeur": "100",
                     "source": [
                         "groupesudouest.com",
                         "lefigaro.fr"
@@ -8664,16 +8684,16 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "La République des Pyrénées",
+                    "valeur": "100",
                     "source": [
                         "groupesudouest.com",
                         "lefigaro.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "L'Eclair",
+                    "valeur": "100",
                     "source": [
                         "groupesudouest.com",
                         "lefigaro.fr"
@@ -8683,8 +8703,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Sud Ouest",
+                    "valeur": "100",
                     "source": [
                         "groupesudouest.com",
                         "lefigaro.fr"
@@ -8716,8 +8736,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Pyrénées Presse",
+                    "valeur": "100",
                     "source": [
                         "groupesudouest.com",
                         "lefigaro.fr"
@@ -8747,8 +8767,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Pyrénées Presse",
+                    "valeur": "100",
                     "source": [
                         "groupesudouest.com",
                         "lefigaro.fr"
@@ -8768,8 +8788,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "contrôle",
                     "nom": "Groupe Télégramme",
+                    "valeur": "contrôle",
                     "source": [
                         "groupesudouest.com",
                         "lefigaro.fr"
@@ -8791,57 +8811,57 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "Le Télégramme",
+                    "valeur": "100",
                     "source": [
                         "groupe-telegramme.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Le Poher",
+                    "valeur": "100",
                     "source": [
                         "groupe-telegramme.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Tébéo",
+                    "valeur": "100",
                     "source": [
                         "groupe-telegramme.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Tébésud",
+                    "valeur": "100",
                     "source": [
                         "groupe-telegramme.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Le Mensuel de Rennes",
+                    "valeur": "100",
                     "source": [
                         "groupe-telegramme.com"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Sept Jours à Brest",
-                    "source": [
-                        "groupe-telegramme.com"
-                    ]
-                },
-                {
                     "valeur": "100",
-                    "nom": "Le Journal des entreprises",
                     "source": [
                         "groupe-telegramme.com"
                     ]
                 },
                 {
-                    "valeur": "50",
+                    "nom": "Le Journal des entreprises",
+                    "valeur": "100",
+                    "source": [
+                        "groupe-telegramme.com"
+                    ]
+                },
+                {
                     "nom": "Bretagne magazine",
+                    "valeur": "50",
                     "source": [
                         "groupe-telegramme.com"
                     ]
@@ -8850,8 +8870,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "contrôle",
                     "nom": "Édouard Coudurier",
+                    "valeur": "contrôle",
                     "source": [
                         "groupesudouest.com",
                         "lefigaro.fr"
@@ -8883,8 +8903,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Télégramme",
+                    "valeur": "100",
                     "source": [
                         "groupe-telegramme.com"
                     ]
@@ -8915,8 +8935,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Télégramme",
+                    "valeur": "100",
                     "source": [
                         "groupe-telegramme.com"
                     ]
@@ -8947,8 +8967,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Télégramme",
+                    "valeur": "100",
                     "source": [
                         "groupe-telegramme.com"
                     ]
@@ -8979,8 +8999,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Télégramme",
+                    "valeur": "100",
                     "source": [
                         "groupe-telegramme.com"
                     ]
@@ -9001,8 +9021,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Télégramme",
+                    "valeur": "100",
                     "source": [
                         "groupe-telegramme.com"
                     ]
@@ -9023,8 +9043,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Télégramme",
+                    "valeur": "100",
                     "source": [
                         "groupe-telegramme.com"
                     ]
@@ -9045,8 +9065,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Télégramme",
+                    "valeur": "100",
                     "source": [
                         "groupe-telegramme.com"
                     ]
@@ -9067,8 +9087,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "50",
                     "nom": "Groupe Télégramme",
+                    "valeur": "50",
                     "source": [
                         "groupe-telegramme.com"
                     ]
@@ -9087,8 +9107,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "89",
                     "nom": "Groupe La Provence",
+                    "valeur": "89",
                     "source": [
                         "groupe-telegramme.com"
                     ]
@@ -9109,15 +9129,15 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "11",
                     "nom": "Groupe La Provence",
+                    "valeur": "11",
                     "source": [
                         "groupe-telegramme.com"
                     ]
                 },
                 {
-                    "valeur": "20",
                     "nom": "Nice-Matin",
+                    "valeur": "20",
                     "source": [
                         "lesechos.fr"
                     ]
@@ -9138,15 +9158,15 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "65",
                     "nom": "Corse Matin",
+                    "valeur": "65",
                     "source": [
                         "latribune.fr"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "La Provence",
+                    "valeur": "100",
                     "source": [
                         "lesechos.fr"
                     ]
@@ -9155,15 +9175,15 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "89",
                     "nom": "Bernard Tapie",
+                    "valeur": "89",
                     "source": [
                         "groupe-telegramme.com"
                     ]
                 },
                 {
-                    "valeur": "11",
                     "nom": "Nethys",
+                    "valeur": "11",
                     "source": [
                         "groupe-telegramme.com"
                     ]
@@ -9184,8 +9204,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "20",
                     "nom": "Nethys",
+                    "valeur": "20",
                     "source": [
                         "lesechos.fr"
                     ]
@@ -9216,8 +9236,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "65",
                     "nom": "Groupe La Provence",
+                    "valeur": "65",
                     "source": [
                         "latribune.fr"
                     ]
@@ -9248,8 +9268,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe La Provence",
+                    "valeur": "100",
                     "source": [
                         "lesechos.fr"
                     ]
@@ -9268,8 +9288,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "Société Normande d'Information et de Communication",
+                    "valeur": "100",
                     "source": [
                         "parisnormandie.fr"
                     ]
@@ -9290,48 +9310,48 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "Paris-Normandie",
+                    "valeur": "100",
                     "source": [
                         "lesechos.fr",
                         "wikipedia.org"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Havre Libre",
+                    "valeur": "100",
                     "source": [
                         "lesechos.fr",
                         "wikipedia.org"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Le Progrès de Fécamp",
+                    "valeur": "100",
                     "source": [
                         "lesechos.fr",
                         "wikipedia.org"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Liberté Dimanche",
+                    "valeur": "100",
                     "source": [
                         "lesechos.fr",
                         "wikipedia.org"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Havre Dimanche",
+                    "valeur": "100",
                     "source": [
                         "lesechos.fr",
                         "wikipedia.org"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Normandie Dimanche",
+                    "valeur": "100",
                     "source": [
                         "lesechos.fr",
                         "wikipedia.org"
@@ -9341,8 +9361,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Jean-Louis Louvel",
+                    "valeur": "100",
                     "source": [
                         "parisnormandie.fr"
                     ]
@@ -9363,8 +9383,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Société Normande d'Information et de Communication",
+                    "valeur": "100",
                     "source": [
                         "lesechos.fr",
                         "wikipedia.org"
@@ -9396,8 +9416,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Société Normande d'Information et de Communication",
+                    "valeur": "100",
                     "source": [
                         "lesechos.fr",
                         "wikipedia.org"
@@ -9429,8 +9449,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Société Normande d'Information et de Communication",
+                    "valeur": "100",
                     "source": [
                         "lesechos.fr",
                         "wikipedia.org"
@@ -9452,8 +9472,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Société Normande d'Information et de Communication",
+                    "valeur": "100",
                     "source": [
                         "lesechos.fr",
                         "wikipedia.org"
@@ -9475,8 +9495,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Société Normande d'Information et de Communication",
+                    "valeur": "100",
                     "source": [
                         "lesechos.fr",
                         "wikipedia.org"
@@ -9498,8 +9518,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Société Normande d'Information et de Communication",
+                    "valeur": "100",
                     "source": [
                         "lesechos.fr",
                         "wikipedia.org"
@@ -9519,16 +9539,16 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "Éditions Suisses Holding",
+                    "valeur": "100",
                     "source": [
                         "lesechos.fr",
                         "wikipedia.org"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Groupe Hersant Média",
+                    "valeur": "100",
                     "source": [
                         "lesechos.fr",
                         "wikipedia.org"
@@ -9550,16 +9570,16 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": ">50",
                     "nom": "Groupe Filanosa",
+                    "valeur": ">50",
                     "source": [
                         "lesechos.fr",
                         "wikipedia.org"
                     ]
                 },
                 {
-                    "valeur": ">50",
                     "nom": "Rhône Média",
+                    "valeur": ">50",
                     "source": [
                         "lesechos.fr",
                         "wikipedia.org"
@@ -9569,8 +9589,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Philippe Hersant",
+                    "valeur": "100",
                     "source": [
                         "lesechos.fr",
                         "wikipedia.org"
@@ -9590,15 +9610,15 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "France Antilles",
+                    "valeur": "100",
                     "source": [
                         "wikipedia.org"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "France Guyane",
+                    "valeur": "100",
                     "source": [
                         "wikipedia.org"
                     ]
@@ -9607,8 +9627,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Philippe Hersant",
+                    "valeur": "100",
                     "source": [
                         "lesechos.fr",
                         "wikipedia.org"
@@ -9628,22 +9648,22 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "La Côte (Nyon)",
+                    "valeur": "100",
                     "source": [
                         "syndicom.ch"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "L'Express (Neuchâtel)",
+                    "valeur": "100",
                     "source": [
                         "syndicom.ch"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "L'Impartial (La Chaux-de-Fonds)",
+                    "valeur": "100",
                     "source": [
                         "syndicom.ch"
                     ]
@@ -9652,8 +9672,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": ">50",
                     "nom": "Éditions Suisses Holding",
+                    "valeur": ">50",
                     "source": [
                         "lesechos.fr",
                         "wikipedia.org"
@@ -9673,22 +9693,22 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "100",
                     "nom": "Le Nouvelliste",
+                    "valeur": "100",
                     "source": [
                         "syndicom.ch"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "La Gazette de Martigny",
+                    "valeur": "100",
                     "source": [
                         "syndicom.ch"
                     ]
                 },
                 {
-                    "valeur": "100",
                     "nom": "Le Journal de Sierre",
+                    "valeur": "100",
                     "source": [
                         "syndicom.ch"
                     ]
@@ -9697,8 +9717,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": ">50",
                     "nom": "Éditions Suisses Holding",
+                    "valeur": ">50",
                     "source": [
                         "lesechos.fr",
                         "wikipedia.org"
@@ -9720,8 +9740,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Filanosa",
+                    "valeur": "100",
                     "source": [
                         "syndicom.ch"
                     ]
@@ -9742,8 +9762,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Filanosa",
+                    "valeur": "100",
                     "source": [
                         "syndicom.ch"
                     ]
@@ -9764,8 +9784,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Filanosa",
+                    "valeur": "100",
                     "source": [
                         "syndicom.ch"
                     ]
@@ -9786,8 +9806,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Rhône Média",
+                    "valeur": "100",
                     "source": [
                         "syndicom.ch"
                     ]
@@ -9808,8 +9828,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Rhône Média",
+                    "valeur": "100",
                     "source": [
                         "syndicom.ch"
                     ]
@@ -9830,8 +9850,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Rhône Média",
+                    "valeur": "100",
                     "source": [
                         "syndicom.ch"
                     ]
@@ -9862,8 +9882,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Hersant Média",
+                    "valeur": "100",
                     "source": [
                         "wikipedia.org"
                     ]
@@ -9884,8 +9904,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "100",
                     "nom": "Groupe Hersant Média",
+                    "valeur": "100",
                     "source": [
                         "wikipedia.org"
                     ]
@@ -9904,8 +9924,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": ">50",
                     "nom": "Le Journal de l'Île de la Réunion",
+                    "valeur": ">50",
                     "source": [
                         "ipreunion.com"
                     ]
@@ -9928,8 +9948,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": ">50",
                     "nom": "Abdoul Cadjee",
+                    "valeur": ">50",
                     "source": [
                         "ipreunion.com"
                     ]
@@ -9948,8 +9968,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "contrôle",
                     "nom": "Lampsane Investissement SA",
+                    "valeur": "contrôle",
                     "source": [
                         "ipreunion.com"
                     ]
@@ -9970,8 +9990,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": ">50",
                     "nom": "Slate.fr",
+                    "valeur": ">50",
                     "source": [
                         "bilan.ch"
                     ]
@@ -9980,8 +10000,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "contrôle",
                     "nom": "Benjamin et Ariane de Rothschild",
+                    "valeur": "contrôle",
                     "source": [
                         "ipreunion.com"
                     ]
@@ -10002,8 +10022,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": ">50",
                     "nom": "Lampsane Investissement SA",
+                    "valeur": ">50",
                     "source": [
                         "bilan.ch"
                     ]
@@ -10022,8 +10042,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": ">50",
                     "nom": "Atlantico.fr",
+                    "valeur": ">50",
                     "source": [
                         "cbnews.fr"
                     ]
@@ -10044,8 +10064,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": ">50",
                     "nom": "Atlantico.fr",
+                    "valeur": ">50",
                     "source": [
                         "cbnews.fr"
                     ]
@@ -10066,8 +10086,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": ">50",
                     "nom": "Atlantico.fr",
+                    "valeur": ">50",
                     "source": [
                         "cbnews.fr"
                     ]
@@ -10090,22 +10110,22 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": ">50",
                     "nom": "Jean-Sébastien Ferjou",
+                    "valeur": ">50",
                     "source": [
                         "cbnews.fr"
                     ]
                 },
                 {
-                    "valeur": ">50",
                     "nom": "Pierre Guyot",
+                    "valeur": ">50",
                     "source": [
                         "cbnews.fr"
                     ]
                 },
                 {
-                    "valeur": ">50",
                     "nom": "Gérard Lignac",
+                    "valeur": ">50",
                     "source": [
                         "cbnews.fr"
                     ]
@@ -10124,8 +10144,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "contrôle",
                     "nom": "Edi Invest",
+                    "valeur": "contrôle",
                     "source": [
                         "cbnews.fr"
                     ]
@@ -10146,8 +10166,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "37,4",
                     "nom": "Hima Groupe",
+                    "valeur": "37,4",
                     "source": [
                         "cbnews.fr"
                     ]
@@ -10156,8 +10176,8 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "contrôle",
                     "nom": "Franck Julien",
+                    "valeur": "contrôle",
                     "source": [
                         "cbnews.fr"
                     ]
@@ -10176,8 +10196,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "17",
                     "nom": "Hima Groupe",
+                    "valeur": "17",
                     "source": [
                         "cbnews.fr"
                     ]
@@ -10198,8 +10218,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "28",
                     "nom": "Hima Groupe",
+                    "valeur": "28",
                     "source": [
                         "cbnews.fr"
                     ]
@@ -10220,8 +10240,8 @@
             "possedex": {},
             "possessions": [
                 {
-                    "valeur": "contrôle",
                     "nom": "La Tribune",
+                    "valeur": "contrôle",
                     "source": [
                         "lefigaro.fr"
                     ]
@@ -10230,22 +10250,22 @@
             "urls": [],
             "est_possede": [
                 {
-                    "valeur": "37,4",
                     "nom": "Edi Invest",
+                    "valeur": "37,4",
                     "source": [
                         "cbnews.fr"
                     ]
                 },
                 {
-                    "valeur": "17",
                     "nom": "Jean Christophe Tortora",
+                    "valeur": "17",
                     "source": [
                         "cbnews.fr"
                     ]
                 },
                 {
-                    "valeur": "28",
                     "nom": "Laurent Alexandre",
+                    "valeur": "28",
                     "source": [
                         "cbnews.fr"
                     ]
@@ -10276,8 +10296,8 @@
             ],
             "est_possede": [
                 {
-                    "valeur": "contrôle",
                     "nom": "Hima Groupe",
+                    "valeur": "contrôle",
                     "source": [
                         "lefigaro.fr"
                     ]
@@ -10401,6 +10421,8 @@
         "virginradio.fr": 75,
         "vosgesmatin.fr": 211,
         "vsd.fr": 118,
-        "6play.fr/w9": 111
+        "6play.fr/w9": 111,
+        "tv5monde.com/‎": 139,
+        "lcp.fr": 130
     }
 }
