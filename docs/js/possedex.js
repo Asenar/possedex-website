@@ -144,154 +144,141 @@ var colors = {
 
 var base_url = "http://"+DOMAIN+"/mdiplo.json?maj="+maj;
 
-var Possedex = {};
-Possedex.data = {};
+var Possedex = {
+    data : {},
 
-$(document).ready(function(){
-    $("#form-possedex").on("submit", function(e){
-        e.preventDefault();
-        var url = $("#url").val();
-        if (url.length > 0) {
-            $.getJSON(base_url, function(data){
-                Possedex.data = data;
-                document.title = 'Qui possède "'+url+'" ? - Possedex';
-                document.location.hash = url;
-                debunkSite(url);
-            });
-        } else {
-            alert("Saisissez d'abord une url :) ");
+    removeAfterLastSlash : function(url){
+        if(url.lastIndexOf('/') !== -1) {
+            return url.substring(0, url.lastIndexOf('/'));
         }
-    });
-
-    $("#submit-possedex").on("click", function(e){
-        e.preventDefault();
-        $("#form-possedex").submit();
-    });
-
-    $(document).on("click", ".detail-owner,.detail-media", function(e){
-        e.preventDefault();
-        var nom = this.href.replace('http://'+DOMAIN+"/#", '');
-        if ('p/' == nom.substr(0, 2)) {
-            $("#domain-or-owner").val("owner");
-            $("#url").val(decodeURIComponent(nom.substr(2)));
-        } else {
-            $("#domain-or-owner").val("domain");
-            $("#url").val(decodeURIComponent(nom));
+        else {
+            return url;
         }
-        $("#form-possedex").submit();
-    });
+    },
 
-    // check if this is a direct request
-    var current_location = document.location.href; // full url;
-    if ((pos = current_location.indexOf('#')) > -1) {
-        url = current_location.substring(pos+1);
-        if ('p/' == url.substr(0, 2)) {
-            $("#domain-or-owner").val("owner");
-            url = url.substr(2);
-            $("#url").val(decodeURIComponent(url));
-        } else {
-            $("#domain-or-owner").val("domain");
-            $("#url").val(decodeURIComponent(url));
+    lastSlash: function(url) { // remove the last slash at the end of the string
+        if(url.lastIndexOf('/') == url.length-1) {
+            return url.substring(0, url.length-1);
         }
-        $("#submit-possedex").click();
-    }
+        else {
+            return url;
+        }
+    },
 
-});
+    url_cleaner : function(url){
+        return url
+            .replace("http://", "")
+            .replace('www.', "")
+            .replace("https://", "")
+            .replace("\n", "");
+    },
 
-function removeAfterLastSlash(url){
-    if(url.lastIndexOf('/') !== -1) {
-        return url.substring(0, url.lastIndexOf('/'));
-    }
-    else {
-        return url;
-    }
-}
+    // @TODO
+    getAllMediaForEntity: function(entity, medias = []) {
+        // console && console.log("start getAllMediaForEntity");
+        for(item_index in entity.possessions) {
+            item = entity.possessions[item_index];
+            // console && console.info(item);
+            entity_id = Possedex.getEntityIdFromNom(item.nom);
+            entity = Possedex.data.objets[entity_id]
+            if (entity.type == 3) {
+                // console && console.log("A ajouter");
+                // console && console.log(entity);
+                medias.push(entity);
 
-function lastSlash(url){ // remove the last slash at the end of the string
-    if(url.lastIndexOf('/') == url.length-1) {
-        return url.substring(0, url.length-1);
-    }
-    else {
-        return url;
-    }
-}
+            } else {
+                // console && console.log("A creuser");
+                medias = Possedex.getAllMediaForEntity(entity, medias);
+                // console && console.log(entity);
+            }
+        }
+        return medias;
+    },
 
-function url_cleaner(url){
-    return url
-        .replace("http://", "")
-        .replace('www.', "")
-        .replace("https://", "")
-        .replace("\n", "");
-}
+    getEntityIdFromNom: function(str) {
+        if (urls.hasOwnProperty(url)) {
+            return urls[url];
+        } else {
+            for(id in Possedex.data.objets) {
+                //console && console.log("check id="+id);
 
-function youtubeChannel(url){
-    var elms = url.split('/');
-    if(elms.length > 2){
-        return elms[0] + '/' + elms[1] + "/" + elms[2];
-    }
-    else{
-        return url;
-    }
-}
+                if (Possedex.data.objets[id].nom == str) {
+                    //console && console.info("TROUVé : "+id);
+                    return id;
+                }
+            }
+            return false;
+        }
+    },
 
-function debunkSite(url){
-    // INIT vars
+    youtubeChannel: function(url){
+        var elms = url.split('/');
+        if(elms.length > 2){
+            return elms[0] + '/' + elms[1] + "/" + elms[2];
+        }
+        else{
+            return url;
+        }
+    },
 
-    var owner_msg = '';
+    debunkSite: function(url){
+        // INIT vars
 
-    var proprietaires = '';
-    var fortunes      = '';
-    var marques       = '';
-    var interets      = '';
+        var owner_msg = '';
 
-    var interets      = '';
+        var proprietaires = '';
+        var fortunes      = '';
+        var marques       = '';
+        var interets      = '';
 
-    var conflits      = '';
-    var subventions   = '';
-    var publicite     = '';
-    var sources       = [];
+        var interets      = '';
 
-    var note          = '';
-    var decodex_note  = '';
-    var color         = '';
-    var decodex_color = '';
-    var decodex_desc  = '';
-    var message       = '';
-    var bandeau_msg   = '';
-    var icone         = '';
-    // end INIT vars
-    if (3 <= _debug) {
-        console && console.group('START debunk site '+url);
-    }
+        var conflits      = '';
+        var subventions   = '';
+        var publicite     = '';
+        var sources       = [];
 
-    if (3 <= _debug) {
-        console && console.info("debunkSite : var results");
-        console && console.log("results");
-    }
+        var note          = '';
+        var decodex_note  = '';
+        var color         = '';
+        var decodex_color = '';
+        var decodex_desc  = '';
+        var message       = '';
+        var bandeau_msg   = '';
+        var icone         = '';
+        // end INIT vars
+        if (3 <= _debug) {
+            console && console.group('START debunk site '+url);
+        }
 
-    urls = Possedex.data.urls;
-    sites = Possedex.data.objets;
-    objets = Possedex.data.objets;
-    url = lastSlash(url);
-    url = url_cleaner(url);
+        if (3 <= _debug) {
+            console && console.info("debunkSite : var results");
+            console && console.log("results");
+        }
 
-    entity_id = getEntityIdFromNom(url)
+        urls = Possedex.data.urls;
+        sites = Possedex.data.objets;
+        objets = Possedex.data.objets;
+        url = Possedex.lastSlash(url);
+        url = Possedex.url_cleaner(url);
 
-    if (entity_id == false) {
-        $("#result").html('Nous n\'avons actuellement aucune information sur ce site.');
+        entity_id = Possedex.getEntityIdFromNom(url)
+
+        if (entity_id == false) {
+            $("#result").html('Nous n\'avons actuellement aucune information sur ce site.');
+            if (2 <= _debug) {
+                console && console.info("site non trouvé", url);
+                console && console.log(urls);
+            }
+            // Optional : add a badge text and badge bg with the icon
+            //browser.browserAction.setBadgeText({"text" : "Soumis :p"});
+            //browser.browserAction.setBadgeBackgroundColor({'color' : "#D50303"});
+            return;
+        }
+
         if (2 <= _debug) {
-            console && console.info("site non trouvé", url);
-            console && console.log(urls);
+            console && console.info("Site id pour "+url+", entity_id = "+entity_id);
         }
-        // Optional : add a badge text and badge bg with the icon
-        //browser.browserAction.setBadgeText({"text" : "Soumis :p"});
-        //browser.browserAction.setBadgeBackgroundColor({'color' : "#D50303"});
-        return;
-    }
-
-    if (2 <= _debug) {
-        console && console.info("Site id pour "+url+", entity_id = "+entity_id);
-    }
 
         entity = sites[entity_id];
         if (2 <= _debug) {
@@ -360,118 +347,118 @@ function debunkSite(url){
 
             // URL toute seule
             var regex = new RegExp(/^(http[s]?:\/\/([^/]+)\/[^" ,]+)[^"]{1,2}$/g);
-            match = regex.exec(raw_sources);
-            while (match != null) {
-                sources.push({"url":match[1], "title":match[2]});
-                match = regex.exec(raw_sources);
-            }
+match = regex.exec(raw_sources);
+while (match != null) {
+    sources.push({"url":match[1], "title":match[2]});
+    match = regex.exec(raw_sources);
+}
 
-            if (3 <= _debug) {
-                console && console.log("sources apres urls simples", sources);
-            }
+if (3 <= _debug) {
+    console && console.log("sources apres urls simples", sources);
+}
 
-            note          = classement;
-            color         = colors[classement];
-            message       = messages[classement];
-            //decodex_color = decodex_colors[decodex_note];
-            //decodex_desc  = decodex_descs[decodex_note];
-            updated_human  = updated.toLocaleString('fr');
-            bandeau_msg   = bandeau_msgs[classement];
-            icone         = icones[classement];
+note          = classement;
+color         = colors[classement];
+message       = messages[classement];
+//decodex_color = decodex_colors[decodex_note];
+//decodex_desc  = decodex_descs[decodex_note];
+updated_human  = updated.toLocaleString('fr');
+bandeau_msg   = bandeau_msgs[classement];
+icone         = icones[classement];
 
-            if (2 <= _debug) {
-                console && console.group("tout s'est bien passé");
-                console && console.log(JSON.stringify(entity, null, 2));
-                console && console.log('nom            =',entity.nom            );
-                console && console.log('updated        =',entity.possedex.updated_human  );
-                console && console.log('classement     =',entity.possedex.classement     );
-                console && console.log('notule         =',entity.possedex.notule         );
-                console && console.log('slug           =',entity.possedex.slug           );
-                console && console.log('proprietaires  =',entity.possedex.proprietaires  );
-                console && console.log('interets       =',entity.possedex.interets       );
-                console && console.log('conflits       =',entity.possedex.conflits       );
-                console && console.log('subventions    =',entity.possedex.subventions    );
-                console && console.log('sources        =',entity.possedex.sources        );
-                console && console.groupEnd();
-            }
+if (2 <= _debug) {
+    console && console.group("tout s'est bien passé");
+    console && console.log(JSON.stringify(entity, null, 2));
+    console && console.log('nom            =',entity.nom            );
+    console && console.log('updated        =',entity.possedex.updated_human  );
+    console && console.log('classement     =',entity.possedex.classement     );
+    console && console.log('notule         =',entity.possedex.notule         );
+    console && console.log('slug           =',entity.possedex.slug           );
+    console && console.log('proprietaires  =',entity.possedex.proprietaires  );
+    console && console.log('interets       =',entity.possedex.interets       );
+    console && console.log('conflits       =',entity.possedex.conflits       );
+    console && console.log('subventions    =',entity.possedex.subventions    );
+    console && console.log('sources        =',entity.possedex.sources        );
+    console && console.groupEnd();
+}
 
-            // display results
-            $("#result").html('<dl id="infos">');
-            $("#infos").append("<label>"+entity.typeLibelle+"</label>");
-            $("#infos").append("<p>"
-                //+entity.nom
-                +' <a class="detail-media" href="http://'+DOMAIN+'#'+entity.nom+'">'
-                + entity.nom
-                + '</a>'
-                +"</p>");
+// display results
+$("#result").html('<dl id="infos">');
+$("#infos").append("<label>"+entity.typeLibelle+"</label>");
+$("#infos").append("<p>"
+    //+entity.nom
+    +' <a class="detail-media" href="http://'+DOMAIN+'#'+entity.nom+'">'
+    + entity.nom
+    + '</a>'
+    +"</p>");
 
-            $("#infos").append("<label>Site(s)</label>");
-            urls = "";
-            for (url_id in entity.urls) {
-                urls += ' <a target="_blank" href="http://'+entity.urls[url_id]+'">'
-                    + entity.urls[url_id] + '</a>'
-            }
-            $("#infos").append("<p>"
-                //+entity.nom
-                + urls
-                +"</p>");
-            //$("#result").append("<label>Note LeMonde (outdated)</label><p>"+decodex_note+"</p>");
-            // $("#result").append("<label>Classement Possedex</label><p>"+messages[classement]+"</p>");
-            // $("#result").append("<label>Description</label><p>"+notule+"</p>");
-            //$("#result").append("<label>identifiant(à masquer plus tard)</label><p>"+slug+"</p>");
-            if (entity.hasOwnProperty('est_possede')) {
-                proprietaires = []
-                entity.est_possede.forEach(function(el, i) {
-                    proprietaires.push(
-                        ' <a class="detail-owner" href="http://'+DOMAIN+'#'+el.nom+'">'
-                        +el.nom
-                        +'</a>'
-                        + ' ('+el.valeur+'%)'
-                        //+ " (" + fortunes1 + ")"
-                    );
-                })
-                if (proprietaires.length) {
-                    $("#result").append("<label>Propriétaires</label><p>"+proprietaires+"</p>");
-                }
-            }
+$("#infos").append("<label>Site(s)</label>");
+urls = "";
+for (url_id in entity.urls) {
+    urls += ' <a target="_blank" href="http://'+entity.urls[url_id]+'">'
+        + entity.urls[url_id] + '</a>'
+}
+$("#infos").append("<p>"
+    //+entity.nom
+    + urls
+    +"</p>");
+//$("#result").append("<label>Note LeMonde (outdated)</label><p>"+decodex_note+"</p>");
+// $("#result").append("<label>Classement Possedex</label><p>"+messages[classement]+"</p>");
+// $("#result").append("<label>Description</label><p>"+notule+"</p>");
+//$("#result").append("<label>identifiant(à masquer plus tard)</label><p>"+slug+"</p>");
+if (entity.hasOwnProperty('est_possede')) {
+    proprietaires = []
+    entity.est_possede.forEach(function(el, i) {
+        proprietaires.push(
+            ' <a class="detail-owner" href="http://'+DOMAIN+'#'+el.nom+'">'
+            +el.nom
+            +'</a>'
+            + ' ('+el.valeur+'%)'
+            //+ " (" + fortunes1 + ")"
+        );
+    })
+    if (proprietaires.length) {
+        $("#result").append("<label>Propriétaires</label><p>"+proprietaires+"</p>");
+    }
+}
 
-            if (entity.hasOwnProperty('possessions')) {
-                possessions = []
-                entity.possessions.forEach(function(el, i) {
-                    possessions.push(
-                        ' <a class="detail-owner" href="http://'+DOMAIN+'#'+el.nom+'">'
-                        +el.nom
-                        +'</a>'
-                        + ' ('+el.valeur+'%)'
-                        //+ " (" + fortunes1 + ")"
-                    );
-                })
-                if (possessions.length) {
-                    $("#result").append("<label>Possède ou contrôle</label><p>"+possessions+"</p>");
-                }
-            }
+if (entity.hasOwnProperty('possessions')) {
+    possessions = []
+    entity.possessions.forEach(function(el, i) {
+        possessions.push(
+            ' <a class="detail-owner" href="http://'+DOMAIN+'#'+el.nom+'">'
+            +el.nom
+            +'</a>'
+            + ' ('+el.valeur+'%)'
+            //+ " (" + fortunes1 + ")"
+        );
+    })
+    if (possessions.length) {
+        $("#result").append("<label>Possède ou contrôle</label><p>"+possessions+"</p>");
+    }
+}
 
-            if (entity.possedex.interets.length) {
-                $("#result").append("<label>Intérêts</label><p>"+entity.possedex.interets+"</p>");
-            }
-            if (entity.possedex.marques.length) {
-                $("#result").append("<label>Marques</label><p>"+entity.possedex.marques+"</p>");
-            }
-            if (entity.possedex.subventions) {
-            $("#result").append("<label>Subventions publiques</label><p>"+entity.possedex.subventions+"</p>");
-                //console && console.log('subventions    =',entity.possedex.subventions    );
-            }
+if (entity.possedex.interets.length) {
+    $("#result").append("<label>Intérêts</label><p>"+entity.possedex.interets+"</p>");
+}
+if (entity.possedex.marques.length) {
+    $("#result").append("<label>Marques</label><p>"+entity.possedex.marques+"</p>");
+}
+if (entity.possedex.subventions) {
+    $("#result").append("<label>Subventions publiques</label><p>"+entity.possedex.subventions+"</p>");
+    //console && console.log('subventions    =',entity.possedex.subventions    );
+}
 
-            if (entity.type == 1) { // si personne physique, récupérer les possessions intermédiaires et remonter jusqu'aux médias
-                medias = getAllMediaForEntity(entity);
-                console && console.info("FINALEMENT");
-                console && console.info(medias);
-            }
+if (entity.type == 1) { // si personne physique, récupérer les possessions intermédiaires et remonter jusqu'aux médias
+    medias = Possedex.getAllMediaForEntity(entity);
+    console && console.info("FINALEMENT");
+    console && console.info(medias);
+}
 
-            $("#result").append(sources);
-            //$("#result").append("<label>Dernière mise à jour</label><p>"
-            //    + new Date(data.proprietaires[nom].updated).toLocaleString()
-            //    +"</p>");
+$("#result").append(sources);
+//$("#result").append("<label>Dernière mise à jour</label><p>"
+//    + new Date(data.proprietaires[nom].updated).toLocaleString()
+//    +"</p>");
 
         } catch(e) {
             if (1 <= _debug) {
@@ -499,102 +486,119 @@ function debunkSite(url){
         //    });
         //}
 
-    if (url.match(/youtube.com/)) {
+        if (url.match(/youtube.com/)) {
 
-        if (null == classement)
-            classement  = '';                             // propriétaires
+            if (null == classement)
+                classement  = '';                             // propriétaires
 
 
-        if ("" == proprietaires)
-            proprietaires  = "Youtube est une propriété de la Holding Alphabet (Google)";                             // propriétaires
-        if ("" == interets)
-            interets       = "Le groupe Alphabet(Google) a de nombreux intérêts internationnaux. Son business model est fortement basé sur la publicité et son quasi-monopole de la publicité. Google exerce de nombreuses pressions sur les états et l'Union Européenne.";                               // intérets
-        if ("" == conflits)
-            conflits       = "Youtube peut être un outil de partage de connaissances. Les vidéastes et utilisateurs de la plateforme youtube ne sont pas forcément soumis à Google, mais… ";  // exemple de conflits / complicité idéologique
-        if ("" == subventions)
-            subventions    = "";             // Montant des subventions d'état
-        if ("" == sources)
-            sources        = "";             // Nos sources (urls séparés par virgule et/ou espace)
-    }
-
-    if (3 <= _debug) {
-        console && console.groupEnd();
-    }
-}
-
-function getEntityIdFromNom(str) {
-    if (urls.hasOwnProperty(url)) {
-        return urls[url];
-    } else {
-        for(id in Possedex.data.objets) {
-            //console && console.log("check id="+id);
-
-            if (Possedex.data.objets[id].nom == str) {
-                //console && console.info("TROUVé : "+id);
-                return id;
-            }
+            if ("" == proprietaires)
+                proprietaires  = "Youtube est une propriété de la Holding Alphabet (Google)";                             // propriétaires
+            if ("" == interets)
+                interets       = "Le groupe Alphabet(Google) a de nombreux intérêts internationnaux. Son business model est fortement basé sur la publicité et son quasi-monopole de la publicité. Google exerce de nombreuses pressions sur les états et l'Union Européenne.";                               // intérets
+            if ("" == conflits)
+                conflits       = "Youtube peut être un outil de partage de connaissances. Les vidéastes et utilisateurs de la plateforme youtube ne sont pas forcément soumis à Google, mais… ";  // exemple de conflits / complicité idéologique
+            if ("" == subventions)
+                subventions    = "";             // Montant des subventions d'état
+            if ("" == sources)
+                sources        = "";             // Nos sources (urls séparés par virgule et/ou espace)
         }
-        return false;
+
+        if (3 <= _debug) {
+            console && console.groupEnd();
+        }
+    },
+
+    debunkProprietaire: function(nom, data){
+        console && console.info('debunkProprietaire');
+
+        nom = decodeURIComponent(nom);
+        // display results
+        $("#result").html('<dl id="infos">');
+        $("#infos").append("<label>Nom</label>");
+        $("#infos").append("<p>"+nom+"</p>");
+        //$("#result").append("<label>Note LeMonde (outdated)</label><p>"+decodex_note+"</p>");
+        $("#result").append("<label>Classement Fortune</label><p>"+data.proprietaires[nom].fortune+"</p>");
+        $("#result").append("<label>Description</label><p>"+data.proprietaires[nom].description+"</p>");
+        //$("#result").append("<label>identifiant(à masquer plus tard)</label><p>"+slug+"</p>");
+        //$("#result").append("<label>Description</label><p>"+data.proprietaires[nom].description+"</p>");
+        $("#result").append("<label>Secteur(s)</label><p>"+data.proprietaires[nom].secteur+"</p>");
+        $("#result").append("<label>Marques</label><p>"+data.proprietaires[nom].marque+"</p>");
+        var medias = $('<ul class="list-group">');
+        data.proprietaires[nom].possession.forEach(function(media) {
+            medias.append('<li class="list-group-item">'
+                +'<a class="detail-media" href="http://'+DOMAIN+'/#'+media.url+'">'+media.nom+'</a>'
+                +' -  '
+                //+'<small>'
+                +'<a class="goto-acrimed" title="Cliquer pour chercher des articles d\'ACRIMED concernant ce média" target="to_acrimed" href="http://www.acrimed.org/+-'+media.nom.replace(/ /,'-')+'-+">'
+                +'<img src="/img/acrimed.png" alt="ACRIMED"/>'
+                +' ACRIMED'
+                +'</a>'
+                //+'</small>'
+                //+' <br><small><a class="goto-media" target="from_possedex" href="http://'+media.url+'">accéder à ce média (dans un nouvel onglet)</a></small>'
+                +'</li>');
+
+        })
+        medias = $("<p>").append(medias);
+        $("#result").append("<label>Médias contrôlés</label>").append(medias);
+        $("#result").append("<label>Dernière mise à jour</label><p>"
+            + new Date(data.proprietaires[nom].updated).toLocaleString()
+            +"</p>");
+
     }
-}
+};
 
-function getAllMediaForEntity(entity, medias = []) {
-    console && console.log("start getAllMediaForEntity");
-    for(item_index in entity.possessions) {
-        console && console.info(item_index);
-        item = entity.possessions[item_index];
-        console && console.info(item);
-        entity_id = getEntityIdFromNom(item.nom);
-        entity = Possedex.data.objets[entity_id]
-        if (entity.type == 3) {
-            console && console.log("A ajouter");
-            console && console.log(entity);
-            medias.push(entity);
-
+$(document).ready(function(){
+    $("#form-possedex").on("submit", function(e){
+        e.preventDefault();
+        var url = $("#url").val();
+        if (url.length > 0) {
+            $.getJSON(base_url, function(data){
+                Possedex.data = data;
+                document.title = 'Qui possède "'+url+'" ? - Possedex';
+                document.location.hash = url;
+                Possedex.debunkSite(url);
+            });
         } else {
-            console && console.log("A creuser");
-            medias = getAllMediaForEntity(entity, medias);
-            console && console.log(entity);
+            alert("Saisissez d'abord une url :) ");
         }
+    });
+
+    $("#submit-possedex").on("click", function(e){
+        e.preventDefault();
+        $("#form-possedex").submit();
+    });
+
+    $(document).on("click", ".detail-owner,.detail-media", function(e){
+        e.preventDefault();
+        var nom = this.href.replace('http://'+DOMAIN+"/#", '');
+        if ('p/' == nom.substr(0, 2)) {
+            $("#domain-or-owner").val("owner");
+            $("#url").val(decodeURIComponent(nom.substr(2)));
+        } else {
+            $("#domain-or-owner").val("domain");
+            $("#url").val(decodeURIComponent(nom));
+        }
+        $("#form-possedex").submit();
+    });
+
+    // check if this is a direct request
+    var current_location = document.location.href; // full url;
+    if ((pos = current_location.indexOf('#')) > -1) {
+        url = current_location.substring(pos+1);
+        if ('p/' == url.substr(0, 2)) {
+            $("#domain-or-owner").val("owner");
+            url = url.substr(2);
+            $("#url").val(decodeURIComponent(url));
+        } else {
+            $("#domain-or-owner").val("domain");
+            $("#url").val(decodeURIComponent(url));
+        }
+        $("#submit-possedex").click();
     }
-    return medias;
-}
-function debunkProprietaire(nom, data){
-    console && console.info('debunkProprietaire');
-    
 
-    nom = decodeURIComponent(nom);
-    // display results
-    $("#result").html('<dl id="infos">');
-    $("#infos").append("<label>Nom</label>");
-    $("#infos").append("<p>"+nom+"</p>");
-    //$("#result").append("<label>Note LeMonde (outdated)</label><p>"+decodex_note+"</p>");
-    $("#result").append("<label>Classement Fortune</label><p>"+data.proprietaires[nom].fortune+"</p>");
-    $("#result").append("<label>Description</label><p>"+data.proprietaires[nom].description+"</p>");
-    //$("#result").append("<label>identifiant(à masquer plus tard)</label><p>"+slug+"</p>");
-    //$("#result").append("<label>Description</label><p>"+data.proprietaires[nom].description+"</p>");
-    $("#result").append("<label>Secteur(s)</label><p>"+data.proprietaires[nom].secteur+"</p>");
-    $("#result").append("<label>Marques</label><p>"+data.proprietaires[nom].marque+"</p>");
-    var medias = $('<ul class="list-group">');
-    data.proprietaires[nom].possession.forEach(function(media) {
-        medias.append('<li class="list-group-item">'
-            +'<a class="detail-media" href="http://'+DOMAIN+'/#'+media.url+'">'+media.nom+'</a>'
-            +' -  '
-            //+'<small>'
-            +'<a class="goto-acrimed" title="Cliquer pour chercher des articles d\'ACRIMED concernant ce média" target="to_acrimed" href="http://www.acrimed.org/+-'+media.nom.replace(/ /,'-')+'-+">'
-            +'<img src="/img/acrimed.png" alt="ACRIMED"/>'
-            +' ACRIMED'
-            +'</a>'
-            //+'</small>'
-            //+' <br><small><a class="goto-media" target="from_possedex" href="http://'+media.url+'">accéder à ce média (dans un nouvel onglet)</a></small>'
-            +'</li>');
+});
 
-    })
-    medias = $("<p>").append(medias);
-    $("#result").append("<label>Médias contrôlés</label>").append(medias);
-    $("#result").append("<label>Dernière mise à jour</label><p>"
-        + new Date(data.proprietaires[nom].updated).toLocaleString()
-        +"</p>");
 
-}
+
 
