@@ -196,8 +196,8 @@ var Possedex = {
     },
 
     getEntityIdFromNom: function(str) {
-        if (urls.hasOwnProperty(url)) {
-            return urls[url];
+        if (urls.hasOwnProperty(str)) {
+            return urls[str];
         } else {
             for(id in Possedex.data.objets) {
                 //console && console.log("check id="+id);
