@@ -44,7 +44,7 @@ body {
 
 /* Custom page header */
 .header {
-    position:fixed;
+    position:absolute;
     width: 100%;
     margin: 0;
 
