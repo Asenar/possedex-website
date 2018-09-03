@@ -297,6 +297,7 @@ with open(file_urls, 'r') as csvfile:
                 entry = collections.OrderedDict()
                 entry['nom'] = row[col_nom]                     # 0  - Nom
                 entry['desc'] = row[col_desc]                   # 1  - Description
+                entry['classement'] = row[col_possedex]         # 3  - Classement
                 entry['slug'] = slugify(row[col_nom])           # 2  - Nom normalise
                 entry['udpated'] = row[col_updated]             # 4  - updated
 
