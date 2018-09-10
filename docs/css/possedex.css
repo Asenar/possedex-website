@@ -38,13 +38,14 @@ body {
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
-.footer {
+.footer,
+.main {
 
 }
 
 /* Custom page header */
 .header {
-    position:absolute;
+    /*position:absolute;*/
     width: 100%;
     margin: 0;
 
@@ -56,6 +57,9 @@ body {
   line-height: 3rem;
 }
 
+.main {
+}
+
 /* Custom page footer */
 .footer {
     padding-top: 1.5rem;
@@ -64,10 +68,10 @@ padding-bottom: 0.5rem;
     border-top: 0;
     background-color: var(--dark-color);
 }
+.separator {
+    margin-top:4rem;margin-bottom:-2rem;
+}
 #rechercher{
-  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-  min-height: 100vh; /* These two lines are counted as one :-)       */
-  padding-top:calc(50vh - 130px);
 
 }
 
