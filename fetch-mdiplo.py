@@ -6,7 +6,7 @@ import re
 import requests
 
 show_error_old_data = False
-show_nothing_found = False
+show_no_id_found = True
 
 url_base = 'https://docs.google.com/spreadsheets/export?id=1po3WjKX15T766GYOYV8fHtve4RdlyLF6XEXBlUICib0&exportFormat=tsv&gid=0'
 file_urls = 'urls.tsv'
@@ -62,7 +62,7 @@ def idFromNom(db, nom):
         if re.search('^'+row['nom']+'$', nom, flags=re.IGNORECASE|re.UNICODE):
             return id
 
-    if show_nothing_found:
+    if show_no_id_found:
         print("RIEN TROUVE pour ", nom)
 
     return -2
@@ -151,6 +151,7 @@ database['urls']   = collections.OrderedDict()
 
 
 # {{{ objets
+print("Ou est Patrick Drahi")
 with open(file_liste_medias, 'r') as tsvfile:
     reader = csv.reader(tsvfile, delimiter="\t")
 
@@ -265,13 +266,15 @@ with open(file_urls, 'r') as csvfile:
                 continue
 
             if id == -1:
-                print(bcolors.WARNING
-                    +"(-1) <"+row[col_nom]+"> est introuvable dans la db[objets] sans exception"
-                    +bcolors.ENDC, id)
+                if show_error_old_data :
+                    print(bcolors.WARNING
+                            +"(-1) <"+row[col_nom]+"> est introuvable dans la db[objets] sans exception"
+                            +bcolors.ENDC, id)
             elif id == -2:
-                print(bcolors.WARNING
-                    +"(-2) <"+row[col_nom]+"> est introuvable dans la db[objets] sans exception"
-                    +bcolors.ENDC, id)
+                if show_error_old_data :
+                    print(bcolors.WARNING
+                            +"(-2) <"+row[col_nom]+"> est introuvable dans la db[objets] sans exception"
+                            +bcolors.ENDC, id)
 
             # {{{ anciennes donnees
             try:
