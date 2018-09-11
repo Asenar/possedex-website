@@ -4,6 +4,9 @@ import csv
 import json
 import re
 import requests
+import unicodedata
+
+from collections import OrderedDict
 
 show_error_old_data = False
 show_nothing_found = False
@@ -81,7 +84,6 @@ def idFromNom(db, nom):
 #  4 - datePublication
 #  5 - dateConsultation
 downloadData(url_relations_medias, file_relations)
-
 # }}}
 
 #### base des medias / proprietaires ####
@@ -143,11 +145,11 @@ downloadData(url_owners, file_owners)
 
 # }}} recuperations des donnees
 
-database = collections.OrderedDict()
+database = OrderedDict()
 
-database['objets'] = collections.OrderedDict()
-database['sites']  = collections.OrderedDict()
-database['urls']   = collections.OrderedDict()
+database['objets'] = OrderedDict()
+database['sites']  = OrderedDict()
+database['urls']   = OrderedDict()
 
 
 # {{{ objets
@@ -174,7 +176,7 @@ with open(file_liste_medias, 'r') as tsvfile:
         if row[col_nom] == '':
             continue
 
-        entry = collections.OrderedDict()
+        entry = OrderedDict()
 
         entry['nom'        ] = row[col_nom]
         #if row[col_type] == '1':
@@ -275,7 +277,7 @@ with open(file_urls, 'r') as csvfile:
 
             # {{{ anciennes donnees
             try:
-                entry = collections.OrderedDict()
+                entry = OrderedDict()
                 entry['nom'] = row[col_nom]                     # 0  - Nom
                 entry['desc'] = row[col_desc]                   # 1  - Description
                 entry['classement'] = row[col_possedex]         # 3  - Classement

@@ -11,6 +11,13 @@ from collections import OrderedDict
 base_file   = 'https://docs.google.com/spreadsheets/export?id=1po3WjKX15T766GYOYV8fHtve4RdlyLF6XEXBlUICib0&exportFormat=csv&gid=0'
 owner_file  = 'https://docs.google.com/spreadsheets/export?id=1po3WjKX15T766GYOYV8fHtve4RdlyLF6XEXBlUICib0&exportFormat=csv&gid=1970270275'
 
+# {{{ official mdiplo
+url_relations_medias = 'https://raw.githubusercontent.com/mdiplo/Medias_francais/master/relations_medias_francais.tsv'
+file_relations = 'relations.tsv'
+
+url_liste_medias     = 'https://raw.githubusercontent.com/mdiplo/Medias_francais/master/medias_francais.tsv'
+file_liste_medias = 'liste_medias.tsv'
+# }}} official mdiplo
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -43,11 +50,75 @@ def slugify(value):
 # @TODO: use original decodex to consolidate datas
 # decodex = requests.get('http://www.lemonde.fr/webservice/decodex/updates');
 
+
+#### base des relations medias / proprietaires ####
+# {{{
+# ce fichier contient les relations entre les entites :
+#  0 - origine
+#  1 - valeur ([origine] possede [cible] a [valeur] %)
+#  2 - cible
+#  3 - source
+#  4 - datePublication
+#  5 - dateConsultation
+downloadData(url_relations_medias, file_relations)
+# }}}
+
+#### base des medias / proprietaires ####
+# {{{
+# ce fichier contient les informations sur les proprietaires
+# 0 - nom
+# 1 - typeLibelle
+# 2 - typeCode
+# 3 - rangChallenges
+# 4 - mediaType
+# 5 - mediaPeriodicite
+# 6 - mediaEchelle
+# 7 - commentaire
+downloadData(url_liste_medias, file_liste_medias)
+# }}}
+
 base_output = 'base.csv'
 downloadData(base_file, base_output)
+# ce fichier contient les informations sur les proprietaires
+#  1 - Média
+#  2 - description
+#  3 - Possedex
+#  4 - dernière modif (automatique)
+###### +
+#  5 - Propriétaire 1
+#  6 - Fortune 1
+#  7 - Marque 1
+#  8 - secteur1
+#  9 - Propriétaire 2
+# 10 - Fortune 2
+# 11 - Marque 2
+# 12 - secteur 2
+# 13 - Propriétaire 3
+# 14 - Fortune 3
+# 15 - Marque 3
+# 16 - secteur 3
+# 17 - Subventions
+# 18 - Pub
+# 19 - Sources
+# 20 - Adresse 1
+# 21 - Adresse 2
+# 22 - Adresse 3
+# 23 - Adresse 4
+# 24 - Adresse 5
+downloadData(url_base, file_urls)
+# }}}
 
 owner_output = 'owner.csv'
+# {{{
+# ce fichier contient les informations sur les proprietaires
+#  1 - Nom
+#  2 - Fortune
+#  3 - Marque
+#  4 - Secteur d'activite
+#  5 - Description
 downloadData(owner_file, owner_output)
+# }}}
+
 
 database = OrderedDict()
 
