@@ -424,55 +424,55 @@ with open(file_relations, 'r') as tsvfile:
         if sources:
             result = re.split(',', sources)
 
-        est_possede_par = {
-                 'nom'    : row[col_origine],
-                 'valeur' : row[col_valeur],
-                 'source' : []
-                 }
-        possession = {
-                 'nom'    : row[col_cible],
-                 'valeur' : row[col_valeur],
-                 'source' : []
-                 }
-        for source in result:
-            #print "Pour <"+urls+">, traitement de ", source
-            relations_count = relations_count+1;
-            source = source.strip(' ')
-            est_possede_par['source'].append(source)
-            possession['source'].append(source)
+            est_possede_par = {
+                     'nom'    : row[col_origine],
+                     'valeur' : row[col_valeur],
+                     'source' : []
+                     }
+            possession = {
+                     'nom'    : row[col_cible],
+                     'valeur' : row[col_valeur],
+                     'source' : []
+                     }
+            for source in result:
+                #print "Pour <"+urls+">, traitement de ", source
+                relations_count = relations_count+1;
+                source = source.strip(' ')
+                est_possede_par['source'].append(source)
+                possession['source'].append(source)
 
-        try:
-            # OUPS ici
-            #print ("recherche <"+row[col_origine]+">")
-            idOrig = idFromNom(database['objets'], row[col_origine])
+            try:
+                # OUPS ici
+                #print ("recherche <"+row[col_origine]+">")
+                idOrig = idFromNom(database['objets'], row[col_origine])
 
-            if idOrig != -2 and idOrig != -1:
-                #print ("idOrig=", idOrig)
-                if row[col_cible] and database['objets'][idOrig]:
+                if idOrig != -2 and idOrig != -1:
+                    #print ("idOrig=", idOrig)
+                    if row[col_cible] and database['objets'][idOrig]:
 
-                    #if not hasattr(database['objets'][idOrig], 'possessions'):
-                    #    database['objets'][idOrig]['possessions'] = []
-                    if possession not in database['objets'][idOrig]['possessions']:
-                        database['objets'][idOrig]['possessions'].append(possession)
+                        #if not hasattr(database['objets'][idOrig], 'possessions'):
+                        #    database['objets'][idOrig]['possessions'] = []
+                        if possession not in database['objets'][idOrig]['possessions']:
+                            database['objets'][idOrig]['possessions'].append(possession)
 
-            idCible = idFromNom(database['objets'], row[col_cible])
-            if idCible == "120":
-                print("120 !!!!!!!!!!!!!!!!!!!!!!!!!")
-                print(est_possede_par)
+                idCible = idFromNom(database['objets'], row[col_cible])
+                if idCible == "120":
+                    print("120 !!!!!!!!!!!!!!!!!!!!!!!!!")
+                    print(est_possede_par)
 
-            if idCible != -2 and idCible != -1:
-                #print ("idCible=", idCible)
-                if row[col_origine] and database['objets'][idCible]:
-                    #if not hasattr(database['objets'][idCible], 'est_possede'):
-                    #    database['objets'][idCible]['est_possede'] = []
-                    if est_possede_par not in database['objets'][idCible]['est_possede']:
-                        database['objets'][idCible]['est_possede'].append(est_possede_par)
-        except:
-            print ("[[[[EXCEPTION]]]]"                  )
-            print ("row col_cible = "+row[col_cible]    )
-            print ("row col_origine = "+row[col_origine])
-            print (row                                  )
-            raise
+                if idCible != -2 and idCible != -1:
+                    #print ("idCible=", idCible)
+                    if row[col_origine] and database['objets'][idCible]:
+                        #if not hasattr(database['objets'][idCible], 'est_possede'):
+                        #    database['objets'][idCible]['est_possede'] = []
+                        if est_possede_par not in database['objets'][idCible]['est_possede']:
+                            database['objets'][idCible]['est_possede'].append(est_possede_par)
+            except:
+                print ("[[[[EXCEPTION]]]]"                  )
+                print ("row col_cible = "+row[col_cible]    )
+                print ("row col_origine = "+row[col_origine])
+                print (row                                  )
+                raise
 
 # }}} relations
 print(bcolors.OKGREEN+"Nombre de relations : "+bcolors.ENDC+" ", relations_count)
