@@ -6,6 +6,8 @@ import re
 import requests
 import unicodedata
 
+from collections import OrderedDict
+
 base_file   = 'https://docs.google.com/spreadsheets/export?id=1po3WjKX15T766GYOYV8fHtve4RdlyLF6XEXBlUICib0&exportFormat=csv&gid=0'
 owner_file  = 'https://docs.google.com/spreadsheets/export?id=1po3WjKX15T766GYOYV8fHtve4RdlyLF6XEXBlUICib0&exportFormat=csv&gid=1970270275'
 
@@ -47,11 +49,11 @@ downloadData(base_file, base_output)
 owner_output = 'owner.csv'
 downloadData(owner_file, owner_output)
 
-database = collections.OrderedDict()
+database = OrderedDict()
 
-database['proprietaires'] = collections.OrderedDict()
-database['sites'] = collections.OrderedDict()
-database['urls'] = collections.OrderedDict()
+database['proprietaires'] = OrderedDict()
+database['sites'] = OrderedDict()
+database['urls'] = OrderedDict()
 
 
 with open(owner_output, 'r') as csvfile:
@@ -82,7 +84,7 @@ with open(owner_output, 'r') as csvfile:
             'updated'     : row[col_updated],
             'possession'  : []
         }
-        database['proprietaires'][row[col_nom]] = entry
+        database['proprietaires'][row[col_nom]] = OrderedDict(entry)
 
 print(bcolors.OKGREEN+"Nombre de proprietaires trouves : "+bcolors.ENDC+" ", owner_count)
 
@@ -218,7 +220,7 @@ print(bcolors.OKGREEN+"Nombre d'url trouvees : "+bcolors.ENDC+" ", url_count)
 
 # final write
 with open('docs/database.json', 'w') as outfile:
-    json.dump(database, outfile, indent=4, ensure_ascii=False)
+    json.dump(database, outfile, indent=4, sort_keys = True, ensure_ascii=False)
 # final write
 
 print(bcolors.OKGREEN+"Data written to docs/database.json"+bcolors.ENDC+" ")

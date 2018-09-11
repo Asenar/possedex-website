@@ -463,7 +463,7 @@ print(bcolors.OKBLUE+"Going to write into mdiplo.json"+bcolors.ENDC+" ")
 
 # final write
 with open('docs/mdiplo.json', 'w') as outfile:
-    json.dump(database, outfile, indent=4, ensure_ascii=False)
+    json.dump(database, outfile, indent=4, sort_keys = True, ensure_ascii=False)
 # final write
 
 print(bcolors.OKGREEN+"Data written to docs/mdiplo.json"+bcolors.ENDC+" ")
