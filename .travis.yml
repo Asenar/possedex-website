@@ -9,5 +9,6 @@ install:
  - pip install requests
 script:
  - python fetch-v2.py
+ - python3 fetch-mdiplo.py
 after_success:
 - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && bash deploy.sh
