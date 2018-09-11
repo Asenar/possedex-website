@@ -40,7 +40,6 @@ def downloadData(url, filename):
     text_file.close()
 
 def strip_accents(s):
-    import unicodedata
     return ''.join(c for c in unicodedata.normalize('NFD', s)
             if unicodedata.category(c) != 'Mn')
 
@@ -50,22 +49,6 @@ def slugify(value):
     and converts spaces to hyphens.
     """
     return strip_accents(value)
-    ### with python2
-    ### import re
-    ### #value = unicode(value.decode("utf-8"))
-    ### #value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore')
-    ### #value = unicode(re.sub('[^\w\s-]', '', value).strip().lower())
-    ### #value = unicode(re.sub('[-\s]+', '-', value))
-    ### #return str(value)
-
-    ### import unidecode
-    ### #value = unicode(value.decode("utf-8"))
-    ### return unidecode.unidecode(value)
-    ### value = str(value)
-    ### value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore')
-    ### value = (re.sub('[^\w\s-]', '', value).strip().lower())
-    ### value = (re.sub('[-\s]+', '-', value))
-    ### return (value)
 
 
 def idFromNom(db, nom):
@@ -165,8 +148,6 @@ database = collections.OrderedDict()
 database['objets'] = collections.OrderedDict()
 database['sites']  = collections.OrderedDict()
 database['urls']   = collections.OrderedDict()
-
-#database = {'sites': {}, 'urls': {}, 'objets' : {}}
 
 
 # {{{ objets
@@ -480,7 +461,9 @@ print(bcolors.OKGREEN+"Nombre de relations : "+bcolors.ENDC+" ", relations_count
 
 print(bcolors.OKBLUE+"Going to write into mdiplo.json"+bcolors.ENDC+" ")
 
+# final write
 with open('docs/mdiplo.json', 'w') as outfile:
     json.dump(database, outfile, indent=4, ensure_ascii=False)
+# final write
 
 print(bcolors.OKGREEN+"Data written to docs/mdiplo.json"+bcolors.ENDC+" ")
