@@ -24,6 +24,16 @@
             "possedex": {},
             "possessions": [
                 {
+                    "nom": "Sophia Publications",
+                    "source": [],
+                    "valeur": "50"
+                },
+                {
+                    "nom": "Groupe Perdriel",
+                    "source": [],
+                    "valeur": "53"
+                },
+                {
                     "nom": "L'Opinion",
                     "source": [
                         "challenges.fr"
@@ -39,7 +49,13 @@
         "3": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Claude Perdriel",
+                    "source": [],
+                    "valeur": "50"
+                }
+            ],
             "fortune": "",
             "nom": "Sophia Publications",
             "periodicite": "",
@@ -69,6 +85,11 @@
             "commentaire": "",
             "echelle": "",
             "est_possede": [
+                {
+                    "nom": "Claude Perdriel",
+                    "source": [],
+                    "valeur": "53"
+                },
                 {
                     "nom": "Renault",
                     "source": [
@@ -249,7 +270,13 @@
             "nom": "Prisa",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Le Monde libre",
+                    "source": [],
+                    "valeur": "20"
+                }
+            ],
             "type": "2",
             "typeLibelle": "Personne morale",
             "type_media": "",
@@ -292,6 +319,11 @@
                         "https://fr.reuters.com/article/topNews/idFRKCN1BJ24Z-OFRTP"
                     ],
                     "valeur": "40"
+                },
+                {
+                    "nom": "Les Nouvelles Éditions",
+                    "source": [],
+                    "valeur": "78"
                 }
             ],
             "type": "1",
@@ -303,6 +335,11 @@
             "commentaire": "",
             "echelle": "",
             "est_possede": [
+                {
+                    "nom": "Prisa",
+                    "source": [],
+                    "valeur": "20"
+                },
                 {
                     "nom": "Xavier Niel",
                     "source": [
@@ -656,6 +693,16 @@
                         "lemonde.fr"
                     ],
                     "valeur": "51"
+                },
+                {
+                    "nom": "Les Amis du Monde diplomatique",
+                    "source": [],
+                    "valeur": "24,5"
+                },
+                {
+                    "nom": "Association Günter-Holzmann",
+                    "source": [],
+                    "valeur": "24,5"
                 }
             ],
             "fortune": "",
@@ -681,6 +728,16 @@
                         "lemonde.fr"
                     ],
                     "valeur": "51"
+                },
+                {
+                    "nom": "Les Amis du Monde diplomatique",
+                    "source": [],
+                    "valeur": "24,5"
+                },
+                {
+                    "nom": "Association Günter-Holzmann",
+                    "source": [],
+                    "valeur": "24,5"
                 }
             ],
             "fortune": "",
@@ -739,7 +796,13 @@
             "nom": "AOL",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Huffington Post",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "type": "2",
             "typeLibelle": "Personne morale",
             "type_media": "",
@@ -748,7 +811,13 @@
         "27": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "AOL",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "Huffington Post",
             "periodicite": "",
@@ -770,7 +839,13 @@
         "28": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Matthieu Pigasse",
+                    "source": [],
+                    "valeur": "78"
+                }
+            ],
             "fortune": "",
             "nom": "Les Nouvelles Éditions",
             "periodicite": "",
@@ -886,7 +961,18 @@
             "nom": "Les Amis du Monde diplomatique",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Le Monde diplomatique",
+                    "source": [],
+                    "valeur": "24,5"
+                },
+                {
+                    "nom": "Manière de voir",
+                    "source": [],
+                    "valeur": "24,5"
+                }
+            ],
             "type": "2",
             "typeLibelle": "Personne morale",
             "type_media": "",
@@ -900,7 +986,18 @@
             "nom": "Association Günter-Holzmann",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Le Monde diplomatique",
+                    "source": [],
+                    "valeur": "24,5"
+                },
+                {
+                    "nom": "Manière de voir",
+                    "source": [],
+                    "valeur": "24,5"
+                }
+            ],
             "type": "2",
             "typeLibelle": "Personne morale",
             "type_media": "",
@@ -914,7 +1011,13 @@
             "nom": "Famille Dassault",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Groupe Dassault",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "type": "1",
             "typeLibelle": "Personne physique",
             "type_media": "",
@@ -923,12 +1026,24 @@
         "35": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Famille Dassault",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "Groupe Dassault",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Groupe Figaro",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "type": "2",
             "typeLibelle": "Personne morale",
             "type_media": "",
@@ -937,7 +1052,13 @@
         "36": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Groupe Dassault",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "Groupe Figaro",
             "periodicite": "",
@@ -1086,7 +1207,13 @@
             "nom": "Bernard Arnault",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "LVMH",
+                    "source": [],
+                    "valeur": "46,6"
+                }
+            ],
             "type": "1",
             "typeLibelle": "Personne physique",
             "type_media": "",
@@ -1095,7 +1222,13 @@
         "42": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Bernard Arnault",
+                    "source": [],
+                    "valeur": "46,6"
+                }
+            ],
             "fortune": "",
             "nom": "LVMH",
             "periodicite": "",
@@ -1463,7 +1596,13 @@
             "nom": "Patrick Drahi",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Altice",
+                    "source": [],
+                    "valeur": "61"
+                }
+            ],
             "type": "1",
             "typeLibelle": "Personne physique",
             "type_media": "",
@@ -1472,12 +1611,24 @@
         "56": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Patrick Drahi",
+                    "source": [],
+                    "valeur": "61"
+                }
+            ],
             "fortune": "",
             "nom": "Altice",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Altice France",
+                    "source": [],
+                    "valeur": "78"
+                }
+            ],
             "type": "2",
             "typeLibelle": "Personne morale",
             "type_media": "",
@@ -1486,7 +1637,13 @@
         "57": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Altice",
+                    "source": [],
+                    "valeur": "78"
+                }
+            ],
             "fortune": "",
             "nom": "Altice France",
             "periodicite": "",
@@ -1745,7 +1902,13 @@
             "nom": "Arnaud Lagardère",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Lagardère SCA",
+                    "source": [],
+                    "valeur": "7,96"
+                }
+            ],
             "type": "1",
             "typeLibelle": "Personne physique",
             "type_media": "",
@@ -1759,7 +1922,13 @@
             "nom": "Qatar Investment Authority",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Lagardère SCA",
+                    "source": [],
+                    "valeur": "12,83"
+                }
+            ],
             "type": "2",
             "typeLibelle": "Personne morale",
             "type_media": "",
@@ -1768,12 +1937,29 @@
         "68": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Arnaud Lagardère",
+                    "source": [],
+                    "valeur": "7,96"
+                },
+                {
+                    "nom": "Qatar Investment Authority",
+                    "source": [],
+                    "valeur": "12,83"
+                }
+            ],
             "fortune": "",
             "nom": "Lagardère SCA",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Lagardère Active",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "type": "2",
             "typeLibelle": "Personne morale",
             "type_media": "",
@@ -1782,7 +1968,13 @@
         "69": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Lagardère SCA",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "Lagardère Active",
             "periodicite": "",
@@ -1989,7 +2181,13 @@
             "nom": "Vincent Bolloré",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Financière de l'Odet",
+                    "source": [],
+                    "valeur": "49,77"
+                }
+            ],
             "type": "1",
             "typeLibelle": "Personne physique",
             "type_media": "",
@@ -1998,12 +2196,24 @@
         "77": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Vincent Bolloré",
+                    "source": [],
+                    "valeur": "49,77"
+                }
+            ],
             "fortune": "",
             "nom": "Financière de l'Odet",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Bolloré",
+                    "source": [],
+                    "valeur": "64,4"
+                }
+            ],
             "type": "2",
             "typeLibelle": "Personne morale",
             "type_media": "",
@@ -2012,7 +2222,13 @@
         "78": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Financière de l'Odet",
+                    "source": [],
+                    "valeur": "64,4"
+                }
+            ],
             "fortune": "",
             "nom": "Bolloré",
             "periodicite": "",
@@ -2233,7 +2449,13 @@
             "nom": "Iskandar Safa",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Privinvest",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "type": "1",
             "typeLibelle": "Personne physique",
             "type_media": "",
@@ -2242,12 +2464,24 @@
         "86": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Iskandar Safa",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "Privinvest",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Groupe Valmonde",
+                    "source": [],
+                    "valeur": ">50"
+                }
+            ],
             "type": "2",
             "typeLibelle": "Personne morale",
             "type_media": "",
@@ -2256,7 +2490,13 @@
         "87": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Privinvest",
+                    "source": [],
+                    "valeur": ">50"
+                }
+            ],
             "fortune": "",
             "nom": "Groupe Valmonde",
             "periodicite": "",
@@ -2441,7 +2681,13 @@
             "nom": "François Pinault",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Artémis",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "type": "1",
             "typeLibelle": "Personne physique",
             "type_media": "",
@@ -2450,12 +2696,28 @@
         "95": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "François Pinault",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "Artémis",
             "periodicite": "",
             "possedex": {},
             "possessions": [
+                {
+                    "nom": "Groupe Sebdo-Le Point",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "Groupe L'Agefi",
+                    "source": [],
+                    "valeur": "100"
+                },
                 {
                     "nom": "Point de vue",
                     "source": [
@@ -2472,7 +2734,13 @@
         "96": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Artémis",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "Groupe Sebdo-Le Point",
             "periodicite": "",
@@ -2495,7 +2763,13 @@
         "97": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Artémis",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "Groupe L'Agefi",
             "periodicite": "",
@@ -2595,7 +2869,13 @@
             "nom": "Famille Mohn",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Bertelsmann",
+                    "source": [],
+                    "valeur": "contrôle"
+                }
+            ],
             "type": "1",
             "typeLibelle": "Personne physique",
             "type_media": "",
@@ -2604,12 +2884,29 @@
         "102": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Famille Mohn",
+                    "source": [],
+                    "valeur": "contrôle"
+                }
+            ],
             "fortune": "",
             "nom": "Bertelsmann",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Gruner + Jahr",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "RTL Group",
+                    "source": [],
+                    "valeur": "75"
+                }
+            ],
             "type": "2",
             "typeLibelle": "Personne morale",
             "type_media": "",
@@ -2618,12 +2915,24 @@
         "103": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Bertelsmann",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "Gruner + Jahr",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Prisma Media",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "type": "2",
             "typeLibelle": "Personne morale",
             "type_media": "",
@@ -2632,12 +2941,24 @@
         "104": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Bertelsmann",
+                    "source": [],
+                    "valeur": "75"
+                }
+            ],
             "fortune": "",
             "nom": "RTL Group",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Groupe M6",
+                    "source": [],
+                    "valeur": "48"
+                }
+            ],
             "type": "2",
             "typeLibelle": "Personne morale",
             "type_media": "",
@@ -2646,7 +2967,13 @@
         "105": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Gruner + Jahr",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "Prisma Media",
             "periodicite": "",
@@ -2752,7 +3079,13 @@
         "109": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "RTL Group",
+                    "source": [],
+                    "valeur": "48"
+                }
+            ],
             "fortune": "",
             "nom": "Groupe M6",
             "periodicite": "",
@@ -3050,7 +3383,13 @@
             "nom": "Martin et Olivier Bouygues",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Bouygues",
+                    "source": [],
+                    "valeur": "20"
+                }
+            ],
             "type": "1",
             "typeLibelle": "Personne physique",
             "type_media": "",
@@ -3059,12 +3398,24 @@
         "120": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Martin et Olivier Bouygues",
+                    "source": [],
+                    "valeur": "20"
+                }
+            ],
             "fortune": "",
             "nom": "Bouygues",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Groupe TF1",
+                    "source": [],
+                    "valeur": "44"
+                }
+            ],
             "type": "2",
             "typeLibelle": "Personne morale",
             "type_media": "",
@@ -3073,7 +3424,13 @@
         "121": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Bouygues",
+                    "source": [],
+                    "valeur": "44"
+                }
+            ],
             "fortune": "",
             "nom": "Groupe TF1",
             "periodicite": "",
@@ -3263,6 +3620,41 @@
             "possessions": [
                 {
                     "nom": "Renault",
+                    "source": [],
+                    "valeur": "15"
+                },
+                {
+                    "nom": "La Chaîne parlementaire",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "Public Sénat",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "France Médias Monde",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "France Télévision",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "Radio France",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "Arte France",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "Renault",
                     "source": [
                         "zonebourse.com"
                     ],
@@ -3282,7 +3674,13 @@
             "nom": "République fédérale d'Allemagne",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "ARD / ZDF",
+                    "source": [],
+                    "valeur": "contrôle"
+                }
+            ],
             "type": "4",
             "typeLibelle": "État",
             "type_media": "",
@@ -3292,6 +3690,11 @@
             "commentaire": "",
             "echelle": "",
             "est_possede": [
+                {
+                    "nom": "République française",
+                    "source": [],
+                    "valeur": "15"
+                },
                 {
                     "nom": "République française",
                     "source": [
@@ -3321,7 +3724,13 @@
         "130": {
             "commentaire": "Gratuit",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "République française",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "La Chaîne parlementaire",
             "periodicite": "",
@@ -3337,7 +3746,13 @@
         "131": {
             "commentaire": "Gratuit",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "République française",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "Public Sénat",
             "periodicite": "",
@@ -3353,12 +3768,39 @@
         "132": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "République française",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "France Médias Monde",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Monte Carlo Doualiya",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "Radio France International",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "France 24",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "TV5 Monde",
+                    "source": [],
+                    "valeur": "13"
+                }
+            ],
             "type": "2",
             "typeLibelle": "Personne morale",
             "type_media": "",
@@ -3367,12 +3809,54 @@
         "133": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "République française",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "France Télévision",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "TV5 Monde",
+                    "source": [],
+                    "valeur": "49"
+                },
+                {
+                    "nom": "France 2",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "France 3",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "France 5",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "France 4",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "France Ô",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "France info",
+                    "source": [],
+                    "valeur": "contrôle"
+                }
+            ],
             "type": "2",
             "typeLibelle": "Personne morale",
             "type_media": "",
@@ -3381,12 +3865,59 @@
         "134": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "République française",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "Radio France",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "France Inter",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "France Musique",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "France Culture",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "FIP",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "France Bleu",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "France Info",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "Mouv'",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "France info",
+                    "source": [],
+                    "valeur": "contrôle"
+                }
+            ],
             "type": "2",
             "typeLibelle": "Personne morale",
             "type_media": "",
@@ -3397,12 +3928,24 @@
         "135": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "République française",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "Arte France",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Arte",
+                    "source": [],
+                    "valeur": "50"
+                }
+            ],
             "type": "2",
             "typeLibelle": "Personne morale",
             "type_media": "",
@@ -3411,7 +3954,13 @@
         "136": {
             "commentaire": "",
             "echelle": "International",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "France Médias Monde",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "Monte Carlo Doualiya",
             "periodicite": "",
@@ -3425,7 +3974,13 @@
         "137": {
             "commentaire": "",
             "echelle": "International",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "France Médias Monde",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "Radio France International",
             "periodicite": "",
@@ -3439,7 +3994,13 @@
         "138": {
             "commentaire": "",
             "echelle": "International",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "France Médias Monde",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "France 24",
             "periodicite": "",
@@ -3453,7 +4014,18 @@
         "139": {
             "commentaire": "",
             "echelle": "International",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "France Médias Monde",
+                    "source": [],
+                    "valeur": "13"
+                },
+                {
+                    "nom": "France Télévision",
+                    "source": [],
+                    "valeur": "49"
+                }
+            ],
             "fortune": "",
             "nom": "TV5 Monde",
             "periodicite": "",
@@ -3469,7 +4041,13 @@
         "140": {
             "commentaire": "Gratuit",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "France Télévision",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "France 2",
             "periodicite": "",
@@ -3487,7 +4065,13 @@
         "141": {
             "commentaire": "Gratuit",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "France Télévision",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "France 3",
             "periodicite": "",
@@ -3503,7 +4087,13 @@
         "142": {
             "commentaire": "Gratuit",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "France Télévision",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "France 5",
             "periodicite": "",
@@ -3519,7 +4109,13 @@
         "143": {
             "commentaire": "Gratuit",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "France Télévision",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "France 4",
             "periodicite": "",
@@ -3535,7 +4131,13 @@
         "144": {
             "commentaire": "Gratuit",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "France Télévision",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "France Ô",
             "periodicite": "",
@@ -3551,7 +4153,23 @@
         "145": {
             "commentaire": "Gratuit",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "France Télévision",
+                    "source": [],
+                    "valeur": "contrôle"
+                },
+                {
+                    "nom": "Radio France",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "Radio France",
+                    "source": [],
+                    "valeur": "contrôle"
+                }
+            ],
             "fortune": "",
             "nom": "France info",
             "periodicite": "",
@@ -3565,7 +4183,13 @@
         "146": {
             "commentaire": "",
             "echelle": "National",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Radio France",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "France Inter",
             "periodicite": "",
@@ -3581,7 +4205,13 @@
         "147": {
             "commentaire": "",
             "echelle": "National",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Radio France",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "France Musique",
             "periodicite": "",
@@ -3597,7 +4227,13 @@
         "148": {
             "commentaire": "",
             "echelle": "National",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Radio France",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "France Culture",
             "periodicite": "",
@@ -3613,7 +4249,13 @@
         "149": {
             "commentaire": "",
             "echelle": "National",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Radio France",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "FIP",
             "periodicite": "",
@@ -3629,7 +4271,13 @@
         "150": {
             "commentaire": "",
             "echelle": "National",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Radio France",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "France Bleu",
             "periodicite": "",
@@ -3659,7 +4307,13 @@
         "152": {
             "commentaire": "",
             "echelle": "National",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Radio France",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "Mouv'",
             "periodicite": "",
@@ -3673,7 +4327,18 @@
         "153": {
             "commentaire": "Gratuit",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Arte France",
+                    "source": [],
+                    "valeur": "50"
+                },
+                {
+                    "nom": "Arte Deutschland TV GmbH",
+                    "source": [],
+                    "valeur": "50"
+                }
+            ],
             "fortune": "",
             "nom": "Arte",
             "periodicite": "",
@@ -3691,12 +4356,24 @@
         "154": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "République fédérale d'Allemagne",
+                    "source": [],
+                    "valeur": "contrôle"
+                }
+            ],
             "fortune": "",
             "nom": "ARD / ZDF",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Arte Deutschland TV GmbH",
+                    "source": [],
+                    "valeur": "50"
+                }
+            ],
             "type": "2",
             "typeLibelle": "Personne morale",
             "type_media": "",
@@ -3705,12 +4382,24 @@
         "155": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "ARD / ZDF",
+                    "source": [],
+                    "valeur": "50"
+                }
+            ],
             "fortune": "",
             "nom": "Arte Deutschland TV GmbH",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Arte",
+                    "source": [],
+                    "valeur": "50"
+                }
+            ],
             "type": "2",
             "typeLibelle": "Personne morale",
             "type_media": "",
@@ -3724,7 +4413,13 @@
             "nom": "Les Augustins de l'Assomption",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Bayard",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "type": "2",
             "typeLibelle": "Personne morale",
             "type_media": "",
@@ -3733,12 +4428,34 @@
         "157": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Les Augustins de l'Assomption",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "Bayard",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "La Croix",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "Pèlerin",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "Notre temps",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "type": "2",
             "typeLibelle": "Personne morale",
             "type_media": "",
@@ -3747,7 +4464,13 @@
         "158": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Bayard",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "La Croix",
             "periodicite": "Quotidien",
@@ -3763,7 +4486,13 @@
         "159": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Bayard",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "Pèlerin",
             "periodicite": "Hebdomadaire",
@@ -3777,7 +4506,13 @@
         "160": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Bayard",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "Notre temps",
             "periodicite": "Mensuel",
@@ -3798,7 +4533,13 @@
             "nom": "Jean-Paul Baudecroux",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "NRJ Group",
+                    "source": [],
+                    "valeur": "79,1"
+                }
+            ],
             "type": "1",
             "typeLibelle": "Personne physique",
             "type_media": "",
@@ -3807,7 +4548,13 @@
         "162": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Jean-Paul Baudecroux",
+                    "source": [],
+                    "valeur": "79,1"
+                }
+            ],
             "fortune": "",
             "nom": "NRJ Group",
             "periodicite": "",
@@ -4009,7 +4756,13 @@
             "nom": "Famille Hutin",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Association pour le soutien des principes de la démocratie humaniste",
+                    "source": [],
+                    "valeur": "contrôle"
+                }
+            ],
             "type": "1",
             "typeLibelle": "Personne physique",
             "type_media": "",
@@ -4023,7 +4776,13 @@
             "nom": "Famille Hurbain",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Groupe Rossel",
+                    "source": [],
+                    "valeur": "contrôle"
+                }
+            ],
             "type": "1",
             "typeLibelle": "Personne physique",
             "type_media": "",
@@ -4037,7 +4796,13 @@
             "nom": "Crédit Agricole Nord de France",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Groupe Rossel La Voix",
+                    "source": [],
+                    "valeur": "25"
+                }
+            ],
             "type": "2",
             "typeLibelle": "Personne morale",
             "type_media": "",
@@ -4046,12 +4811,24 @@
         "172": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Famille Hutin",
+                    "source": [],
+                    "valeur": "contrôle"
+                }
+            ],
             "fortune": "",
             "nom": "Association pour le soutien des principes de la démocratie humaniste",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Groupe SIPA - Ouest",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "type": "2",
             "typeLibelle": "Personne morale",
             "type_media": "",
@@ -4060,7 +4837,13 @@
         "173": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Association pour le soutien des principes de la démocratie humaniste",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "Groupe SIPA - Ouest",
             "periodicite": "",
@@ -4112,6 +4895,11 @@
                         "publihebdos.com"
                     ],
                     "valeur": "100"
+                },
+                {
+                    "nom": "Sofiouest",
+                    "source": [],
+                    "valeur": "40"
                 }
             ],
             "type": "2",
@@ -4269,7 +5057,13 @@
         "180": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Groupe SIPA - Ouest",
+                    "source": [],
+                    "valeur": "40"
+                }
+            ],
             "fortune": "",
             "nom": "Sofiouest",
             "periodicite": "",
@@ -4325,12 +5119,24 @@
         "182": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Famille Hurbain",
+                    "source": [],
+                    "valeur": "contrôle"
+                }
+            ],
             "fortune": "",
             "nom": "Groupe Rossel",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Groupe Rossel La Voix",
+                    "source": [],
+                    "valeur": "73"
+                }
+            ],
             "type": "2",
             "typeLibelle": "Personne morale",
             "type_media": "",
@@ -4339,7 +5145,18 @@
         "183": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Groupe Rossel",
+                    "source": [],
+                    "valeur": "73"
+                },
+                {
+                    "nom": "Crédit Agricole Nord de France",
+                    "source": [],
+                    "valeur": "25"
+                }
+            ],
             "fortune": "",
             "nom": "Groupe Rossel La Voix",
             "periodicite": "",
@@ -4352,6 +5169,11 @@
                         "lavoixdunord.fr"
                     ],
                     "valeur": "49"
+                },
+                {
+                    "nom": "La Voix du Nord SA",
+                    "source": [],
+                    "valeur": "96"
                 }
             ],
             "type": "2",
@@ -4362,7 +5184,13 @@
         "184": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Groupe Rossel La Voix",
+                    "source": [],
+                    "valeur": "96"
+                }
+            ],
             "fortune": "",
             "nom": "La Voix du Nord SA",
             "periodicite": "",
@@ -5039,7 +5867,13 @@
             "nom": "Crédit Mutuel",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Groupe EBRA",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "type": "2",
             "typeLibelle": "Personne morale",
             "type_media": "",
@@ -5048,7 +5882,13 @@
         "207": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Crédit Mutuel",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "Groupe EBRA",
             "periodicite": "",
@@ -5401,7 +6241,13 @@
             "nom": "Fondation Varenne",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Groupe La Montagne",
+                    "source": [],
+                    "valeur": ">50"
+                }
+            ],
             "type": "2",
             "typeLibelle": "Personne morale",
             "type_media": "",
@@ -5415,7 +6261,13 @@
             "nom": "Famille Saint-Cricq",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Groupe NRCO",
+                    "source": [],
+                    "valeur": "15"
+                }
+            ],
             "type": "1",
             "typeLibelle": "Personne physique",
             "type_media": "",
@@ -5424,7 +6276,13 @@
         "221": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Fondation Varenne",
+                    "source": [],
+                    "valeur": ">50"
+                }
+            ],
             "fortune": "",
             "nom": "Groupe La Montagne",
             "periodicite": "",
@@ -5527,6 +6385,11 @@
                         "docpresse.esj-lille.fr"
                     ],
                     "valeur": "70"
+                },
+                {
+                    "nom": "Groupe NRCO",
+                    "source": [],
+                    "valeur": "16"
                 }
             ],
             "type": "2",
@@ -5862,7 +6725,18 @@
         "236": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Groupe La Montagne",
+                    "source": [],
+                    "valeur": "16"
+                },
+                {
+                    "nom": "Famille Saint-Cricq",
+                    "source": [],
+                    "valeur": "15"
+                }
+            ],
             "fortune": "",
             "nom": "Groupe NRCO",
             "periodicite": "",
@@ -5980,7 +6854,13 @@
             "nom": "Famille Baylet",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Groupe La Dépêche",
+                    "source": [],
+                    "valeur": "82,5"
+                }
+            ],
             "type": "1",
             "typeLibelle": "Personne physique",
             "type_media": "",
@@ -5989,7 +6869,13 @@
         "241": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Famille Baylet",
+                    "source": [],
+                    "valeur": "82,5"
+                }
+            ],
             "fortune": "",
             "nom": "Groupe La Dépêche",
             "periodicite": "",
@@ -6033,6 +6919,11 @@
                         "strategies.fr",
                         "ladepeche-diffusion.com"
                     ],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "Les Journaux du midi",
+                    "source": [],
                     "valeur": "100"
                 }
             ],
@@ -6163,7 +7054,13 @@
         "247": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Groupe La Dépêche",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "Les Journaux du midi",
             "periodicite": "",
@@ -6276,7 +7173,13 @@
             "nom": "Famille Lemoine",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Groupe Sud Ouest",
+                    "source": [],
+                    "valeur": "80"
+                }
+            ],
             "type": "1",
             "typeLibelle": "Personne physique",
             "type_media": "",
@@ -6285,7 +7188,13 @@
         "252": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Famille Lemoine",
+                    "source": [],
+                    "valeur": "80"
+                }
+            ],
             "fortune": "",
             "nom": "Groupe Sud Ouest",
             "periodicite": "",
@@ -6684,7 +7593,13 @@
             "nom": "Édouard Coudurier",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Groupe Télégramme",
+                    "source": [],
+                    "valeur": "contrôle"
+                }
+            ],
             "type": "1",
             "typeLibelle": "Personne physique",
             "type_media": "",
@@ -6693,7 +7608,13 @@
         "266": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Édouard Coudurier",
+                    "source": [],
+                    "valeur": "contrôle"
+                }
+            ],
             "fortune": "",
             "nom": "Groupe Télégramme",
             "periodicite": "",
@@ -6953,7 +7874,13 @@
             "nom": "Bernard Tapie",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Groupe La Provence",
+                    "source": [],
+                    "valeur": "89"
+                }
+            ],
             "type": "1",
             "typeLibelle": "Personne physique",
             "type_media": "",
@@ -6968,6 +7895,11 @@
             "periodicite": "",
             "possedex": {},
             "possessions": [
+                {
+                    "nom": "Groupe La Provence",
+                    "source": [],
+                    "valeur": "11"
+                },
                 {
                     "nom": "Nice-Matin",
                     "source": [
@@ -6984,7 +7916,18 @@
         "277": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Bernard Tapie",
+                    "source": [],
+                    "valeur": "89"
+                },
+                {
+                    "nom": "Nethys",
+                    "source": [],
+                    "valeur": "11"
+                }
+            ],
             "fortune": "",
             "nom": "Groupe La Provence",
             "periodicite": "",
@@ -7323,7 +8266,18 @@
             "nom": "Philippe Hersant",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Éditions Suisses Holding",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "Groupe Hersant Média",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "type": "1",
             "typeLibelle": "Personne physique",
             "type_media": "",
@@ -7332,12 +8286,29 @@
         "290": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Philippe Hersant",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "Éditions Suisses Holding",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Groupe Filanosa",
+                    "source": [],
+                    "valeur": ">50"
+                },
+                {
+                    "nom": "Rhône Média",
+                    "source": [],
+                    "valeur": ">50"
+                }
+            ],
             "type": "2",
             "typeLibelle": "Personne morale",
             "type_media": "",
@@ -7346,7 +8317,13 @@
         "291": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Philippe Hersant",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "fortune": "",
             "nom": "Groupe Hersant Média",
             "periodicite": "",
@@ -7375,7 +8352,13 @@
         "292": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Éditions Suisses Holding",
+                    "source": [],
+                    "valeur": ">50"
+                }
+            ],
             "fortune": "",
             "nom": "Groupe Filanosa",
             "periodicite": "",
@@ -7411,7 +8394,13 @@
         "293": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Éditions Suisses Holding",
+                    "source": [],
+                    "valeur": ">50"
+                }
+            ],
             "fortune": "",
             "nom": "Rhône Média",
             "periodicite": "",
@@ -7674,7 +8663,13 @@
             "nom": "Benjamin et Ariane de Rothschild",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Lampsane Investissement SA",
+                    "source": [],
+                    "valeur": "contrôle"
+                }
+            ],
             "type": "1",
             "typeLibelle": "Personne physique",
             "type_media": "",
@@ -7683,7 +8678,13 @@
         "305": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Benjamin et Ariane de Rothschild",
+                    "source": [],
+                    "valeur": "contrôle"
+                }
+            ],
             "fortune": "",
             "nom": "Lampsane Investissement SA",
             "periodicite": "",
@@ -7834,7 +8835,13 @@
             "nom": "Franck Julien",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Edi Invest",
+                    "source": [],
+                    "valeur": "contrôle"
+                }
+            ],
             "type": "1",
             "typeLibelle": "Personne physique",
             "type_media": "",
@@ -7843,12 +8850,24 @@
         "312": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Franck Julien",
+                    "source": [],
+                    "valeur": "contrôle"
+                }
+            ],
             "fortune": "",
             "nom": "Edi Invest",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Hima Groupe",
+                    "source": [],
+                    "valeur": "37,4"
+                }
+            ],
             "type": "2",
             "typeLibelle": "Personne morale",
             "type_media": "",
@@ -7862,7 +8881,13 @@
             "nom": "Jean Christophe Tortora",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Hima Groupe",
+                    "source": [],
+                    "valeur": "17"
+                }
+            ],
             "type": "1",
             "typeLibelle": "Personne physique",
             "type_media": "",
@@ -7876,7 +8901,13 @@
             "nom": "Laurent Alexandre",
             "periodicite": "",
             "possedex": {},
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Hima Groupe",
+                    "source": [],
+                    "valeur": "28"
+                }
+            ],
             "type": "1",
             "typeLibelle": "Personne physique",
             "type_media": "",
@@ -7885,7 +8916,23 @@
         "315": {
             "commentaire": "",
             "echelle": "",
-            "est_possede": [],
+            "est_possede": [
+                {
+                    "nom": "Edi Invest",
+                    "source": [],
+                    "valeur": "37,4"
+                },
+                {
+                    "nom": "Jean Christophe Tortora",
+                    "source": [],
+                    "valeur": "17"
+                },
+                {
+                    "nom": "Laurent Alexandre",
+                    "source": [],
+                    "valeur": "28"
+                }
+            ],
             "fortune": "",
             "nom": "Hima Groupe",
             "periodicite": "",
