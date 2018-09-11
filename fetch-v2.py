@@ -1,7 +1,10 @@
-import requests
+#!/usr/bin/python3
+import collections
 import csv
 import json
 import re
+import requests
+import unicodedata
 
 base_file   = 'https://docs.google.com/spreadsheets/export?id=1po3WjKX15T766GYOYV8fHtve4RdlyLF6XEXBlUICib0&exportFormat=csv&gid=0'
 owner_file  = 'https://docs.google.com/spreadsheets/export?id=1po3WjKX15T766GYOYV8fHtve4RdlyLF6XEXBlUICib0&exportFormat=csv&gid=1970270275'
@@ -16,44 +19,42 @@ class bcolors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
+def downloadData(url, filename):
+    response = requests.get(url)
+    response.encoding = 'UTF-8'
+    assert response.status_code == 200, 'failed to download '+url
+    text_file = open(filename, 'w')
+    text_file.write(response.text)
+    text_file.close()
+
+def strip_accents(s):
+    return ''.join(c for c in unicodedata.normalize('NFD', s)
+            if unicodedata.category(c) != 'Mn')
+
 def slugify(value):
     """
     Normalizes string, converts to lowercase, removes non-alpha characters,
     and converts spaces to hyphens.
     """
-    import unicodedata
-    import re
-    value = unicode(value.decode("utf-8"))
-    value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore')
-    value = unicode(re.sub('[^\w\s-]', '', value).strip().lower())
-    value = unicode(re.sub('[-\s]+', '-', value))
-    return str(value)
+    return strip_accents(value)
 
 # @TODO: use original decodex to consolidate datas
 # decodex = requests.get('http://www.lemonde.fr/webservice/decodex/updates');
 
 base_output = 'base.csv'
-response = requests.get(base_file)
-response.encoding = 'UTF-8'
-
-assert response.status_code == 200, 'failed to download base csv file'
-
-text_file = open(base_output, 'w')
-text_file.write(response.content)
-text_file.close()
+downloadData(base_file, base_output)
 
 owner_output = 'owner.csv'
-response = requests.get(owner_file)
-response.encoding = 'UTF-8'
-assert response.status_code == 200, 'failed to download owner csv file'
-text2_file = open(owner_output, 'w')
-text2_file.write(response.content)
-text2_file.close()
+downloadData(owner_file, owner_output)
 
-database = {'sites': {}, 'urls': {}, 'proprietaires' : {}}
+database = collections.OrderedDict()
+
+database['proprietaires'] = collections.OrderedDict()
+database['sites'] = collections.OrderedDict()
+database['urls'] = collections.OrderedDict()
 
 
-with open(owner_output, 'rb') as csvfile:
+with open(owner_output, 'r') as csvfile:
     reader = csv.reader(csvfile, delimiter=',', quotechar='"')
 
     col_updated       = 0
@@ -83,10 +84,10 @@ with open(owner_output, 'rb') as csvfile:
         }
         database['proprietaires'][row[col_nom]] = entry
 
-print bcolors.OKGREEN+"Nombre de proprietaires trouves : "+bcolors.ENDC+" ", owner_count
+print(bcolors.OKGREEN+"Nombre de proprietaires trouves : "+bcolors.ENDC+" ", owner_count)
 
 
-with open(base_output, 'rb') as csvfile:
+with open(base_output, 'r') as csvfile:
     id = 0
 
     col_nom           = 0
@@ -131,19 +132,19 @@ with open(base_output, 'rb') as csvfile:
 
             if row[col_possedex] == 'inconnu':
                 classement_possedex = ''
-                print bcolors.OKBLUE+"[  inconnu   ] "+bcolors.ENDC+" "+row[col_nom]
+                print(bcolors.OKBLUE+"[  inconnu   ] "+bcolors.ENDC+" "+row[col_nom])
             elif row[col_possedex] == 'capital':
                 classement_possedex = 'capital'
-                print bcolors.OKGREEN+"[  capital  ] "+bcolors.ENDC+" "+row[col_nom]
+                print(bcolors.OKGREEN+"[  capital  ] "+bcolors.ENDC+" "+row[col_nom])
             elif row[col_possedex] == 'etat':
                 classement_possedex = 'etat'
-                print bcolors.OKBLUE +"[    etat   ] "+bcolors.ENDC+" "+row[col_nom]
+                print(bcolors.OKBLUE +"[    etat   ] "+bcolors.ENDC+" "+row[col_nom])
             elif row[col_possedex] == 'independant':
                 classement_possedex = 'independant'
-                print bcolors.OKGREEN+"[   indep   ] "+bcolors.ENDC+" "+row[col_nom]
+                print(bcolors.OKGREEN+"[   indep   ] "+bcolors.ENDC+" "+row[col_nom])
                 # TODO: ajouter reseaux sociaux ?
             else:
-                print bcolors.FAIL+"[classement possedex manquant] "+bcolors.ENDC+" "+row[col_nom]+" (on met 0)"
+                print(bcolors.FAIL+"[classement possedex manquant] "+bcolors.ENDC+" "+row[col_nom]+" (on met 0)")
                 continue
         except:
             pass
@@ -213,7 +214,11 @@ with open(base_output, 'rb') as csvfile:
             if url:
                 database['urls'][url] = id
 
-print bcolors.OKGREEN+"Nombre d'url trouvees : "+bcolors.ENDC+" ", url_count
-with open('docs/database.json', 'wb') as outfile:
-    json.dump(database, outfile, indent=4)
+print(bcolors.OKGREEN+"Nombre d'url trouvees : "+bcolors.ENDC+" ", url_count)
 
+# final write
+with open('docs/database.json', 'w') as outfile:
+    json.dump(database, outfile, indent=4, ensure_ascii=False)
+# final write
+
+print(bcolors.OKGREEN+"Data written to docs/database.json"+bcolors.ENDC+" ")
