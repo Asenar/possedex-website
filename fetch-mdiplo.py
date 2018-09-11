@@ -6,7 +6,7 @@ import re
 import requests
 
 show_error_old_data = False
-show_no_id_found = True
+show_no_id_found = False
 
 url_base = 'https://docs.google.com/spreadsheets/export?id=1po3WjKX15T766GYOYV8fHtve4RdlyLF6XEXBlUICib0&exportFormat=tsv&gid=0'
 file_urls = 'urls.tsv'
@@ -175,6 +175,12 @@ with open(file_liste_medias, 'r') as tsvfile:
         if row[col_nom] == '':
             continue
 
+        #if row[col_nom] == 'Patrick Drahi':
+        #    print("PATRIIIIICK")
+        #    show_all = True
+        #else:
+        #    show_all = False
+
         entry = collections.OrderedDict()
 
         entry['nom'        ] = row[col_nom]
@@ -205,6 +211,9 @@ with open(file_liste_medias, 'r') as tsvfile:
         entry['possessions'] = []
         entry['urls']        = []
         entry['est_possede'] = []
+
+        #if show_all:
+        #    print(entry)
 
         database['objets'][id] = entry
 # }}} objets
@@ -400,24 +409,38 @@ with open(file_relations, 'r') as tsvfile:
         if num_row == 0:
             continue
 
-        if num_row == 113:
-            print(bcolors.OKBLUE+"loop relations"+bcolors.ENDC+" ", num_row)
-            print(row)
+
+        #if row[col_origine] == 'Patrick Drahi':
+        #    show_all = True
+        #    print(bcolors.OKBLUE+"Patrick Drahi origine"+bcolors.ENDC+" ", num_row)
+        #    print(row)
+        #    print("==== IL EST LA en origine ====")
+        #elif row[col_cible] == 'Patrick Drahi':
+        #    show_all = True
+        #    print(bcolors.OKBLUE+"Patrick Drahi cible"+bcolors.ENDC+" ", num_row)
+        #    print(row)
+        #    print("==== IL EST LA en cible ====")
+        #else:
+        #    show_all = False
+
+        est_possede_par = {
+                 'nom'    : row[col_origine],
+                 'valeur' : row[col_valeur],
+                 'source' : []
+                 }
+        possession = {
+                 'nom'    : row[col_cible],
+                 'valeur' : row[col_valeur],
+                 'source' : []
+                 }
 
         sources = row[col_source]
+        #if show_all:
+        #    print(sources)
+
         if sources:
             result = re.split(',', sources)
 
-            est_possede_par = {
-                     'nom'    : row[col_origine],
-                     'valeur' : row[col_valeur],
-                     'source' : []
-                     }
-            possession = {
-                     'nom'    : row[col_cible],
-                     'valeur' : row[col_valeur],
-                     'source' : []
-                     }
             for source in result:
                 #print "Pour <"+urls+">, traitement de ", source
                 relations_count = relations_count+1;
@@ -425,38 +448,44 @@ with open(file_relations, 'r') as tsvfile:
                 est_possede_par['source'].append(source)
                 possession['source'].append(source)
 
-            try:
-                # OUPS ici
-                #print ("recherche <"+row[col_origine]+">")
-                idOrig = idFromNom(database['objets'], row[col_origine])
+            #if show_all:
+            #    print(row[col_origine] + " dans est_possede_par")
+            #    print(est_possede_par)
+            #    print("possessions")
+            #    print(possession)
 
-                if idOrig != -2 and idOrig != -1:
-                    #print ("idOrig=", idOrig)
-                    if row[col_cible] and database['objets'][idOrig]:
+        try:
+            # OUPS ici
+            #print ("recherche <"+row[col_origine]+">")
+            idOrig = idFromNom(database['objets'], row[col_origine])
 
-                        #if not hasattr(database['objets'][idOrig], 'possessions'):
-                        #    database['objets'][idOrig]['possessions'] = []
-                        if possession not in database['objets'][idOrig]['possessions']:
-                            database['objets'][idOrig]['possessions'].append(possession)
+            if idOrig != -2 and idOrig != -1:
+                #print ("idOrig=", idOrig)
+                if row[col_cible] and database['objets'][idOrig]:
 
-                idCible = idFromNom(database['objets'], row[col_cible])
-                if idCible == "120":
-                    print("120 !!!!!!!!!!!!!!!!!!!!!!!!!")
-                    print(est_possede_par)
+                    #if not hasattr(database['objets'][idOrig], 'possessions'):
+                    #    database['objets'][idOrig]['possessions'] = []
+                    if possession not in database['objets'][idOrig]['possessions']:
+                        database['objets'][idOrig]['possessions'].append(possession)
 
-                if idCible != -2 and idCible != -1:
-                    #print ("idCible=", idCible)
-                    if row[col_origine] and database['objets'][idCible]:
-                        #if not hasattr(database['objets'][idCible], 'est_possede'):
-                        #    database['objets'][idCible]['est_possede'] = []
-                        if est_possede_par not in database['objets'][idCible]['est_possede']:
-                            database['objets'][idCible]['est_possede'].append(est_possede_par)
-            except:
-                print ("[[[[EXCEPTION]]]]"                  )
-                print ("row col_cible = "+row[col_cible]    )
-                print ("row col_origine = "+row[col_origine])
-                print (row                                  )
-                raise
+            idCible = idFromNom(database['objets'], row[col_cible])
+            if idCible == "120":
+                print("120 !!!!!!!!!!!!!!!!!!!!!!!!!")
+                print(est_possede_par)
+
+            if idCible != -2 and idCible != -1:
+                #print ("idCible=", idCible)
+                if row[col_origine] and database['objets'][idCible]:
+                    #if not hasattr(database['objets'][idCible], 'est_possede'):
+                    #    database['objets'][idCible]['est_possede'] = []
+                    if est_possede_par not in database['objets'][idCible]['est_possede']:
+                        database['objets'][idCible]['est_possede'].append(est_possede_par)
+        except:
+            print ("[[[[EXCEPTION]]]]"                  )
+            print ("row col_cible = "+row[col_cible]    )
+            print ("row col_origine = "+row[col_origine])
+            print (row                                  )
+            raise
 
 # }}} relations
 print(bcolors.OKGREEN+"Nombre de relations : "+bcolors.ENDC+" ", relations_count)
