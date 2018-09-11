@@ -4,6 +4,7 @@ import csv
 import json
 import re
 import requests
+import unicodedata
 
 show_error_old_data = False
 show_no_id_found = False
@@ -151,7 +152,6 @@ database['urls']   = collections.OrderedDict()
 
 
 # {{{ objets
-print("Ou est Patrick Drahi")
 with open(file_liste_medias, 'r') as tsvfile:
     reader = csv.reader(tsvfile, delimiter="\t")
 
@@ -268,11 +268,10 @@ with open(file_urls, 'r') as csvfile:
             if re.search('^$', row[col_nom]):
                 continue
 
-            try:
-                id = idFromNom(database['objets'], row[col_nom])
-            except:
-                print("ERREUR FATALE idFromNom")
-                continue
+            id = idFromNom(database['objets'], row[col_nom])
+            #except ValueError:
+            #print(ValueError+"ERREUR FATALE idFromNom")
+            #continue
 
             if id == -1:
                 if show_error_old_data :
@@ -280,71 +279,73 @@ with open(file_urls, 'r') as csvfile:
                             +"(-1) <"+row[col_nom]+"> est introuvable dans la db[objets] sans exception"
                             +bcolors.ENDC, id)
             elif id == -2:
-                if show_error_old_data :
+                if show_no_id_found :
                     print(bcolors.WARNING
                             +"(-2) <"+row[col_nom]+"> est introuvable dans la db[objets] sans exception"
                             +bcolors.ENDC, id)
+                continue
 
             # {{{ anciennes donnees
-            try:
-                entry = collections.OrderedDict()
-                entry['nom'] = row[col_nom]                     # 0  - Nom
-                entry['desc'] = row[col_desc]                   # 1  - Description
-                entry['classement'] = row[col_possedex]         # 3  - Classement
-                entry['slug'] = slugify(row[col_nom])           # 2  - Nom normalise
-                entry['udpated'] = row[col_updated]             # 4  - updated
+            entry = collections.OrderedDict()
+            entry['nom'] = row[col_nom]                     # 0  - Nom
+            entry['desc'] = row[col_desc]                   # 1  - Description
+            entry['classement'] = row[col_possedex]         # 3  - Classement
+            entry['slug'] = slugify(row[col_nom])           # 2  - Nom normalise
+            entry['udpated'] = row[col_updated]             # 4  - updated
 
-                entry['pub'] = row[col_pub]                     # 5  - Pub ?
-                entry['subventions'] = row[col_subventions]     # 6  - subventions
+            entry['pub'] = row[col_pub]                     # 5  - Pub ?
+            entry['subventions'] = row[col_subventions]     # 6  - subventions
 
-                entry['sources'] = row[col_sources]             # 7 - Sources
+            entry['sources'] = row[col_sources]             # 7 - Sources
+            #except ValueError:
+            #    if show_error_old_data:
+            #        print(bcolors.FAIL
+            #                +ValueError
+            #                +"ERRREUR fatale dans le traitement des anciennes donnees"
+            #                +bcolors.ENDC, id)
 
-                # données pas à jour pour les entités de type média (type = 3),
-                # + les types 1 et 2 sont les clefs
-                #entry['proprietaires'] = [
-                #        row[col_proprietaire1],
-                #        row[col_proprietaire2],
-                #        row[col_proprietaire3]
-                #        ]
+            # données pas à jour pour les entités de type média (type = 3),
+            # + les types 1 et 2 sont les clefs
+            #entry['proprietaires'] = [
+            #        row[col_proprietaire1],
+            #        row[col_proprietaire2],
+            #        row[col_proprietaire3]
+            #        ]
 
 
-                if database['objets'][id]['type'] == '1' or database['objets'][id]['type'] == '2':
-                    entry['fortunes'] = [
-                            row[col_fortune1],
-                            row[col_fortune2],
-                            row[col_fortune3]
-                            ]
-
-                # @TODO : ajouter les marques dans toute la chaine proprietaire / groupe / media
-                if database['objets'][id]['type'] == '1' or database['objets'][id]['type'] == '2':
-                    entry['marques'] = [
-                            row[col_marque1],
-                            row[col_marque2],
-                            row[col_marque3]
-                            ]
-
-                # @TODO : ajouter les influences (intérets) dans toute la chaine proprietaire / groupe / media
-                if database['objets'][id]['type'] == '1' or database['objets'][id]['type'] == '2':
-                    entry['influences'] = [
-                        row[col_influence1],
-                        row[col_influence2],
-                        row[col_influence3]
+            if database['objets'][id]['type'] == '1' or database['objets'][id]['type'] == '2':
+                entry['fortunes'] = [
+                        row[col_fortune1],
+                        row[col_fortune2],
+                        row[col_fortune3]
                         ]
 
-                print(bcolors.OKBLUE+"AJOUT DONNEES POSSEDEX"+bcolors.ENDC+" ", id)
-                database['objets'][id]['possedex'] = entry
-                #database['objets'][id]['possedex']['zzz'] = "GRRR"
-                #print bcolors.OKGREEN +"le nom <"+row[col_nom]+"> de googlesheet est bien dans la db[objets]" +bcolors.ENDC, id
-            except:
-                if show_error_old_data:
-                    print(bcolors.FAIL
-                        +"ERRREUR fatale dans le traitement des anciennes donnees"
-                        +bcolors.ENDC, id)
+            # @TODO : ajouter les marques dans toute la chaine proprietaire / groupe / media
+            if database['objets'][id]['type'] == '1' or database['objets'][id]['type'] == '2':
+                entry['marques'] = [
+                        row[col_marque1],
+                        row[col_marque2],
+                        row[col_marque3]
+                        ]
+
+            # @TODO : ajouter les influences (intérets) dans toute la chaine proprietaire / groupe / media
+            if database['objets'][id]['type'] == '1' or database['objets'][id]['type'] == '2':
+                entry['influences'] = [
+                    row[col_influence1],
+                    row[col_influence2],
+                    row[col_influence3]
+                    ]
+
+            print(bcolors.OKBLUE+"AJOUT DONNEES POSSEDEX"+bcolors.ENDC+" ", id)
+            database['objets'][id]['possedex'] = entry
+            #database['objets'][id]['possedex']['zzz'] = "GRRR"
+            #print bcolors.OKGREEN +"le nom <"+row[col_nom]+"> de googlesheet est bien dans la db[objets]" +bcolors.ENDC, id
 
 
             # }}} anciennes donnees
-        except:
+        except ValueError:
             print(bcolors.FAIL
+                    + ValueError
                 +"Fail pour idFromNom<"+row[col_nom]+">, on saute"
                 +bcolors.ENDC, id)
             continue
