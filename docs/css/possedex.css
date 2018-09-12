@@ -30,14 +30,13 @@
 /* Space out content a bit */
 body {
   padding-top: 0rem;
-    font-family: Brown;
-    font-size: 0.85em;
-    color: var(--dark-color);
+  font-family: Brown;
+  /*font-size: 0.85em;*/
+  color: var(--dark-color);
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
-.marketing,
 .footer,
 .main {
 
@@ -45,9 +44,13 @@ body {
 
 /* Custom page header */
 .header {
-    /*position:absolute;*/
+    position:fixed;
+    top:0;
     width: 100%;
     margin: 0;
+    z-index : 90;
+    background-color:white;
+    border-bottom: 2px solid var(--bright-color)
 
 }
 /* Make the masthead heading the same height as the navigation */
@@ -55,9 +58,6 @@ body {
   margin-top: 0;
   margin-bottom: 0;
   line-height: 3rem;
-}
-
-.main {
 }
 
 /* Custom page footer */
@@ -75,21 +75,33 @@ padding-bottom: 0.5rem;
 
 }
 
-#logo{
+#logo .img {
     width:60px;
-    margin: 3%;
+    display:inline-block;
+}
+#logo {
+    margin: 20px;
+    display: inline-block;
+}
+#site-title {
+    color : #ffbf00;
+    display:inline-block;
+    font-size : 62px;
+    height : 94px;
+    margin-bottom:0;
+    vertical-align:middle;
 }
 
 .container-narrow > hr {
   margin: 2rem 0;
 }
 
-
 .section{
     padding-top: 120px;
     margin-bottom: 5px;
     min-height: 400px;
 }
+
 #medias-et-miliardaires{
     background-color: var(--dark-color);
     color: var(--white-color);
@@ -175,7 +187,7 @@ h4{
 
 
 
-/* Main marketing message and sign up button */
+/* Main message and sign up button */
 .jumbotron {
   border-bottom: .05rem solid #e5e5e5;
   text-align : left;
@@ -185,19 +197,42 @@ h4{
   font-size: 1.5rem;
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 3rem 0;
-}
-.marketing p + h4 {
-  margin-top: 1.5rem;
+/* Supporting content */
+@media screen and (max-height: 800px) {
+    .header {
+        height : auto;
+        position : relative;
+        padding : 0px;
+    }
 }
 
+@media screen and (max-width: 930px) {
+    #logo {
+        font-size : 1.2em!important;
+        display : inline;
+        text-align:center;
+        margin: 0;
+    }
+    #logo .img {
+        height : 25px;
+    }
+    #site-title {
+        display : inline;
+        text-align:center;
+        margin : auto;
+        padding : 0px;
+        font-size : 1.2em!important;
+    }
+    .header {
+        height : auto;
+        position : relative;
+        padding : 0px;
+    }
+}
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 48em) {
   /* Remove the padding we set earlier */
   .header,
-  .marketing,
   .footer {
       /*   padding-right: 0;*/
       /*    padding-left: 0;*/
@@ -213,18 +248,29 @@ h4{
 }
 
 
-.nav{
-    margin: 3rem !important;
-    font-size:0.9em;
-    font-weight: 400;
-    color: var(--dark-color) ;
+#menu {
+}
+
+#menu .nav-item {
+    display:inline-block;
+    vertical-align: middle;
+    /*height : 46px;*/
+    padding: 8px 6px;
+}
+
+.nav-item > a {
+    vertical-align: middle;
+    height : 46px;
+    line-height : 0.9em;
+
 }
 
 .container-fluid {
     width: 90vw;
 }
 
-.section {    margin-right: -5vw;
+.section {
+    margin-right: -5vw;
     margin-left:  -5vw;
     padding-left: 5vw;
     padding-right: 5vw;
@@ -253,6 +299,22 @@ h1{
 
 
 @media (min-width: 922px) {
+    .header {
+    }
+
+    #main {
+        margin-top: 180px;
+        z-index : 10;
+    }
+
+
+
+    #menu .nav{
+        margin: 3rem !important;
+        font-weight: bold;
+        color: var(--dark-color) ;
+    }
+
     .container-fluid {width: 840px;}
     .section {
         margin-right: calc(-100vw / 2 + 840px / 2)!important;
@@ -274,37 +336,55 @@ h1{
         line-height: 3rem !important;
         max-width: 900px;
     }
-}
-/*=======                     */
-/*.nav{                       */
-/*    margin: 3rem !important;*/
-/*    font-size:0.9em;        */
-/*    font-weight: 400;       */
-/*    visibility: hidden;     */
-/*                            */
-/*}                           */
-/*                            */
-/*>>>>>>> Stashed changes     */
-.possedex .nav-pills .nav-link.active{
+    /** {{{ search form **/
+    .titre{
+        font-weight: 900 !important;
+        color: var(--bright-color);
+    }
 
-    background:none !important;
+    .form-control{
+        height: 85px;
+        padding: 0.5rem 2rem;
+        border-radius: 0 !important;
+        border:2px solid var(--dark-color)!important;
+        font-size:1.5rem;
+        color: var(--dark-color) !important;
+
+        font-family : Brown;
+    }
+
+    .input-group-addon{
+        border-left:0;
+        border-bottom :2px solid var(--dark-color)!important;
+        border-right: 2px solid var(--dark-color)!important;
+        border-top: 2px solid var(--dark-color)!important;
+        background-color: white !important;
+        border-radius: 0 !important;
+    }
+
+    .btn{
+        font-size:1.5rem;
+    }
+    /** }}} search form **/
 }
-.possedex .nav-pills .nav-link.active span{
+    .input-group-addon{
+        background-color: white !important;
+    }
+
+.possedex .nav-link.active{
+}
+.possedex .nav-link.active span{
 
     padding-bottom:1,5px;
 }
 
-.possedex .nav-pills .nav-link:hover{
+.possedex .nav-link.active,
+.possedex .nav-link:hover{
     color:var(--bright-color) !important;
     transition-property: color;
     transition-duration: 0.2s;
-    /*=======                                       */
-    /*.possedex .nav-pills .nav-link{               */
-    /*         color:var(--bright-color) !important;*/
-    /*                                              */
-    /*>>>>>>> Stashed changes                       */
-
 }
+
 .possedex h3.text-muted{
     color : #555
 }
@@ -319,6 +399,7 @@ h1{
 h1, h2, h3, h4, h5, h6, #result label{
     font-family : Brown;
 }
+
 h1{
     font-size: 2.1REM !important;
     font-weight: 500 !important;
@@ -327,54 +408,7 @@ h1{
 
     font-family : Brown;
 }
-.titre{
-    font-weight: 900 !important;
-    color: var(--bright-color);
-}
 
-.form-control{
-    height: 85px;
-    padding: 0.5rem 2rem;
-    border-radius: 0 !important;
-    border:2px solid var(--dark-color)!important;
-    font-size:1.5rem;
-    color: var(--dark-color) !important;
-
-    font-family : Brown;
-}
-h1{                                              /* */
-    font-size: 2.1REM !important;                /* */
-    font-weight: 500 !important;                 /* */
-    line-height: 3rem !important;                /* */
-    max-width: 900px;                            /* */
-}                                                /* */
-.titre{                                          /* */
-    font-weight: 900 !important;                 /* */
-    color: var(--bright-color);                  /* */
-}                                                /* */
-                                                 /* */
-.form-control{                                   /* */
-    height: 85px;                                /* */
-    padding: 0.5rem 2rem;                        /* */
-    border-radius: 0 !important;                 /* */
-    border:2px solid var(--dark-color)!important;/* */
-    font-size:1.5rem;                            /* */
-    color: var(--dark-color) !important;         /* */
-                                                 /* */
-}                                                /* */
-
-.input-group-addon{
-    border-left:0;
-    border-bottom :2px solid var(--dark-color)!important;
-    border-right: 2px solid var(--dark-color)!important;
-    border-top: 2px solid var(--dark-color)!important;
-    background-color: white !important;
-    border-radius: 0 !important;
-}
-
-.btn{
-    font-size:1.5rem;
-}
 ::placeholder {
     color: var(--dark-color)!important;
 }
