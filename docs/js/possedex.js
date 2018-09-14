@@ -199,6 +199,7 @@ var Possedex = {
         if (urls.hasOwnProperty(str)) {
             return urls[str];
         } else {
+            // 1st look, check exact match
             for(id in Possedex.data.objets) {
                 //console && console.log("check id="+id);
 
@@ -261,6 +262,7 @@ var Possedex = {
         objets = Possedex.data.objets;
         url = Possedex.lastSlash(url);
         url = Possedex.url_cleaner(url);
+        url = url.toLowerCase(); // when url contains names
 
         entity_id = Possedex.getEntityIdFromNom(url)
 
