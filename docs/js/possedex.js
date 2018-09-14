@@ -204,8 +204,22 @@ var Possedex = {
                 //console && console.log("check id="+id);
 
                 if (Possedex.data.objets[id].nom == str) {
-                    //console && console.info("TROUVé : "+id);
                     return id;
+                }
+                // @TODO: test on Edge
+                try {
+                    if (
+                        Possedex.data.objets[id].nom.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+                        ==
+                        str.normalize("NFD").replace(/[\u0300-\u036f]/g, ""
+                        )
+                    )
+                    {
+                        return id;
+                    }
+                } catch(e) {
+                    console && console.error("TODO: code alternative to str.normalize('NFD')");
+                    console && console.error(e);
                 }
             }
             return false;
