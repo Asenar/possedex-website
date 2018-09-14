@@ -196,32 +196,36 @@ var Possedex = {
     },
 
     getEntityIdFromNom: function(str) {
-        if (urls.hasOwnProperty(str)) {
-            return urls[str];
+        // 1st look, check url, exact match
+        if (Possedex.data.urls.hasOwnProperty(str)) {
+            return Possedex.data.urls[str];
         } else {
-            // 1st look, check exact match
-            for(id in Possedex.data.objets) {
-                //console && console.log("check id="+id);
 
-                if (Possedex.data.objets[id].nom == str) {
-                    return id;
-                }
-                // @TODO: test on Edge
-                try {
-                    if (
-                        Possedex.data.objets[id].nom.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-                        ==
-                        str.normalize("NFD").replace(/[\u0300-\u036f]/g, ""
-                        )
-                    )
-                    {
-                        return id;
-                    }
-                } catch(e) {
+            try {
+                // @TODO: check this works on Edge
+                strClean = str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+            } catch (e) {
                     console && console.error("TODO: code alternative to str.normalize('NFD')");
                     console && console.error(e);
+                strClean = str;
+            }
+            var regex = new RegExp("^"+strClean, 'i');
+
+            // 2nd look, check regex after removing accents
+            for(idEntity in Possedex.data.objets) {
+                //console && console.log("check idEntity="+id);
+                if (Possedex.data.objets[idEntity].slug == strClean) {
+                    return idEntity;
                 }
             }
+
+            // 3rd look, check partial match
+            for(idEntity in Possedex.data.objets) {
+
+                if (regex.test(Possedex.data.objets[idEntity].slug))
+                    return idEntity;
+            }
+
             return false;
         }
     },
@@ -271,7 +275,6 @@ var Possedex = {
             console && console.log("results");
         }
 
-        urls = Possedex.data.urls;
         sites = Possedex.data.objets;
         objets = Possedex.data.objets;
         url = Possedex.lastSlash(url);
@@ -284,7 +287,7 @@ var Possedex = {
             $("#result").html('Nous n\'avons actuellement aucune information sur ce site.');
             if (2 <= _debug) {
                 console && console.info("site non trouvé", url);
-                console && console.log(urls);
+                console && console.log(Possedex.data.urls);
             }
             // Optional : add a badge text and badge bg with the icon
             //browser.browserAction.setBadgeText({"text" : "Soumis :p"});
@@ -409,7 +412,7 @@ $("#infos").append("<p>"
     +"</p>");
 
 $("#infos").append("<label>Site(s)</label>");
-urls = "";
+var urls = "";
 for (url_id in entity.urls) {
     urls += ' <a target="_blank" href="http://'+entity.urls[url_id]+'">'
         + entity.urls[url_id] + '</a>'
