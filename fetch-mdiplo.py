@@ -4,6 +4,7 @@ import csv
 import json
 import re
 import requests
+import unicodedata
 
 show_error_old_data = False
 show_no_id_found = False
@@ -48,7 +49,7 @@ def slugify(value):
     Normalizes string, converts to lowercase, removes non-alpha characters,
     and converts spaces to hyphens.
     """
-    return strip_accents(value)
+    return strip_accents(value).lower()
 
 
 def idFromNom(db, nom):
@@ -151,7 +152,6 @@ database['urls']   = collections.OrderedDict()
 
 
 # {{{ objets
-print("Ou est Patrick Drahi")
 with open(file_liste_medias, 'r') as tsvfile:
     reader = csv.reader(tsvfile, delimiter="\t")
 
@@ -181,9 +181,10 @@ with open(file_liste_medias, 'r') as tsvfile:
         #else:
         #    show_all = False
 
-        entry = collections.OrderedDict()
-
-        entry['nom'        ] = row[col_nom]
+        entry = collections.OrderedDict({
+            'nom'    :  row[col_nom],
+            'slug'   :slugify(row[col_nom]),   # 2  - Nom normalise
+            
         #if row[col_type] == '1':
         #    entry['type' ] = "Personne physique"
         #elif row[col_type] == '2':
@@ -195,22 +196,21 @@ with open(file_liste_medias, 'r') as tsvfile:
         #else:
         #    entry['type' ] = "Autre type: "+row[col_type]
 
-        entry['type'] = row[col_type]
-        entry['typeLibelle'] = row[col_typeLibelle]
-
+        'type' : row[col_type],
+        'typeLibelle' : row[col_typeLibelle],
         #entry['description'] = row[col_description]
-        entry['fortune'    ] = row[col_fortune]
-
+        'fortune'     : row[col_fortune],
         # nouvelle colonnes
-        entry['type_media' ] = row[col_type_media]
-        entry['periodicite'] = row[col_periodicite]
-        entry['echelle'    ] = row[col_echelle]
-        entry['commentaire'] = row[col_commentaire]
-        entry['possedex'   ] = {}
+        'type_media'  : row[col_type_media],
+        'periodicite' : row[col_periodicite],
+        'echelle'     : row[col_echelle],
+        'commentaire' : row[col_commentaire],
+        'possedex'    : {},
 
-        entry['possessions'] = []
-        entry['urls']        = []
-        entry['est_possede'] = []
+        'possessions' : [],
+        'urls'        : [],
+        'est_possede' : [],
+        })
 
         #if show_all:
         #    print(entry)
