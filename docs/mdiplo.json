@@ -7,7 +7,12 @@
             "fortune": "rangChallenges",
             "nom": "nom",
             "periodicite": "mediaPeriodicite",
-            "possedex": {},
+            "possedex": {
+                "activite": "Secteur d'activité",
+                "desc": "Description",
+                "fortune": "Fortune",
+                "marque": "Marque"
+            },
             "possessions": [],
             "slug": "nom",
             "type": "typeCode",
@@ -22,7 +27,12 @@
             "fortune": "365",
             "nom": "Claude Perdriel",
             "periodicite": "",
-            "possedex": {},
+            "possedex": {
+                "activite": "",
+                "desc": "",
+                "fortune": "365ème fortune de France",
+                "marque": ""
+            },
             "possessions": [
                 {
                     "nom": "Sophia Publications",
@@ -335,7 +345,12 @@
             "fortune": "10",
             "nom": "Xavier Niel",
             "periodicite": "",
-            "possedex": {},
+            "possedex": {
+                "activite": "Télécommunications",
+                "desc": "",
+                "fortune": "10ème fortune de France (Challenges, 2017), 129ème fortune mondiale (Forbes, 2016)",
+                "marque": "Free"
+            },
             "possessions": [
                 {
                     "nom": "Le Monde libre",
@@ -358,7 +373,12 @@
             "fortune": "",
             "nom": "Matthieu Pigasse",
             "periodicite": "",
-            "possedex": {},
+            "possedex": {
+                "activite": "",
+                "desc": "",
+                "fortune": "Hors classement",
+                "marque": ""
+            },
             "possessions": [
                 {
                     "nom": "Le Monde libre",
@@ -1169,7 +1189,12 @@
             "fortune": "5",
             "nom": "Famille Dassault",
             "periodicite": "",
-            "possedex": {},
+            "possedex": {
+                "activite": "Aéronautique, Armement, Défense",
+                "desc": "",
+                "fortune": "5ème fortune de France",
+                "marque": "Veolia, Dassault"
+            },
             "possessions": [
                 {
                     "nom": "Groupe Dassault",
@@ -1390,7 +1415,12 @@
             "fortune": "1",
             "nom": "Bernard Arnault",
             "periodicite": "",
-            "possedex": {},
+            "possedex": {
+                "activite": "",
+                "desc": "",
+                "fortune": "1ère fortune de France",
+                "marque": ""
+            },
             "possessions": [
                 {
                     "nom": "LVMH",
@@ -1774,7 +1804,12 @@
             "fortune": "2",
             "nom": "Famille Bettencourt",
             "periodicite": "",
-            "possedex": {},
+            "possedex": {
+                "activite": "Produits cosmétiques",
+                "desc": "André Bettencourt par son mariage en 1950 avec Liliane Schueller, héritière du groupe industriel français de produits cosmétiques L'Oréal, permet à cette famille de devenir l'une des premières fortunes françaises.",
+                "fortune": "1ère fortune de France",
+                "marque": ""
+            },
             "possessions": [
                 {
                     "nom": "L'Opinion",
@@ -1820,7 +1855,12 @@
             "fortune": "8",
             "nom": "Patrick Drahi",
             "periodicite": "",
-            "possedex": {},
+            "possedex": {
+                "activite": "télécommunications, publicité (teads), médias, divertissements",
+                "desc": "son nom est apparu dans les Panama Papers par l'intermédiaire de la société panaméenne Jenville SA qui a été actionnaire « de passage » au capital d’Altice IV en décembre 2008",
+                "fortune": "8ème fortune de France",
+                "marque": "Numéricable, SFR, Altice"
+            },
             "possessions": [
                 {
                     "nom": "Altice",
@@ -2191,7 +2231,12 @@
             "fortune": "303",
             "nom": "Arnaud Lagardère",
             "periodicite": "",
-            "possedex": {},
+            "possedex": {
+                "activite": "",
+                "desc": "",
+                "fortune": "305ème fortune de France",
+                "marque": ""
+            },
             "possessions": [
                 {
                     "nom": "Lagardère SCA",
@@ -2212,7 +2257,12 @@
             "fortune": "",
             "nom": "Qatar Investment Authority",
             "periodicite": "",
-            "possedex": {},
+            "possedex": {
+                "activite": "",
+                "desc": "",
+                "fortune": "PIB par habitant :  88 313€",
+                "marque": ""
+            },
             "possessions": [
                 {
                     "nom": "Lagardère SCA",
@@ -2525,7 +2575,12 @@
             "fortune": "12",
             "nom": "Vincent Bolloré",
             "periodicite": "",
-            "possedex": {},
+            "possedex": {
+                "activite": "Transport, Logistique, Communication",
+                "desc": "",
+                "fortune": "10ème fortune de France",
+                "marque": ""
+            },
             "possessions": [
                 {
                     "nom": "Financière de l'Odet",
@@ -2811,7 +2866,12 @@
             "fortune": "76",
             "nom": "Iskandar Safa",
             "periodicite": "",
-            "possedex": {},
+            "possedex": {
+                "activite": "",
+                "desc": "",
+                "fortune": "71ème fortune de France",
+                "marque": ""
+            },
             "possessions": [
                 {
                     "nom": "Privinvest",
@@ -2952,7 +3012,12 @@
             "fortune": "",
             "nom": "Yves de Chaisemartin",
             "periodicite": "",
-            "possedex": {},
+            "possedex": {
+                "activite": "",
+                "desc": "",
+                "fortune": "57 %",
+                "marque": ""
+            },
             "possessions": [
                 {
                     "nom": "Marianne",
@@ -3070,7 +3135,12 @@
             "fortune": "7",
             "nom": "François Pinault",
             "periodicite": "",
-            "possedex": {},
+            "possedex": {
+                "activite": "",
+                "desc": "",
+                "fortune": "7ème fortune de France",
+                "marque": ""
+            },
             "possessions": [
                 {
                     "nom": "Artémis",
@@ -3283,7 +3353,12 @@
             "fortune": "39",
             "nom": "Famille Mohn",
             "periodicite": "",
-            "possedex": {},
+            "possedex": {
+                "activite": "",
+                "desc": "Les membres de la famille Mohn possèdent 23 % et contrôlent un des plus  grands groupes mondiaux d'édition et de médias, la société allemande Bertelsmann, fondée en 1835 par Carl Bertelsmann .",
+                "fortune": "Hors classement",
+                "marque": ""
+            },
             "possessions": [
                 {
                     "nom": "Bertelsmann",
@@ -4174,7 +4249,12 @@
             "fortune": "",
             "nom": "République française",
             "periodicite": "",
-            "possedex": {},
+            "possedex": {
+                "activite": "",
+                "desc": "",
+                "fortune": "PIB par habitant :  40 049€",
+                "marque": ""
+            },
             "possessions": [
                 {
                     "nom": "Renault",
@@ -4232,7 +4312,12 @@
             "fortune": "",
             "nom": "République fédérale d'Allemagne",
             "periodicite": "",
-            "possedex": {},
+            "possedex": {
+                "activite": "",
+                "desc": "",
+                "fortune": "PIB par habitant :  43 597€",
+                "marque": ""
+            },
             "possessions": [
                 {
                     "nom": "ARD / ZDF",
@@ -5149,7 +5234,12 @@
             "fortune": "",
             "nom": "Les Augustins de l'Assomption",
             "periodicite": "",
-            "possedex": {},
+            "possedex": {
+                "activite": "",
+                "desc": "",
+                "fortune": "Sans information",
+                "marque": ""
+            },
             "possessions": [
                 {
                     "nom": "Bayard",
@@ -5559,7 +5649,12 @@
             "fortune": "",
             "nom": "Famille Hutin",
             "periodicite": "",
-            "possedex": {},
+            "possedex": {
+                "activite": "",
+                "desc": "",
+                "fortune": "Hors classement",
+                "marque": ""
+            },
             "possessions": [
                 {
                     "nom": "Association pour le soutien des principes de la démocratie humaniste",
@@ -5580,7 +5675,12 @@
             "fortune": "105",
             "nom": "Famille Hurbain",
             "periodicite": "",
-            "possedex": {},
+            "possedex": {
+                "activite": "",
+                "desc": "",
+                "fortune": "Hors classement",
+                "marque": ""
+            },
             "possessions": [
                 {
                     "nom": "Groupe Rossel",
@@ -6788,7 +6888,12 @@
             "fortune": "",
             "nom": "Crédit Mutuel",
             "periodicite": "",
-            "possedex": {},
+            "possedex": {
+                "activite": "",
+                "desc": "",
+                "fortune": "Produit Net Bancaire : 16.8 milliard €",
+                "marque": ""
+            },
             "possessions": [
                 {
                     "nom": "Groupe EBRA",
@@ -7238,7 +7343,12 @@
             "fortune": "",
             "nom": "Fondation Varenne",
             "periodicite": "",
-            "possedex": {},
+            "possedex": {
+                "activite": "",
+                "desc": "",
+                "fortune": "Sans information",
+                "marque": ""
+            },
             "possessions": [
                 {
                     "nom": "Groupe La Montagne",
@@ -7259,7 +7369,12 @@
             "fortune": "",
             "nom": "Famille Saint-Cricq",
             "periodicite": "",
-            "possedex": {},
+            "possedex": {
+                "activite": "",
+                "desc": "",
+                "fortune": "Sans information",
+                "marque": ""
+            },
             "possessions": [
                 {
                     "nom": "Groupe NRCO",
@@ -7935,7 +8050,12 @@
             "fortune": "",
             "nom": "Famille Baylet",
             "periodicite": "",
-            "possedex": {},
+            "possedex": {
+                "activite": "",
+                "desc": "",
+                "fortune": "Hors classement",
+                "marque": ""
+            },
             "possessions": [
                 {
                     "nom": "Groupe La Dépêche",
@@ -8310,7 +8430,12 @@
             "fortune": "",
             "nom": "Famille Lemoine",
             "periodicite": "",
-            "possedex": {},
+            "possedex": {
+                "activite": "",
+                "desc": "",
+                "fortune": "Sans information",
+                "marque": ""
+            },
             "possessions": [
                 {
                     "nom": "Groupe Sud Ouest",
@@ -9107,7 +9232,12 @@
             "fortune": "",
             "nom": "Bernard Tapie",
             "periodicite": "",
-            "possedex": {},
+            "possedex": {
+                "activite": "",
+                "desc": "",
+                "fortune": "400ème fortune de France",
+                "marque": ""
+            },
             "possessions": [
                 {
                     "nom": "Groupe La Provence",
@@ -9128,7 +9258,12 @@
             "fortune": "",
             "nom": "Nethys",
             "periodicite": "",
-            "possedex": {},
+            "possedex": {
+                "activite": "",
+                "desc": "",
+                "fortune": "Sans information",
+                "marque": ""
+            },
             "possessions": [
                 {
                     "nom": "Groupe La Provence",
@@ -9549,7 +9684,12 @@
             "fortune": "",
             "nom": "Philippe Hersant",
             "periodicite": "",
-            "possedex": {},
+            "possedex": {
+                "activite": "",
+                "desc": "",
+                "fortune": "Hors classement",
+                "marque": ""
+            },
             "possessions": [
                 {
                     "nom": "Éditions Suisses Holding",
@@ -10149,7 +10289,12 @@
             "fortune": "135",
             "nom": "Franck Julien",
             "periodicite": "",
-            "possedex": {},
+            "possedex": {
+                "activite": "",
+                "desc": "",
+                "fortune": "166ème fortune de France",
+                "marque": ""
+            },
             "possessions": [
                 {
                     "nom": "Edi Invest",

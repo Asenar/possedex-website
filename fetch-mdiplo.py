@@ -10,7 +10,7 @@ show_error_old_data = False
 show_no_id_found = False
 
 url_base = 'https://docs.google.com/spreadsheets/export?id=1po3WjKX15T766GYOYV8fHtve4RdlyLF6XEXBlUICib0&exportFormat=tsv&gid=0'
-file_urls = 'urls.tsv'
+file_base = 'urls.tsv'
 
 url_owners = 'https://docs.google.com/spreadsheets/export?id=1po3WjKX15T766GYOYV8fHtve4RdlyLF6XEXBlUICib0&exportFormat=tsv&gid=1970270275'
 file_owners = 'owners.tsv'
@@ -101,7 +101,7 @@ downloadData(url_liste_medias, file_liste_medias)
 
 #### base des urls des medias ####
 # {{{
-file_urls = 'urls.tsv'
+file_base = 'base.tsv'
 # ce fichier contient les informations sur les proprietaires
 #  1 - Média
 #  2 - description
@@ -128,7 +128,7 @@ file_urls = 'urls.tsv'
 # 22 - Adresse 3
 # 23 - Adresse 4
 # 24 - Adresse 5
-downloadData(url_base, file_urls)
+downloadData(url_base, file_base)
 # }}}
 
 #### base des infos proprietaires ####
@@ -222,7 +222,7 @@ print(bcolors.OKGREEN+"Nombre d'objets trouves : "+bcolors.ENDC+" ", id)
 # {{{ ancienne base
 # 1 - Utilisé pour les urls
 # 2 - utilisé pour les conflits d'intérêts des propriétaires
-with open(file_urls, 'r') as csvfile:
+with open(file_base, 'r') as csvfile:
     # {{{ colonnes
     col_nom           = 0
     col_desc          = 1
@@ -390,6 +390,32 @@ with open(file_urls, 'r') as csvfile:
 
 # }}} ancienne base
 print(bcolors.OKGREEN+"Nombre d'url trouvees : "+bcolors.ENDC+" ", url_count)
+
+# {{{ ancienne base (propriétaires)
+with open(file_owners, 'r') as csvfile:
+    #  1 - Nom
+    #  2 - Fortune
+    #  3 - Marque
+    #  4 - Secteur d'activite
+    #  5 - Description
+    col_nom = 1
+    col_fortune = 2
+    col_marque = 3
+    col_activite = 4
+    col_desc = 5
+    reader = csv.reader(csvfile, delimiter="\t")
+    #reader = csv.reader(csvfile, delimiter="\t", quotechar='"')
+
+    for row in reader:
+        id = idFromNom(database['objets'], row[col_nom])
+        if (id != -2):
+            database['objets'][id]['possedex']['desc'] = row[col_desc]
+            database['objets'][id]['possedex']['activite'] = row[col_activite]
+            database['objets'][id]['possedex']['marque'] = row[col_marque]
+            database['objets'][id]['possedex']['fortune'] = row[col_fortune]
+
+
+# }}} ancienne base (propriétaires)
 
 # {{{ relations
 with open(file_relations, 'r') as tsvfile:
