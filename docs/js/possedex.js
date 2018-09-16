@@ -156,7 +156,7 @@ var Possedex = {
     },
 
     getAllChildrenForEntity: function(entity, medias = []) {
-        console && console.log("start getAllChildrenForEntity");
+        // console && console.log("start getAllChildrenForEntity");
         for(item_index in entity.possessions) {
             item = entity.possessions[item_index];
              console && console.info(item);
@@ -432,7 +432,7 @@ var Possedex = {
     },
 
     sendToOutput : function(entity) {
-        $("#result").html('<dl id="infos">');
+        $("#result").html('<div id="infos">');
         $("#infos").append("<label>"+entity.typeLibelle+"</label>");
         $("#infos").append("<p>"
             //+entity.nom
@@ -501,23 +501,23 @@ var Possedex = {
         }
 
         console && console.info("POUET");
-        if (entity.type == 1) { // si personne physique, récupérer les possessions intermédiaires et remonter jusqu'aux médias
+        //if (entity.type == 1) { // si personne physique, récupérer les possessions intermédiaires et remonter jusqu'aux médias
             console && console.log("type 1");
             console && console.log(entity);
             medias = [];
             Possedex.getAllChildrenForEntity(entity, medias);
             console && console.log("les enfants");
             console && console.log(medias);
-        } else {
-            medias = [];
-        }
-        if (entity.type == 3) { // si média, récupérer tous les propriétaires finaux
+        //} else {
+        //    medias = [];
+        //}
+        //if (entity.type == 3) { // si média, récupérer tous les propriétaires finaux
             proprios = Possedex.getAllParentsForEntity(entity);
             console && console.info("les parents");
             console && console.info(proprios);
-        } else {
-            proprios = [];
-        }
+        //} else {
+        //    proprios = [];
+        //}
 
         if (proprios.length) {
             proprios_display = []
@@ -554,7 +554,24 @@ var Possedex = {
                 +"</p>");
         }
 
-        $("#result").append(sources);
+        //if (true || activite.length) {
+        // @TODO neto
+        console && console.info("activite");
+        if (entity.possedex.activite) {
+            $("#result").append("<label style='color:red'>Et a comme potentiels conflits d'intérêts…</label><p >"
+                +entity.possedex.activite
+                +"</p>");
+        }
+        else {
+            $("#result").append("Aucune activité ailleurs ? oO");
+            console && console.log(entity);
+            console && console.log(entity.nom);
+            console && console.log(entity.possedex);
+            console && console.log(entity['possedex']);
+        }
+
+
+        //$("#result").append(sources);
         //$("#result").append("<label>Dernière mise à jour</label><p>"
         //    + new Date(data.proprietaires[nom].updated).toLocaleString()
         //    +"</p>");
