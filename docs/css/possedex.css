@@ -49,9 +49,6 @@ body {
     width: 100%;
     margin: 0;
     z-index : 90;
-    background-color:white;
-    border-bottom: 2px solid var(--bright-color)
-
 }
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
@@ -67,12 +64,15 @@ padding-bottom: 0.5rem;
     color: white;
     border-top: 0;
     background-color: var(--dark-color);
+    font-size: 0.85rem;
+    font-weight: 400;
 }
 .separator {
     margin-top:4rem;margin-bottom:-2rem;
 }
 #rechercher{
-
+    padding-top: 30vh;
+    min-height: 100vh;
 }
 
 #logo .img {
@@ -80,16 +80,12 @@ padding-bottom: 0.5rem;
     display:inline-block;
 }
 #logo {
-    margin: 20px;
+    margin: 32px;
     display: inline-block;
 }
 #site-title {
     color : #ffbf00;
-    display:inline-block;
-    font-size : 62px;
-    height : 94px;
-    margin-bottom:0;
-    vertical-align:middle;
+    font-weight: bold;
 }
 
 .container-narrow > hr {
@@ -201,7 +197,6 @@ h4{
 @media screen and (max-height: 599px) {
     .header {
         height : auto;
-        position : relative;
         padding : 0px;
     }
 }
@@ -214,13 +209,10 @@ h4{
         width: 100%;
         margin: 0;
         z-index : 90;
-        background-color:white;
-        border-bottom: 2px solid var(--bright-color)
 
     }
 
     #main,#main-install {
-        margin-top: 180px;
         z-index : 10;
     }
 }
@@ -234,13 +226,6 @@ h4{
     }
     #logo .img {
         height : 25px;
-    }
-    #site-title {
-        display : inline;
-        text-align:center;
-        margin : auto;
-        padding : 0px;
-        font-size : 1.2em!important;
     }
     .header {
         height : auto;
@@ -322,29 +307,27 @@ h1{
     }
 
     #main {
-        margin-top: 180px;
         z-index : 10;
     }
 
     #menu .nav{
         margin: 3rem !important;
-        font-weight: bold;
         color: var(--dark-color) ;
     }
 
     .container-fluid {width: 840px;}
     .section {
-        margin-right: calc(-100vw / 2 + 840px / 2)!important;
-        margin-left: calc(-100vw / 2 + 840px / 2)!important;
-        padding-left: calc(100vw / 2 - 840px / 2)!important;
-        padding-right: calc(100vw / 2 - 840px / 2) !important;
+        margin-right: calc(-100vw / 2 + 780px / 2)!important;
+        margin-left: calc(-100vw / 2 + 780px / 2)!important;
+        padding-left: calc(100vw / 2 - 780px / 2)!important;
+        padding-right: calc(100vw / 2 - 780px / 2) !important;
 
     }
     .footer {
-        margin-right: calc(-100vw / 2 + 840px / 2)!important;
-        margin-left: calc(-100vw / 2 + 840px / 2)!important;
-        padding-left: calc(100vw / 2 - 840px / 2)!important;
-        padding-right: calc(100vw / 2 - 840px / 2) !important;
+        margin-right: calc(-100vw / 2 + 780px / 2)!important;
+        margin-left: calc(-100vw / 2 + 780px / 2)!important;
+        padding-left: calc(100vw / 2 - 780px / 2)!important;
+        padding-right: calc(100vw / 2 - 780px / 2) !important;
 
     }
     h1{
@@ -396,11 +379,19 @@ h1{
 }
 
 .possedex .nav-link.active,
-.possedex .nav-link:hover{
+.possedex .nav-link:hover, .nav-social:hover{
     color:var(--bright-color) !important;
     transition-property: color;
     transition-duration: 0.2s;
 }
+.nav-social{
+    padding: 30x!important;
+}
+    
+.fab{
+    margin: 6px 3px;
+}
+
 
 .possedex h3.text-muted{
     color : #555
