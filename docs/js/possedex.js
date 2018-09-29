@@ -579,6 +579,17 @@ var Possedex = {
 };
 
 $(document).ready(function(){
+
+    $("#logo").on("click", function(){
+        if($("#menupopup").is(":hidden")){
+            $("#menupopup").removeClass("d-none");
+        }
+
+    });
+    $(".quit").on("click", function(){
+            $("#menupopup").addClass("d-none");   
+    });
+    
     $("#form-possedex").on("submit", function(e){
         e.preventDefault();
         var url = $("#url").val();
@@ -626,6 +637,9 @@ $(document).ready(function(){
         }
         $("#submit-possedex").click();
     }
+        
+  
+
 
 });
 
