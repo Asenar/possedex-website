@@ -586,7 +586,7 @@ $(document).ready(function(){
         }
 
     });
-    $(".quit").on("click", function(){
+    $(".quit, .nav-link, .nav-social").on("click", function(){
             $("#menupopup").addClass("d-none");   
     });
     
