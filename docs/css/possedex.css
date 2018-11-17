@@ -48,7 +48,9 @@ body {
     width: 100%;
     margin: 0;
     z-index : 90;
+     pointer-events:none;  
 }
+
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
   margin-top: 0;
@@ -77,6 +79,7 @@ padding-bottom: 0.5rem;
 #logo .img {
     width:60px;
     display:inline-block;
+    pointer-events:auto;  
 }
 #logo {
     margin: 32px;
@@ -146,9 +149,7 @@ h4{
 }
 .lien-extension { font-weight:bold;}
 
-.visuel2{
-    border: 1px solid var(--dark-color);
-    
+.visuel2{    
     max-width: 320px;
     width: 100%;
 }
@@ -243,6 +244,8 @@ h4{
     vertical-align: middle;
     /*height : 46px;*/
     padding: 8px 6px;
+        pointer-events:auto;  
+
 }
 
 
@@ -299,6 +302,8 @@ h1{
         top: 30px;
         right: 30px;
         height: 35px;
+            pointer-events:auto;  
+
     }
     .quit:before, .quit:after {
       position: absolute;
