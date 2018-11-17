@@ -4,10 +4,11 @@ language: python
 cache: apt
 sudo: false
 python:
- - '2.7'
+ - '3.5'
 install:
  - pip install requests
 script:
  - python fetch-v2.py
+ - python fetch-mdiplo.py
 after_success:
 - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && bash deploy.sh

@@ -42,6 +42,7 @@ changes=$(git status -uno -s)
 if [[ -n $changes ]]; then
     date=$(date)
     git add docs/database.json
+    git add docs/mdiplo.json
     git commit -m"Update with $rev ($date)"
     if [[ false == $test_mode ]]; then
         git push origin master:master
