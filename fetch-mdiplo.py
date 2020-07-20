@@ -155,61 +155,68 @@ database['urls']   = collections.OrderedDict()
 with open(file_liste_medias, 'r') as tsvfile:
     reader = csv.reader(tsvfile, delimiter="\t")
 
-    col_nom           = 0
-    col_typeLibelle   = 1  # indication basique (personne morale/media/personne physique/etat)
-    col_type          = 2  # typeCode, 1/2/3/4 ?
-    col_fortune       = 3  # rang Challenge
+    col_id            = 0
+    col_nom           = 1
+    col_typeLibelle   = 2  # indication basique (personne morale/media/personne physique/etat)
+    col_type          = 3  # typeCode, 1/2/3/4 ?
+    col_fortune       = 4  # rang Challenge
+    col_challenges    = 4  # rang Challenge
+    col_forbes        = 5  # rang Forbes
 
     # nouvelle colonnes
-    col_type_media    = 4  # GPE, Television, Regional, Radio, ...
-    col_periodicite   = 5  # Hebdomadaire, Bimestriel, Mensuel, ...
-    col_echelle       = 6  # International, National
-    col_commentaire   = 7  # Gratuit, Pure player, ...
+    col_type_media    = 6  # GPE, Television, Regional, Radio, ...
+    col_periodicite   = 7  # Hebdomadaire, Bimestriel, Mensuel, ...
+    col_echelle       = 8  # International, National
+    col_commentaire   = 9  # Gratuit, Pure player, ...
 
     id = 0
     for row in reader:
         if len(row) < 4:
             continue
+        # id = row[col_id]
         id = id + 1
 
         if row[col_nom] == '':
             continue
 
-        #if row[col_nom] == 'Patrick Drahi':
+        #if row[col_id] == 'Patrick Drahi':
         #    print("PATRIIIIICK")
         #    show_all = True
         #else:
         #    show_all = False
 
         entry = collections.OrderedDict({
+            'id'     :  row[col_id],
             'nom'    :  row[col_nom],
-            'slug'   :slugify(row[col_nom]),   # 2  - Nom normalise
+            'slug'   :  slugify(row[col_nom]),   # 2  - Nom normalise
             
-        #if row[col_type] == '1':
-        #    entry['type' ] = "Personne physique"
-        #elif row[col_type] == '2':
-        #    entry['type' ] = "Groupe (personne morale)"
-        #elif row[col_type] == '3':
-        #    entry['type' ] = "Média"
-        #elif row[col_type] == '4':
-        #    entry['type' ] = "État"
-        #else:
-        #    entry['type' ] = "Autre type: "+row[col_type]
+            #if row[col_type] == '1':
+            #    entry['type' ] = "Personne physique"
+            #elif row[col_type] == '2':
+            #    entry['type' ] = "Groupe (personne morale)"
+            #elif row[col_type] == '3':
+            #    entry['type' ] = "Média"
+            #elif row[col_type] == '4':
+            #    entry['type' ] = "État"
+            #else:
+            #    entry['type' ] = "Autre type: "+row[col_type]
 
-        'type' : row[col_type],
-        'typeLibelle' : row[col_typeLibelle],
-        #entry['description'] = row[col_description]
-        'fortune'     : row[col_fortune],
-        # nouvelle colonnes
-        'type_media'  : row[col_type_media],
-        'periodicite' : row[col_periodicite],
-        'echelle'     : row[col_echelle],
-        'commentaire' : row[col_commentaire],
-        'possedex'    : {},
+            'type' : row[col_type],
+            'typeLibelle' : row[col_typeLibelle],
+            #entry['description'] = row[col_description]
+            'fortune'     : row[col_fortune],
+            'challenges'  : row[col_challenges],
+            'forbes'      : row[col_forbes],
+            # nouvelle colonnes
+            'type_media'  : row[col_type_media],
+            'periodicite' : row[col_periodicite],
+            'echelle'     : row[col_echelle],
+            'commentaire' : row[col_commentaire],
+            'possedex'    : {},
 
-        'possessions' : [],
-        'urls'        : [],
-        'est_possede' : [],
+            'possessions' : [],
+            'urls'        : [],
+            'est_possede' : [],
         })
 
         #if show_all:
@@ -421,12 +428,13 @@ with open(file_owners, 'r') as csvfile:
 with open(file_relations, 'r') as tsvfile:
     id = 0
 
-    col_origine           = 0
-    col_valeur            = 1
-    col_cible             = 2
-    col_source            = 3 # source de l'information
-    col_date_publication  = 4
-    col_date_consultation = 5
+    col_id                = 0
+    col_origine           = 1
+    col_valeur            = 2
+    col_cible             = 3
+    col_source            = 4 # source de l'information
+    col_date_publication  = 5
+    col_date_consultation = 6
 
     relations_count = 0;
     reader = csv.reader(tsvfile, delimiter="\t")
@@ -434,6 +442,8 @@ with open(file_relations, 'r') as tsvfile:
     for row in reader:
         num_row = num_row + 1
         if num_row == 0:
+            continue
+        if len(row) == 0:
             continue
 
 
