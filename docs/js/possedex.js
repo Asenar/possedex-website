@@ -500,24 +500,16 @@ var Possedex = {
             //console && console.log('subventions    =',entity.possedex.subventions    );
         }
 
-        console && console.info("POUET");
-        //if (entity.type == 1) { // si personne physique, récupérer les possessions intermédiaires et remonter jusqu'aux médias
-            console && console.log("type 1");
-            console && console.log(entity);
-            medias = [];
-            Possedex.getAllChildrenForEntity(entity, medias);
-            console && console.log("les enfants");
-            console && console.log(medias);
-        //} else {
-        //    medias = [];
-        //}
-        //if (entity.type == 3) { // si média, récupérer tous les propriétaires finaux
-            proprios = Possedex.getAllParentsForEntity(entity);
-            console && console.info("les parents");
-            console && console.info(proprios);
-        //} else {
-        //    proprios = [];
-        //}
+        // console && console.log("type 1");
+        // console && console.log(entity);
+        medias = [];
+        Possedex.getAllChildrenForEntity(entity, medias);
+        // console && console.log("les enfants");
+        // console && console.log(medias);
+
+        proprios = Possedex.getAllParentsForEntity(entity);
+        // console && console.info("les parents");
+        // console && console.info(proprios);
 
         if (proprios.length) {
             proprios_display = []
@@ -526,6 +518,10 @@ var Possedex = {
                     ' <a class="detail-owner" href="http://'+DOMAIN+'#'+el.nom+'">'
                     +el.nom
                     +'</a>'
+                    +'<p><small class="text-muted">Secteur d\'activité: '
+                    + el.possedex.activite
+                    +'</small></p>'
+                    +'</div>'
                 )
                 ;
             })
@@ -563,11 +559,11 @@ var Possedex = {
                 +"</p>");
         }
         else {
-            $("#result").append("Aucune activité ailleurs ? oO");
-            console && console.log(entity);
-            console && console.log(entity.nom);
-            console && console.log(entity.possedex);
-            console && console.log(entity['possedex']);
+            // $("#result").append("Aucune activité ailleurs ? oO");
+            // console && console.log(entity);
+            // console && console.log(entity.nom);
+            // console && console.log(entity.possedex);
+            // console && console.log(entity['possedex']);
         }
 
 
