@@ -1,0 +1,9 @@
+{
+  "entrypoints": {
+    "possedex": {
+      "js": [
+        "/js/possedex.js"
+      ]
+    }
+  }
+}

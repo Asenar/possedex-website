@@ -1,0 +1,41 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "[Télécharger la version firefox](https://addons.mozilla.org/fr/firefox/addon/possedex/)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "encore dev",
+    "watch": "encore dev --watch",
+    "build": "encore production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Asenar/possedex-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Asenar/possedex-website/issues"
+  },
+  "homepage": "https://github.com/Asenar/possedex-website#readme",
+  "dependencies": {
+    "babel-preset-react-app": "^9.1.2",
+    "core-js": "^3.6.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.10.5",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "@symfony/webpack-encore": "^0.30.2",
+    "babel-cli": "^6.26.0",
+    "webpack-notifier": "^1.8.0"
+  }
+}
