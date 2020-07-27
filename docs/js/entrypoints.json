@@ -1,7 +1,15 @@
 {
   "entrypoints": {
+    "app": {
+      "js": [
+        "/js/vendors~app.js",
+        "/js/app~possedex.js",
+        "/js/app.js"
+      ]
+    },
     "possedex": {
       "js": [
+        "/js/app~possedex.js",
         "/js/possedex.js"
       ]
     }

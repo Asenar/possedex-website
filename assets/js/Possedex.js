@@ -121,7 +121,7 @@ var colors = {
 
 var base_url = "http://"+DOMAIN+"/mdiplo.json?maj="+maj;
 
-var Possedex = {
+export var Possedex = {
     data : {},
     regex_url_seule : new RegExp(/^(http[s]?:\/\/([^/]+)\/[^" ,]+)[^"]{1,2}$/g),
 
@@ -157,11 +157,11 @@ var Possedex = {
 
     getAllChildrenForEntity: function(entity, medias = []) {
         // console && console.log("start getAllChildrenForEntity");
-        for(item_index in entity.possessions) {
-            item = entity.possessions[item_index];
+        for(let item_index in entity.possessions) {
+            let item = entity.possessions[item_index];
              console && console.info(item);
-            childId = Possedex.getEntityIdFromNom(item.nom);
-            childEntity = Possedex.data.objets[childId]
+            let childId = Possedex.getEntityIdFromNom(item.nom);
+            let childEntity = Possedex.data.objets[childId]
             if (childEntity.type != 3) {
                 medias = Possedex.getAllChildrenForEntity(childEntity, medias);
             } else {
@@ -173,16 +173,16 @@ var Possedex = {
 
     getAllParentsForEntity: function(entity, proprios = []) {
         console && console.log("start getAllParentsForEntity");
-        for(item_index in entity.est_possede) {
+        for(let item_index in entity.est_possede) {
             console && console.group("Une boucle de est_possede de "+entity.nom);
-            item = entity.est_possede[item_index];
-            parentId = Possedex.getEntityIdFromNom(item.nom);
-            parentEntity = Possedex.data.objets[parentId]
+            let item = entity.est_possede[item_index];
+            let parentId = Possedex.getEntityIdFromNom(item.nom);
+            let parentEntity = Possedex.data.objets[parentId]
             //console && console.log("Dealing with item.nom = "+item.nom);
             //console && console.log(parentEntity);
             if (parentEntity.type != 1) {
                 console && console.log("A creuser pour "+parentEntity.nom);
-                a_creuser = Possedex.getAllParentsForEntity(parentEntity, proprios);
+                let a_creuser = Possedex.getAllParentsForEntity(parentEntity, proprios);
 
             } else {
                 console && console.info("Tiens, cette entité est une personne physique");
@@ -204,16 +204,16 @@ var Possedex = {
 
             try {
                 // @TODO: check this works on Edge
-                strClean = str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+                var strClean = str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
             } catch (e) {
                     console && console.error("TODO: code alternative to str.normalize('NFD')");
                     console && console.error(e);
-                strClean = str;
+                var strClean = str;
             }
             var regex = new RegExp("^"+strClean, 'i');
 
             // 2nd look, check regex after removing accents
-            for(idEntity in Possedex.data.objets) {
+            for(let idEntity in Possedex.data.objets) {
                 //console && console.log("check idEntity="+id);
                 if (Possedex.data.objets[idEntity].slug == strClean) {
                     return idEntity;
@@ -221,7 +221,7 @@ var Possedex = {
             }
 
             // 3rd look, check partial match
-            for(idEntity in Possedex.data.objets) {
+            for(let idEntity in Possedex.data.objets) {
 
                 if (regex.test(Possedex.data.objets[idEntity].slug))
                     return idEntity;
@@ -277,13 +277,13 @@ var Possedex = {
             console && console.log("results");
         }
 
-        sites = Possedex.data.objets;
-        objets = Possedex.data.objets;
+        var sites = Possedex.data.objets;
+        var objets = Possedex.data.objets;
         url = Possedex.lastSlash(url);
         url = Possedex.url_cleaner(url);
         url = url.toLowerCase(); // when url contains names
 
-        entity_id = Possedex.getEntityIdFromNom(url)
+        var entity_id = Possedex.getEntityIdFromNom(url)
 
         if (entity_id == false) {
             $("#result").html('Nous n\'avons actuellement aucune information sur ce site.');
@@ -301,7 +301,7 @@ var Possedex = {
             console && console.info("Site id pour "+url+", entity_id = "+entity_id);
         }
 
-        entity = Possedex.data.objets[entity_id];
+        const entity = Possedex.data.objets[entity_id];
         if (2 <= _debug) {
             console && console.log('contenu', Possedex.data.objets[entity_id]);
         }
@@ -350,7 +350,7 @@ var Possedex = {
 
         // Markdown style
         var regex = new RegExp(/\[([^\]]*?)\]\(([^\)]*?)\)[, ]{0,2}/gm);
-        match = regex.exec(raw_sources);
+        var match = regex.exec(raw_sources);
         sources = [];
         while (match != null) {
             sources.push({
@@ -389,6 +389,8 @@ var Possedex = {
             console && console.groupEnd();
         }
 
+        console && console.log("entity retournée (au lieu d'appeler sendToOutput)");
+        // console && console.info(entity);
         // display results
         Possedex.sendToOutput(entity);
 
@@ -432,6 +434,7 @@ var Possedex = {
     },
 
     sendToOutput : function(entity) {
+        console && console.log("send to output");
         $("#result").html('<div id="infos">');
         $("#infos").append("<label>"+entity.typeLibelle+"</label>");
         $("#infos").append("<p>"
@@ -442,8 +445,8 @@ var Possedex = {
             +"</p>");
 
         $("#infos").append("<label>Site(s)</label>");
-        urls = "";
-        for (url_id in entity.urls) {
+        var urls = "";
+        for (let url_id in entity.urls) {
             urls += ' <a target="_blank" href="http://'+entity.urls[url_id]+'">'
                 + entity.urls[url_id] + '</a>'
         }
@@ -456,7 +459,7 @@ var Possedex = {
         // $("#result").append("<label>Description</label><p>"+notule+"</p>");
         // $("#result").append("<label>identifiant(à masquer plus tard)</label><p>"+slug+"</p>");
         if (entity.hasOwnProperty('est_possede')) {
-            proprietaires = []
+            const proprietaires = []
             entity.est_possede.forEach(function(el, i) {
                 proprietaires.push(
                     ' <a class="detail-owner" href="http://'+DOMAIN+'#'+el.nom+'">'
@@ -474,7 +477,7 @@ var Possedex = {
         }
 
         if (entity.hasOwnProperty('possessions')) {
-            possessions = []
+            const possessions = []
             entity.possessions.forEach(function(el, i) {
                 possessions.push(
                     ' <a class="detail-owner" href="http://'+DOMAIN+'#'+el.nom+'">'
@@ -502,17 +505,17 @@ var Possedex = {
 
         // console && console.log("type 1");
         // console && console.log(entity);
-        medias = [];
+        const medias = [];
         Possedex.getAllChildrenForEntity(entity, medias);
         // console && console.log("les enfants");
         // console && console.log(medias);
 
-        proprios = Possedex.getAllParentsForEntity(entity);
+        const proprios = Possedex.getAllParentsForEntity(entity);
         // console && console.info("les parents");
         // console && console.info(proprios);
 
         if (proprios.length) {
-            proprios_display = []
+            const proprios_display = []
             proprios.forEach(function(el, i) {
                 proprios_display.push(
                     ' <a class="detail-owner" href="http://'+DOMAIN+'#'+el.nom+'">'
@@ -532,11 +535,11 @@ var Possedex = {
 
         if (medias.length) {
             if (medias.length == 1) {
-                medias_title = "A de l'influence dans ce média";
+                var medias_title = "A de l'influence dans ce média";
             } else {
-                medias_title = "A de l'influence dans ces médias";
+                var medias_title = "A de l'influence dans ces médias";
             }
-            medias_display = []
+            const medias_display = []
             medias.forEach(function(el, i) {
                 medias_display.push(
                     ' <a class="detail-owner" href="http://'+DOMAIN+'#'+el.nom+'">'
@@ -550,7 +553,7 @@ var Possedex = {
                 +"</p>");
         }
 
-        //if (true || activite.length) {
+        //if (true || activite.length) {}
         // @TODO neto
         console && console.info("activite");
         if (entity.possedex.activite) {
@@ -574,67 +577,3 @@ var Possedex = {
     }
 };
 
-$(document).ready(function(){
-
-    $("#logo").on("click", function(){
-        if($("#menupopup").is(":hidden")){
-            $("#menupopup").removeClass("d-none");
-        }
-
-    });
-    $(".quit, .nav-link, .nav-social").on("click", function(){
-            $("#menupopup").addClass("d-none");   
-    });
-    
-    $("#form-possedex").on("submit", function(e){
-        e.preventDefault();
-        var url = $("#url").val();
-        if (url.length > 0) {
-            $.getJSON(base_url, function(data){
-                Possedex.data = data;
-                document.title = 'Qui possède "'+url+'" ? - Possedex';
-                document.location.hash = url;
-                Possedex.debunkSite(url);
-            });
-        } else {
-            alert("Saisissez d'abord une url :) ");
-        }
-    });
-
-    $("#submit-possedex").on("click", function(e){
-        e.preventDefault();
-        $("#form-possedex").submit();
-    });
-
-    $(document).on("click", ".detail-owner,.detail-media", function(e){
-        e.preventDefault();
-        var nom = this.href.replace('http://'+DOMAIN+"/#", '');
-        if ('p/' == nom.substr(0, 2)) {
-            $("#domain-or-owner").val("owner");
-            $("#url").val(decodeURIComponent(nom.substr(2)));
-        } else {
-            $("#domain-or-owner").val("domain");
-            $("#url").val(decodeURIComponent(nom));
-        }
-        $("#form-possedex").submit();
-    });
-
-    // check if this is a direct request
-    var current_location = document.location.href; // full url;
-    if ((pos = current_location.indexOf('#')) > -1) {
-        url = current_location.substring(pos+1);
-        if ('p/' == url.substr(0, 2)) {
-            $("#domain-or-owner").val("owner");
-            url = url.substr(2);
-            $("#url").val(decodeURIComponent(url));
-        } else {
-            $("#domain-or-owner").val("domain");
-            $("#url").val(decodeURIComponent(url));
-        }
-        $("#submit-possedex").click();
-    }
-        
-  
-
-
-});
