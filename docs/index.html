@@ -241,8 +241,24 @@ Pour nous aider à compléter nos données, aucune compétence particulière en 
             });
         </script>
 
-        <script src="/js/vendors~possedex.js?update=20200727"></script>
-        <script src="/js/possedex.js?update=20200727"></script>
+        <script type="text/javascript">
+            (function(){
+                var request = new XMLHttpRequest();
+                request.addEventListener("load", function() {
+                    const json = JSON.parse(this.responseText);
+                    json.entrypoints.app.js.forEach((js => {
+                            let el = document.createElement('script');
+                            el.src = js;
+                            document.querySelector("body").append(el);
+                        }
+                    ))
+
+                });
+                request.open("get", "/js/entrypoints.json");
+                res = request.send();
+                console.log(res);
+            }) ()
+        </script>
 
     </body>
 </html>

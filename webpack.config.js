@@ -24,9 +24,9 @@ Encore
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
     // .addEntry('possedex', './assets/js/possedex.js')
-    // .addEntry('possedex', './assets/js/possedex.js')
-    .addEntry('possedex', './assets/base-possedex.js')
-    //.addEntry('page1', './assets/js/page1.js')
+    .addEntry('app', './assets/js/app.js')
+    // .addEntry('possedex', './assets/js/Possedex.js')
+	//.addEntry('page1', './assets/js/page1.js')
     //.addEntry('page2', './assets/js/page2.js')
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
@@ -35,12 +35,14 @@ Encore
     // will require an extra script tag for runtime.js
     // but, you probably want this, unless you're building a single-page app
 // possedex is single page !!
-    // .enableSingleRuntimeChunk()
+    //.enableSingleRuntimeChunk()
     .disableSingleRuntimeChunk()
-	// .configureBabel(function(babelConfig){
-	// 	babelConfig.plugins.push("@babel/plugin-proposal-class-properties");
-	// })
-    // .enableReactPreset()
+
+    .enableReactPreset()
+
+	.configureBabel(function(babelConfig){
+		babelConfig.plugins.push("@babel/plugin-proposal-class-properties");
+	})
 
     /*
      * FEATURE CONFIG
