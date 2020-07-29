@@ -119,7 +119,7 @@ var colors = {
 // let possedex_colors = [ "#A2A9AE", "#129AF0", "#D50303", "#F5A725", "#468847" ];
 // let possedex_descs = [ "inclassable", "parodique", "pas fiable du tout", "peu fiable", "fiable" ];
 
-var base_url = "http://"+DOMAIN+"/mdiplo.json?maj="+maj;
+var base_url = "https://"+DOMAIN+"/mdiplo.json?maj="+maj;
 
 var Possedex = {
     data : {},
