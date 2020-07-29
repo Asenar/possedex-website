@@ -119,11 +119,15 @@ var colors = {
 // let possedex_colors = [ "#A2A9AE", "#129AF0", "#D50303", "#F5A725", "#468847" ];
 // let possedex_descs = [ "inclassable", "parodique", "pas fiable du tout", "peu fiable", "fiable" ];
 
-var base_url = "http://"+DOMAIN+"/mdiplo.json?maj="+maj;
+var base_url = document.location.protocol + "//"+document.location.hostname+"/mdiplo.json?maj="+maj;
 
 export var Possedex = {
+
+    current_entity : null,
+
     data : {},
     regex_url_seule : new RegExp(/^(http[s]?:\/\/([^/]+)\/[^" ,]+)[^"]{1,2}$/g),
+    regex_url_markdown : new RegExp(/\[([^\]]*?)\]\(([^\)]*?)\)[, ]{0,2}/gm),
 
     loadJSON : function(path, success, error) {
         // here to help diff with extension version
@@ -155,11 +159,37 @@ export var Possedex = {
             .replace("\n", "");
     },
 
+    extractUrlsFromRaw : function(raw_sources) {
+        const sources = [];
+
+        // Markdown style
+        var match = this.regex_url_markdown.exec(raw_sources);
+        while (match != null) {
+            sources.push({
+                "url"   : match[2],
+                "title" : match[1]
+            });
+            match = this.regex_url_markdown.exec(raw_sources);
+        }
+
+        // URL toute seule
+        match = this.regex_url_seule.exec(raw_sources);
+        while (match != null) {
+            sources.push({
+                "url"   : match[1],
+                "title" : match[2]
+            });
+            match = this.regex_url_seule.exec(raw_sources);
+        }
+
+        return sources;
+    },
+
     getAllChildrenForEntity: function(entity, medias = []) {
         // console && console.log("start getAllChildrenForEntity");
         for(let item_index in entity.possessions) {
             let item = entity.possessions[item_index];
-             console && console.info(item);
+             //console && console.info(item);
             let childId = Possedex.getEntityIdFromNom(item.nom);
             let childEntity = Possedex.data.objets[childId]
             if (childEntity.type != 3) {
@@ -171,28 +201,40 @@ export var Possedex = {
         return medias;
     },
 
-    getAllParentsForEntity: function(entity, proprios = []) {
-        console && console.log("start getAllParentsForEntity");
+    getAllParentsForEntity: function(entity, proprios) {
+        if (3 <= _debug) {
+            console && console.log("start getAllParentsForEntity");
+        }
         for(let item_index in entity.est_possede) {
-            console && console.group("Une boucle de est_possede de "+entity.nom);
+            if (3 <= _debug) {
+                console && console.group("Une boucle de est_possede de " + entity.nom);
+            }
             let item = entity.est_possede[item_index];
             let parentId = Possedex.getEntityIdFromNom(item.nom);
             let parentEntity = Possedex.data.objets[parentId]
             //console && console.log("Dealing with item.nom = "+item.nom);
             //console && console.log(parentEntity);
             if (parentEntity.type != 1) {
-                console && console.log("A creuser pour "+parentEntity.nom);
+                if (3 <= _debug) {
+                    console && console.log("A creuser pour " + parentEntity.nom);
+                }
                 let a_creuser = Possedex.getAllParentsForEntity(parentEntity, proprios);
 
             } else {
-                console && console.info("Tiens, cette entité est une personne physique");
-                console && console.log(parentEntity);
+                if (3 <= _debug) {
+                    console && console.info("Tiens, cette entité est une personne physique");
+                    console && console.log(parentEntity);
+                }
                 proprios.push(parentEntity);
             }
-            console && console.groupEnd();
+            if (3 <= _debug) {
+                console && console.groupEnd();
+            }
         }
-        console && console.warn("au final");
-        console && console.warn(proprios);
+        if (3 <= _debug) {
+            console && console.info("(fin de getAllParents");
+            console && console.info(proprios);
+        }
         return proprios;
     },
 
@@ -208,7 +250,7 @@ export var Possedex = {
             } catch (e) {
                     console && console.error("TODO: code alternative to str.normalize('NFD')");
                     console && console.error(e);
-                var strClean = str;
+                strClean = str;
             }
             var regex = new RegExp("^"+strClean, 'i');
 
@@ -242,30 +284,23 @@ export var Possedex = {
     },
 
     debunkSite: function(url){
-        // INIT vars
-
-        var owner_msg = '';
-
-        var proprietaires = '';
-        var fortunes      = '';
-        var marques       = '';
-        var interets      = '';
-
-        var influences      = '';
-
-        var conflits      = '';
-        var subventions   = '';
-        var publicite     = '';
-        var sources       = [];
-
-        var note          = '';
-        var decodex_note  = '';
-        var color         = '';
-        var decodex_color = '';
-        var decodex_desc  = '';
-        var message       = '';
-        var bandeau_msg   = '';
-        var icone         = '';
+        // var owner_msg = '';
+        // var proprietaires = '';
+        // var fortunes      = '';
+        // var marques       = '';
+        // var interets      = '';
+        // var influences      = '';
+        // var conflits      = '';
+        // var subventions   = '';
+        // var publicite     = '';
+        // var note          = '';
+        // var decodex_note  = '';
+        // var color         = '';
+        // var decodex_color = '';
+        // var decodex_desc  = '';
+        // var message       = '';
+        // var bandeau_msg   = '';
+        // var icone         = '';
         // end INIT vars
         if (3 <= _debug) {
             console && console.group('START debunk site '+url);
@@ -277,13 +312,11 @@ export var Possedex = {
             console && console.log("results");
         }
 
-        var sites = Possedex.data.objets;
-        var objets = Possedex.data.objets;
         url = Possedex.lastSlash(url);
         url = Possedex.url_cleaner(url);
         url = url.toLowerCase(); // when url contains names
 
-        var entity_id = Possedex.getEntityIdFromNom(url)
+        const entity_id = Possedex.getEntityIdFromNom(url)
 
         if (entity_id == false) {
             $("#result").html('Nous n\'avons actuellement aucune information sur ce site.');
@@ -294,6 +327,8 @@ export var Possedex = {
             // Optional : add a badge text and badge bg with the icon
             //browser.browserAction.setBadgeText({"text" : "Soumis :p"});
             //browser.browserAction.setBadgeBackgroundColor({'color' : "#D50303"});
+            console && console.info("PERDU");
+            this.sendToOutput(false);
             return;
         }
 
@@ -301,74 +336,17 @@ export var Possedex = {
             console && console.info("Site id pour "+url+", entity_id = "+entity_id);
         }
 
-        const entity = Possedex.data.objets[entity_id];
+        Possedex.current_entity = Possedex.data.objets[entity_id];
         if (2 <= _debug) {
-            console && console.log('contenu', Possedex.data.objets[entity_id]);
+            console && console.log('contenu', Possedex.current_entity);
         }
 
 
-        //var proprietaire1  = Possedex.data.objets[entity_id][col_proprietaire1];      // propriétaires
-        //var fortunes1      = Possedex.data.objets[entity_id][col_fortune1     ];      // propriétaires
-        //var marque1        = Possedex.data.objets[entity_id][col_marque1      ];      // propriétaires
-        //var interet1     = Possedex.data.objets[entity_id][col_interet1   ];      // propriétaires
-
-        //var proprietaire2 = Possedex.data.objets[entity_id][col_proprietaire2];      // propriétaires
-        //var fortunes2      = Possedex.data.objets[entity_id][col_fortune2     ];      // propriétaires
-        //var marque2        = Possedex.data.objets[entity_id][col_marque2      ];      // propriétaires
-        //var interet2     = Possedex.data.objets[entity_id][col_interet2   ];      // propriétaires
-
-        //var proprietaire3 = Possedex.data.objets[entity_id][col_proprietaire3];      // propriétaires
-        //var fortunes3      = Possedex.data.objets[entity_id][col_fortune3     ];      // propriétaires
-        //var marque3        = Possedex.data.objets[entity_id][col_marque3      ];      // propriétaires
-        //var interet3     = Possedex.data.objets[entity_id][col_interet3   ];      // propriétaires
-
-        //entity.possedex.marques       = [];
-        //if (marque1) {
-        //    entity.possedex.marques.push(marque1);
-        //}
-        //if (marque2) {
-        //    entity.possedex.marques.push(marque2);
-        //}
-        //if (marque3) {
-        //    entity.possedex.marques.push(marque3);
-        //}
-
-        //entity.possedex.interets = [];
-        //if (interet1) {
-        //    entity.possedex.interets.push(interet1);
-        //}
-        //if (interet2) {
-        //    entity.possedex.interets.push(interet2);
-        //}
-        //if (interet3) {
-        //    entity.possedex.interets.push(interet3);
-        //}
-
-        //publicite      = Possedex.data.objets[entity_id][col_pub];                    // Pub ?
 
         var raw_sources = Possedex.data.objets[entity_id].possedex.sources;                // Nos sources (urls séparés par virgule et/ou espace)
 
-        // Markdown style
-        var regex = new RegExp(/\[([^\]]*?)\]\(([^\)]*?)\)[, ]{0,2}/gm);
-        var match = regex.exec(raw_sources);
-        sources = [];
-        while (match != null) {
-            sources.push({
-                "url"   : match[2],
-                "title" : match[1]
-            });
-            match = regex.exec(raw_sources);
-        }
+        const sources       = this.extractUrlsFromRaw(raw_sources);
 
-        // URL toute seule
-        match = Possedex.regex_url_seule.exec(raw_sources);
-        while (match != null) {
-            sources.push({
-                "url"   : match[1],
-                "title" : match[2]
-            });
-            match = regex.exec(raw_sources);
-        }
 
         if (3 <= _debug) {
             console && console.log("sources apres urls simples", sources);
@@ -378,21 +356,21 @@ export var Possedex = {
 
         if (2 <= _debug) {
             console && console.group("tout s'est bien passé");
-            console && console.log('nom            =',entity.nom                     );
-            console && console.log('desc           =',entity.possedex.description    );
-            console && console.log('slug           =',entity.possedex.slug           );
-            console && console.log('proprietaires  =',entity.possedex.proprietaires  );
-            console && console.log('influences     =',entity.possedex.influences     );
-            console && console.log('conflits       =',entity.possedex.conflits       );
-            console && console.log('subventions    =',entity.possedex.subventions    );
-            console && console.log('sources        =',entity.possedex.sources        );
+            console && console.log('nom            =',Possedex.current_entity.nom                     );
+            console && console.log('possedex       =',Possedex.current_entity.possedex);
+            //console && console.log('slug           =',entity.possedex.slug           );
+            //console && console.log('proprietaires  =',entity.possedex.proprietaires  );
+            //console && console.log('influences     =',entity.possedex.influences     );
+            //console && console.log('conflits       =',entity.possedex.conflits       );
+            //console && console.log('subventions    =',entity.possedex.subventions    );
+            //console && console.log('sources        =',entity.possedex.sources        );
             console && console.groupEnd();
         }
 
-        console && console.log("entity retournée (au lieu d'appeler sendToOutput)");
+        // console && console.log("entity retournée", Possedex.current_entity);
         // console && console.info(entity);
         // display results
-        Possedex.sendToOutput(entity);
+        Possedex.sendToOutput(Possedex.current_entity);
 
 
         //if(results.infobulles[classement] == true){  // note
@@ -413,7 +391,7 @@ export var Possedex = {
         if (url.match(/youtube.com/)) {
 
             if (null == classement)
-                classement  = '';                             // propriétaires
+                var classement  = '';                             // propriétaires
 
 
             if ("" == proprietaires)
@@ -434,12 +412,12 @@ export var Possedex = {
     },
 
     sendToOutput : function(entity) {
-        console && console.log("send to output");
+        // console && console.log("send to output (possedex class)");
         $("#result").html('<div id="infos">');
         $("#infos").append("<label>"+entity.typeLibelle+"</label>");
         $("#infos").append("<p>"
             //+entity.nom
-            +' <a class="detail-media" href="http://'+DOMAIN+'#'+entity.nom+'">'
+            +' <a class="detail-media" href="'+ document.location.protocol +'//'+DOMAIN+'#'+entity.nom+'">'
             + entity.nom
             + '</a>'
             +"</p>");
@@ -447,7 +425,7 @@ export var Possedex = {
         $("#infos").append("<label>Site(s)</label>");
         var urls = "";
         for (let url_id in entity.urls) {
-            urls += ' <a target="_blank" href="http://'+entity.urls[url_id]+'">'
+            urls += ' <a target="_blank" href="' + document.location.protocol + '//' +entity.urls[url_id]+'">'
                 + entity.urls[url_id] + '</a>'
         }
         $("#infos").append("<p>"
@@ -462,7 +440,7 @@ export var Possedex = {
             const proprietaires = []
             entity.est_possede.forEach(function(el, i) {
                 proprietaires.push(
-                    ' <a class="detail-owner" href="http://'+DOMAIN+'#'+el.nom+'">'
+                    ' <a class="detail-owner" href="' + document.location.protocol + '//' +DOMAIN+'#'+el.nom+'">'
                     +el.nom
                     +'</a>'
                     + ' ('+el.valeur
@@ -480,7 +458,7 @@ export var Possedex = {
             const possessions = []
             entity.possessions.forEach(function(el, i) {
                 possessions.push(
-                    ' <a class="detail-owner" href="http://'+DOMAIN+'#'+el.nom+'">'
+                    ' <a class="detail-owner" href="' + document.location.protocol + '//' +DOMAIN+'#'+el.nom+'">'
                     +el.nom
                     +'</a>'
                     + ' ('+el.valeur+'%)'
@@ -507,18 +485,18 @@ export var Possedex = {
         // console && console.log(entity);
         const medias = [];
         Possedex.getAllChildrenForEntity(entity, medias);
-        // console && console.log("les enfants");
-        // console && console.log(medias);
+        console && console.log("les enfants");
+        console && console.log(medias);
 
         const proprios = Possedex.getAllParentsForEntity(entity);
-        // console && console.info("les parents");
-        // console && console.info(proprios);
+        console && console.info("les parents");
+        console && console.info(proprios);
 
         if (proprios.length) {
             const proprios_display = []
             proprios.forEach(function(el, i) {
                 proprios_display.push(
-                    ' <a class="detail-owner" href="http://'+DOMAIN+'#'+el.nom+'">'
+                    ' <a class="detail-owner" href="' + document.location.protocol + '//' +DOMAIN+'#'+el.nom+'">'
                     +el.nom
                     +'</a>'
                     +'<p><small class="text-muted">Secteur d\'activité: '
@@ -542,7 +520,7 @@ export var Possedex = {
             const medias_display = []
             medias.forEach(function(el, i) {
                 medias_display.push(
-                    ' <a class="detail-owner" href="http://'+DOMAIN+'#'+el.nom+'">'
+                    ' <a class="detail-owner" href="' + document.location.protocol + '//' +DOMAIN+'#'+el.nom+'">'
                     +el.nom
                     +'</a>'
                 )
