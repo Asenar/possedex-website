@@ -2,8 +2,8 @@
   "entrypoints": {
     "app": {
       "js": [
-        "/js/vendors~app.js",
-        "/js/app.js"
+        "/js/0.0a878c35.js",
+        "/js/app.ba248dff.js"
       ]
     }
   }
