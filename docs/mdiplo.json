@@ -1831,13 +1831,27 @@
             "id": "49",
             "nom": "Les Échos",
             "periodicite": "Quotidien",
-            "possedex": {},
+            "possedex": {
+                "classement": "capital",
+                "desc": "",
+                "nom": "Les Échos",
+                "pub": "Oui",
+                "slug": "les echos",
+                "sources": "[La carte des médias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)",
+                "subventions": "1.6 M€",
+                "udpated": "2020-08-05 11:26"
+            },
             "possessions": [],
             "slug": "les echos",
             "type": "3",
             "typeLibelle": "Média",
             "type_media": "GPE",
-            "urls": []
+            "urls": [
+                "lesechos.fr",
+                "facebook.com/lesechos",
+                "twitter.com/LesEchos",
+                "www.lesechos.fr"
+            ]
         },
         "50": {
             "challenges": "",
@@ -11602,6 +11616,7 @@
         "facebook.com/france2": 141,
         "facebook.com/gulli": 73,
         "facebook.com/lefigaro": 38,
+        "facebook.com/lesechos": 49,
         "fipradio.fr": 149,
         "france.tv/france-2": 141,
         "france2.fr": 141,
@@ -11641,6 +11656,7 @@
         "lepoint.fr": 100,
         "lepopulaire.fr": 223,
         "leprogres.fr": 215,
+        "lesechos.fr": 49,
         "lesinrocks.com": 31,
         "letelegramme.fr": 267,
         "liberation.fr": 60,
@@ -11679,12 +11695,14 @@
         "tf1.fr/tmc": 127,
         "tv5monde.com/‎": 140,
         "tvtours.fr": 239,
+        "twitter.com/LesEchos": 49,
         "twitter.com/gulli": 73,
         "valeursactuelles.com": 89,
         "virginradio.fr": 76,
         "vosgesmatin.fr": 211,
         "vsd.fr": 119,
         "www.arte.tv": 153,
+        "www.lesechos.fr": 49,
         "youtube.com/user/gulli": 73
     }
 }
