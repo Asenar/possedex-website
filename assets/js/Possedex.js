@@ -57,21 +57,6 @@
 
 */
 
-// var browser = browser || chrome;
-
-// var checkSite_in_progress = false;
-
-var _debug = 1;
-if (_debug) {
-    console && console.info("DEBUG LEVEL", _debug);
-}
-
-var DOMAIN     = document.location.hostname;
-var maj        = '201809011846';
-
-
-var base_url = document.location.protocol + "//"+document.location.hostname+"/mdiplo.json?maj="+maj;
-
 export var Possedex = {
 
     current_entity : null,
@@ -228,7 +213,6 @@ export var Possedex = {
         }
     },
 
-    // zzzzz zzzzz
     loadJSON : function(path, successCallback) {
 	    if (window.fetch) {
         fetch(path)
@@ -250,10 +234,6 @@ export var Possedex = {
                 if (xhr.readyState === XMLHttpRequest.DONE) {
                     if (xhr.status === 200) {
                         if (success) {
-                            if (4 <= _debug) {
-                                console && console.info("raw json");
-                                //console && console.log(xhr.responseText);
-                            }
                             success(JSON.parse(xhr.responseText));
                         }
                     } else {
@@ -279,11 +259,10 @@ export var Possedex = {
     cleanStringForSearch: function(str) { // remove the last slash at the end of the string
         str = Possedex.url_cleaner(str);
         str = str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        str = str.replace(/\W+/g, '-');
         if(str.indexOf('/') === -1) {
-            console && console.log("return str lowercased")
             return str.toLowerCase();
         } else {
-            console && console.log("return str substring from 0 to " + str.indexOf('/'))
             return str.substring(0, str.indexOf('/')).toLowerCase();
         }
     },
@@ -323,13 +302,15 @@ export var Possedex = {
     },
 
     getAllChildrenForEntity: function(entity, medias = []) {
-        // console && console.log("start getAllChildrenForEntity");
         for(let item_index in entity.possessions) {
             let item = entity.possessions[item_index];
-             //console && console.info(item);
             let childId = Possedex.getEntityIdFromNom(item.nom);
+            if (!childId) {
+                // console && console.error("no child found for item=", item);
+                continue;
+            }
             let childEntity = Possedex.data.objets[childId]
-            if (childEntity.type != 3) {
+            if (childEntity && childEntity.type !== 3) {
                 medias = Possedex.getAllChildrenForEntity(childEntity, medias);
             } else {
                 medias.push(childEntity);
@@ -338,80 +319,67 @@ export var Possedex = {
         return medias;
     },
 
-    getAllParentsForEntity: function(entity, proprios) {
+    /** Boucle récursive pour récupérer le propriétaire de l'entité, puis
+     * son propriétaire à elle, … jusqu'au bout
+     *
+     **/
+    getAllParentsForEntity: function(entity, proprios = []) {
         if (3 <= _debug) {
-            console && console.log("start getAllParentsForEntity");
+            console && console.group("getAllParentsForEntity " + entity.nom);
         }
-        for(let item_index in entity.est_possede) {
-            if (3 <= _debug) {
-                console && console.group("Une boucle de est_possede de " + entity.nom);
-            }
+        for (let item_index in entity.est_possede) {
             let item = entity.est_possede[item_index];
             let parentId = Possedex.getEntityIdFromNom(item.nom);
             let parentEntity = Possedex.data.objets[parentId]
-            //console && console.log("Dealing with item.nom = "+item.nom);
-            //console && console.log(parentEntity);
             if (parentEntity.type != 1) {
-                if (3 <= _debug) {
-                    console && console.log("A creuser pour " + parentEntity.nom);
-                }
-                let a_creuser = Possedex.getAllParentsForEntity(parentEntity, proprios);
+                Possedex.getAllParentsForEntity(parentEntity, proprios);
 
             } else {
-                if (3 <= _debug) {
-                    console && console.info("Tiens, cette entité est une personne physique");
-                    console && console.log(parentEntity);
-                }
                 proprios.push(parentEntity);
-            }
-            if (3 <= _debug) {
-                console && console.groupEnd();
             }
         }
         if (3 <= _debug) {
-            console && console.info("(fin de getAllParents)");
-            console && console.info(proprios);
+            console && console.log(proprios);
+            console && console.groupEnd();
         }
         return proprios;
     },
 
     getEntityIdFromNom: function(str) {
+        str = Possedex.cleanStringForSearch(str);
+        if ("" === str) {
+            if (_debug) {
+                console && console.warn("getEntityIdFromNom(empty string)");
+            }
+            return false;
+        }
 
-        console && console.log("get entity for " + str)
+        // TODO: build data.slug[str]
         // 1st look, check url, exact match
         if (Possedex.data.urls.hasOwnProperty(str)) {
-            console && console.log("exact match found")
             return Possedex.data.urls[str];
         } else {
 
-            //try {
-            //    console && console.log("strClean")
-            //    // @TODO: check this works on Edge
-            //    var strClean = str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-            //} catch (e) {
-            //        console && console.error("TODO: code alternative to str.normalize('NFD')");
-            //        console && console.error(e);
-            //    strClean = str;
-            //}
-            //var strClean = str;
-            var regex = new RegExp("^"+str, 'i');
-
-            console && console.log("start loop to get entity from db")
             // 2nd look, check regex after removing accents
             for (let idEntity in Possedex.data.objets) {
-                //console && console.log("check idEntity="+id);
                 if (Possedex.data.objets[idEntity].slug === str) {
-                    console && console.info("FOUND ! slug = " + str);
                     return idEntity;
                 }
             }
 
-            console && console.log("start loop partial match to get entity from db")
-            // 3rd look, check partial match
+            var regex = new RegExp("^"+str, 'i');
+            // 3rd look, check partial match starting with
             for(let idEntity in Possedex.data.objets) {
-
                 if (regex.test(Possedex.data.objets[idEntity].slug)) {
-                    console && console.info("FOUND partial match for \"" + str + "\" : " + idEntity);
+                    return idEntity;
+               }
+            }
+
+            // 4th look, check partial match «begin of word»
+            regex = new RegExp("\\b"+str, 'i');
+            // 3rd look, check partial match starting with
+            for (let idEntity in Possedex.data.objets) {
+                if (regex.test(Possedex.data.objets[idEntity].slug)) {
                     return idEntity;
                 }
             }
@@ -432,256 +400,240 @@ export var Possedex = {
 
     debunkSite: function(url, $next){
 
-        console && console.group('START debunk site url='+url);
 
         // infosToGet in extension
         if (3 <= _debug) {
-            console && console.info("debunkSite : var results");
-            console && console.log("results");
+            console && console.log("startDebunkSite");
         }
 
         if (url === "") {
-            console && console.warn("url is empty : nothing to search");
+            if (_debug) {
+                console && console.warn("url is empty : nothing to search");
+            }
             return $next(null);
         }
 
-        url = Possedex.cleanStringForSearch(url);
-
-        if (url === "") {
-            console && console.error("url cleaning error : nothing to search");
-            return $next(null);
-        }
-
-        console && console.info("getEntityIdFromNom "+url);
         const entity_id = Possedex.getEntityIdFromNom(url)
 
         if (false === entity_id) {
-            console && console.warn("aucun résultat")
-            console && console.groupEnd();
-            // FIXME: sortir ça de la classe
-            $("#result").html('Nous n\'avons actuellement aucune information sur ce site.');
-            // Optional : add a badge text and badge bg with the icon
-            //browser.browserAction.setBadgeText({"text" : "Soumis :p"});
-            //browser.browserAction.setBadgeBackgroundColor({'color' : "#D50303"});
             $next(null);
             return;
         }
-        console && console.warn("OOOOOK")
 
 
         Possedex.current_entity = Possedex.data.objets[entity_id];
 
-        var raw_sources = Possedex.data.objets[entity_id].possedex.sources;                // Nos sources (urls séparés par virgule et/ou espace)
+        if (Possedex.current_entity.hasOwnProperty('est_possede')) {
+            Possedex.current_entity.proprietaires = [];
+            Possedex.getAllParentsForEntity(Possedex.current_entity, Possedex.current_entity.proprietaires);
 
-        const sources       = this.extractUrlsFromRaw(raw_sources);
-
-
-        if (3 <= _debug) {
-            console && console.log("sources apres urls simples", sources);
+            for(let j in Possedex.current_entity.proprietaires){
+                /*
+                current_entity.proprietaires[j].medias = Possedex.getAllChildrenForEntity(entityP);
+                */
+                var entityP_id = Possedex.getEntityIdFromNom(Possedex.current_entity.proprietaires[j].nom);
+                var entityP = Possedex.data.objets[entityP_id];
+                var medias_entity = Possedex.getAllChildrenForEntity(entityP);
+                Possedex.current_entity.proprietaires[j].medias = medias_entity.map(a => a.nom);
+            }
         }
 
-        //updated_human  = updated.toLocaleString('fr');
 
-        if (2 <= _debug) {
-            console && console.group("tout s'est bien passé");
-            console && console.log('nom            =',Possedex.current_entity.nom                     );
-            console && console.log('possedex       =',Possedex.current_entity.possedex);
-            //console && console.log('slug           =',entity.possedex.slug           );
-            //console && console.log('proprietaires  =',entity.possedex.proprietaires  );
-            //console && console.log('influences     =',entity.possedex.influences     );
-            //console && console.log('conflits       =',entity.possedex.conflits       );
-            //console && console.log('subventions    =',entity.possedex.subventions    );
-            //console && console.log('sources        =',entity.possedex.sources        );
-            console && console.groupEnd();
-        }
+        Possedex.formatSources(Possedex.current_entity);
+        // updated_human  = current_entity.possedex.updated.toLocaleString('fr');
 
-        // console && console.log("entity retournée", Possedex.current_entity);
-        // console && console.info(entity);
-        // display results
         $next(Possedex.current_entity);
-        console && console.groupEnd();
-        return;
-
-
-        //if(results.infobulles[classement] == true){  // note
-        //    browser.tabs.query({active: true, currentWindow: true}, function(tabs) {
-        //        // sendMessage to the content.js listener
-        //        browser.tabs.sendMessage(tabs[0].id, {
-        //            show_popup  : true,
-        //            note        : insoumis_note,
-        //            color       : colors[insoumis_note],
-        //            message     : messages[insoumis_note],
-        //            bandeau_msg : bandeau_msgs[insoumis_note],
-        //            icone       : icones[insoumis_note],
-        //        }, function(response) { // note
-        //        });
-        //    });
-        //}
-
-        if (url.match(/youtube.com/)) {
-
-            if (null == classement)
-                var classement  = '';                             // propriétaires
-
-
-            if ("" == proprietaires)
-                proprietaires  = "Youtube est une propriété de la Holding Alphabet (Google)";                             // propriétaires
-            if ("" == influences)
-                influences       = "Le groupe Alphabet(Google) a de nombreux intérêts internationnaux. Son business model est fortement basé sur la publicité et son quasi-monopole de la publicité. Google exerce de nombreuses pressions sur les états et l'Union Européenne.";                               // intérets
-            if ("" == conflits)
-                conflits       = "Youtube peut être un outil de partage de connaissances. Les vidéastes et utilisateurs de la plateforme youtube ne sont pas forcément soumis à Google, mais… ";  // exemple de conflits / complicité idéologique
-            if ("" == subventions)
-                subventions    = "";             // Montant des subventions d'état
-            if ("" == sources)
-                sources        = "";             // Nos sources (urls séparés par virgule et/ou espace)
-        }
-
-        if (3 <= _debug) {
-            console && console.groupEnd();
-        }
     },
 
-    sendToOutput : function(entity) {
-        // console && console.log("send to output (possedex class)");
-        $("#result").html('<div id="infos">');
-        $("#infos").append("<label>"+entity.typeLibelle+"</label>");
-        $("#infos").append("<p>"
-            //+entity.nom
-            +' <a class="detail-media" href="'+ document.location.protocol +'//'+DOMAIN+'#'+entity.nom+'">'
-            + entity.nom
-            + '</a>'
-            +"</p>");
+    /**
+     * create entity.sources = [{url, title}] from entity.possedex.sources
+     */
+    formatSources : function(entity) {
 
-        $("#infos").append("<label>Site(s)</label>");
-        var urls = "";
-        for (let url_id in entity.urls) {
-            urls += ' <a target="_blank" href="' + document.location.protocol + '//' +entity.urls[url_id]+'">'
-                + entity.urls[url_id] + '</a>'
+        entity.sources = [];
+
+        // Récupération des sources (du googledoc)
+        var raw_sources = entity.possedex.sources;                // Nos sources (urls séparés par virgule et/ou espace)
+
+        if (3 <= _debug) {
+            console && console.info("sources avant markdown", raw_sources);
         }
-        $("#infos").append("<p>"
-            //+entity.nom
-            + urls
-            +"</p>");
-        // $("#result").append("<label>Note LeMonde (outdated)</label><p>"+decodex_note+"</p>");
-        // $("#result").append("<label>Classement Possedex</label><p>"+messages[classement]+"</p>");
-        // $("#result").append("<label>Description</label><p>"+notule+"</p>");
-        // $("#result").append("<label>identifiant(à masquer plus tard)</label><p>"+slug+"</p>");
-        if (entity.hasOwnProperty('est_possede')) {
-            const proprietaires = []
-            entity.est_possede.forEach(function(el, i) {
-                proprietaires.push(
-                    ' <a class="detail-owner" href="' + document.location.protocol + '//' +DOMAIN+'#'+el.nom+'">'
-                    +el.nom
-                    +'</a>'
-                    + ' ('+el.valeur
-                    +(parseInt(el.valeur)?'%':'')
-                    +')'
-                    //+ " (" + fortunes1 + ")"
-                );
-            })
-            if (proprietaires.length) {
-                $("#result").append("<label>Propriétaires</label><p>"+proprietaires+"</p>");
-            }
+        // Markdown style
+        var regex = new RegExp(/\[([^\]]*?)\]\(([^\)]*?)\)[, ]{0,2}/gm);
+        var match = regex.exec(raw_sources);
+        while (match != null) {
+            var title = match[1];
+            var url = match[2];
+            entity.sources.push({"url": match[2], "title": match[1]});
+            match = regex.exec(raw_sources);
         }
 
-        if (entity.hasOwnProperty('possessions')) {
-            const possessions = []
-            entity.possessions.forEach(function(el, i) {
-                possessions.push(
-                    ' <a class="detail-owner" href="' + document.location.protocol + '//' +DOMAIN+'#'+el.nom+'">'
-                    +el.nom
-                    +'</a>'
-                    + ' ('+el.valeur+'%)'
-                    //+ " (" + fortunes1 + ")"
-                );
-            })
-            if (possessions.length) {
-                $("#result").append("<label>Possède ou contrôle</label><p>"+possessions.join(", ")+"</p>");
-            }
+        if (3 <= _debug) {
+            console && console.log("sources apres markdown", entity.sources);
         }
 
-        if (entity.possedex.influences && entity.possedex.influences.length) {
-            $("#result").append("<label>Intérêts</label><p>"+entity.possedex.influences+"</p>");
-        }
-        if (entity.possedex.marques && entity.possedex.marques.length) {
-            $("#result").append("<label>Marques</label><p>"+entity.possedex.marques+"</p>");
-        }
-        if (entity.possedex.subventions) {
-            $("#result").append("<label>Subventions publiques</label><p>"+entity.possedex.subventions+"</p>");
-            //console && console.log('subventions    =',entity.possedex.subventions    );
-        }
-
-        // console && console.log("type 1");
-        // console && console.log(entity);
-        const medias = [];
-        Possedex.getAllChildrenForEntity(entity, medias);
-        console && console.log("les enfants");
-        console && console.log(medias);
-
-        const proprios = Possedex.getAllParentsForEntity(entity);
-        console && console.info("les parents");
-        console && console.info(proprios);
-
-        if (proprios.length) {
-            const proprios_display = []
-            proprios.forEach(function(el, i) {
-                proprios_display.push(
-                    ' <a class="detail-owner" href="' + document.location.protocol + '//' +DOMAIN+'#'+el.nom+'">'
-                    +el.nom
-                    +'</a>'
-                    +'<p><small class="text-muted">Secteur d\'activité: '
-                    + el.possedex.activite
-                    +'</small></p>'
-                    +'</div>'
-                )
-                ;
-            })
-            $("#result").append("<label>Au bout de la chaîne alimentaire…</label><p>"
-                +proprios_display.join(", ")
-                +"</p>");
+        // URL toute seule
+        match = Possedex.regex_url_seule.exec(raw_sources);
+        while (match != null) {
+            entity.sources.push({
+                "url": match[1],
+                "title": match[2]
+            });
+            match = regex.exec(raw_sources);
         }
 
-        if (medias.length) {
-            if (medias.length == 1) {
-                var medias_title = "A de l'influence dans ce média";
-            } else {
-                var medias_title = "A de l'influence dans ces médias";
-            }
-            const medias_display = []
-            medias.forEach(function(el, i) {
-                medias_display.push(
-                    ' <a class="detail-owner" href="' + document.location.protocol + '//' +DOMAIN+'#'+el.nom+'">'
-                    +el.nom
-                    +'</a>'
-                )
-                ;
-            })
-            $("#result").append("<label>"+medias_title+"</label><p>"
-                +medias_display.join(", ")
-                +"</p>");
+        if (3 <= _debug) {
+            console && console.log("sources apres urls simples", entity.sources);
         }
-
-        //if (true || activite.length) {}
-        // @TODO neto
-        console && console.info("activite");
-        if (entity.possedex.activite) {
-            $("#result").append("<label style='color:red'>Et a comme potentiels conflits d'intérêts…</label><p >"
-                +entity.possedex.activite
-                +"</p>");
-        }
-        else {
-            // $("#result").append("Aucune activité ailleurs ? oO");
-            // console && console.log(entity);
-            // console && console.log(entity.nom);
-            // console && console.log(entity.possedex);
-            // console && console.log(entity['possedex']);
-        }
+        return entity.sources;
+    },
 
 
-        //$("#result").append(sources);
-        //$("#result").append("<label>Dernière mise à jour</label><p>"
-        //    + new Date(data.proprietaires[nom].updated).toLocaleString()
-        //    +"</p>");
+    // sendToOutput : function(entity) {
+    //     // console && console.log("send to output (possedex class)");
+    //     $("#result").html('<div id="infos">');
+    //     $("#infos").append("<label>"+entity.typeLibelle+"</label>");
+    //     $("#infos").append("<p>"
+    //         //+entity.nom
+    //         +' <a class="detail-media" href="'+ document.location.protocol +'//'+DOMAIN+'#'+entity.nom+'">'
+    //         + entity.nom
+    //         + '</a>'
+    //         +"</p>");
+
+    //     $("#infos").append("<label>Site(s)</label>");
+    //     var urls = "";
+    //     for (let url_id in entity.urls) {
+    //         urls += ' <a target="_blank" href="' + document.location.protocol + '//' +entity.urls[url_id]+'">'
+    //             + entity.urls[url_id] + '</a>'
+    //     }
+    //     $("#infos").append("<p>"
+    //         //+entity.nom
+    //         + urls
+    //         +"</p>");
+    //     // $("#result").append("<label>Note LeMonde (outdated)</label><p>"+decodex_note+"</p>");
+    //     // $("#result").append("<label>Classement Possedex</label><p>"+messages[classement]+"</p>");
+    //     // $("#result").append("<label>Description</label><p>"+notule+"</p>");
+    //     // $("#result").append("<label>identifiant(à masquer plus tard)</label><p>"+slug+"</p>");
+    //     if (entity.hasOwnProperty('est_possede')) {
+    //         const proprietaires = []
+    //         entity.est_possede.forEach(function(el, i) {
+    //             proprietaires.push(
+    //                 ' <a class="detail-owner" href="' + document.location.protocol + '//' +DOMAIN+'#'+el.nom+'">'
+    //                 +el.nom
+    //                 +'</a>'
+    //                 + ' ('+el.valeur
+    //                 +(parseInt(el.valeur)?'%':'')
+    //                 +')'
+    //                 //+ " (" + fortunes1 + ")"
+    //             );
+    //         })
+    //         if (proprietaires.length) {
+    //             $("#result").append("<label>Propriétaires</label><p>"+proprietaires+"</p>");
+    //         }
+    //     }
+
+    //     if (entity.hasOwnProperty('possessions')) {
+    //         const possessions = []
+    //         entity.possessions.forEach(function(el, i) {
+    //             possessions.push(
+    //                 ' <a class="detail-owner" href="' + document.location.protocol + '//' +DOMAIN+'#'+el.nom+'">'
+    //                 +el.nom
+    //                 +'</a>'
+    //                 + ' ('+el.valeur+'%)'
+    //                 //+ " (" + fortunes1 + ")"
+    //             );
+    //         })
+    //         if (possessions.length) {
+    //             $("#result").append("<label>Possède ou contrôle</label><p>"+possessions.join(", ")+"</p>");
+    //         }
+    //     }
+
+    //     if (entity.possedex.influences && entity.possedex.influences.length) {
+    //         $("#result").append("<label>Intérêts</label><p>"+entity.possedex.influences+"</p>");
+    //     }
+    //     if (entity.possedex.marques && entity.possedex.marques.length) {
+    //         $("#result").append("<label>Marques</label><p>"+entity.possedex.marques+"</p>");
+    //     }
+    //     if (entity.possedex.subventions) {
+    //         $("#result").append("<label>Subventions publiques</label><p>"+entity.possedex.subventions+"</p>");
+    //         //console && console.log('subventions    =',entity.possedex.subventions    );
+    //     }
+
+    //     // console && console.log("type 1");
+    //     // console && console.log(entity);
+    //     const medias = [];
+    //     Possedex.getAllChildrenForEntity(entity, medias);
+    //     console && console.log("les enfants");
+    //     console && console.log(medias);
+
+    //     const proprios = Possedex.getAllParentsForEntity(entity);
+    //     console && console.info("les parents");
+    //     console && console.info(proprios);
+
+    //     if (proprios.length) {
+    //         const proprios_display = []
+    //         proprios.forEach(function(el, i) {
+    //             proprios_display.push(
+    //                 ' <a class="detail-owner" href="' + document.location.protocol + '//' +DOMAIN+'#'+el.nom+'">'
+    //                 +el.nom
+    //                 +'</a>'
+    //                 +'<p><small class="text-muted">Secteur d\'activité: '
+    //                 + el.possedex.activite
+    //                 +'</small></p>'
+    //                 +'</div>'
+    //             )
+    //             ;
+    //         })
+    //         $("#result").append("<label>Au bout de la chaîne alimentaire…</label><p>"
+    //             +proprios_display.join(", ")
+    //             +"</p>");
+    //     }
+
+    //     if (medias.length) {
+    //         if (medias.length == 1) {
+    //             var medias_title = "A de l'influence dans ce média";
+    //         } else {
+    //             var medias_title = "A de l'influence dans ces médias";
+    //         }
+    //         const medias_display = []
+    //         medias.forEach(function(el, i) {
+    //             medias_display.push(
+    //                 ' <a class="detail-owner" href="' + document.location.protocol + '//' +DOMAIN+'#'+el.nom+'">'
+    //                 +el.nom
+    //                 +'</a>'
+    //             )
+    //             ;
+    //         })
+    //         $("#result").append("<label>"+medias_title+"</label><p>"
+    //             +medias_display.join(", ")
+    //             +"</p>");
+    //     }
+
+    //     //if (true || activite.length) {}
+    //     // @TODO neto
+    //     console && console.info("activite");
+    //     if (entity.possedex.activite) {
+    //         $("#result").append("<label style='color:red'>Et a comme potentiels conflits d'intérêts…</label><p >"
+    //             +entity.possedex.activite
+    //             +"</p>");
+    //     }
+    //     else {
+    //         // $("#result").append("Aucune activité ailleurs ? oO");
+    //         // console && console.log(entity);
+    //         // console && console.log(entity.nom);
+    //         // console && console.log(entity.possedex);
+    //         // console && console.log(entity['possedex']);
+    //     }
+
+
+    //     //$("#result").append(sources);
+    //     //$("#result").append("<label>Dernière mise à jour</label><p>"
+    //     //    + new Date(data.proprietaires[nom].updated).toLocaleString()
+    //     //    +"</p>");
+    // }
+
+    // RIEN
+    rien : function() {
     }
-};
+}
 

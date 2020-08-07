@@ -24,8 +24,6 @@ function Sites({urls}) {
 }
 
 function PossedexInfo({possedex}) {
-    console.info("possedex")
-    console.log(possedex)
     return <>
         {/* TODO: reformater la sortie de la classe*/}
 
@@ -80,10 +78,16 @@ export default class Result extends React.Component {
 
 
     render() {
-        console.info("render result");
-        const {entity} = this.props;
+        const {search, entity} = this.props;
+        if (!search) {
+            return <div id="result" style={{clear:"both"}} >
+                …
+            </div>
+        }
         if (!entity) {
-            return <div id="result" style={{clear:"both"}} />
+            return <div id="result" style={{clear:"both"}} >
+                Nous n'avons actuellement aucune information sur ce site.
+                </div>
         }
         // console.log(entity);
         // console.info("props dans le else de render");

@@ -10,12 +10,18 @@ import { Possedex } from "./Possedex";
 import SearchForm from "./components/SearchForm";
 import Result from "./components/Result";
 
+import './global.js'
 
-const e = React.createElement;
+if (_debug) {
+    console && console.info("DEBUG LEVEL", _debug);
+}
 
-const DOMAIN     = document.location.hostname
-const base_url   = "/mdiplo.json"
-
+const base_url =  (document.location.port !== 80 || document.location.port !== 443)
+    ?  document.location.protocol + "//"
+        + document.location.hostname
+        + ":" + document.location.port
+        + "/mdiplo.json"
+    : document.location.protocol + "//" + document.location.hostname + "/mdiplo.json";
 
 // function RechercheFunc({name, children}) {
 //     return <div>
@@ -33,17 +39,16 @@ ReactDOM.render(<SearchForm base_url={base_url} />, document.querySelector('#rec
 // }, 10000)
 // render();
 
-//ReactDOM.render(e, domContainer);
 $(document).ready(function(){
 
     $("#logo").on("click", function(){
         if($("#menupopup").is(":hidden")){
-            $("#menupopup").classList.remove("d-none");
+            document.getElementById("menupopup").classList.remove("d-none");
         }
 
     });
     $(".quit, .nav-link, .nav-social").on("click", function(){
-        $("#menupopup").classList.remove("d-none");
+        document.getElementById("menupopup").classList.remove("d-none");
     });
 
 });

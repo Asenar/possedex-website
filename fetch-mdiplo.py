@@ -36,7 +36,7 @@ def downloadData(url, filename):
     response = requests.get(url)
     response.encoding = 'UTF-8'
     assert response.status_code == 200, 'failed to download '+url
-    text_file = open(filename, 'w')
+    text_file = open(filename, 'w', newline='\n', encoding="utf-8")
     text_file.write(response.text)
     text_file.close()
 
@@ -49,19 +49,19 @@ def slugify(value):
     Normalizes string, converts to lowercase, removes non-alpha characters,
     and converts spaces to hyphens.
     """
-    return strip_accents(value).lower()
+    return re.sub('[^a-zA-Z0-9.]+', '-', strip_accents(value).lower())
 
 
 def idFromNom(db, nom):
-    id = 0
+    # id = 0
 
     for id in db:
         row = db[id]
         if row['nom'] == nom:
-            return id
+            return int(id)
 
         if re.search('^'+row['nom']+'$', nom, flags=re.IGNORECASE|re.UNICODE):
-            return id
+            return int(id)
 
     if show_no_id_found:
         print("RIEN TROUVE pour ", nom)
@@ -152,7 +152,7 @@ database['urls']   = collections.OrderedDict()
 
 
 # {{{ objets
-with open(file_liste_medias, 'r') as tsvfile:
+with open(file_liste_medias, 'r', encoding="utf-8") as tsvfile:
     reader = csv.reader(tsvfile, delimiter="\t")
 
     col_id            = 0
@@ -179,14 +179,19 @@ with open(file_liste_medias, 'r') as tsvfile:
         if row[col_nom] == '':
             continue
 
-        #if row[col_id] == 'Patrick Drahi':
-        #    print("PATRIIIIICK")
-        #    show_all = True
+        if row[col_id] == 'Patrick Drahi':
+            print("PATRIIIIICK")
+            show_all = True
         #else:
         #    show_all = False
 
+        if row[col_id] == 'id':
+            continue
+
+        mdiplo_id = int(row[col_id])
+
         entry = collections.OrderedDict({
-            'id'     :  row[col_id],
+            'id'     :  int(row[col_id]),
             'nom'    :  row[col_nom],
             'slug'   :  slugify(row[col_nom]),   # 2  - Nom normalise
             
@@ -201,7 +206,7 @@ with open(file_liste_medias, 'r') as tsvfile:
             #else:
             #    entry['type' ] = "Autre type: "+row[col_type]
 
-            'type' : row[col_type],
+            'type' : int(row[col_type]),
             'typeLibelle' : row[col_typeLibelle],
             #entry['description'] = row[col_description]
             'fortune'     : row[col_fortune],
@@ -222,14 +227,14 @@ with open(file_liste_medias, 'r') as tsvfile:
         #if show_all:
         #    print(entry)
 
-        database['objets'][id] = entry
+        database['objets'][mdiplo_id] = entry
 # }}} objets
 print(bcolors.OKGREEN+"Nombre d'objets trouves : "+bcolors.ENDC+" ", id)
 
 # {{{ ancienne base
 # 1 - Utilisé pour les urls
 # 2 - utilisé pour les conflits d'intérêts des propriétaires
-with open(file_base, 'r') as csvfile:
+with open(file_base, 'r', encoding="utf-8") as csvfile:
     # {{{ colonnes
     col_nom           = 0
     col_desc          = 1
@@ -320,7 +325,7 @@ with open(file_base, 'r') as csvfile:
             #        ]
 
 
-            if database['objets'][id]['type'] == '1' or database['objets'][id]['type'] == '2':
+            if database['objets'][id]['type'] == 1 or database['objets'][id]['type'] == 2:
                 entry['fortunes'] = [
                         row[col_fortune1],
                         row[col_fortune2],
@@ -328,7 +333,7 @@ with open(file_base, 'r') as csvfile:
                         ]
 
             # @TODO : ajouter les marques dans toute la chaine proprietaire / groupe / media
-            if database['objets'][id]['type'] == '1' or database['objets'][id]['type'] == '2':
+            if database['objets'][id]['type'] == 1 or database['objets'][id]['type'] == 2:
                 entry['marques'] = [
                         row[col_marque1],
                         row[col_marque2],
@@ -336,7 +341,7 @@ with open(file_base, 'r') as csvfile:
                         ]
 
             # @TODO : ajouter les influences (intérets) dans toute la chaine proprietaire / groupe / media
-            if database['objets'][id]['type'] == '1' or database['objets'][id]['type'] == '2':
+            if database['objets'][id]['type'] == 1 or database['objets'][id]['type'] == 2:
                 entry['influences'] = [
                     row[col_influence1],
                     row[col_influence2],
@@ -399,7 +404,7 @@ with open(file_base, 'r') as csvfile:
 print(bcolors.OKGREEN+"Nombre d'url trouvees : "+bcolors.ENDC+" ", url_count)
 
 # {{{ ancienne base (propriétaires)
-with open(file_owners, 'r') as csvfile:
+with open(file_owners, 'r', encoding="utf-8") as csvfile:
     #  1 - Nom
     #  2 - Fortune
     #  3 - Marque
@@ -414,6 +419,9 @@ with open(file_owners, 'r') as csvfile:
     #reader = csv.reader(csvfile, delimiter="\t", quotechar='"')
 
     for row in reader:
+        if len(row) ==  0:
+            continue
+
         id = idFromNom(database['objets'], row[col_nom])
         if (id != -2):
             database['objets'][id]['possedex']['desc'] = row[col_desc]
@@ -425,7 +433,7 @@ with open(file_owners, 'r') as csvfile:
 # }}} ancienne base (propriétaires)
 
 # {{{ relations
-with open(file_relations, 'r') as tsvfile:
+with open(file_relations, 'r', encoding="utf-8") as tsvfile:
     id = 0
 
     col_id                = 0
@@ -480,7 +488,7 @@ with open(file_relations, 'r') as tsvfile:
 
             for source in result:
                 #print "Pour <"+urls+">, traitement de ", source
-                relations_count = relations_count+1;
+                relations_count = relations_count+1
                 source = source.strip(' ')
                 est_possede_par['source'].append(source)
                 possession['source'].append(source)
@@ -506,8 +514,8 @@ with open(file_relations, 'r') as tsvfile:
                         database['objets'][idOrig]['possessions'].append(possession)
 
             idCible = idFromNom(database['objets'], row[col_cible])
-            if idCible == "120":
-                print("120 !!!!!!!!!!!!!!!!!!!!!!!!!")
+            if idCible == 120:
+                print("idCible = 120 !!!!!!!!!!!!!!!!!!!!!!!!!")
                 print(est_possede_par)
 
             if idCible != -2 and idCible != -1:
@@ -531,7 +539,7 @@ print(bcolors.OKGREEN+"Nombre de relations : "+bcolors.ENDC+" ", relations_count
 print(bcolors.OKBLUE+"Going to write into mdiplo.json"+bcolors.ENDC+" ")
 
 # final write
-with open('docs/mdiplo.json', 'w') as outfile:
+with open('docs/mdiplo.json', 'w', newline='\n',  encoding="utf-8") as outfile:
     json.dump(database, outfile, indent=4, sort_keys = True, ensure_ascii=False)
 # final write
 

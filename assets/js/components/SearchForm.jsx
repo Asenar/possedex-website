@@ -22,10 +22,14 @@ export default class SearchForm extends React.Component{
 
     searchFromHash() {
         // check if this is a direct request
-        const current_location = document.location.href; // full url;
-        const pos = current_location.indexOf('#');
-        if (pos > -1) {
-            let search = current_location.substring(pos+1);
+        const current_hash = document.location.hash;
+        if (current_hash.indexOf('#') !== -1) {
+            let search = current_hash.substring(1);
+            if ('rechercher' === search
+                || 'extension' === search
+                || 'contribuer' === search) {
+                return false;
+            }
             if ('p/' === search.substr(0, 2)) {
                 //$("#domain-or-owner").val("owner");
                 search = decodeURIComponent(search.substr(2));
@@ -34,20 +38,18 @@ export default class SearchForm extends React.Component{
                 search = decodeURIComponent(search);
             }
             this.setState({search})
-            // this.doSearch(search);
+            this.doSearch();
             //$("#submit-possedex").click();
         }
     }
 
     componentDidMount() {
-        console.log("component SearchForm did mount - loading db")
-        
+
         // COPY
         fetch(this.props.base_url)
             .then((res) => res.json())
             .then((data) => {
                 Possedex.data = data
-                console.log('data:', data)
                 this.searchFromHash()
             })
         // end copy
@@ -59,11 +61,12 @@ export default class SearchForm extends React.Component{
     }
 
     handleChange(e) {
-        // console.log(e);
         this.setState({
-            search: e.target.value
-        })
-        this.doSearch();
+                search: e.target.value
+            }, () => {
+                this.doSearch()
+            }
+        )
     }
 
     handleKeyUp(e) {
@@ -74,33 +77,35 @@ export default class SearchForm extends React.Component{
     }
 
     doSearch() {
-        //console && console.log(e);
-        // console && console.log('prevent default');
+        // console && console.info("======= start search = "+this.state.search)
         if (!this.state.search) {
             return null;
         }
 
         // var search = this.state.search
         if (this.state.search.length > 0) {
-            console.log("TODO: useEffect ? " + this.state.search);
-            // TODO: useEffect
-            //this.setState({
-            //    search_output : "recherche de " + search,
-            //});
+
             Possedex.debunkSite(this.state.search, function(current_entity) {
-                console && console.log("current entity in output of debunkSite, ", current_entity);
                 if (current_entity) {
                     this.setState({
                         //search: this.state.search,
                         entity: current_entity,
                         found : true,
                     })
+
+                    if (document.location.hash !== '#' + current_entity.nom) {
+                        document.location.hash = '#'+current_entity.nom;
+                        document.title = (
+                            current_entity.type === 1 ? 'Que' : 'Qui'
+                        ) + ' possède "' + current_entity.nom + '" ? - Possedex';
+                    }
+
                 } else {
-                    //this.setState({
-                    //    search: this.state.search,
-                    //    entity: false,
-                    //    found : false,
-                    //})
+                    this.setState({
+                        //search: this.state.search,
+                        entity: false,
+                        found : false,
+                    })
                 }
 
             }.bind(this));
@@ -116,10 +121,8 @@ export default class SearchForm extends React.Component{
     }
 
     shouldComponentUpdate(nextProps, nextState, nextContext) {
-        if (nextState.search !== this.state.search) {
-            return true;
-        }
-        return false;
+        return nextState.entity !== this.state.entity
+            || nextState.search !== this.state.search
 
     }
 
@@ -132,16 +135,22 @@ export default class SearchForm extends React.Component{
     //     // this.doSearch();
     // }
 
+    //componentDidMount() {
+    //    document.title = 'Qui possède "'+this.state.search+'" ? - Possedex';
+    //    document.location.hash = this.state.search;
+    //    // this.doSearch();
+    //}
+
     render () {
+        // TODO: useEffect
         // this.doSearch();
-        // useEffect(() => {
-        //     document.title = 'Qui possède "'+this.state.search+'" ? - Possedex';
-        //     // document.location.hash = this.state.search;
-        // })
-        console.info("render searchform")
-        console.log(Possedex.data)
         const {search, entity, found} = this.state
-        console.log(entity)
+        //if (search.length > 2) {
+        ////    // this.props.history.push('#'+this.state.search);
+        //    // document.title = 'Qui possède "'+this.state.search+'" ? - Possedex';
+        //    //useEffect(() => {
+        //    //})
+        //}
         return <div className="align-middle">
             <h1 className="">
                 <span id="site-title" className="">Possédex</span>
@@ -159,10 +168,7 @@ export default class SearchForm extends React.Component{
                     />
                 </span>
             </form>
-            {entity ?
-                <Result Possedex={Possedex} onClickSearch={this.handleClickSearch} id="result" entity={entity} />
-                : null
-            }
+            <Result Possedex={Possedex} onClickSearch={this.handleClickSearch} id="result" entity={entity} search={search} />
         </div>
     }
 }
