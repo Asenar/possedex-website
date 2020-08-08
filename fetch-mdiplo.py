@@ -303,7 +303,7 @@ with open(file_base, 'r', encoding="utf-8") as csvfile:
             entry['desc'] = row[col_desc]                   # 1  - Description
             entry['classement'] = row[col_possedex]         # 3  - Classement
             entry['slug'] = slugify(row[col_nom])           # 2  - Nom normalise
-            entry['udpated'] = row[col_updated]             # 4  - updated
+            entry['updated'] = row[col_updated]             # 4  - updated
 
             entry['pub'] = row[col_pub]                     # 5  - Pub ?
             entry['subventions'] = row[col_subventions]     # 6  - subventions
