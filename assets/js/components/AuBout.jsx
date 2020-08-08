@@ -7,7 +7,7 @@ function FinalOwner({proprios, onClickSearch}) {
     }
 
     return <div key="finalOwner">
-        <label>Au bout de la chaîne alimentaire…</label>
+        <label>Propriétaire final</label>
         <div>
             {proprios.map((el, i) => {
                 return (<div key={i}>
