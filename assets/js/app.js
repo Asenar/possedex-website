@@ -20,8 +20,8 @@ const base_url =  (document.location.port !== 80 || document.location.port !== 4
     ?  document.location.protocol + "//"
         + document.location.hostname
         + ":" + document.location.port
-        + "/mdiplo.json"
-    : document.location.protocol + "//" + document.location.hostname + "/mdiplo.json";
+        + "/db.json"
+    : document.location.protocol + "//" + document.location.hostname + "/db.json";
 
 // function RechercheFunc({name, children}) {
 //     return <div>

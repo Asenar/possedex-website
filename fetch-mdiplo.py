@@ -536,11 +536,11 @@ with open(file_relations, 'r', encoding="utf-8") as tsvfile:
 print(bcolors.OKGREEN+"Nombre de relations : "+bcolors.ENDC+" ", relations_count)
 
 
-print(bcolors.OKBLUE+"Going to write into mdiplo.json"+bcolors.ENDC+" ")
+print(bcolors.OKBLUE+"Going to write into db.json"+bcolors.ENDC+" ")
 
 # final write
-with open('docs/mdiplo.json', 'w', newline='\n',  encoding="utf-8") as outfile:
+with open('docs/db.json', 'w', newline='\n',  encoding="utf-8") as outfile:
     json.dump(database, outfile, indent=4, sort_keys = True, ensure_ascii=False)
 # final write
 
-print(bcolors.OKGREEN+"Data written to docs/mdiplo.json"+bcolors.ENDC+" ")
+print(bcolors.OKGREEN+"Data written to docs/db.json"+bcolors.ENDC+" ")
