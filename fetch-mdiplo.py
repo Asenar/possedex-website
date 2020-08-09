@@ -21,6 +21,9 @@ file_relations = 'relations.tsv'
 url_liste_medias     = 'https://raw.githubusercontent.com/mdiplo/Medias_francais/master/medias_francais.tsv'
 file_liste_medias = 'liste_medias.tsv'
 
+url_decodex = 'https://www.lemonde.fr/webservice/decodex/updates'
+file_decodex = 'decodex.json'
+
 # {{{ quelques definitions
 class bcolors:
     HEADER = '\033[95m'
@@ -63,6 +66,9 @@ def idFromNom(db, nom):
         if re.search('^'+row['nom']+'$', nom, flags=re.IGNORECASE|re.UNICODE):
             return int(id)
 
+        if slugify(row['nom']) == slugify(nom):
+            return int(id)
+
     if show_no_id_found:
         print("RIEN TROUVE pour ", nom)
 
@@ -71,6 +77,7 @@ def idFromNom(db, nom):
 # }}}
 
 # {{{ recuperations des donnees
+database = collections.OrderedDict()
 
 #### base des relations medias / proprietaires ####
 # {{{
@@ -144,11 +151,23 @@ downloadData(url_owners, file_owners)
 
 # }}} recuperations des donnees
 
-database = collections.OrderedDict()
 
-database['objets'] = collections.OrderedDict()
-database['sites']  = collections.OrderedDict()
-database['urls']   = collections.OrderedDict()
+database['objets']    = collections.OrderedDict()
+database['sites']     = collections.OrderedDict()
+database['urls']      = collections.OrderedDict()
+
+# {{{ decodex official database (for decodex score and description)
+decodex_db   = collections.OrderedDict()
+downloadData(url_decodex, file_decodex)
+with open(file_decodex, 'r', encoding="utf-8") as jsonfile:
+    decodex_data = json.load(jsonfile)
+    for decodex_url in decodex_data['urls']:
+        decodex_id = decodex_data['urls'][decodex_url]
+        decodex_db[decodex_url] = collections.OrderedDict({
+            'note' : decodex_data['sites'][str(decodex_id)][0],
+            'desc' : decodex_data['sites'][str(decodex_id)][1],
+        })
+# }}}
 
 
 # {{{ objets
@@ -398,6 +417,12 @@ with open(file_base, 'r', encoding="utf-8") as csvfile:
                     database['urls'][url] = id
                     if url not in database['objets'][id]['urls']:
                         database['objets'][id]['urls'].append(url)
+                if url in decodex_db:
+                    database['objets'][id]['possedex']['desc'] = decodex_db[url]['desc']
+                    database['objets'][id]['possedex']['decodex'] = int(decodex_db[url]['note'])
+                else:
+                    database['objets'][id]['possedex']['desc'] = ""
+                    database['objets'][id]['possedex']['decodex'] = 0
         # }}} on recupere les urls
 
 # }}} ancienne base
@@ -428,8 +453,6 @@ with open(file_owners, 'r', encoding="utf-8") as csvfile:
             database['objets'][id]['possedex']['activite'] = row[col_activite]
             database['objets'][id]['possedex']['marque'] = row[col_marque]
             database['objets'][id]['possedex']['fortune'] = row[col_fortune]
-
-
 # }}} ancienne base (propriétaires)
 
 # {{{ relations
