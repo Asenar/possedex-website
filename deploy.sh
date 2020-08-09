@@ -35,7 +35,6 @@ git fetch origin
 
 git reset --hard origin/master
 
-python fetch-v2.py
 python fetch-mdiplo.py
 
 changes=$(git status -uno -s)
