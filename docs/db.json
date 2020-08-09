@@ -151,13 +151,25 @@
             "id": 4,
             "nom": "L’histoire",
             "periodicite": "Mensuel",
-            "possedex": {},
+            "possedex": {
+                "classement": "",
+                "decodex": 0,
+                "desc": "",
+                "nom": "L'Histoire",
+                "pub": "",
+                "slug": "l-histoire",
+                "sources": "",
+                "subventions": "",
+                "updated": "2020-08-09 08:54"
+            },
             "possessions": [],
             "slug": "l-histoire",
             "type": 3,
             "typeLibelle": "Média",
             "type_media": "GPE",
-            "urls": []
+            "urls": [
+                "lhistoire.fr"
+            ]
         },
         "5": {
             "challenges": "",
@@ -179,7 +191,8 @@
             "periodicite": "Mensuel",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Une revue mensuelle de vulgarisation historique.",
                 "nom": "Historia",
                 "pub": "",
                 "slug": "historia",
@@ -216,7 +229,8 @@
             "periodicite": "Hebdomadaire",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un magazine hebdomadaire économique.",
                 "nom": "Challenges",
                 "pub": "",
                 "slug": "challenges",
@@ -275,13 +289,25 @@
             "id": 8,
             "nom": "L’Opinion",
             "periodicite": "Quotidien",
-            "possedex": {},
+            "possedex": {
+                "classement": "capital",
+                "decodex": 4,
+                "desc": "Un quotidien et site Internet d'information généraliste qui se présente comme libéral et européen.",
+                "nom": "L'Opinion",
+                "pub": "",
+                "slug": "l-opinion",
+                "sources": "[La carte des médias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)",
+                "subventions": "87.5 K€",
+                "updated": "2017-03-31 00:00"
+            },
             "possessions": [],
             "slug": "l-opinion",
             "type": 3,
             "typeLibelle": "Média",
             "type_media": "GPE",
-            "urls": []
+            "urls": [
+                "lopinion.fr"
+            ]
         },
         "9": {
             "challenges": "",
@@ -667,13 +693,27 @@
             "id": 16,
             "nom": "L’Obs",
             "periodicite": "Hebdomadaire",
-            "possedex": {},
+            "possedex": {
+                "classement": "capital",
+                "decodex": 0,
+                "desc": "",
+                "nom": "L'OBS",
+                "pub": "",
+                "slug": "l-obs",
+                "sources": "[La carte des médias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)",
+                "subventions": "390 k€",
+                "updated": "2017-03-31 00:00"
+            },
             "possessions": [],
             "slug": "l-obs",
             "type": 3,
             "typeLibelle": "Média",
             "type_media": "GPE",
-            "urls": []
+            "urls": [
+                "tempsreel.nouvelobs.com",
+                "www.nouvelobs.com",
+                "nouvelobs.com"
+            ]
         },
         "17": {
             "challenges": "",
@@ -696,6 +736,7 @@
             "periodicite": "Mensuel",
             "possedex": {
                 "classement": "capital",
+                "decodex": 0,
                 "desc": "",
                 "nom": "Prier",
                 "pub": "",
@@ -762,7 +803,8 @@
             "periodicite": "Hebdomadaire",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un quotidien et site Internet d'information généraliste. Le groupe est détenu majoritairement par les hommes d'affaires Xavier Niel et Matthieu Pigasse.",
                 "nom": "Le Monde",
                 "pub": "",
                 "slug": "le-monde",
@@ -800,7 +842,8 @@
             "periodicite": "Mensuel",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un hebdomadaire culturel qui appartient au groupe Le Monde.",
                 "nom": "Télérama",
                 "pub": "",
                 "slug": "telerama",
@@ -838,7 +881,8 @@
             "periodicite": "Hebdomadaire",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un hebdomadaire d'actualité centré principalement sur les informations internationales, qui reprend de nombreux articles traduits de la presse étrangère, propriété du groupe Le Monde.",
                 "nom": "Courrier international",
                 "pub": "",
                 "slug": "courrier-international",
@@ -876,6 +920,7 @@
             "periodicite": "Mensuel",
             "possedex": {
                 "classement": "capital",
+                "decodex": 0,
                 "desc": "",
                 "nom": "Le Monde des Religions",
                 "pub": "",
@@ -914,7 +959,8 @@
             "periodicite": "Hebdomadaire",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un hebdomadaire catholique français qui fait partie du groupe Le Monde.",
                 "nom": "La vie",
                 "pub": "",
                 "slug": "la-vie",
@@ -962,7 +1008,8 @@
             "periodicite": "Mensuel",
             "possedex": {
                 "classement": "independant",
-                "desc": "L'indépendance du Monde diplomatique est garantie par ses statuts qui stipulent que son directeur ne peut être désigné que sur proposition de l’association Gunter Holzmann. Ce sont donc les personnels du journal qui élisent leur directeur, actuellement Serge Halimi depuis mars 2008. Ainsi associés, lecteurs et salariés font la singularité du Monde diplomatique et protègent sa liberté d’informer.",
+                "decodex": 4,
+                "desc": "Un journal mensuel français d'information et d'opinion, marqué à gauche.",
                 "nom": "Le Monde diplomatique",
                 "pub": "",
                 "slug": "le-monde-diplomatique",
@@ -1010,6 +1057,7 @@
             "periodicite": "Bimestriel",
             "possedex": {
                 "classement": "independant",
+                "decodex": 0,
                 "desc": "",
                 "nom": "Manière de voir",
                 "pub": "",
@@ -1169,7 +1217,8 @@
             "periodicite": "Hebdomadaire",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "« Les Inrockuptibles », ou « Les Inrocks », est un hebdomadaire culturel et généraliste politique français, propriété du milliardaire Matthieu Pigasse (également actionnaire à titre personnel du Monde).",
                 "nom": "Les inrockuptibles",
                 "pub": "",
                 "slug": "les-inrockuptibles",
@@ -1407,7 +1456,8 @@
             "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un quotidien et site Internet d'information généraliste qui appartient à l'industriel Serge Dassault, classé politiquement à droite.",
                 "nom": "Le Figaro",
                 "pub": "",
                 "slug": "le-figaro",
@@ -1473,6 +1523,7 @@
             "periodicite": "Mesuel",
             "possedex": {
                 "classement": "capital",
+                "decodex": 0,
                 "desc": "",
                 "nom": "Le Particulier",
                 "pub": "",
@@ -1633,7 +1684,8 @@
             "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un quotidien et site Internet d'information généraliste détenu par le groupe de luxe LVMH, dirigé par le milliardaire Bernard Arnault.",
                 "nom": "Le Parisien",
                 "pub": "",
                 "slug": "le-parisien",
@@ -1694,13 +1746,25 @@
             "id": 46,
             "nom": "Le Parisien économie",
             "periodicite": "Hebdomadaire",
-            "possedex": {},
+            "possedex": {
+                "classement": "capital",
+                "decodex": 0,
+                "desc": "",
+                "nom": "Le Parisien Economie",
+                "pub": "",
+                "slug": "le-parisien-economie",
+                "sources": "[La carte des médias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)",
+                "subventions": "",
+                "updated": "2017-03-31 00:00"
+            },
             "possessions": [],
             "slug": "le-parisien-economie",
             "type": 3,
             "typeLibelle": "Média",
             "type_media": "GPE",
-            "urls": []
+            "urls": [
+                "leparisien.fr/economie"
+            ]
         },
         "47": {
             "challenges": "",
@@ -1810,6 +1874,7 @@
             "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
+                "decodex": 0,
                 "desc": "",
                 "nom": "Les Échos",
                 "pub": "Oui",
@@ -1850,6 +1915,7 @@
             "periodicite": "Hebdomadaire",
             "possedex": {
                 "classement": "capital",
+                "decodex": 0,
                 "desc": "",
                 "nom": "Investir",
                 "pub": "",
@@ -1939,6 +2005,7 @@
             "periodicite": "National",
             "possedex": {
                 "classement": "capital",
+                "decodex": 0,
                 "desc": "",
                 "nom": "Radio Classique",
                 "pub": "",
@@ -2148,13 +2215,25 @@
             "id": 59,
             "nom": "L’Express",
             "periodicite": "Hebdomadaire",
-            "possedex": {},
+            "possedex": {
+                "classement": "capital",
+                "decodex": 4,
+                "desc": "Un hebdomadaire français d'actualité généraliste, propriété du milliardaire Patrick Drahi depuis 2015, via le groupe SFR Médias.",
+                "nom": "L'Express",
+                "pub": "",
+                "slug": "l-express",
+                "sources": "[La carte des médias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)",
+                "subventions": "373 k€",
+                "updated": "2017-03-31 00:00"
+            },
             "possessions": [],
             "slug": "l-express",
             "type": 3,
             "typeLibelle": "Média",
             "type_media": "GPE",
-            "urls": []
+            "urls": [
+                "lexpress.fr"
+            ]
         },
         "60": {
             "challenges": "",
@@ -2176,7 +2255,8 @@
             "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un quotidien et site Internet d'information généraliste, classé politiquement à gauche. Il appartient au groupe SFR Médias du milliardaire Patrick Drahi depuis 2014.",
                 "nom": "Libération",
                 "pub": "",
                 "slug": "liberation",
@@ -2275,7 +2355,8 @@
             "periodicite": "",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Chaîne de télévision d'information en continu, propriété du groupe NextRadio TV.",
                 "nom": "BFM TV",
                 "pub": "Oui",
                 "slug": "bfm-tv",
@@ -2407,13 +2488,25 @@
             "id": 66,
             "nom": "Numéro 23",
             "periodicite": "",
-            "possedex": {},
+            "possedex": {
+                "classement": "capital",
+                "decodex": 4,
+                "desc": "Une station de radio privée française propriété du groupe NextRadio TV.",
+                "nom": "Numero 23",
+                "pub": "",
+                "slug": "numero-23",
+                "sources": "[La carte des médias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)",
+                "subventions": "",
+                "updated": "2017-03-31 00:00"
+            },
             "possessions": [],
             "slug": "numero-23",
             "type": 3,
             "typeLibelle": "Média",
             "type_media": "Télévision",
-            "urls": []
+            "urls": [
+                "bfmbusiness.bfmtv.com"
+            ]
         },
         "67": {
             "challenges": "389",
@@ -2614,7 +2707,8 @@
             "periodicite": "Hebdomaire",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un hebdomadaire d'actualité et d'images, propriété du groupe Lagardère.",
                 "nom": "Paris Match",
                 "pub": "",
                 "slug": "paris-match",
@@ -2649,6 +2743,7 @@
             "periodicite": "",
             "possedex": {
                 "classement": "capital",
+                "decodex": 0,
                 "desc": "",
                 "nom": "Gulli",
                 "pub": "Oui",
@@ -2689,7 +2784,8 @@
             "periodicite": "",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Radio généraliste privée, propriété du groupe Lagardère.",
                 "nom": "Europe 1",
                 "pub": "Oui",
                 "slug": "europe-1",
@@ -2726,6 +2822,7 @@
             "periodicite": "",
             "possedex": {
                 "classement": "capital",
+                "decodex": 0,
                 "desc": "",
                 "nom": "RFM",
                 "pub": "Oui",
@@ -2763,6 +2860,7 @@
             "periodicite": "",
             "possedex": {
                 "classement": "capital",
+                "decodex": 0,
                 "desc": "",
                 "nom": "Virgin Radio",
                 "pub": "",
@@ -2995,13 +3093,25 @@
             "id": 82,
             "nom": "Canal +",
             "periodicite": "",
-            "possedex": {},
+            "possedex": {
+                "classement": "capital",
+                "decodex": 4,
+                "desc": "Chaîne de télévision généraliste privée et en partie payante, principalement axée sur le cinéma et le sport. Le groupe Canal + est une filiale du groupe Vivendi, dirigé par Vincent Bolloré.",
+                "nom": "Canal+",
+                "pub": "Oui",
+                "slug": "canal-",
+                "sources": "[La carte des médias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)",
+                "subventions": "",
+                "updated": "2017-03-31 00:00"
+            },
             "possessions": [],
             "slug": "canal-",
             "type": 3,
             "typeLibelle": "Média",
             "type_media": "Télévision",
-            "urls": []
+            "urls": [
+                "canalplus.fr"
+            ]
         },
         "83": {
             "challenges": "",
@@ -3025,6 +3135,7 @@
             "periodicite": "",
             "possedex": {
                 "classement": "capital",
+                "decodex": 0,
                 "desc": "",
                 "nom": "C8",
                 "pub": "Oui",
@@ -3206,7 +3317,8 @@
             "periodicite": "Hebdomadaire",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 3,
+                "desc": "Un hebdomadaire d'information généraliste positionné politiquement à droite. Le magazine a été condamné pour provocation à la haine raciale envers les Roms en 2015 après sa couverture « Roms : l'overdose ». Le site Internet et le journal mentionnent clairement leurs sources et publient des informations vérifiées mais certaines enquêtes ou reprises d'autres médias sont à prendre avec précaution.",
                 "nom": "Valeurs Actuelles",
                 "pub": "",
                 "slug": "valeurs-actuelles",
@@ -3381,7 +3493,8 @@
             "periodicite": "Hebdomadaire",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un hebdomadaire d'actualité généraliste.",
                 "nom": "Marianne",
                 "pub": "",
                 "slug": "marianne",
@@ -3562,7 +3675,8 @@
             "periodicite": "Hebdomadaire",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un hebdomadaire d'actualité généraliste classé à droite. Le titre appartient au milliardaire François Pinault via la holding Artémis.",
                 "nom": "Le Point",
                 "pub": "",
                 "slug": "le-point",
@@ -3595,13 +3709,25 @@
             "id": 101,
             "nom": "L’Agefi hebdo",
             "periodicite": "Hebdomadaire",
-            "possedex": {},
+            "possedex": {
+                "classement": "capital",
+                "decodex": 0,
+                "desc": "",
+                "nom": "L'AGEFI Hebdo",
+                "pub": "",
+                "slug": "l-agefi-hebdo",
+                "sources": "[La carte des médias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)",
+                "subventions": "",
+                "updated": "2017-03-31 00:00"
+            },
             "possessions": [],
             "slug": "l-agefi-hebdo",
             "type": 3,
             "typeLibelle": "Média",
             "type_media": "GPE",
-            "urls": []
+            "urls": [
+                "agefi.fr"
+            ]
         },
         "102": {
             "challenges": "",
@@ -3793,7 +3919,8 @@
             "periodicite": "Mensuel",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un magazine mensuel qui traite l'actualité économique.",
                 "nom": "Capital",
                 "pub": "",
                 "slug": "capital",
@@ -3865,6 +3992,7 @@
             "periodicite": "Bimestriel",
             "possedex": {
                 "classement": "capital",
+                "decodex": 0,
                 "desc": "",
                 "nom": "Harvard Business Review",
                 "pub": "",
@@ -3981,6 +4109,7 @@
             "periodicite": "",
             "possedex": {
                 "classement": "capital",
+                "decodex": 0,
                 "desc": "",
                 "nom": "M6",
                 "pub": "Oui",
@@ -4019,6 +4148,7 @@
             "periodicite": "",
             "possedex": {
                 "classement": "capital",
+                "decodex": 0,
                 "desc": "",
                 "nom": "W9",
                 "pub": "Oui",
@@ -4057,6 +4187,7 @@
             "periodicite": "",
             "possedex": {
                 "classement": "capital",
+                "decodex": 0,
                 "desc": "",
                 "nom": "6ter",
                 "pub": "",
@@ -4095,7 +4226,8 @@
             "periodicite": "National",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Radio publique généraliste privée.",
                 "nom": "RTL",
                 "pub": "",
                 "slug": "rtl",
@@ -4133,6 +4265,7 @@
             "periodicite": "National",
             "possedex": {
                 "classement": "capital",
+                "decodex": 0,
                 "desc": "",
                 "nom": "RTL2",
                 "pub": "",
@@ -4171,6 +4304,7 @@
             "periodicite": "National",
             "possedex": {
                 "classement": "capital",
+                "decodex": 0,
                 "desc": "",
                 "nom": "Fun radio",
                 "pub": "",
@@ -4272,6 +4406,7 @@
             "periodicite": "Mensuel",
             "possedex": {
                 "classement": "capital",
+                "decodex": 0,
                 "desc": "",
                 "nom": "VSD",
                 "pub": "",
@@ -4433,7 +4568,8 @@
             "periodicite": "",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Chaîne de télévision généraliste, propriété du groupe TF1, dont l'actionnaire principal est le groupe Bouygues.",
                 "nom": "TF1",
                 "pub": "Oui",
                 "slug": "tf1",
@@ -4500,7 +4636,8 @@
             "periodicite": "",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Chaîne de télévision d'information en continu, propriété du groupe TF1.",
                 "nom": "LCI",
                 "pub": "Oui",
                 "slug": "lci",
@@ -4565,6 +4702,7 @@
             "periodicite": "",
             "possedex": {
                 "classement": "capital",
+                "decodex": 0,
                 "desc": "",
                 "nom": "TMC",
                 "pub": "Oui",
@@ -4719,7 +4857,8 @@
             "periodicite": "",
             "possedex": {
                 "classement": "",
-                "desc": "",
+                "decodex": 4,
+                "desc": "La chaîne de télévision de l'Assemblée nationale française.",
                 "nom": "La Chaîne Parlementaire",
                 "pub": "",
                 "slug": "la-chaine-parlementaire",
@@ -4754,6 +4893,7 @@
             "periodicite": "",
             "possedex": {
                 "classement": "etat",
+                "decodex": 0,
                 "desc": "",
                 "nom": "Public Sénat",
                 "pub": "",
@@ -4894,6 +5034,7 @@
             "periodicite": "",
             "possedex": {
                 "classement": "etat",
+                "decodex": 0,
                 "desc": "",
                 "fortunes": [
                     "PIB par habitant :  40 049€",
@@ -5092,6 +5233,7 @@
             "periodicite": "",
             "possedex": {
                 "classement": "",
+                "decodex": 0,
                 "desc": "",
                 "nom": "TV5 Monde",
                 "pub": "",
@@ -5127,7 +5269,8 @@
             "periodicite": "",
             "possedex": {
                 "classement": "etat",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Chaîne de télévision publique généraliste française.",
                 "nom": "France 2",
                 "pub": "Oui",
                 "slug": "france-2",
@@ -5164,7 +5307,8 @@
             "periodicite": "",
             "possedex": {
                 "classement": "etat",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Chaîne de télévision publique généraliste française à vocation régionale.",
                 "nom": "France 3",
                 "pub": "Oui",
                 "slug": "france-3",
@@ -5199,7 +5343,8 @@
             "periodicite": "",
             "possedex": {
                 "classement": "etat",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Chaîne de télévision publique généraliste française.",
                 "nom": "France 5",
                 "pub": "",
                 "slug": "france-5",
@@ -5234,6 +5379,7 @@
             "periodicite": "",
             "possedex": {
                 "classement": "etat",
+                "decodex": 0,
                 "desc": "",
                 "nom": "France 4",
                 "pub": "",
@@ -5269,6 +5415,7 @@
             "periodicite": "",
             "possedex": {
                 "classement": "etat",
+                "decodex": 0,
                 "desc": "",
                 "nom": "France Ô",
                 "pub": "",
@@ -5304,7 +5451,8 @@
             "periodicite": "",
             "possedex": {
                 "classement": "etat",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Radio publique généraliste.",
                 "nom": "France Inter",
                 "pub": "Oui",
                 "slug": "france-inter",
@@ -5339,6 +5487,7 @@
             "periodicite": "",
             "possedex": {
                 "classement": "etat",
+                "decodex": 0,
                 "desc": "",
                 "nom": "France Musique",
                 "pub": "",
@@ -5374,7 +5523,8 @@
             "periodicite": "",
             "possedex": {
                 "classement": "etat",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Radio publique culturelle et de débats.",
                 "nom": "France Culture",
                 "pub": "",
                 "slug": "france-culture",
@@ -5409,6 +5559,7 @@
             "periodicite": "",
             "possedex": {
                 "classement": "etat",
+                "decodex": 0,
                 "desc": "",
                 "nom": "FIP",
                 "pub": "",
@@ -5444,7 +5595,8 @@
             "periodicite": "",
             "possedex": {
                 "classement": "etat",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Réseau de radio publique d'information locale déclinée en 45 radios de proximité.",
                 "nom": "France Bleu",
                 "pub": "Oui",
                 "slug": "france-bleu",
@@ -5542,6 +5694,7 @@
             "periodicite": "",
             "possedex": {
                 "classement": "etat",
+                "decodex": 0,
                 "desc": "",
                 "nom": "Arte",
                 "pub": "",
@@ -5631,7 +5784,12 @@
             "id": 157,
             "nom": "Les Augustins de l’Assomption",
             "periodicite": "",
-            "possedex": {},
+            "possedex": {
+                "activite": "",
+                "desc": "",
+                "fortune": "Sans information",
+                "marque": ""
+            },
             "possessions": [
                 {
                     "nom": "Bayard",
@@ -5703,7 +5861,8 @@
             "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un quotidien et site Internet catholique d'information généraliste qui appartient à Bayard Presse.",
                 "nom": "La Croix",
                 "pub": "",
                 "slug": "la-croix",
@@ -5736,13 +5895,25 @@
             "id": 160,
             "nom": "Pèlerin",
             "periodicite": "Hebdomadaire",
-            "possedex": {},
+            "possedex": {
+                "classement": "capital",
+                "decodex": 4,
+                "desc": "Un hebdomadaire catholique français.",
+                "nom": "Pélerin",
+                "pub": "",
+                "slug": "pelerin",
+                "sources": "[La carte des médias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)",
+                "subventions": "251 k€",
+                "updated": "2017-03-31 00:00"
+            },
             "possessions": [],
             "slug": "pelerin",
             "type": 3,
             "typeLibelle": "Média",
             "type_media": "GPE",
-            "urls": []
+            "urls": [
+                "pelerin.com"
+            ]
         },
         "161": {
             "challenges": "",
@@ -5762,7 +5933,8 @@
             "periodicite": "Mensuel",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un mensuel français qui s'adresse aux seniors et parle de retraite, de santé ou encore de voyages.",
                 "nom": "Notre Temps",
                 "pub": "",
                 "slug": "notre-temps",
@@ -5916,6 +6088,7 @@
             "periodicite": "",
             "possedex": {
                 "classement": "capital",
+                "decodex": 0,
                 "desc": "",
                 "nom": "Chérie 25",
                 "pub": "",
@@ -5953,6 +6126,7 @@
             "periodicite": "",
             "possedex": {
                 "classement": "capital",
+                "decodex": 0,
                 "desc": "",
                 "nom": "NRJ",
                 "pub": "",
@@ -5990,6 +6164,7 @@
             "periodicite": "",
             "possedex": {
                 "classement": "capital",
+                "decodex": 0,
                 "desc": "",
                 "nom": "Rire et Chansons",
                 "pub": "Oui",
@@ -6027,6 +6202,7 @@
             "periodicite": "",
             "possedex": {
                 "classement": "capital",
+                "decodex": 0,
                 "desc": "",
                 "nom": "Chérie FM",
                 "pub": "Oui",
@@ -6280,7 +6456,8 @@
             "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un quotidien régional et son site Internet qui appartiennent au groupe SIPA - Ouest-France.",
                 "nom": "Ouest France",
                 "pub": "",
                 "slug": "ouest-france",
@@ -6316,13 +6493,25 @@
             "id": 176,
             "nom": "Le Courrier de l’Ouest",
             "periodicite": "Quotidien",
-            "possedex": {},
+            "possedex": {
+                "classement": "capital",
+                "decodex": 4,
+                "desc": "Un quotidien et site Internet régional qui appartient au groupe SIPA - Ouest-France.",
+                "nom": "Le Courrier de l'Ouest",
+                "pub": "",
+                "slug": "le-courrier-de-l-ouest",
+                "sources": "[La carte des médias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)",
+                "subventions": "479 k€",
+                "updated": "2017-03-31 00:00"
+            },
             "possessions": [],
             "slug": "le-courrier-de-l-ouest",
             "type": 3,
             "typeLibelle": "Média",
             "type_media": "Régional",
-            "urls": []
+            "urls": [
+                "courrierdelouest.fr"
+            ]
         },
         "177": {
             "challenges": "",
@@ -6345,7 +6534,8 @@
             "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un quotidien et site Internet régional qui appartient au groupe SIPA - Ouest-France.",
                 "nom": "Le Maine Libre",
                 "pub": "",
                 "slug": "le-maine-libre",
@@ -6381,13 +6571,25 @@
             "id": 178,
             "nom": "Presse-Océan",
             "periodicite": "Quotidien",
-            "possedex": {},
+            "possedex": {
+                "classement": "capital",
+                "decodex": 4,
+                "desc": "Un quotidien régional et site Internet qui appartiennent au groupe SIPA - Ouest-France.",
+                "nom": "Presse Océan",
+                "pub": "",
+                "slug": "presse-ocean",
+                "sources": "[La carte des médias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)",
+                "subventions": "1.3 M€",
+                "updated": "2017-03-31 00:00"
+            },
             "possessions": [],
             "slug": "presse-ocean",
             "type": 3,
             "typeLibelle": "Média",
             "type_media": "Régional",
-            "urls": []
+            "urls": [
+                "presseocean.fr"
+            ]
         },
         "179": {
             "challenges": "",
@@ -6410,7 +6612,8 @@
             "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un quotidien et site Internet régional qui appartiennent au groupe SIPA - Ouest-France.",
                 "nom": "La Presse de la Manche",
                 "pub": "",
                 "slug": "la-presse-de-la-manche",
@@ -6447,6 +6650,7 @@
             "periodicite": "Quotidien et hebdomadaire",
             "possedex": {
                 "classement": "capital",
+                "decodex": 0,
                 "desc": "",
                 "nom": "Publi Hebdos",
                 "pub": "",
@@ -6526,7 +6730,8 @@
             "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un quotidien gratuit et site Internet d'information généraliste qui appartient à Rossel et Sipa-Ouest France depuis 2016.",
                 "nom": "20 minutes",
                 "pub": "",
                 "slug": "20-minutes",
@@ -6830,7 +7035,8 @@
             "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un quotidien et site Internet régional qui appartient au groupe La Voix, filiale du groupe belge Rossel.",
                 "nom": "La Voix du Nord",
                 "pub": "",
                 "slug": "la-voix-du-nord",
@@ -6866,13 +7072,25 @@
             "id": 187,
             "nom": "Nord éclair",
             "periodicite": "Quotidien",
-            "possedex": {},
+            "possedex": {
+                "classement": "capital",
+                "decodex": 4,
+                "desc": "Un quotidien et un site Internet régional qui appartient au groupe La Voix, filiale du groupe belge Rossel.",
+                "nom": "Nord Eclair",
+                "pub": "",
+                "slug": "nord-eclair",
+                "sources": "[La carte des médias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)",
+                "subventions": "49 k€",
+                "updated": "2017-03-31 00:00"
+            },
             "possessions": [],
             "slug": "nord-eclair",
             "type": 3,
             "typeLibelle": "Média",
             "type_media": "Régional",
-            "urls": []
+            "urls": [
+                "nordeclair.fr"
+            ]
         },
         "188": {
             "challenges": "",
@@ -6895,6 +7113,7 @@
             "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
+                "decodex": 0,
                 "desc": "",
                 "nom": "Nord Littoral",
                 "pub": "",
@@ -6933,7 +7152,8 @@
             "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un quotidien et site Internet régional qui appartient au groupe La Voix, filiale du groupe belge Rossel.",
                 "nom": "Courrier Picard",
                 "pub": "",
                 "slug": "courrier-picard",
@@ -7558,13 +7778,25 @@
             "id": 209,
             "nom": "L’Est républicain",
             "periodicite": "Quotidien",
-            "possedex": {},
+            "possedex": {
+                "classement": "capital",
+                "decodex": 4,
+                "desc": "Un quotidien et site Internet régional qui appartient au groupe EBRA.",
+                "nom": "L'Est Républicain",
+                "pub": "",
+                "slug": "l-est-republicain",
+                "sources": "[La carte des médias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)",
+                "subventions": "1.2 M€",
+                "updated": "2017-03-31 00:00"
+            },
             "possessions": [],
             "slug": "l-est-republicain",
             "type": 3,
             "typeLibelle": "Média",
             "type_media": "Régional",
-            "urls": []
+            "urls": [
+                "estrepublicain.fr"
+            ]
         },
         "210": {
             "challenges": "",
@@ -7586,7 +7818,8 @@
             "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un quotidien et site Internet régional qui appartient au groupe BFCM (Banque fédérative du Crédit mutuel).",
                 "nom": "Le Républicain Lorrain",
                 "pub": "",
                 "slug": "le-republicain-lorrain",
@@ -7623,7 +7856,8 @@
             "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un quotidien et site Internet régional qui appartient au groupe BFCM.",
                 "nom": "DNA",
                 "pub": "",
                 "slug": "dna",
@@ -7660,7 +7894,8 @@
             "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un quotidien régional et son site Internet qui appartiennent au groupe EBRA.",
                 "nom": "Vosges Matin",
                 "pub": "",
                 "slug": "vosges-matin",
@@ -7695,13 +7930,25 @@
             "id": 213,
             "nom": "L’Alsace",
             "periodicite": "Quotidien",
-            "possedex": {},
+            "possedex": {
+                "classement": "capital",
+                "decodex": 4,
+                "desc": "Un quotidien et site Internet régional qui appartient au groupe BFCM.",
+                "nom": "L'Alsace",
+                "pub": "",
+                "slug": "l-alsace",
+                "sources": "[La carte des médias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)",
+                "subventions": "274 k€",
+                "updated": "2017-03-31 00:00"
+            },
             "possessions": [],
             "slug": "l-alsace",
             "type": 3,
             "typeLibelle": "Média",
             "type_media": "Régional",
-            "urls": []
+            "urls": [
+                "lalsace.fr"
+            ]
         },
         "214": {
             "challenges": "",
@@ -7723,7 +7970,8 @@
             "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un quotidien et site Internet régional qui appartient au groupe EBRA.",
                 "nom": "Le Bien Public",
                 "pub": "",
                 "slug": "le-bien-public",
@@ -7786,7 +8034,8 @@
             "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un quotidien et site Internet régional qui appartient au groupe EBRA.",
                 "nom": "Le Progrès",
                 "pub": "",
                 "slug": "le-progres",
@@ -7821,13 +8070,25 @@
             "id": 217,
             "nom": "Le Dauphiné libéré",
             "periodicite": "Quotidien",
-            "possedex": {},
+            "possedex": {
+                "classement": "capital",
+                "decodex": 4,
+                "desc": "Un quotidien et site Internet régional qui appartient au groupe EBRA.",
+                "nom": "Le Dauphiné Liberé",
+                "pub": "",
+                "slug": "le-dauphine-libere",
+                "sources": "[La carte des médias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)",
+                "subventions": "1.2 M€",
+                "updated": "2017-03-31 00:00"
+            },
             "possessions": [],
             "slug": "le-dauphine-libere",
             "type": 3,
             "typeLibelle": "Média",
             "type_media": "Régional",
-            "urls": []
+            "urls": [
+                "ledauphine.com"
+            ]
         },
         "218": {
             "challenges": "",
@@ -7873,13 +8134,25 @@
             "id": 219,
             "nom": "Le Journal de la Haute-Marne",
             "periodicite": "Quotidien",
-            "possedex": {},
+            "possedex": {
+                "classement": "capital",
+                "decodex": 4,
+                "desc": "Un quotidien et site Internet régional.",
+                "nom": "Le journal de la Haute Marne",
+                "pub": "",
+                "slug": "le-journal-de-la-haute-marne",
+                "sources": "[La carte des médias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)",
+                "subventions": "1.2 M€",
+                "updated": "2017-03-31 00:00"
+            },
             "possessions": [],
             "slug": "le-journal-de-la-haute-marne",
             "type": 3,
             "typeLibelle": "Média",
             "type_media": "Régional",
-            "urls": []
+            "urls": [
+                "jhm.fr"
+            ]
         },
         "220": {
             "challenges": "",
@@ -8087,7 +8360,8 @@
             "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un quotidien et site Internet régional installé à Clermont-Ferrand et qui appartient au groupe Centre-France.",
                 "nom": "La Montagne",
                 "pub": "",
                 "slug": "la-montagne",
@@ -8124,7 +8398,8 @@
             "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un quotidien et site Internet régional qui appartient au groupe Centre-France.",
                 "nom": "Le populaire du Centre",
                 "pub": "",
                 "slug": "le-populaire-du-centre",
@@ -8161,7 +8436,8 @@
             "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un quotidien et site Internet régional qui appartient au groupe Centre-France.",
                 "nom": "Le Journal du Centre",
                 "pub": "",
                 "slug": "le-journal-du-centre",
@@ -8198,7 +8474,8 @@
             "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un quotidien et site Internet régional qui appartient au groupe Centre-France.",
                 "nom": "Le Berry Républicain",
                 "pub": "",
                 "slug": "le-berry-republicain",
@@ -8233,13 +8510,25 @@
             "id": 227,
             "nom": "L’Yonne Républicaine",
             "periodicite": "Quotidien",
-            "possedex": {},
+            "possedex": {
+                "classement": "capital",
+                "decodex": 4,
+                "desc": "Un quotidien et site Internet régional sis à Auxerre et qui appartiennent au groupe Centre-France.",
+                "nom": "L'Yonne Républicaine",
+                "pub": "",
+                "slug": "l-yonne-republicaine",
+                "sources": "[La carte des médias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)",
+                "subventions": "211 k€",
+                "updated": "2017-03-31 00:00"
+            },
             "possessions": [],
             "slug": "l-yonne-republicaine",
             "type": 3,
             "typeLibelle": "Média",
             "type_media": "Régional",
-            "urls": []
+            "urls": [
+                "lyonne.fr"
+            ]
         },
         "228": {
             "challenges": "",
@@ -8476,7 +8765,8 @@
             "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un quotidien et site Internet régional du Loiret, qui appartient au groupe Centre-France.",
                 "nom": "La République du Centre",
                 "pub": "",
                 "slug": "la-republique-du-centre",
@@ -8597,6 +8887,7 @@
             "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
+                "decodex": 0,
                 "desc": "",
                 "nom": "Centre Presse",
                 "pub": "",
@@ -8634,6 +8925,7 @@
             "periodicite": "",
             "possedex": {
                 "classement": "capital",
+                "decodex": 0,
                 "desc": "",
                 "nom": "TV Tours",
                 "pub": "",
@@ -8798,6 +9090,7 @@
             "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
+                "decodex": 0,
                 "desc": "",
                 "nom": "Le Petit Bleu",
                 "pub": "",
@@ -8836,7 +9129,8 @@
             "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un quotidien et site Internet régional qui appartiennent au groupe La Dépêche.",
                 "nom": "La Nouvelle République des Pyrénées",
                 "pub": "",
                 "slug": "la-nouvelle-republique-des-pyrenees",
@@ -8973,7 +9267,8 @@
             "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un quotidien et site Internet régional qui appartient au groupe La Dépêche.",
                 "nom": "Midi Libre",
                 "pub": "",
                 "slug": "midi-libre",
@@ -9008,13 +9303,25 @@
             "id": 250,
             "nom": "L’Indépendant",
             "periodicite": "Quotidien",
-            "possedex": {},
+            "possedex": {
+                "classement": "capital",
+                "decodex": 4,
+                "desc": "Un quotidien et site Internet régional qui appartient au groupe Sud Ouest.",
+                "nom": "L'Indépendant",
+                "pub": "",
+                "slug": "l-independant",
+                "sources": "[La carte des médias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)",
+                "subventions": "141 k€",
+                "updated": "2017-03-31 00:00"
+            },
             "possessions": [],
             "slug": "l-independant",
             "type": 3,
             "typeLibelle": "Média",
             "type_media": "Régional",
-            "urls": []
+            "urls": [
+                "lindependant.fr"
+            ]
         },
         "251": {
             "challenges": "",
@@ -9036,7 +9343,8 @@
             "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un quotidien et site Internet régional qui appartient au groupe Sud Ouest.",
                 "nom": "Centre Presse Aveyron",
                 "pub": "",
                 "slug": "centre-presse-aveyron",
@@ -9208,7 +9516,8 @@
             "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un quotidien régional et son site Internet qui appartiennent au groupe Sud Ouest.",
                 "nom": "Sud Ouest",
                 "pub": "",
                 "slug": "sud-ouest",
@@ -9273,6 +9582,7 @@
             "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
+                "decodex": 0,
                 "desc": "",
                 "nom": "Dordogne Libre",
                 "pub": "",
@@ -9517,7 +9827,8 @@
             "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un quotidien et site Internet régional.",
                 "nom": "La République Des Pyrénées",
                 "pub": "",
                 "slug": "la-republique-des-pyrenees",
@@ -9553,7 +9864,16 @@
             "id": 265,
             "nom": "L’Eclair",
             "periodicite": "Quotidien",
-            "possedex": {},
+            "possedex": {
+                "classement": "capital",
+                "desc": "",
+                "nom": "L'Eclair",
+                "pub": "",
+                "slug": "l-eclair",
+                "sources": "[La carte des médias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)",
+                "subventions": "",
+                "updated": "2017-03-31 00:00"
+            },
             "possessions": [],
             "slug": "l-eclair",
             "type": 3,
@@ -9571,7 +9891,12 @@
             "id": 266,
             "nom": "Édouard Coudurier",
             "periodicite": "",
-            "possedex": {},
+            "possedex": {
+                "activite": "",
+                "desc": "",
+                "fortune": "Hors classement",
+                "marque": ""
+            },
             "possessions": [
                 {
                     "nom": "Groupe Télégramme",
@@ -9686,7 +10011,8 @@
             "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un quotidien et site Internet régional qui appartient au groupe Télégramme.",
                 "nom": "Le Télégramme",
                 "pub": "",
                 "slug": "le-telegramme",
@@ -9723,6 +10049,7 @@
             "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
+                "decodex": 0,
                 "desc": "",
                 "nom": "Le Poher",
                 "pub": "",
@@ -9760,6 +10087,7 @@
             "periodicite": "",
             "possedex": {
                 "classement": "capital",
+                "decodex": 0,
                 "desc": "",
                 "nom": "Tébéo",
                 "pub": "",
@@ -9797,6 +10125,7 @@
             "periodicite": "",
             "possedex": {
                 "classement": "capital",
+                "decodex": 0,
                 "desc": "",
                 "nom": "Tébésud",
                 "pub": "",
@@ -10098,13 +10427,25 @@
             "id": 281,
             "nom": "Nice-Matin",
             "periodicite": "Quotidien",
-            "possedex": {},
+            "possedex": {
+                "classement": "capital",
+                "decodex": 4,
+                "desc": "Un quotidien et un site Internet régional qui appartient au groupe Nice-Matin.",
+                "nom": "Nice matin",
+                "pub": "",
+                "slug": "nice-matin",
+                "sources": "[La carte des médias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)",
+                "subventions": "502 k€",
+                "updated": "2017-03-31 00:00"
+            },
             "possessions": [],
             "slug": "nice-matin",
             "type": 3,
             "typeLibelle": "Média",
             "type_media": "Régional",
-            "urls": []
+            "urls": [
+                "nicematin.com"
+            ]
         },
         "282": {
             "challenges": "",
@@ -10126,7 +10467,8 @@
             "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un quotidien et site Internet régional qui appartient au groupe La Provence.",
                 "nom": "Corse Matin",
                 "pub": "",
                 "slug": "corse-matin",
@@ -10163,7 +10505,8 @@
             "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un quotidien et site Internet régional qui appartiennent à Bernard Tapie.",
                 "nom": "La Provence",
                 "pub": "",
                 "slug": "la-provence",
@@ -10300,13 +10643,25 @@
             "id": 286,
             "nom": "Paris-Normandie",
             "periodicite": "Quotidien",
-            "possedex": {},
+            "possedex": {
+                "classement": "capital",
+                "decodex": 4,
+                "desc": "Un quotidien régional et site Internet qui appartient à Xavier Ellie.",
+                "nom": "Paris Normandie",
+                "pub": "",
+                "slug": "paris-normandie",
+                "sources": "[La carte des médias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)",
+                "subventions": "88.9 k€",
+                "updated": "2017-03-31 00:00"
+            },
             "possessions": [],
             "slug": "paris-normandie",
             "type": 3,
             "typeLibelle": "Média",
             "type_media": "Régional",
-            "urls": []
+            "urls": [
+                "paris-normandie.fr"
+            ]
         },
         "287": {
             "challenges": "",
@@ -10329,6 +10684,7 @@
             "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
+                "decodex": 0,
                 "desc": "",
                 "nom": "Havre Libre",
                 "pub": "",
@@ -10367,6 +10723,7 @@
             "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
+                "decodex": 0,
                 "desc": "",
                 "nom": "Le Progrès de Fécamp",
                 "pub": "",
@@ -10841,6 +11198,7 @@
             "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
+                "decodex": 0,
                 "desc": "",
                 "nom": "France Antilles",
                 "pub": "",
@@ -11305,7 +11663,8 @@
             "periodicite": "",
             "possedex": {
                 "classement": "capital",
-                "desc": "",
+                "decodex": 4,
+                "desc": "Un journal économique qui appartient majoritairement au groupe Hima.",
                 "nom": "La Tribune",
                 "pub": "",
                 "slug": "la-tribune",
@@ -11574,11 +11933,14 @@
         "20minutes.fr": 182,
         "6play.fr/6ter": 113,
         "6play.fr/w9": 112,
+        "agefi.fr": 101,
         "arte.tv": 154,
         "arte.tv/fr": 154,
+        "bfmbusiness.bfmtv.com": 66,
         "bfmtv.com": 62,
         "bienpublic.com": 214,
         "c8.fr": 83,
+        "canalplus.fr": 82,
         "capital.fr": 107,
         "centre-presse.fr": 239,
         "centrepresseaveyron.fr": 251,
@@ -11586,9 +11948,11 @@
         "cheriefm.fr": 168,
         "corsematin.com": 282,
         "courrier-picard.fr": 189,
+        "courrierdelouest.fr": 176,
         "courrierinternational.com": 21,
         "dna.fr": 211,
         "dordognelibre.fr": 256,
+        "estrepublicain.fr": 209,
         "europe1.fr": 74,
         "facebook.com/france2": 141,
         "facebook.com/gulli": 73,
@@ -11611,7 +11975,9 @@
         "hbrfrance.fr": 109,
         "historia.fr": 5,
         "investir.lesechos.fr": 50,
+        "jhm.fr": 219,
         "la-croix.com": 159,
+        "lalsace.fr": 213,
         "lamontagne.fr": 223,
         "lapressedelamanche.fr": 179,
         "laprovence.com": 283,
@@ -11623,12 +11989,14 @@
         "lci.fr": 125,
         "lcp.fr": 131,
         "leberry.fr": 226,
+        "ledauphine.com": 217,
         "lefigaro.fr": 38,
         "lejdc.fr": 225,
         "lemainelibre.fr": 177,
         "lemonde.fr": 19,
         "lemondedesreligions.fr": 22,
         "leparisien.fr": 44,
+        "leparisien.fr/economie": 46,
         "leparticulier.fr": 40,
         "lepoint.fr": 100,
         "lepopulaire.fr": 224,
@@ -11636,24 +12004,35 @@
         "lesechos.fr": 49,
         "lesinrocks.com": 31,
         "letelegramme.fr": 268,
+        "lexpress.fr": 59,
+        "lhistoire.fr": 4,
         "liberation.fr": 60,
+        "lindependant.fr": 250,
+        "lopinion.fr": 8,
+        "lyonne.fr": 227,
         "m6.fr": 111,
         "magazine-prier.fr": 17,
         "marianne.net": 94,
         "midilibre.fr": 249,
         "monde-diplomatique.fr": 24,
         "monde-diplomatique.fr/mav": 25,
+        "nicematin.com": 281,
+        "nordeclair.fr": 187,
         "nordlittoral.fr": 188,
         "notretemps.com": 161,
+        "nouvelobs.com": 16,
         "nrj-play.fr/cherie25": 165,
         "nrj.fr": 166,
         "nrpyrenees.fr": 245,
         "ouest-france.fr": 175,
+        "paris-normandie.fr": 286,
         "paris-normandie.fr/fecamp": 288,
         "paris-normandie.fr/le-havre": 287,
         "parismatch.com": 72,
+        "pelerin.com": 160,
         "petitbleu.fr": 244,
         "poher.bzh": 269,
+        "presseocean.fr": 178,
         "prier.presse.fr": 17,
         "publicsenat.fr": 132,
         "publihebdos.com": 180,
@@ -11668,6 +12047,7 @@
         "tebeo.bzh": 270,
         "tebesud.fr": 271,
         "telerama.fr": 20,
+        "tempsreel.nouvelobs.com": 16,
         "tf1.fr": 123,
         "tf1.fr/tmc": 127,
         "tv5monde.com/‎": 140,
@@ -11680,6 +12060,7 @@
         "vsd.fr": 119,
         "www.arte.tv": 154,
         "www.lesechos.fr": 49,
+        "www.nouvelobs.com": 16,
         "youtube.com/user/gulli": 73
     }
 }
