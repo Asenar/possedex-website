@@ -117,6 +117,9 @@ export default class SearchForm extends React.Component{
     }
 
     handleClickSearch(search) {
+        this.setState({search}, () => {
+            return this.doSearch();
+        });
         // todo: setState
     }
 
