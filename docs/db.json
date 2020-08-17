@@ -23,7 +23,7 @@
                     "valeur": "53"
                 },
                 {
-                    "nom": "Groupe L’Opinon",
+                    "nom": "Groupe L’Opinion",
                     "source": [
                         "challenges.fr"
                     ],
@@ -279,7 +279,7 @@
             "echelle": "",
             "est_possede": [
                 {
-                    "nom": "Groupe L’Opinon",
+                    "nom": "Groupe L’Opinion",
                     "source": [],
                     "valeur": "100"
                 }
@@ -1630,7 +1630,7 @@
                     "valeur": "100"
                 },
                 {
-                    "nom": "Groupe L’Opinon",
+                    "nom": "Groupe L’Opinion",
                     "source": [
                         "challenges.fr"
                     ],
@@ -2041,7 +2041,7 @@
             },
             "possessions": [
                 {
-                    "nom": "Groupe L’Opinon",
+                    "nom": "Groupe L’Opinion",
                     "source": [
                         "challenges.fr"
                     ],
@@ -2067,7 +2067,7 @@
             "possedex": {},
             "possessions": [
                 {
-                    "nom": "Groupe L’Opinon",
+                    "nom": "Groupe L’Opinion",
                     "source": [
                         "challenges.fr"
                     ],
@@ -3699,7 +3699,7 @@
             "echelle": "",
             "est_possede": [
                 {
-                    "nom": "Groupe L’Opinon",
+                    "nom": "Groupe L’Opinion",
                     "source": [],
                     "valeur": "100"
                 }
@@ -11856,7 +11856,7 @@
             "forbes": "",
             "fortune": "",
             "id": 325,
-            "nom": "Groupe L’Opinon",
+            "nom": "Groupe L’Opinion",
             "periodicite": "",
             "possedex": {},
             "possessions": [
@@ -11871,7 +11871,7 @@
                     "valeur": "100"
                 }
             ],
-            "slug": "groupe-l-opinon",
+            "slug": "groupe-l-opinion",
             "type": 2,
             "typeLibelle": "Personne morale",
             "type_media": "",
@@ -11890,7 +11890,7 @@
             "possedex": {},
             "possessions": [
                 {
-                    "nom": "Groupe L’Opinon",
+                    "nom": "Groupe L’Opinion",
                     "source": [],
                     "valeur": "participe"
                 }
