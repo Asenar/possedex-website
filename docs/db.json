@@ -4789,9 +4789,14 @@
             "forbes": "",
             "fortune": "",
             "id": 129,
-            "nom": "Länder de République fédérale d’Allemagne",
+            "nom": "République fédérale d’Allemagne",
             "periodicite": "",
-            "possedex": {},
+            "possedex": {
+                "activite": "",
+                "desc": "",
+                "fortune": "PIB par habitant :  43 597€",
+                "marque": ""
+            },
             "possessions": [
                 {
                     "nom": "ARD / ZDF",
@@ -4799,7 +4804,7 @@
                     "valeur": "contrôle"
                 }
             ],
-            "slug": "lander-de-republique-federale-d-allemagne",
+            "slug": "republique-federale-d-allemagne",
             "type": 4,
             "typeLibelle": "État",
             "type_media": "",
@@ -5720,7 +5725,7 @@
             "echelle": "",
             "est_possede": [
                 {
-                    "nom": "Länder de République fédérale d’Allemagne",
+                    "nom": "République fédérale d’Allemagne",
                     "source": [],
                     "valeur": "contrôle"
                 }
@@ -5735,7 +5740,7 @@
                 {
                     "nom": "Arte Deutschland TV GmbH",
                     "source": [],
-                    "valeur": "50"
+                    "valeur": "100"
                 }
             ],
             "slug": "ard-zdf",
@@ -5752,7 +5757,7 @@
                 {
                     "nom": "ARD / ZDF",
                     "source": [],
-                    "valeur": "50"
+                    "valeur": "100"
                 }
             ],
             "forbes": "",
