@@ -1077,7 +1077,7 @@
         },
         "26": {
             "challenges": "",
-            "commentaire": "Pure player",
+            "commentaire": "",
             "echelle": "",
             "est_possede": [
                 {
@@ -1237,7 +1237,7 @@
         },
         "32": {
             "challenges": "",
-            "commentaire": "Pure player",
+            "commentaire": "",
             "echelle": "",
             "est_possede": [
                 {
@@ -3075,7 +3075,7 @@
         },
         "82": {
             "challenges": "",
-            "commentaire": "Semi-payant",
+            "commentaire": "Payant",
             "echelle": "",
             "est_possede": [
                 {
@@ -5259,7 +5259,7 @@
         "141": {
             "challenges": "",
             "commentaire": "Gratuit",
-            "echelle": "",
+            "echelle": "National",
             "est_possede": [
                 {
                     "nom": "France Télévision",
@@ -5297,7 +5297,7 @@
         "142": {
             "challenges": "",
             "commentaire": "Gratuit",
-            "echelle": "",
+            "echelle": "National",
             "est_possede": [
                 {
                     "nom": "France Télévision",
@@ -5333,7 +5333,7 @@
         "143": {
             "challenges": "",
             "commentaire": "Gratuit",
-            "echelle": "",
+            "echelle": "National",
             "est_possede": [
                 {
                     "nom": "France Télévision",
@@ -5369,7 +5369,7 @@
         "144": {
             "challenges": "",
             "commentaire": "Gratuit",
-            "echelle": "",
+            "echelle": "National",
             "est_possede": [
                 {
                     "nom": "France Télévision",
@@ -5405,7 +5405,7 @@
         "145": {
             "challenges": "",
             "commentaire": "Gratuit",
-            "echelle": "",
+            "echelle": "National",
             "est_possede": [
                 {
                     "nom": "France Télévision",
@@ -5679,7 +5679,7 @@
         "154": {
             "challenges": "",
             "commentaire": "Gratuit",
-            "echelle": "",
+            "echelle": "Europe",
             "est_possede": [
                 {
                     "nom": "Arte France",
@@ -6474,7 +6474,7 @@
             "slug": "ouest-france",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "ouest-france.fr"
             ]
@@ -6513,7 +6513,7 @@
             "slug": "le-courrier-de-l-ouest",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "courrierdelouest.fr"
             ]
@@ -6552,7 +6552,7 @@
             "slug": "le-maine-libre",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "lemainelibre.fr"
             ]
@@ -6591,7 +6591,7 @@
             "slug": "presse-ocean",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "presseocean.fr"
             ]
@@ -6630,7 +6630,7 @@
             "slug": "la-presse-de-la-manche",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "lapressedelamanche.fr"
             ]
@@ -6638,7 +6638,7 @@
         "180": {
             "challenges": "",
             "commentaire": "",
-            "echelle": "Régional",
+            "echelle": "",
             "est_possede": [
                 {
                     "nom": "Groupe SIPA - Ouest",
@@ -6652,11 +6652,26 @@
             "fortune": "",
             "id": 180,
             "nom": "Publi Hebdos",
-            "periodicite": "Quotidien et hebdomadaire",
+            "periodicite": "",
             "possedex": {
                 "classement": "capital",
                 "decodex": 0,
                 "desc": "",
+                "fortunes": [
+                    "Hors classement",
+                    "",
+                    ""
+                ],
+                "influences": [
+                    "",
+                    "",
+                    ""
+                ],
+                "marques": [
+                    "",
+                    "",
+                    ""
+                ],
                 "nom": "Publi Hebdos",
                 "pub": "",
                 "slug": "publi-hebdos",
@@ -6666,9 +6681,9 @@
             },
             "possessions": [],
             "slug": "publi-hebdos",
-            "type": 3,
-            "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type": 2,
+            "typeLibelle": "Personne morale",
+            "type_media": "",
             "urls": [
                 "publihebdos.com"
             ]
@@ -7053,7 +7068,7 @@
             "slug": "la-voix-du-nord",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "lavoixdunord.fr"
             ]
@@ -7092,7 +7107,7 @@
             "slug": "nord-eclair",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "nordeclair.fr"
             ]
@@ -7131,7 +7146,7 @@
             "slug": "nord-littoral",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "nordlittoral.fr"
             ]
@@ -7170,7 +7185,7 @@
             "slug": "courrier-picard",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "courrier-picard.fr"
             ]
@@ -7199,7 +7214,7 @@
             "slug": "l-aisne-nouvelle",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "191": {
@@ -7226,7 +7241,7 @@
             "slug": "l-union-l-ardennais",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "192": {
@@ -7253,7 +7268,7 @@
             "slug": "l-est-eclair-liberation-champagne",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "193": {
@@ -7280,7 +7295,7 @@
             "slug": "l-avenir-de-l-artois",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "194": {
@@ -7307,7 +7322,7 @@
             "slug": "les-echos-du-touquet",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "195": {
@@ -7334,7 +7349,7 @@
             "slug": "le-journal-des-flandres",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "196": {
@@ -7361,7 +7376,7 @@
             "slug": "le-messager",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "197": {
@@ -7388,7 +7403,7 @@
             "slug": "l-essor-savoyard",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "198": {
@@ -7415,7 +7430,7 @@
             "slug": "le-pays-gessien",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "199": {
@@ -7442,7 +7457,7 @@
             "slug": "la-tribune-republicaine",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "200": {
@@ -7469,7 +7484,7 @@
             "slug": "la-savoie",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "201": {
@@ -7496,7 +7511,7 @@
             "slug": "le-phare-dunkerquois",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "202": {
@@ -7523,7 +7538,7 @@
             "slug": "la-semaine-dans-le-boulonnais",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "203": {
@@ -7550,7 +7565,7 @@
             "slug": "le-reveil-de-berck",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "204": {
@@ -7577,7 +7592,7 @@
             "slug": "le-journal-de-montreuil",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "205": {
@@ -7604,7 +7619,7 @@
             "slug": "l-indicateur",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "206": {
@@ -7631,7 +7646,7 @@
             "slug": "l-echo-de-la-lys",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "207": {
@@ -7798,7 +7813,7 @@
             "slug": "l-est-republicain",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "estrepublicain.fr"
             ]
@@ -7836,7 +7851,7 @@
             "slug": "le-republicain-lorrain",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "republicain-lorrain.fr"
             ]
@@ -7874,7 +7889,7 @@
             "slug": "dna",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "dna.fr"
             ]
@@ -7912,7 +7927,7 @@
             "slug": "vosges-matin",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "vosgesmatin.fr"
             ]
@@ -7950,7 +7965,7 @@
             "slug": "l-alsace",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "lalsace.fr"
             ]
@@ -7988,7 +8003,7 @@
             "slug": "le-bien-public",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "bienpublic.com"
             ]
@@ -8016,7 +8031,7 @@
             "slug": "le-journal-de-saone-et-loire",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "216": {
@@ -8052,7 +8067,7 @@
             "slug": "le-progres",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "leprogres.fr"
             ]
@@ -8090,7 +8105,7 @@
             "slug": "le-dauphine-libere",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "ledauphine.com"
             ]
@@ -8118,7 +8133,7 @@
             "slug": "vaucluse-matin",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "219": {
@@ -8154,7 +8169,7 @@
             "slug": "le-journal-de-la-haute-marne",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "jhm.fr"
             ]
@@ -8378,7 +8393,7 @@
             "slug": "la-montagne",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "lamontagne.fr"
             ]
@@ -8416,7 +8431,7 @@
             "slug": "le-populaire-du-centre",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "lepopulaire.fr"
             ]
@@ -8454,7 +8469,7 @@
             "slug": "le-journal-du-centre",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "lejdc.fr"
             ]
@@ -8492,7 +8507,7 @@
             "slug": "le-berry-republicain",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "leberry.fr"
             ]
@@ -8530,7 +8545,7 @@
             "slug": "l-yonne-republicaine",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "lyonne.fr"
             ]
@@ -8558,7 +8573,7 @@
             "slug": "l-echo-republicain",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "229": {
@@ -8584,7 +8599,7 @@
             "slug": "courrier-du-loiret",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "230": {
@@ -8610,7 +8625,7 @@
             "slug": "l-eclaireur-du-gatinais",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "231": {
@@ -8636,7 +8651,7 @@
             "slug": "regional-de-cosne",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "232": {
@@ -8662,7 +8677,7 @@
             "slug": "l-echo-charitois",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "233": {
@@ -8688,7 +8703,7 @@
             "slug": "pays-roannais",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "234": {
@@ -8714,7 +8729,7 @@
             "slug": "la-liberte",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "235": {
@@ -8740,7 +8755,7 @@
             "slug": "journal-de-gien",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "236": {
@@ -8783,7 +8798,7 @@
             "slug": "la-republique-du-centre",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "larep.fr"
             ]
@@ -8869,7 +8884,7 @@
             "slug": "nouvelle-republique-du-centre",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "239": {
@@ -8905,14 +8920,14 @@
             "slug": "centre-presse",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "centre-presse.fr"
             ]
         },
         "240": {
             "challenges": "",
-            "commentaire": "Télévision",
+            "commentaire": "",
             "echelle": "Régional",
             "est_possede": [
                 {
@@ -8943,7 +8958,7 @@
             "slug": "tv-tours",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "Télévision",
             "urls": [
                 "tvtours.fr"
             ]
@@ -9071,7 +9086,7 @@
             "slug": "la-depeche-du-midi",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "244": {
@@ -9108,7 +9123,7 @@
             "slug": "le-petit-bleu",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "petitbleu.fr"
             ]
@@ -9147,7 +9162,7 @@
             "slug": "la-nouvelle-republique-des-pyrenees",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "nrpyrenees.fr"
             ]
@@ -9176,7 +9191,7 @@
             "slug": "le-villefranchois",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "247": {
@@ -9203,7 +9218,7 @@
             "slug": "la-gazette-du-comminges",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "248": {
@@ -9285,7 +9300,7 @@
             "slug": "midi-libre",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "midilibre.fr"
             ]
@@ -9323,7 +9338,7 @@
             "slug": "l-independant",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "lindependant.fr"
             ]
@@ -9361,7 +9376,7 @@
             "slug": "centre-presse-aveyron",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "centrepresseaveyron.fr"
             ]
@@ -9534,7 +9549,7 @@
             "slug": "sud-ouest",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "sudouest.fr"
             ]
@@ -9563,7 +9578,7 @@
             "slug": "charente-libre",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "256": {
@@ -9600,7 +9615,7 @@
             "slug": "dordogne-libre",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "dordognelibre.fr"
             ]
@@ -9629,7 +9644,7 @@
             "slug": "haute-saintonge",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "258": {
@@ -9656,7 +9671,7 @@
             "slug": "haute-gironde",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "259": {
@@ -9683,7 +9698,7 @@
             "slug": "le-resistant",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "260": {
@@ -9710,7 +9725,7 @@
             "slug": "l-hebdo-de-charente-maritime",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "261": {
@@ -9737,7 +9752,7 @@
             "slug": "la-depeche-du-bassin",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "262": {
@@ -9764,7 +9779,7 @@
             "slug": "le-journal-du-medoc",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "263": {
@@ -9845,7 +9860,7 @@
             "slug": "la-republique-des-pyrenees",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "larepubliquedespyrenees.fr"
             ]
@@ -9883,7 +9898,7 @@
             "slug": "l-eclair",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "266": {
@@ -10029,7 +10044,7 @@
             "slug": "le-telegramme",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "letelegramme.fr"
             ]
@@ -10067,14 +10082,14 @@
             "slug": "le-poher",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "poher.bzh"
             ]
         },
         "270": {
             "challenges": "",
-            "commentaire": "Télévision",
+            "commentaire": "",
             "echelle": "Régional",
             "est_possede": [
                 {
@@ -10105,14 +10120,14 @@
             "slug": "tebeo",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "Télévision",
             "urls": [
                 "tebeo.bzh"
             ]
         },
         "271": {
             "challenges": "",
-            "commentaire": "Télévision",
+            "commentaire": "",
             "echelle": "Régional",
             "est_possede": [
                 {
@@ -10143,7 +10158,7 @@
             "slug": "tebesud",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "Télévision",
             "urls": [
                 "tebesud.fr"
             ]
@@ -10171,7 +10186,7 @@
             "slug": "le-mensuel-de-rennes",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "273": {
@@ -10197,7 +10212,7 @@
             "slug": "sept-jours-a-brest",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "274": {
@@ -10223,7 +10238,7 @@
             "slug": "le-journal-des-entreprises",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "275": {
@@ -10249,7 +10264,7 @@
             "slug": "bretagne-magazine",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "276": {
@@ -10447,7 +10462,7 @@
             "slug": "nice-matin",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "nicematin.com"
             ]
@@ -10485,7 +10500,7 @@
             "slug": "corse-matin",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "corsematin.com"
             ]
@@ -10523,7 +10538,7 @@
             "slug": "la-provence",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "laprovence.com"
             ]
@@ -10663,7 +10678,7 @@
             "slug": "paris-normandie",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "paris-normandie.fr"
             ]
@@ -10702,7 +10717,7 @@
             "slug": "havre-libre",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "paris-normandie.fr/le-havre"
             ]
@@ -10741,7 +10756,7 @@
             "slug": "le-progres-de-fecamp",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "paris-normandie.fr/fecamp"
             ]
@@ -10770,7 +10785,7 @@
             "slug": "liberte-dimanche",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "290": {
@@ -10797,7 +10812,7 @@
             "slug": "havre-dimanche",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "291": {
@@ -10824,7 +10839,7 @@
             "slug": "normandie-dimanche",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "292": {
@@ -11030,7 +11045,7 @@
         "297": {
             "challenges": "",
             "commentaire": "",
-            "echelle": "",
+            "echelle": "Suisse",
             "est_possede": [
                 {
                     "nom": "Groupe Filanosa",
@@ -11050,13 +11065,13 @@
             "slug": "la-cote-nyon-",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Suisse",
+            "type_media": "",
             "urls": []
         },
         "298": {
             "challenges": "",
             "commentaire": "",
-            "echelle": "",
+            "echelle": "Suisse",
             "est_possede": [
                 {
                     "nom": "Groupe Filanosa",
@@ -11076,13 +11091,13 @@
             "slug": "l-express-neuchatel-",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Suisse",
+            "type_media": "",
             "urls": []
         },
         "299": {
             "challenges": "",
             "commentaire": "",
-            "echelle": "",
+            "echelle": "Suisse",
             "est_possede": [
                 {
                     "nom": "Groupe Filanosa",
@@ -11102,13 +11117,13 @@
             "slug": "l-impartial-la-chaux-de-fonds-",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Suisse",
+            "type_media": "",
             "urls": []
         },
         "300": {
             "challenges": "",
             "commentaire": "",
-            "echelle": "",
+            "echelle": "Suisse",
             "est_possede": [
                 {
                     "nom": "Rhône Média",
@@ -11128,13 +11143,13 @@
             "slug": "le-nouvelliste",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Suisse",
+            "type_media": "",
             "urls": []
         },
         "301": {
             "challenges": "",
             "commentaire": "",
-            "echelle": "",
+            "echelle": "Suisse",
             "est_possede": [
                 {
                     "nom": "Rhône Média",
@@ -11154,13 +11169,13 @@
             "slug": "la-gazette-de-martigny",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Suisse",
+            "type_media": "",
             "urls": []
         },
         "302": {
             "challenges": "",
             "commentaire": "",
-            "echelle": "",
+            "echelle": "Suisse",
             "est_possede": [
                 {
                     "nom": "Rhône Média",
@@ -11180,7 +11195,7 @@
             "slug": "le-journal-de-sierre",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Suisse",
+            "type_media": "",
             "urls": []
         },
         "303": {
@@ -11216,7 +11231,7 @@
             "slug": "france-antilles",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": [
                 "franceantilles.fr"
             ]
@@ -11244,7 +11259,7 @@
             "slug": "france-guyane",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "305": {
@@ -11296,7 +11311,7 @@
             "slug": "le-journal-de-l-ile-de-la-reunion",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "Régional",
+            "type_media": "GPE",
             "urls": []
         },
         "307": {
@@ -11357,7 +11372,7 @@
         },
         "309": {
             "challenges": "",
-            "commentaire": "Pure player",
+            "commentaire": "",
             "echelle": "",
             "est_possede": [
                 {
@@ -11461,7 +11476,7 @@
         },
         "313": {
             "challenges": "",
-            "commentaire": "Pure player",
+            "commentaire": "",
             "echelle": "",
             "est_possede": [
                 {
@@ -11715,7 +11730,7 @@
         "321": {
             "challenges": "",
             "commentaire": "",
-            "echelle": "Féminin",
+            "echelle": "",
             "est_possede": [
                 {
                     "nom": "Czech Media Invest",
@@ -11735,7 +11750,7 @@
             "slug": "elle",
             "type": 3,
             "typeLibelle": "Média",
-            "type_media": "",
+            "type_media": "GPE",
             "urls": []
         },
         "322": {
