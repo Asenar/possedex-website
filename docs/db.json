@@ -1,12 +1,12 @@
 {
     "objets": {
         "1": {
-            "challenges": "339",
+            "challenges": "386",
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
             "forbes": "",
-            "fortune": "339",
+            "fortune": "386",
             "id": 1,
             "nom": "Claude Perdriel",
             "periodicite": "",
@@ -334,12 +334,12 @@
             "urls": []
         },
         "10": {
-            "challenges": "16",
+            "challenges": "12",
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
             "forbes": "",
-            "fortune": "16",
+            "fortune": "12",
             "id": 10,
             "nom": "Xavier Niel",
             "periodicite": "",
@@ -2024,12 +2024,12 @@
             ]
         },
         "54": {
-            "challenges": "3",
+            "challenges": "4",
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
             "forbes": "",
-            "fortune": "3",
+            "fortune": "4",
             "id": 54,
             "nom": "Famille Bettencourt",
             "periodicite": "",
@@ -2081,12 +2081,12 @@
             "urls": []
         },
         "56": {
-            "challenges": "10",
+            "challenges": "9",
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
             "forbes": "",
-            "fortune": "10",
+            "fortune": "9",
             "id": 56,
             "nom": "Patrick Drahi",
             "periodicite": "",
@@ -2205,7 +2205,7 @@
                     "valeur": "49"
                 },
                 {
-                    "nom": "Alain Weil",
+                    "nom": "Alain Weill",
                     "source": [],
                     "valeur": "51"
                 }
@@ -2509,12 +2509,12 @@
             ]
         },
         "67": {
-            "challenges": "389",
+            "challenges": "448",
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
             "forbes": "",
-            "fortune": "389",
+            "fortune": "448",
             "id": 67,
             "nom": "Arnaud Lagardère",
             "periodicite": "",
@@ -2879,12 +2879,12 @@
             ]
         },
         "77": {
-            "challenges": "12",
+            "challenges": "17",
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
             "forbes": "",
-            "fortune": "12",
+            "fortune": "17",
             "id": 77,
             "nom": "Vincent Bolloré",
             "periodicite": "",
@@ -3200,12 +3200,12 @@
             "urls": []
         },
         "86": {
-            "challenges": "90",
+            "challenges": "92",
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
             "forbes": "",
-            "fortune": "90",
+            "fortune": "92",
             "id": 86,
             "nom": "Iskandar Safa",
             "periodicite": "",
@@ -3512,12 +3512,12 @@
             ]
         },
         "95": {
-            "challenges": "6",
+            "challenges": "5",
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
             "forbes": "",
-            "fortune": "6",
+            "fortune": "5",
             "id": 95,
             "nom": "François Pinault",
             "periodicite": "",
@@ -4425,12 +4425,12 @@
             ]
         },
         "120": {
-            "challenges": "33",
+            "challenges": "37",
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
             "forbes": "",
-            "fortune": "33",
+            "fortune": "37",
             "id": 120,
             "nom": "Martin et Olivier Bouygues",
             "periodicite": "",
@@ -11811,16 +11811,21 @@
             "urls": []
         },
         "324": {
-            "challenges": "368",
+            "challenges": "",
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
             "forbes": "",
-            "fortune": "368",
+            "fortune": "",
             "id": 324,
-            "nom": "Alain Weil",
+            "nom": "Alain Weill",
             "periodicite": "",
-            "possedex": {},
+            "possedex": {
+                "activite": "",
+                "desc": "",
+                "fortune": "230ème fortune de France",
+                "marque": ""
+            },
             "possessions": [
                 {
                     "nom": "L’Express",
@@ -11828,7 +11833,7 @@
                     "valeur": "51"
                 }
             ],
-            "slug": "alain-weil",
+            "slug": "alain-weill",
             "type": 1,
             "typeLibelle": "Personne physique",
             "type_media": "",
