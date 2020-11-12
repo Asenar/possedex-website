@@ -20,7 +20,7 @@
                 {
                     "nom": "Groupe Perdriel",
                     "source": [],
-                    "valeur": "53"
+                    "valeur": "contrôle"
                 },
                 {
                     "nom": "Groupe L’Opinion",
@@ -28,13 +28,6 @@
                         "challenges.fr"
                     ],
                     "valeur": "participe"
-                },
-                {
-                    "nom": "Le Nouveau Magazine littéraire",
-                    "source": [
-                        "lefigaro.fr"
-                    ],
-                    "valeur": "60"
                 },
                 {
                     "nom": "Sophia Publications",
@@ -95,14 +88,7 @@
                 {
                     "nom": "Claude Perdriel",
                     "source": [],
-                    "valeur": "53"
-                },
-                {
-                    "nom": "Renault",
-                    "source": [
-                        "lemonde.fr"
-                    ],
-                    "valeur": "45"
+                    "valeur": "contrôle"
                 }
             ],
             "forbes": "",
@@ -338,7 +324,7 @@
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
-            "forbes": "",
+            "forbes": "253",
             "fortune": "12",
             "id": 10,
             "nom": "Xavier Niel",
@@ -368,9 +354,9 @@
                     "valeur": "participe"
                 },
                 {
-                    "nom": "Nice-Matin",
+                    "nom": "NJJ",
                     "source": [],
-                    "valeur": "34"
+                    "valeur": "100"
                 }
             ],
             "slug": "xavier-niel",
@@ -1324,7 +1310,7 @@
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
-            "forbes": "",
+            "forbes": "361",
             "fortune": "7",
             "id": 35,
             "nom": "Famille Dassault",
@@ -1573,7 +1559,7 @@
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
-            "forbes": "",
+            "forbes": "3",
             "fortune": "1",
             "id": 42,
             "nom": "Bernard Arnault",
@@ -1589,6 +1575,11 @@
                     "nom": "LVMH",
                     "source": [],
                     "valeur": "46,6"
+                },
+                {
+                    "nom": "Lagardère Capital & Management",
+                    "source": [],
+                    "valeur": "27"
                 }
             ],
             "slug": "bernard-arnault",
@@ -2028,7 +2019,7 @@
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
-            "forbes": "",
+            "forbes": "15",
             "fortune": "4",
             "id": 54,
             "nom": "Famille Bettencourt",
@@ -2085,7 +2076,7 @@
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
-            "forbes": "",
+            "forbes": "206",
             "fortune": "9",
             "id": 56,
             "nom": "Patrick Drahi",
@@ -2138,6 +2129,11 @@
                         "societe.com"
                     ],
                     "valeur": "100"
+                },
+                {
+                    "nom": "Fonds de Dotation pour une Presse Indépendante",
+                    "source": [],
+                    "valeur": "contrôle"
                 }
             ],
             "slug": "altice",
@@ -2246,6 +2242,11 @@
                         "linformaticien.com"
                     ],
                     "valeur": "100"
+                },
+                {
+                    "nom": "Fonds de Dotation pour une Presse Indépendante",
+                    "source": [],
+                    "valeur": "contrôle"
                 }
             ],
             "forbes": "",
@@ -2529,6 +2530,11 @@
                     "nom": "Lagardère SCA",
                     "source": [],
                     "valeur": "7,96"
+                },
+                {
+                    "nom": "Lagardère Capital & Management",
+                    "source": [],
+                    "valeur": "73"
                 }
             ],
             "slug": "arnaud-lagardere",
@@ -2580,6 +2586,16 @@
                     "nom": "Qatar Investment Authority",
                     "source": [],
                     "valeur": "12,83"
+                },
+                {
+                    "nom": "Vincent Bolloré",
+                    "source": [],
+                    "valeur": "23,5"
+                },
+                {
+                    "nom": "Amber Capital",
+                    "source": [],
+                    "valeur": "20"
                 }
             ],
             "forbes": "",
@@ -2883,7 +2899,7 @@
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
-            "forbes": "",
+            "forbes": "538",
             "fortune": "17",
             "id": 77,
             "nom": "Vincent Bolloré",
@@ -2895,6 +2911,11 @@
                 "marque": ""
             },
             "possessions": [
+                {
+                    "nom": "Lagardère SCA",
+                    "source": [],
+                    "valeur": "23,5"
+                },
                 {
                     "nom": "Financière de l’Odet",
                     "source": [],
@@ -3397,7 +3418,7 @@
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
-            "forbes": "oui",
+            "forbes": "565",
             "fortune": "",
             "id": 92,
             "nom": "Daniel Křetínský",
@@ -3516,7 +3537,7 @@
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
-            "forbes": "",
+            "forbes": "27",
             "fortune": "5",
             "id": 95,
             "nom": "François Pinault",
@@ -3734,7 +3755,7 @@
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
-            "forbes": "oui",
+            "forbes": "",
             "fortune": "",
             "id": 102,
             "nom": "Famille Mohn",
@@ -4429,7 +4450,7 @@
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
-            "forbes": "",
+            "forbes": "680",
             "fortune": "37",
             "id": 120,
             "nom": "Martin et Olivier Bouygues",
@@ -4810,40 +4831,6 @@
             "type_media": "",
             "urls": []
         },
-        "130": {
-            "challenges": "",
-            "commentaire": "",
-            "echelle": "",
-            "est_possede": [
-                {
-                    "nom": "République française",
-                    "source": [
-                        "zonebourse.com"
-                    ],
-                    "valeur": "15"
-                }
-            ],
-            "forbes": "",
-            "fortune": "",
-            "id": 130,
-            "nom": "Renault",
-            "periodicite": "",
-            "possedex": {},
-            "possessions": [
-                {
-                    "nom": "Groupe Perdriel",
-                    "source": [
-                        "lemonde.fr"
-                    ],
-                    "valeur": "45"
-                }
-            ],
-            "slug": "renault",
-            "type": 2,
-            "typeLibelle": "Personne morale",
-            "type_media": "",
-            "urls": []
-        },
         "131": {
             "challenges": "",
             "commentaire": "Gratuit",
@@ -5003,11 +4990,6 @@
                     "nom": "France Info",
                     "source": [],
                     "valeur": "contrôle"
-                },
-                {
-                    "nom": "France Ô",
-                    "source": [],
-                    "valeur": "100"
                 },
                 {
                     "nom": "TV5 Monde",
@@ -5400,42 +5382,6 @@
             "type_media": "Télévision",
             "urls": [
                 "france4.fr"
-            ]
-        },
-        "145": {
-            "challenges": "",
-            "commentaire": "Gratuit",
-            "echelle": "National",
-            "est_possede": [
-                {
-                    "nom": "France Télévision",
-                    "source": [],
-                    "valeur": "100"
-                }
-            ],
-            "forbes": "",
-            "fortune": "",
-            "id": 145,
-            "nom": "France Ô",
-            "periodicite": "",
-            "possedex": {
-                "classement": "etat",
-                "decodex": 0,
-                "desc": "",
-                "nom": "France Ô",
-                "pub": "",
-                "slug": "france-o",
-                "sources": "[La carte des médias du monde diplomatique](http://www.monde-diplomatique.fr/cartes/ppa)",
-                "subventions": "",
-                "updated": "2017-03-31 00:00"
-            },
-            "possessions": [],
-            "slug": "france-o",
-            "type": 3,
-            "typeLibelle": "Média",
-            "type_media": "Télévision",
-            "urls": [
-                "franceo.fr"
             ]
         },
         "147": {
@@ -5957,12 +5903,12 @@
             ]
         },
         "162": {
-            "challenges": "",
+            "challenges": "255",
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
             "forbes": "",
-            "fortune": "",
+            "fortune": "255",
             "id": 162,
             "nom": "Jean-Paul Baudecroux",
             "periodicite": "",
@@ -6790,6 +6736,16 @@
                     "nom": "Groupe Rossel La Voix",
                     "source": [],
                     "valeur": "73"
+                },
+                {
+                    "nom": "Normandie Dimanche",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "Paris-Normandie",
+                    "source": [],
+                    "valeur": "100"
                 }
             ],
             "slug": "groupe-rossel",
@@ -10437,9 +10393,14 @@
             "echelle": "Régional",
             "est_possede": [
                 {
-                    "nom": "Xavier Niel",
+                    "nom": "NJJ",
                     "source": [],
-                    "valeur": "34"
+                    "valeur": "100"
+                },
+                {
+                    "nom": "Nice-Matin",
+                    "source": [],
+                    "valeur": "100"
                 }
             ],
             "forbes": "",
@@ -10458,7 +10419,28 @@
                 "subventions": "502 k€",
                 "updated": "2017-03-31 00:00"
             },
-            "possessions": [],
+            "possessions": [
+                {
+                    "nom": "Nice-Matin",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "Var-Matin",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "Monaco-Matin",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "France-Antilles",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
             "slug": "nice-matin",
             "type": 3,
             "typeLibelle": "Média",
@@ -10598,39 +10580,7 @@
                     "valeur": "100"
                 },
                 {
-                    "nom": "Havre Libre",
-                    "source": [
-                        "lesechos.fr",
-                        "wikipedia.org"
-                    ],
-                    "valeur": "100"
-                },
-                {
-                    "nom": "Le Progrès de Fécamp",
-                    "source": [
-                        "lesechos.fr",
-                        "wikipedia.org"
-                    ],
-                    "valeur": "100"
-                },
-                {
                     "nom": "Liberté Dimanche",
-                    "source": [
-                        "lesechos.fr",
-                        "wikipedia.org"
-                    ],
-                    "valeur": "100"
-                },
-                {
-                    "nom": "Normandie Dimanche",
-                    "source": [
-                        "lesechos.fr",
-                        "wikipedia.org"
-                    ],
-                    "valeur": "100"
-                },
-                {
-                    "nom": "Paris-Normandie",
                     "source": [
                         "lesechos.fr",
                         "wikipedia.org"
@@ -10650,11 +10600,8 @@
             "echelle": "Régional",
             "est_possede": [
                 {
-                    "nom": "Société Normande d’Information et de Communication",
-                    "source": [
-                        "lesechos.fr",
-                        "wikipedia.org"
-                    ],
+                    "nom": "Groupe Rossel",
+                    "source": [],
                     "valeur": "100"
                 }
             ],
@@ -10687,16 +10634,7 @@
             "challenges": "",
             "commentaire": "",
             "echelle": "Régional",
-            "est_possede": [
-                {
-                    "nom": "Société Normande d’Information et de Communication",
-                    "source": [
-                        "lesechos.fr",
-                        "wikipedia.org"
-                    ],
-                    "valeur": "100"
-                }
-            ],
+            "est_possede": [],
             "forbes": "",
             "fortune": "",
             "id": 287,
@@ -10726,16 +10664,7 @@
             "challenges": "",
             "commentaire": "",
             "echelle": "Régional",
-            "est_possede": [
-                {
-                    "nom": "Société Normande d’Information et de Communication",
-                    "source": [
-                        "lesechos.fr",
-                        "wikipedia.org"
-                    ],
-                    "valeur": "100"
-                }
-            ],
+            "est_possede": [],
             "forbes": "",
             "fortune": "",
             "id": 288,
@@ -10821,11 +10750,8 @@
             "echelle": "Régional",
             "est_possede": [
                 {
-                    "nom": "Société Normande d’Information et de Communication",
-                    "source": [
-                        "lesechos.fr",
-                        "wikipedia.org"
-                    ],
+                    "nom": "Groupe Rossel",
+                    "source": [],
                     "valeur": "100"
                 }
             ],
@@ -11209,6 +11135,11 @@
                         "wikipedia.org"
                     ],
                     "valeur": "100"
+                },
+                {
+                    "nom": "Nice-Matin",
+                    "source": [],
+                    "valeur": "100"
                 }
             ],
             "forbes": "",
@@ -11319,7 +11250,7 @@
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
-            "forbes": "",
+            "forbes": "1851",
             "fortune": "22",
             "id": 307,
             "nom": "Benjamin et Ariane de Rothschild",
@@ -11396,111 +11327,11 @@
             "type_media": "Site",
             "urls": []
         },
-        "310": {
-            "challenges": "",
-            "commentaire": "",
-            "echelle": "",
-            "est_possede": [],
-            "forbes": "",
-            "fortune": "",
-            "id": 310,
-            "nom": "Jean-Sébastien Ferjou",
-            "periodicite": "",
-            "possedex": {},
-            "possessions": [
-                {
-                    "nom": "Atlantico.fr",
-                    "source": [
-                        "cbnews.fr"
-                    ],
-                    "valeur": ">50"
-                }
-            ],
-            "slug": "jean-sebastien-ferjou",
-            "type": 1,
-            "typeLibelle": "Personne physique",
-            "type_media": "",
-            "urls": []
-        },
-        "311": {
-            "challenges": "",
-            "commentaire": "",
-            "echelle": "",
-            "est_possede": [],
-            "forbes": "",
-            "fortune": "",
-            "id": 311,
-            "nom": "Pierre Guyot",
-            "periodicite": "",
-            "possedex": {},
-            "possessions": [
-                {
-                    "nom": "Atlantico.fr",
-                    "source": [
-                        "cbnews.fr"
-                    ],
-                    "valeur": ">50"
-                }
-            ],
-            "slug": "pierre-guyot",
-            "type": 1,
-            "typeLibelle": "Personne physique",
-            "type_media": "",
-            "urls": []
-        },
-        "312": {
-            "challenges": "",
-            "commentaire": "",
-            "echelle": "",
-            "est_possede": [],
-            "forbes": "",
-            "fortune": "",
-            "id": 312,
-            "nom": "Gérard Lignac",
-            "periodicite": "",
-            "possedex": {},
-            "possessions": [
-                {
-                    "nom": "Atlantico.fr",
-                    "source": [
-                        "cbnews.fr"
-                    ],
-                    "valeur": ">50"
-                }
-            ],
-            "slug": "gerard-lignac",
-            "type": 1,
-            "typeLibelle": "Personne physique",
-            "type_media": "",
-            "urls": []
-        },
         "313": {
             "challenges": "",
             "commentaire": "",
             "echelle": "",
-            "est_possede": [
-                {
-                    "nom": "Jean-Sébastien Ferjou",
-                    "source": [
-                        "cbnews.fr"
-                    ],
-                    "valeur": ">50"
-                },
-                {
-                    "nom": "Pierre Guyot",
-                    "source": [
-                        "cbnews.fr"
-                    ],
-                    "valeur": ">50"
-                },
-                {
-                    "nom": "Gérard Lignac",
-                    "source": [
-                        "cbnews.fr"
-                    ],
-                    "valeur": ">50"
-                }
-            ],
+            "est_possede": [],
             "forbes": "",
             "fortune": "",
             "id": 313,
@@ -11515,12 +11346,12 @@
             "urls": []
         },
         "314": {
-            "challenges": "",
+            "challenges": "129",
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
             "forbes": "",
-            "fortune": "",
+            "fortune": "129",
             "id": 314,
             "nom": "Franck Julien",
             "periodicite": "",
@@ -11759,13 +11590,6 @@
             "echelle": "",
             "est_possede": [
                 {
-                    "nom": "Claude Perdriel",
-                    "source": [
-                        "lefigaro.fr"
-                    ],
-                    "valeur": "60"
-                },
-                {
                     "nom": "Xavier Niel",
                     "source": [],
                     "valeur": "participe"
@@ -11907,7 +11731,7 @@
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
-            "forbes": "oui",
+            "forbes": "468",
             "fortune": "",
             "id": 326,
             "nom": "Ken Fisher",
@@ -11950,6 +11774,174 @@
             "type": 3,
             "typeLibelle": "Média",
             "type_media": "Télévision",
+            "urls": []
+        },
+        "328": {
+            "challenges": "",
+            "commentaire": "",
+            "echelle": "",
+            "est_possede": [],
+            "forbes": "",
+            "fortune": "",
+            "id": 328,
+            "nom": "Nice-Matin",
+            "periodicite": "",
+            "possedex": {},
+            "possessions": [],
+            "slug": "nice-matin",
+            "type": 2,
+            "typeLibelle": "Personne morale",
+            "type_media": "",
+            "urls": []
+        },
+        "329": {
+            "challenges": "",
+            "commentaire": "",
+            "echelle": "",
+            "est_possede": [
+                {
+                    "nom": "Altice",
+                    "source": [],
+                    "valeur": "contrôle"
+                }
+            ],
+            "forbes": "",
+            "fortune": "",
+            "id": 329,
+            "nom": "Fonds de Dotation pour une Presse Indépendante",
+            "periodicite": "",
+            "possedex": {},
+            "possessions": [
+                {
+                    "nom": "Libération",
+                    "source": [],
+                    "valeur": "contrôle"
+                }
+            ],
+            "slug": "fonds-de-dotation-pour-une-presse-independante",
+            "type": 2,
+            "typeLibelle": "Personne morale",
+            "type_media": "",
+            "urls": []
+        },
+        "330": {
+            "challenges": "",
+            "commentaire": "",
+            "echelle": "",
+            "est_possede": [],
+            "forbes": "",
+            "fortune": "",
+            "id": 330,
+            "nom": "Amber Capital",
+            "periodicite": "",
+            "possedex": {},
+            "possessions": [
+                {
+                    "nom": "Lagardère SCA",
+                    "source": [],
+                    "valeur": "20"
+                }
+            ],
+            "slug": "amber-capital",
+            "type": 2,
+            "typeLibelle": "Personne morale",
+            "type_media": "",
+            "urls": []
+        },
+        "331": {
+            "challenges": "",
+            "commentaire": "",
+            "echelle": "",
+            "est_possede": [
+                {
+                    "nom": "Xavier Niel",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
+            "forbes": "",
+            "fortune": "",
+            "id": 331,
+            "nom": "NJJ",
+            "periodicite": "",
+            "possedex": {},
+            "possessions": [
+                {
+                    "nom": "Nice-Matin",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
+            "slug": "njj",
+            "type": 2,
+            "typeLibelle": "Personne morale",
+            "type_media": "",
+            "urls": []
+        },
+        "332": {
+            "challenges": "",
+            "commentaire": "",
+            "echelle": "Régional",
+            "est_possede": [
+                {
+                    "nom": "Nice-Matin",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
+            "forbes": "",
+            "fortune": "",
+            "id": 332,
+            "nom": "Var-Matin",
+            "periodicite": "Quotidien",
+            "possedex": {},
+            "possessions": [],
+            "slug": "var-matin",
+            "type": 3,
+            "typeLibelle": "Média",
+            "type_media": "GPE",
+            "urls": []
+        },
+        "333": {
+            "challenges": "",
+            "commentaire": "",
+            "echelle": "Régional",
+            "est_possede": [
+                {
+                    "nom": "Nice-Matin",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
+            "forbes": "",
+            "fortune": "",
+            "id": 333,
+            "nom": "Monaco-Matin",
+            "periodicite": "Quotidien",
+            "possedex": {},
+            "possessions": [],
+            "slug": "monaco-matin",
+            "type": 3,
+            "typeLibelle": "Média",
+            "type_media": "GPE",
+            "urls": []
+        },
+        "334": {
+            "challenges": "",
+            "commentaire": "",
+            "echelle": "",
+            "est_possede": [],
+            "forbes": "",
+            "fortune": "",
+            "id": 334,
+            "nom": "La recherche",
+            "periodicite": "",
+            "possedex": {},
+            "possessions": [],
+            "slug": "la-recherche",
+            "type": 3,
+            "typeLibelle": "Média",
+            "type_media": "GPE",
             "urls": []
         }
     },
@@ -11994,7 +11986,6 @@
         "franceculture.fr": 149,
         "franceinter.fr": 147,
         "francemusique.fr": 148,
-        "franceo.fr": 145,
         "funradio.fr": 116,
         "gulli.fr": 73,
         "hbrfrance.fr": 109,
