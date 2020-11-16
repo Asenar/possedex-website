@@ -10439,6 +10439,11 @@
                     "nom": "France-Antilles",
                     "source": [],
                     "valeur": "100"
+                },
+                {
+                    "nom": "France-Guyane",
+                    "source": [],
+                    "valeur": "100"
                 }
             ],
             "slug": "nice-matin",
@@ -10854,22 +10859,7 @@
             "nom": "Groupe Hersant Média",
             "periodicite": "",
             "possedex": {},
-            "possessions": [
-                {
-                    "nom": "France Antilles",
-                    "source": [
-                        "wikipedia.org"
-                    ],
-                    "valeur": "100"
-                },
-                {
-                    "nom": "France Guyane",
-                    "source": [
-                        "wikipedia.org"
-                    ],
-                    "valeur": "100"
-                }
-            ],
+            "possessions": [],
             "slug": "groupe-hersant-media",
             "type": 2,
             "typeLibelle": "Personne morale",
@@ -11130,13 +11120,6 @@
             "echelle": "Régional",
             "est_possede": [
                 {
-                    "nom": "Groupe Hersant Média",
-                    "source": [
-                        "wikipedia.org"
-                    ],
-                    "valeur": "100"
-                },
-                {
                     "nom": "Nice-Matin",
                     "source": [],
                     "valeur": "100"
@@ -11173,10 +11156,8 @@
             "echelle": "Régional",
             "est_possede": [
                 {
-                    "nom": "Groupe Hersant Média",
-                    "source": [
-                        "wikipedia.org"
-                    ],
+                    "nom": "Nice-Matin",
+                    "source": [],
                     "valeur": "100"
                 }
             ],
