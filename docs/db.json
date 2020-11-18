@@ -28,11 +28,6 @@
                         "challenges.fr"
                     ],
                     "valeur": "participe"
-                },
-                {
-                    "nom": "Sophia Publications",
-                    "source": [],
-                    "valeur": "50"
                 }
             ],
             "slug": "claude-perdriel",
@@ -45,13 +40,7 @@
             "challenges": "",
             "commentaire": "",
             "echelle": "",
-            "est_possede": [
-                {
-                    "nom": "Claude Perdriel",
-                    "source": [],
-                    "valeur": "50"
-                }
-            ],
+            "est_possede": [],
             "forbes": "",
             "fortune": "",
             "id": 2,
@@ -89,6 +78,11 @@
                     "nom": "Claude Perdriel",
                     "source": [],
                     "valeur": "contrôle"
+                },
+                {
+                    "nom": "Bernard Arnault",
+                    "source": [],
+                    "valeur": "40"
                 }
             ],
             "forbes": "",
@@ -1580,6 +1574,11 @@
                     "nom": "Lagardère Capital & Management",
                     "source": [],
                     "valeur": "27"
+                },
+                {
+                    "nom": "Groupe Perdriel",
+                    "source": [],
+                    "valeur": "40"
                 }
             ],
             "slug": "bernard-arnault",
@@ -11902,24 +11901,6 @@
             "possedex": {},
             "possessions": [],
             "slug": "monaco-matin",
-            "type": 3,
-            "typeLibelle": "Média",
-            "type_media": "GPE",
-            "urls": []
-        },
-        "334": {
-            "challenges": "",
-            "commentaire": "",
-            "echelle": "",
-            "est_possede": [],
-            "forbes": "",
-            "fortune": "",
-            "id": 334,
-            "nom": "La recherche",
-            "periodicite": "",
-            "possedex": {},
-            "possessions": [],
-            "slug": "la-recherche",
             "type": 3,
             "typeLibelle": "Média",
             "type_media": "GPE",
