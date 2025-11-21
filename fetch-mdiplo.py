@@ -15,10 +15,10 @@ file_base = 'urls.tsv'
 url_owners = 'https://docs.google.com/spreadsheets/export?id=1po3WjKX15T766GYOYV8fHtve4RdlyLF6XEXBlUICib0&exportFormat=tsv&gid=1970270275'
 file_owners = 'owners.tsv'
 
-url_relations_medias = 'https://raw.githubusercontent.com/mdiplo/Medias_francais/master/relations_medias_francais.tsv'
+url_relations_medias = 'https://raw.githubusercontent.com/mdiplo/Medias_francais/version-2021/relations_medias_francais.tsv'
 file_relations = 'relations.tsv'
 
-url_liste_medias     = 'https://raw.githubusercontent.com/mdiplo/Medias_francais/master/medias_francais.tsv'
+url_liste_medias = 'https://raw.githubusercontent.com/mdiplo/Medias_francais/version-2021/medias_francais.tsv'
 file_liste_medias = 'liste_medias.tsv'
 
 url_decodex = 'https://www.lemonde.fr/webservice/decodex/updates'

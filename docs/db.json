@@ -1,12 +1,12 @@
 {
     "objets": {
         "1": {
-            "challenges": "386",
+            "challenges": "343",
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
             "forbes": "",
-            "fortune": "386",
+            "fortune": "343",
             "id": 1,
             "nom": "Claude Perdriel",
             "periodicite": "",
@@ -80,7 +80,7 @@
                     "valeur": "contrôle"
                 },
                 {
-                    "nom": "Bernard Arnault",
+                    "nom": "LVMH",
                     "source": [],
                     "valeur": "40"
                 }
@@ -318,7 +318,7 @@
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
-            "forbes": "253",
+            "forbes": "230",
             "fortune": "12",
             "id": 10,
             "nom": "Xavier Niel",
@@ -348,9 +348,9 @@
                     "valeur": "participe"
                 },
                 {
-                    "nom": "NJJ",
+                    "nom": "Fonds pour l'indépendance de la presse",
                     "source": [],
-                    "valeur": "100"
+                    "valeur": "contrôle"
                 }
             ],
             "slug": "xavier-niel",
@@ -377,7 +377,7 @@
             },
             "possessions": [
                 {
-                    "nom": "Les Nouvelles Éditions indépendantes",
+                    "nom": "Combat Solutions",
                     "source": [],
                     "valeur": "78"
                 }
@@ -402,12 +402,12 @@
             "forbes": "",
             "fortune": "",
             "id": 12,
-            "nom": "Les Nouvelles Éditions indépendantes",
+            "nom": "Combat Solutions",
             "periodicite": "",
             "possedex": {},
             "possessions": [
                 {
-                    "nom": "Huffingtonpost.fr",
+                    "nom": "HuffPost",
                     "source": [
                         "lexpress.fr"
                     ],
@@ -433,16 +433,9 @@
                         "lesechos.fr"
                     ],
                     "valeur": "100"
-                },
-                {
-                    "nom": "Vice.com",
-                    "source": [
-                        "lemonde.fr"
-                    ],
-                    "valeur": "<50"
                 }
             ],
-            "slug": "les-nouvelles-editions-independantes",
+            "slug": "combat-solutions",
             "type": 2,
             "typeLibelle": "Personne morale",
             "type_media": "",
@@ -454,7 +447,7 @@
             "echelle": "",
             "est_possede": [
                 {
-                    "nom": "Les Nouvelles Éditions indépendantes",
+                    "nom": "Combat Solutions",
                     "source": [
                         "lemonde.fr"
                     ],
@@ -578,7 +571,7 @@
                     "valeur": "100"
                 },
                 {
-                    "nom": "Huffingtonpost.fr",
+                    "nom": "HuffPost",
                     "source": [
                         "lexpress.fr"
                     ],
@@ -780,7 +773,7 @@
             "fortune": "",
             "id": 19,
             "nom": "Le Monde",
-            "periodicite": "Hebdomadaire",
+            "periodicite": "Quotidien",
             "possedex": {
                 "classement": "capital",
                 "decodex": 4,
@@ -819,7 +812,7 @@
             "fortune": "",
             "id": 20,
             "nom": "Télérama",
-            "periodicite": "Mensuel",
+            "periodicite": "Hebdomadaire",
             "possedex": {
                 "classement": "capital",
                 "decodex": 4,
@@ -1061,7 +1054,7 @@
             "echelle": "",
             "est_possede": [
                 {
-                    "nom": "Les Nouvelles Éditions indépendantes",
+                    "nom": "Combat Solutions",
                     "source": [
                         "lexpress.fr"
                     ],
@@ -1085,11 +1078,11 @@
             "forbes": "",
             "fortune": "",
             "id": 26,
-            "nom": "Huffingtonpost.fr",
+            "nom": "HuffPost",
             "periodicite": "",
             "possedex": {},
             "possessions": [],
-            "slug": "huffingtonpost.fr",
+            "slug": "huffpost",
             "type": 3,
             "typeLibelle": "Média",
             "type_media": "Site",
@@ -1138,7 +1131,7 @@
             "possedex": {},
             "possessions": [
                 {
-                    "nom": "Huffingtonpost.fr",
+                    "nom": "HuffPost",
                     "source": [
                         "lexpress.fr"
                     ],
@@ -1157,7 +1150,7 @@
             "echelle": "National",
             "est_possede": [
                 {
-                    "nom": "Les Nouvelles Éditions indépendantes",
+                    "nom": "Combat Solutions",
                     "source": [
                         "lesechos.fr"
                     ],
@@ -1183,7 +1176,7 @@
             "echelle": "",
             "est_possede": [
                 {
-                    "nom": "Les Nouvelles Éditions indépendantes",
+                    "nom": "Combat Solutions",
                     "source": [
                         "lesechos.fr"
                     ],
@@ -1219,15 +1212,7 @@
             "challenges": "",
             "commentaire": "",
             "echelle": "",
-            "est_possede": [
-                {
-                    "nom": "Les Nouvelles Éditions indépendantes",
-                    "source": [
-                        "lemonde.fr"
-                    ],
-                    "valeur": "<50"
-                }
-            ],
+            "est_possede": [],
             "forbes": "",
             "fortune": "",
             "id": 32,
@@ -1300,12 +1285,12 @@
             "urls": []
         },
         "35": {
-            "challenges": "7",
+            "challenges": "6",
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
-            "forbes": "361",
-            "fortune": "7",
+            "forbes": "254",
+            "fortune": "6",
             "id": 35,
             "nom": "Famille Dassault",
             "periodicite": "",
@@ -1574,11 +1559,6 @@
                     "nom": "Lagardère Capital & Management",
                     "source": [],
                     "valeur": "27"
-                },
-                {
-                    "nom": "Groupe Perdriel",
-                    "source": [],
-                    "valeur": "40"
                 }
             ],
             "slug": "bernard-arnault",
@@ -1605,6 +1585,11 @@
             "periodicite": "",
             "possedex": {},
             "possessions": [
+                {
+                    "nom": "Groupe Perdriel",
+                    "source": [],
+                    "valeur": "40"
+                },
                 {
                     "nom": "Aujourd’hui en France",
                     "source": [
@@ -2018,7 +2003,7 @@
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
-            "forbes": "15",
+            "forbes": "14",
             "fortune": "4",
             "id": 54,
             "nom": "Famille Bettencourt",
@@ -2071,12 +2056,12 @@
             "urls": []
         },
         "56": {
-            "challenges": "9",
+            "challenges": "11",
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
-            "forbes": "206",
-            "fortune": "9",
+            "forbes": "375",
+            "fortune": "11",
             "id": 56,
             "nom": "Patrick Drahi",
             "periodicite": "",
@@ -2174,7 +2159,7 @@
                     "valeur": "100"
                 },
                 {
-                    "nom": "NextRadioTV",
+                    "nom": "Altice Média",
                     "source": [
                         "freenews.fr"
                     ],
@@ -2289,7 +2274,7 @@
             "forbes": "",
             "fortune": "",
             "id": 61,
-            "nom": "NextRadioTV",
+            "nom": "Altice Média",
             "periodicite": "",
             "possedex": {},
             "possessions": [
@@ -2329,7 +2314,7 @@
                     "valeur": "100"
                 }
             ],
-            "slug": "nextradiotv",
+            "slug": "altice-media",
             "type": 2,
             "typeLibelle": "Personne morale",
             "type_media": "",
@@ -2341,7 +2326,7 @@
             "echelle": "",
             "est_possede": [
                 {
-                    "nom": "NextRadioTV",
+                    "nom": "Altice Média",
                     "source": [
                         "investir.lesechos.fr"
                     ],
@@ -2379,7 +2364,7 @@
             "echelle": "",
             "est_possede": [
                 {
-                    "nom": "NextRadioTV",
+                    "nom": "Altice Média",
                     "source": [
                         "investir.lesechos.fr"
                     ],
@@ -2414,7 +2399,7 @@
             "echelle": "National",
             "est_possede": [
                 {
-                    "nom": "NextRadioTV",
+                    "nom": "Altice Média",
                     "source": [
                         "investir.lesechos.fr"
                     ],
@@ -2449,7 +2434,7 @@
             "echelle": "National",
             "est_possede": [
                 {
-                    "nom": "NextRadioTV",
+                    "nom": "Altice Média",
                     "source": [
                         "investir.lesechos.fr"
                     ],
@@ -2509,12 +2494,12 @@
             ]
         },
         "67": {
-            "challenges": "448",
+            "challenges": "317",
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
             "forbes": "",
-            "fortune": "448",
+            "fortune": "317",
             "id": 67,
             "nom": "Arnaud Lagardère",
             "periodicite": "",
@@ -2526,7 +2511,7 @@
             },
             "possessions": [
                 {
-                    "nom": "Lagardère SCA",
+                    "nom": "Lagardère SA",
                     "source": [],
                     "valeur": "7,96"
                 },
@@ -2560,7 +2545,7 @@
             },
             "possessions": [
                 {
-                    "nom": "Lagardère SCA",
+                    "nom": "Lagardère SA",
                     "source": [],
                     "valeur": "12,83"
                 }
@@ -2587,9 +2572,9 @@
                     "valeur": "12,83"
                 },
                 {
-                    "nom": "Vincent Bolloré",
+                    "nom": "Vivendi",
                     "source": [],
-                    "valeur": "23,5"
+                    "valeur": "27,6"
                 },
                 {
                     "nom": "Amber Capital",
@@ -2600,17 +2585,17 @@
             "forbes": "",
             "fortune": "",
             "id": 69,
-            "nom": "Lagardère SCA",
+            "nom": "Lagardère SA",
             "periodicite": "",
             "possedex": {},
             "possessions": [
                 {
-                    "nom": "Lagardère Active",
+                    "nom": "Lagardère News",
                     "source": [],
                     "valeur": "100"
                 }
             ],
-            "slug": "lagardere-sca",
+            "slug": "lagardere-sa",
             "type": 2,
             "typeLibelle": "Personne morale",
             "type_media": "",
@@ -2622,7 +2607,7 @@
             "echelle": "",
             "est_possede": [
                 {
-                    "nom": "Lagardère SCA",
+                    "nom": "Lagardère SA",
                     "source": [],
                     "valeur": "100"
                 }
@@ -2630,7 +2615,7 @@
             "forbes": "",
             "fortune": "",
             "id": 70,
-            "nom": "Lagardère Active",
+            "nom": "Lagardère News",
             "periodicite": "",
             "possedex": {},
             "possessions": [
@@ -2670,7 +2655,7 @@
                     "valeur": "100"
                 }
             ],
-            "slug": "lagardere-active",
+            "slug": "lagardere-news",
             "type": 2,
             "typeLibelle": "Personne morale",
             "type_media": "",
@@ -2682,7 +2667,7 @@
             "echelle": "",
             "est_possede": [
                 {
-                    "nom": "Lagardère Active",
+                    "nom": "Lagardère News",
                     "source": [
                         "lagardere.com"
                     ],
@@ -2708,7 +2693,7 @@
             "echelle": "",
             "est_possede": [
                 {
-                    "nom": "Lagardère Active",
+                    "nom": "Lagardère News",
                     "source": [
                         "lagardere.com"
                     ],
@@ -2785,7 +2770,7 @@
             "echelle": "National",
             "est_possede": [
                 {
-                    "nom": "Lagardère Active",
+                    "nom": "Lagardère News",
                     "source": [
                         "lagardere.com"
                     ],
@@ -2823,7 +2808,7 @@
             "echelle": "National",
             "est_possede": [
                 {
-                    "nom": "Lagardère Active",
+                    "nom": "Lagardère News",
                     "source": [
                         "lagardere.com"
                     ],
@@ -2861,7 +2846,7 @@
             "echelle": "National",
             "est_possede": [
                 {
-                    "nom": "Lagardère Active",
+                    "nom": "Lagardère News",
                     "source": [
                         "lagardere.com"
                     ],
@@ -2894,12 +2879,12 @@
             ]
         },
         "77": {
-            "challenges": "17",
+            "challenges": "13",
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
-            "forbes": "538",
-            "fortune": "17",
+            "forbes": "316",
+            "fortune": "13",
             "id": 77,
             "nom": "Vincent Bolloré",
             "periodicite": "",
@@ -2910,11 +2895,6 @@
                 "marque": ""
             },
             "possessions": [
-                {
-                    "nom": "Lagardère SCA",
-                    "source": [],
-                    "valeur": "23,5"
-                },
                 {
                     "nom": "Financière de l’Odet",
                     "source": [],
@@ -2991,7 +2971,12 @@
                         "vivendi.com",
                         "ozap.com"
                     ],
-                    "valeur": "20,65"
+                    "valeur": "27"
+                },
+                {
+                    "nom": "France Catholique",
+                    "source": [],
+                    "valeur": "100"
                 }
             ],
             "slug": "bollore",
@@ -3040,7 +3025,7 @@
                         "vivendi.com",
                         "ozap.com"
                     ],
-                    "valeur": "20,65"
+                    "valeur": "27"
                 }
             ],
             "forbes": "",
@@ -3050,6 +3035,11 @@
             "periodicite": "",
             "possedex": {},
             "possessions": [
+                {
+                    "nom": "Lagardère SA",
+                    "source": [],
+                    "valeur": "27,6"
+                },
                 {
                     "nom": "C8",
                     "source": [
@@ -3084,6 +3074,11 @@
                         "vivendi.com",
                         "ozap.com"
                     ],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "Prisma Media",
+                    "source": [],
                     "valeur": "100"
                 }
             ],
@@ -3220,12 +3215,12 @@
             "urls": []
         },
         "86": {
-            "challenges": "92",
+            "challenges": "90",
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
             "forbes": "",
-            "fortune": "92",
+            "fortune": "90",
             "id": 86,
             "nom": "Iskandar Safa",
             "periodicite": "",
@@ -3417,7 +3412,7 @@
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
-            "forbes": "565",
+            "forbes": "504",
             "fortune": "",
             "id": 92,
             "nom": "Daniel Křetínský",
@@ -3430,6 +3425,11 @@
                         "bfmbusiness.bfmtv.com"
                     ],
                     "valeur": "50"
+                },
+                {
+                    "nom": "Groupe TF1",
+                    "source": [],
+                    "valeur": "5"
                 }
             ],
             "slug": "daniel-kretinsky",
@@ -3478,6 +3478,16 @@
                         "marianne.net"
                     ],
                     "valeur": "91"
+                },
+                {
+                    "nom": "Télé 7 Jours",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "Franc-Tireur",
+                    "source": [],
+                    "valeur": "100"
                 }
             ],
             "slug": "czech-media-invest",
@@ -3532,12 +3542,12 @@
             ]
         },
         "95": {
-            "challenges": "5",
+            "challenges": "7",
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
-            "forbes": "27",
-            "fortune": "5",
+            "forbes": "32",
+            "fortune": "7",
             "id": 95,
             "nom": "François Pinault",
             "periodicite": "",
@@ -3834,7 +3844,7 @@
                 {
                     "nom": "Prisma Media",
                     "source": [],
-                    "valeur": "100"
+                    "valeur": "0"
                 }
             ],
             "slug": "gruner-jahr",
@@ -3881,6 +3891,11 @@
                 {
                     "nom": "Gruner + Jahr",
                     "source": [],
+                    "valeur": "0"
+                },
+                {
+                    "nom": "Vivendi",
+                    "source": [],
                     "valeur": "100"
                 }
             ],
@@ -3910,6 +3925,41 @@
                     "source": [
                         "investir.lesechos.fr"
                     ],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "Télé-Loisirs",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "Gala",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "Voici",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "Femme Actuelle",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "National Geographic",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "Geo",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "Néon",
+                    "source": [],
                     "valeur": "100"
                 }
             ],
@@ -4445,12 +4495,12 @@
             ]
         },
         "120": {
-            "challenges": "37",
+            "challenges": "35",
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
-            "forbes": "680",
-            "fortune": "37",
+            "forbes": "687",
+            "fortune": "35",
             "id": 120,
             "nom": "Martin et Olivier Bouygues",
             "periodicite": "",
@@ -4503,6 +4553,11 @@
             "commentaire": "",
             "echelle": "",
             "est_possede": [
+                {
+                    "nom": "Daniel Křetínský",
+                    "source": [],
+                    "valeur": "5"
+                },
                 {
                     "nom": "Bouygues",
                     "source": [],
@@ -4967,6 +5022,11 @@
             "possessions": [
                 {
                     "nom": "France 2",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "La Première",
                     "source": [],
                     "valeur": "100"
                 },
@@ -5902,12 +5962,12 @@
             ]
         },
         "162": {
-            "challenges": "255",
+            "challenges": "314",
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
             "forbes": "",
-            "fortune": "255",
+            "fortune": "314",
             "id": 162,
             "nom": "Jean-Paul Baudecroux",
             "periodicite": "",
@@ -6230,7 +6290,7 @@
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
-            "forbes": "non",
+            "forbes": "",
             "fortune": "",
             "id": 171,
             "nom": "Famille Hurbain",
@@ -10230,14 +10290,9 @@
             "forbes": "",
             "fortune": "",
             "id": 276,
-            "nom": "Bernard Tapie",
+            "nom": "Ayant droit de Bernard Tapie",
             "periodicite": "",
-            "possedex": {
-                "activite": "",
-                "desc": "",
-                "fortune": "400ème fortune de France",
-                "marque": ""
-            },
+            "possedex": {},
             "possessions": [
                 {
                     "nom": "Groupe La Provence",
@@ -10245,7 +10300,7 @@
                     "valeur": "89"
                 }
             ],
-            "slug": "bernard-tapie",
+            "slug": "ayant-droit-de-bernard-tapie",
             "type": 1,
             "typeLibelle": "Personne physique",
             "type_media": "",
@@ -10353,7 +10408,7 @@
                     "valeur": "11"
                 },
                 {
-                    "nom": "Bernard Tapie",
+                    "nom": "Ayant droit de Bernard Tapie",
                     "source": [],
                     "valeur": "89"
                 }
@@ -11226,24 +11281,18 @@
             "urls": []
         },
         "307": {
-            "challenges": "22",
+            "challenges": "26",
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
-            "forbes": "1851",
-            "fortune": "22",
+            "forbes": "",
+            "fortune": "26",
             "id": 307,
-            "nom": "Benjamin et Ariane de Rothschild",
+            "nom": "Ariane de Rothschild",
             "periodicite": "",
             "possedex": {},
-            "possessions": [
-                {
-                    "nom": "Lampsane Investissement SA",
-                    "source": [],
-                    "valeur": "contrôle"
-                }
-            ],
-            "slug": "benjamin-et-ariane-de-rothschild",
+            "possessions": [],
+            "slug": "ariane-de-rothschild",
             "type": 1,
             "typeLibelle": "Personne physique",
             "type_media": "",
@@ -11326,12 +11375,12 @@
             "urls": []
         },
         "314": {
-            "challenges": "129",
+            "challenges": "161",
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
             "forbes": "",
-            "fortune": "129",
+            "fortune": "161",
             "id": 314,
             "nom": "Franck Julien",
             "periodicite": "",
@@ -11711,7 +11760,7 @@
             "commentaire": "",
             "echelle": "",
             "est_possede": [],
-            "forbes": "468",
+            "forbes": "381",
             "fortune": "",
             "id": 326,
             "nom": "Ken Fisher",
@@ -11736,7 +11785,7 @@
             "echelle": "",
             "est_possede": [
                 {
-                    "nom": "NextRadioTV",
+                    "nom": "Altice Média",
                     "source": [
                         "https://fr.wikipedia.org/wiki/RMC_Story"
                     ],
@@ -11817,7 +11866,7 @@
             "possedex": {},
             "possessions": [
                 {
-                    "nom": "Lagardère SCA",
+                    "nom": "Lagardère SA",
                     "source": [],
                     "valeur": "20"
                 }
@@ -11834,25 +11883,24 @@
             "echelle": "",
             "est_possede": [
                 {
-                    "nom": "Xavier Niel",
+                    "nom": "Bernard Arnault",
                     "source": [],
-                    "valeur": "100"
+                    "valeur": "27"
+                },
+                {
+                    "nom": "Arnaud Lagardère",
+                    "source": [],
+                    "valeur": "73"
                 }
             ],
             "forbes": "",
             "fortune": "",
             "id": 331,
-            "nom": "NJJ",
+            "nom": "Lagardère Capital & Management",
             "periodicite": "",
             "possedex": {},
-            "possessions": [
-                {
-                    "nom": "Nice-Matin",
-                    "source": [],
-                    "valeur": "100"
-                }
-            ],
-            "slug": "njj",
+            "possessions": [],
+            "slug": "lagardere-capital-management",
             "type": 2,
             "typeLibelle": "Personne morale",
             "type_media": "",
@@ -11901,6 +11949,359 @@
             "possedex": {},
             "possessions": [],
             "slug": "monaco-matin",
+            "type": 3,
+            "typeLibelle": "Média",
+            "type_media": "GPE",
+            "urls": []
+        },
+        "334": {
+            "challenges": "",
+            "commentaire": "",
+            "echelle": "",
+            "est_possede": [
+                {
+                    "nom": "Fonds pour l'indépendance de la presse",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
+            "forbes": "",
+            "fortune": "",
+            "id": 334,
+            "nom": "NJJ",
+            "periodicite": "",
+            "possedex": {},
+            "possessions": [
+                {
+                    "nom": "Nice-Matin",
+                    "source": [],
+                    "valeur": "100"
+                },
+                {
+                    "nom": "Paris-Turf",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
+            "slug": "njj",
+            "type": 2,
+            "typeLibelle": "Personne morale",
+            "type_media": "",
+            "urls": []
+        },
+        "335": {
+            "challenges": "",
+            "commentaire": "Payant",
+            "echelle": "National",
+            "est_possede": [
+                {
+                    "nom": "Prisma Media",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
+            "forbes": "",
+            "fortune": "",
+            "id": 335,
+            "nom": "Télé-Loisirs",
+            "periodicite": "Hebdomadaire",
+            "possedex": {},
+            "possessions": [],
+            "slug": "tele-loisirs",
+            "type": 3,
+            "typeLibelle": "Média",
+            "type_media": "GPE",
+            "urls": []
+        },
+        "336": {
+            "challenges": "",
+            "commentaire": "Payant",
+            "echelle": "National",
+            "est_possede": [
+                {
+                    "nom": "Prisma Media",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
+            "forbes": "",
+            "fortune": "",
+            "id": 336,
+            "nom": "Gala",
+            "periodicite": "Hebdomadaire",
+            "possedex": {},
+            "possessions": [],
+            "slug": "gala",
+            "type": 3,
+            "typeLibelle": "Média",
+            "type_media": "GPE",
+            "urls": []
+        },
+        "337": {
+            "challenges": "",
+            "commentaire": "Payant",
+            "echelle": "National",
+            "est_possede": [
+                {
+                    "nom": "Prisma Media",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
+            "forbes": "",
+            "fortune": "",
+            "id": 337,
+            "nom": "Voici",
+            "periodicite": "Hebdomadaire",
+            "possedex": {},
+            "possessions": [],
+            "slug": "voici",
+            "type": 3,
+            "typeLibelle": "Média",
+            "type_media": "GPE",
+            "urls": []
+        },
+        "338": {
+            "challenges": "",
+            "commentaire": "Payant",
+            "echelle": "National",
+            "est_possede": [
+                {
+                    "nom": "Prisma Media",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
+            "forbes": "",
+            "fortune": "",
+            "id": 338,
+            "nom": "Femme Actuelle",
+            "periodicite": "Hebdomadaire",
+            "possedex": {},
+            "possessions": [],
+            "slug": "femme-actuelle",
+            "type": 3,
+            "typeLibelle": "Média",
+            "type_media": "GPE",
+            "urls": []
+        },
+        "339": {
+            "challenges": "",
+            "commentaire": "Payant",
+            "echelle": "National",
+            "est_possede": [
+                {
+                    "nom": "Prisma Media",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
+            "forbes": "",
+            "fortune": "",
+            "id": 339,
+            "nom": "National Geographic",
+            "periodicite": "Mensuel",
+            "possedex": {},
+            "possessions": [],
+            "slug": "national-geographic",
+            "type": 3,
+            "typeLibelle": "Média",
+            "type_media": "GPE",
+            "urls": []
+        },
+        "340": {
+            "challenges": "",
+            "commentaire": "Payant",
+            "echelle": "National",
+            "est_possede": [
+                {
+                    "nom": "Prisma Media",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
+            "forbes": "",
+            "fortune": "",
+            "id": 340,
+            "nom": "Geo",
+            "periodicite": "Mensuel",
+            "possedex": {},
+            "possessions": [],
+            "slug": "geo",
+            "type": 3,
+            "typeLibelle": "Média",
+            "type_media": "GPE",
+            "urls": []
+        },
+        "341": {
+            "challenges": "",
+            "commentaire": "Payant",
+            "echelle": "National",
+            "est_possede": [
+                {
+                    "nom": "NJJ",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
+            "forbes": "",
+            "fortune": "",
+            "id": 341,
+            "nom": "Paris-Turf",
+            "periodicite": "",
+            "possedex": {},
+            "possessions": [],
+            "slug": "paris-turf",
+            "type": 3,
+            "typeLibelle": "Média",
+            "type_media": "GPE",
+            "urls": []
+        },
+        "342": {
+            "challenges": "",
+            "commentaire": "",
+            "echelle": "",
+            "est_possede": [
+                {
+                    "nom": "Xavier Niel",
+                    "source": [],
+                    "valeur": "contrôle"
+                }
+            ],
+            "forbes": "",
+            "fortune": "",
+            "id": 342,
+            "nom": "Fonds pour l'indépendance de la presse",
+            "periodicite": "",
+            "possedex": {},
+            "possessions": [
+                {
+                    "nom": "NJJ",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
+            "slug": "fonds-pour-l-independance-de-la-presse",
+            "type": 2,
+            "typeLibelle": "Personne morale",
+            "type_media": "",
+            "urls": []
+        },
+        "343": {
+            "challenges": "",
+            "commentaire": "Payant",
+            "echelle": "National",
+            "est_possede": [
+                {
+                    "nom": "Czech Media Invest",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
+            "forbes": "",
+            "fortune": "",
+            "id": 343,
+            "nom": "Télé 7 Jours",
+            "periodicite": "Hebdomadaire",
+            "possedex": {},
+            "possessions": [],
+            "slug": "tele-7-jours",
+            "type": 3,
+            "typeLibelle": "Média",
+            "type_media": "GPE",
+            "urls": []
+        },
+        "344": {
+            "challenges": "",
+            "commentaire": "Gratuit",
+            "echelle": "National",
+            "est_possede": [
+                {
+                    "nom": "France Télévision",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
+            "forbes": "",
+            "fortune": "",
+            "id": 344,
+            "nom": "La Première",
+            "periodicite": "",
+            "possedex": {},
+            "possessions": [],
+            "slug": "la-premiere",
+            "type": 3,
+            "typeLibelle": "Média",
+            "type_media": "Télévision",
+            "urls": []
+        },
+        "345": {
+            "challenges": "",
+            "commentaire": "Payant",
+            "echelle": "National",
+            "est_possede": [
+                {
+                    "nom": "Bolloré",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
+            "forbes": "",
+            "fortune": "",
+            "id": 345,
+            "nom": "France Catholique",
+            "periodicite": "",
+            "possedex": {},
+            "possessions": [],
+            "slug": "france-catholique",
+            "type": 3,
+            "typeLibelle": "Média",
+            "type_media": "GPE",
+            "urls": []
+        },
+        "346": {
+            "challenges": "",
+            "commentaire": "Payant",
+            "echelle": "National",
+            "est_possede": [
+                {
+                    "nom": "Czech Media Invest",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
+            "forbes": "",
+            "fortune": "",
+            "id": 346,
+            "nom": "Franc-Tireur",
+            "periodicite": "",
+            "possedex": {},
+            "possessions": [],
+            "slug": "franc-tireur",
+            "type": 3,
+            "typeLibelle": "Média",
+            "type_media": "GPE",
+            "urls": []
+        },
+        "347": {
+            "challenges": "",
+            "commentaire": "Payant",
+            "echelle": "National",
+            "est_possede": [
+                {
+                    "nom": "Prisma Media",
+                    "source": [],
+                    "valeur": "100"
+                }
+            ],
+            "forbes": "",
+            "fortune": "",
+            "id": 347,
+            "nom": "Néon",
+            "periodicite": "",
+            "possedex": {},
+            "possessions": [],
+            "slug": "neon",
             "type": 3,
             "typeLibelle": "Média",
             "type_media": "GPE",
