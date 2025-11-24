@@ -9,17 +9,11 @@ import unicodedata
 show_error_old_data = False
 show_no_id_found = False
 
-url_base = 'https://docs.google.com/spreadsheets/export?id=1po3WjKX15T766GYOYV8fHtve4RdlyLF6XEXBlUICib0&exportFormat=tsv&gid=0'
-file_base = 'urls.tsv'
-
-url_owners = 'https://docs.google.com/spreadsheets/export?id=1po3WjKX15T766GYOYV8fHtve4RdlyLF6XEXBlUICib0&exportFormat=tsv&gid=1970270275'
-file_owners = 'owners.tsv'
-
-url_relations_medias = 'https://raw.githubusercontent.com/mdiplo/Medias_francais/version-2021/relations_medias_francais.tsv'
-file_relations = 'relations.tsv'
-
-url_liste_medias = 'https://raw.githubusercontent.com/mdiplo/Medias_francais/version-2021/medias_francais.tsv'
-file_liste_medias = 'liste_medias.tsv'
+# url_base = 'https://docs.google.com/spreadsheets/export?id=1po3WjKX15T766GYOYV8fHtve4RdlyLF6XEXBlUICib0&exportFormat=tsv&gid=0'
+# file_base = 'urls.tsv'
+# 
+# url_owners = 'https://docs.google.com/spreadsheets/export?id=1po3WjKX15T766GYOYV8fHtve4RdlyLF6XEXBlUICib0&exportFormat=tsv&gid=1970270275'
+# file_owners = 'owners.tsv'
 
 url_decodex = 'https://www.lemonde.fr/webservice/decodex/updates'
 file_decodex = 'decodex.json'
@@ -79,6 +73,22 @@ def idFromNom(db, nom):
 # {{{ recuperations des donnees
 database = collections.OrderedDict()
 
+
+file_personnes                 = 'personnes.tsv'
+downloadData('https://raw.githubusercontent.com/mdiplo/Medias_francais/master/personnes.tsv', file_personnes)
+file_medias                    = 'medias.tsv'
+downloadData('https://raw.githubusercontent.com/mdiplo/Medias_francais/master/medias.tsv', file_medias)
+file_organisations             = 'organisations.tsv'
+downloadData('https://raw.githubusercontent.com/mdiplo/Medias_francais/master/organisations.tsv', file_organisations)
+file_organisation_media        = 'organisation_media.tsv'
+downloadData('https://raw.githubusercontent.com/mdiplo/Medias_francais/master/organisation-media.tsv', file_organisation_media)
+file_organisation_organisation = 'organisation_organisation.tsv'
+downloadData('https://raw.githubusercontent.com/mdiplo/Medias_francais/master/organisation-organisation.tsv', file_organisation_organisation)
+file_personne_media            = 'personne_media.tsv'
+downloadData('https://raw.githubusercontent.com/mdiplo/Medias_francais/master/personne-media.tsv', file_personne_media)
+file_personne_organisation     = 'personne_organisation.tsv'
+downloadData('https://raw.githubusercontent.com/mdiplo/Medias_francais/master/personne-organisation.tsv', file_personne_organisation)
+
 #### base des relations medias / proprietaires ####
 # {{{
 # ce fichier contient les relations entre les entites :
@@ -88,7 +98,7 @@ database = collections.OrderedDict()
 #  3 - source
 #  4 - datePublication
 #  5 - dateConsultation
-downloadData(url_relations_medias, file_relations)
+# downloadData(url_relations_medias, file_relations)
 
 # }}}
 
@@ -97,13 +107,11 @@ downloadData(url_relations_medias, file_relations)
 # ce fichier contient les informations sur les proprietaires
 # 0 - nom
 # 1 - typeLibelle
-# 2 - typeCode
-# 3 - rangChallenges
-# 4 - mediaType
-# 5 - mediaPeriodicite
-# 6 - mediaEchelle
-# 7 - commentaire
-downloadData(url_liste_medias, file_liste_medias)
+# 2 - mediaPeriodicite
+# 3 - mediaEchelle
+# 4 - mediaPrix
+# 5 - mediaDisparu
+# downloadData(url_medias, file_medias)
 # }}}
 
 #### base des urls des medias ####
@@ -135,7 +143,7 @@ file_base = 'base.tsv'
 # 22 - Adresse 3
 # 23 - Adresse 4
 # 24 - Adresse 5
-downloadData(url_base, file_base)
+# downloadData(url_base, file_base)
 # }}}
 
 #### base des infos proprietaires ####
@@ -146,7 +154,7 @@ downloadData(url_base, file_base)
 #  3 - Marque
 #  4 - Secteur d'activite
 #  5 - Description
-downloadData(url_owners, file_owners)
+# downloadData(url_owners, file_owners)
 # }}}
 
 # }}} recuperations des donnees
@@ -170,8 +178,9 @@ with open(file_decodex, 'r', encoding="utf-8") as jsonfile:
 # }}}
 
 
+# with open(file_medias, 'r', encoding="utf-8") as tsvfile:
 # {{{ objets
-with open(file_liste_medias, 'r', encoding="utf-8") as tsvfile:
+with open(file_personnes, 'r', encoding="utf-8") as tsvfile:
     reader = csv.reader(tsvfile, delimiter="\t")
 
     col_id            = 0
